@@ -916,6 +916,10 @@ $$
 - **Assumes:** Q, b, $y > 0$; y is not the critical depth
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Specific-energy diagram of a rectangular channel carrying Q = 6 m³/s in b = 2 m (E computed by the package at 81 depths)](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/alternate-depth-rectangular-diagram.svg)
+
+*Specific-energy diagram of a rectangular channel carrying Q = 6 m³/s in b = 2 m (E computed by the package at 81 depths). Depth y = 0.4 m (supercritical, Fr = 3.78614) has E = 3.26697 m and the alternate depth 3.22281 m; marked: critical depth yc = 0.971683 m at the minimum energy E = 1.45752 m.*
+
 ```python
 civil_engineering_ai999x.solve('alternate_depth_rectangular', Q=6.0, b=2.0, y=0.4)
 # -> E = 3.26697 m, y_alt = 3.22281 m, yc = 0.971683 m, Fr = 3.78614, regime = supercritical   (SOLVED)
@@ -1379,6 +1383,10 @@ $$
 - **Method:** loop corrections dQ = -sum(k Q|Q|^$0.852)/(1.852$ sum(k|Q|^0.852)) until converged, then Newton on all loops
 - **Assumes:** one source (node 1); connected network; $40  \leq  C  \leq  160$; demands >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![A looped pipe network (5 pipes, 2 loops; lengths [600, 500, 600, 500, 780] m, diameters [300, 250, 200, 250, 200] mm, Hazen–Williams C = 120) balanced by the Hardy Cross method in 14 iterations: arrows show the direction and size of each pipe flow returned by the package (L/s, a negative value flows against the stated pipe direction: 1→2: 71](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/hardy-cross-network-network.svg)
+
+*A looped pipe network (5 pipes, 2 loops; lengths [600, 500, 600, 500, 780] m, diameters [300, 250, 200, 250, 200] mm, Hazen–Williams C = 120) balanced by the Hardy Cross method in 14 iterations: arrows show the direction and size of each pipe flow returned by the package (L/s, a negative value flows against the stated pipe direction: 1→2: 71.44, 2→3: 33.1344, 3→4: -16.8656, 4→1: -48.56, 2→4: -1.6944); boxes give each node's demand. The node positions are a layout, not to scale.*
 
 ```python
 civil_engineering_ai999x.solve('hardy_cross_network', pipes='1-2, 2-3, 3-4, 4-1, 2-4', L=[600, 500, 600, 500, 780], D=[300, 250, 200, 250, 200], C=[120, 120, 120, 120, 120], demands=[0, 0.04, 0.05, 0.03])
@@ -2112,6 +2120,10 @@ $$
 - **Assumes:** $0  \leq  X  \leq  0.5$; 2 K $X  \leq  dt  \leq  2$ K $(1 - X)$ (no negative coefficient)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![A flood wave routed through a river reach by the Muskingum method (K = 12 h, X = 0](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/muskingum-routing-hydrograph.svg)
+
+*A flood wave routed through a river reach by the Muskingum method (K = 12 h, X = 0.2, Δt = 6 h; C0 = 0.047619, C1 = 0.428571, C2 = 0.52381): inflow per interval as bars, the outflow returned by the package as stems — lower and later; peak inflow 68 m³/s, marked: peak outflow t = 24 h, Q = 45.836 m³/s (attenuation 22.164 m³/s).*
+
 ```python
 civil_engineering_ai999x.solve('muskingum_routing', inflow=[10, 30, 68, 50, 40, 31, 23, 15, 10], K=43200.0, X=0.2, dt=21600.0)
 # -> outflow = [10.0, 10.9523809524, 21.8321995465, 42.959723572, 45.8360456806, 42.6284048803, 36.7101168421, 29.8005373935, 22.5145672061] m^3/s, C0 = 0.047619, C1 = 0.428571, C2 = 0.52381, peak_outflow = 45.836 m^3/s, attenuation = 22.164 m^3/s   (SOLVED)
@@ -2350,6 +2362,10 @@ $$
 - **Method:** $u = r^{2}$ S/(4 T t), W(u) = E1(u) (series for $u  \leq  1$, continued fraction above), $s = Q$ W/(4 pi T)
 - **Assumes:** confined, homogeneous, infinite aquifer; fully penetrating well, constant rate; $u  \leq  50$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Drawdown cone around a well pumping Q = 2500 m³/d from a confined aquifer (T = 500 m²/d, S = 0](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/theis-drawdown-profile.svg)
+
+*Drawdown cone around a well pumping Q = 2500 m³/d from a confined aquifer (T = 500 m²/d, S = 0.0002) after 1, 10 and 100 days, drawdown computed by the package at 41 distances from 5 m to 1 km (shown on both sides of the well): 4.90277 m at r = 5 m after 1 d; 5.81894 m at r = 5 m after 10 d; 6.73511 m at r = 5 m after 100 d. Marked: r = 100 m, t = 1 d, s = 2.51924 m.*
 
 ```python
 civil_engineering_ai999x.solve('theis_drawdown', Q=0.028935185185185185, T=0.005787037037037037, S=0.0002, r=100.0, t=86400.0)
@@ -3345,6 +3361,10 @@ $$
 - **Method:** Ka = (1 - sin $\phi)/(1 + sin$ phi); $sigma_a = Ka$(gam z + q) - 2c sqrt(Ka); Pa = area of the positive pressure diagram
 - **Assumes:** smooth vertical wall, horizontal backfill; dry backfill; tension zone ignored
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Rankine active earth pressure on a 6 m wall retaining soil with φ = 30° and γ = 18 kN/m³ (Ka = 0](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/rankine-active-thrust-diagram.svg)
+
+*Rankine active earth pressure on a 6 m wall retaining soil with φ = 30° and γ = 18 kN/m³ (Ka = 0.333333), drawn as the pressure diagram against the wall: the pressure at each of 40 depths is the base pressure the package returns for a wall of that height. Without surcharge it grows to 36 kPa at the base, resultant Pa = 108 kN/m acting 2 m above the base (arrow); with a 20 kPa surcharge (dashed) the base pressure is 42.6667 kPa and Pa = 148 kN/m.*
 
 ```python
 civil_engineering_ai999x.solve('rankine_active_thrust', phi=30.0, gam=18000.0, H=6.0)

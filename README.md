@@ -4,7 +4,7 @@
 
 **[Install](https://pypi.org/project/civil-engineering-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/civil-engineering-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/civil-engineering-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.1
 
 Field: **Engineering** · Tasks: Question Answering, Sentence Similarity, Feature Extraction
 
@@ -27,7 +27,7 @@ civil-engineering-ai999x is an offline, deterministic Python solver that answers
 
 | Property | Value |
 |---|---|
-| Package | `civil-engineering-ai999x` 1.0.0 (import `civil_engineering_ai999x`) |
+| Package | `civil-engineering-ai999x` 1.0.1 (import `civil_engineering_ai999x`) |
 | Type | Deterministic neuro-symbolic civil engineering engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 88 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -61,7 +61,18 @@ civil_engineering.ask("Who created you?").message
 # -> civil-engineering-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `civil-engineering-ai999x "<question>"`, `civil-engineering-ai999x --capabilities`. The outputs above were produced by running this exact code on civil-engineering-ai999x 1.0.0.
+Command line: `civil-engineering-ai999x "<question>"`, `civil-engineering-ai999x --capabilities`. The outputs above were produced by running this exact code on civil-engineering-ai999x 1.0.1.
+
+## Find the right capability, and draw it
+
+`civil_engineering.search()` finds which certified capability a question is about — across **every** AI999X model, so a question for another model points you to it. It runs **[ai999x-encoder](https://huggingface.co/AI999X/ai999x-encoder)**, AI999X's own capability encoder (4.7M parameters, a 4.9 MB ONNX model, offline; the root `model.safetensors` of this repository): `pip install "civil-engineering-ai999x[search]"`. `ask(question, suggest=True)` adds the same pointers to a question it does not answer; an answer itself never changes.
+
+```python
+import civil_engineering_ai999x as civil_engineering
+
+civil_engineering.search("Solve x^2 - 5x + 6 = 0", k=2)
+# -> Roots of a quadratic equation (math-foundations-ai999x, 0.63); Roots of a cubic equation (math-foundations-ai999x, 0.59)
+```
 
 ## How every answer is verified
 
@@ -71,6 +82,116 @@ Command line: `civil-engineering-ai999x "<question>"`, `civil-engineering-ai999x
 4. **Checking** — dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
+
+## Worked examples
+
+Each question was put to `civil-engineering-ai999x`; the answer is the one it returned, with the steps it took.
+
+**Manning discharge in a rectangular channel** · _Open-channel hydraulics_
+
+> Manning discharge in a rectangular channel with b = 3 m, y = 1.2 m, S = 0.001 and n = 0.013.
+
+→ **Q = 6.682900203 m^3/s, V = 1.856361167 m/s, A = 3.6 m^2, R = 0.6666666667 m**
+
+<details><summary>Steps</summary>
+
+- Manning discharge in a rectangular channel: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013 → Q = 6.682900203 m^3/s, V = 1.856361167 m/s, A = 3.6 m^2, R = 0.6666666667 m
+
+</details>
+
+**Theis drawdown around a pumped well** · _Groundwater_
+
+> Theis drawdown with pumping rate = 2500 m^3/d, transmissivity = 500 m^2/d, storativity = 0.0002, distance = 100 m and time = 24 h.
+
+→ **s = 2.519239468 m, u = 0.001, W = 6.331539364**
+
+<details><summary>Steps</summary>
+
+- Theis drawdown around a pumped well: Q = 0.02893518519 m^3/s, T = 0.005787037037 m^2/s, S = 0.0002, r = 100 m, t = 86400 s → s = 2.519239468 m, u = 0.001 m, W = 6.331539364 m
+
+</details>
+
+**Primary consolidation settlement of a normally consolidated clay** · _Soil mechanics_
+
+`m.solve("consolidation_settlement_nc", Cc=0.32, e0=0.92, H="4 m", s0="80 kPa", ds="60 kPa")`
+
+→ **Sc = 0.1620253658 m, de = 0.07777217558, e_final = 0.8422278244**
+
+<details><summary>Steps</summary>
+
+- Primary consolidation settlement of a normally consolidated clay: Cc = 0.32, e0 = 0.92, H = 4 m, s0 = 80 kPa, ds = 60 kPa → Sc = 0.1620253658 m, de = 0.07777217558 m, e_final = 0.8422278244 m
+
+</details>
+
+**Pipe network flows by the Hardy Cross method (Hazen-Williams)** · _Pipe flow and water networks_
+
+> Hardy cross network with pipes = [1-2, 2-3, 3-4, 4-1, 2-4], L = [600, 500, 600, 500, 780], D = [300, 250, 200, 250, 200], C = [120, 120, 120, 120, 120] and demands = [0, 0.04, 0.05, 0.03].
+
+→ **flows = [0.07143998453, 0.03313438395, -0.01686561605, -0.04856001547, -0.001694399424] m^3/s, head_loss = [0, 2.398748344, 3.569736308, 2.376754232] m, loops = 2, iterations = 14**
+
+<details><summary>Steps</summary>
+
+- Pipe network flows by the Hardy Cross method (Hazen-Williams): pipes = 1-2, 2-3, 3-4, 4-1, 2-4, L = [600, 500, 600, 500, 780], D = [300, 250, 200, 250, 200], C = [120, 120, 120, 120, 120], demands = [0, 0.04, 0.05, 0.03] → flows = [0.07143998453, 0.03313438395, -0.01686561605, -0.04856001547, -0.001694399424] m^3/s, head_loss = [0, 2.398748344, 3.569736308, 2.376754232] m, loops = 2 m^3/s, iterations = 14 m^3/s
+
+</details>
+
+**Elements of a simple horizontal circular curve** · _Surveying_
+
+> Horizontal circular curve with radius = 300 m, deflection angle = 40 degrees and PI chainage = 1250 m.
+
+→ **T = 109.1910703 m, L = 209.4395102 m, LC = 205.212086 m, E = 19.25333174 m, M = 18.09221376 m, PC = 1140.80893 m, PT = 1350.24844 m**
+
+<details><summary>Steps</summary>
+
+- Elements of a simple horizontal circular curve: R = 300 m, Delta = 40, PI = 1250 m → T = 109.1910703 m, L = 209.4395102 m, LC = 205.212086 m, E = 19.25333174 m, M = 18.09221376 m, PC = 1140.80893 m, PT = 1350.24844 m
+
+</details>
+
+**Coulomb active thrust on a rough wall with sloping backfill** · _Foundations_
+
+> Coulomb active thrust with friction angle = 30 degrees, wall friction angle = 20 degrees, backfill slope = 10 degrees, unit weight = 18 kN/m^3 and height = 6 m.
+
+→ **Ka = 0.3400223954, Pa = 110167.2561 N/m, Pa_h = 103523.3576 N/m, Pa_v = 37679.42072 N/m**
+
+<details><summary>Steps</summary>
+
+- Coulomb active thrust on a rough wall with sloping backfill: phi = 30, delta = 20, beta = 10, gam = 18000 N/m^3, H = 6 m → Ka = 0.3400223954, Pa = 110167.2561 N/m, Pa_h = 103523.3576 N/m, Pa_v = 37679.42072 N/m
+
+</details>
+
+## Figures
+
+Every point was computed by `civil-engineering-ai999x`.
+
+**Drawdown cone around a pumped well**
+
+![Drawdown cone around a pumped well — computed by civil-engineering-ai999x](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/theis-drawdown-profile.svg)
+
+_Drawdown cone around a well pumping Q = 2500 m³/d from a confined aquifer (T = 500 m²/d, S = 0.0002) after 1, 10 and 100 days, drawdown computed by the package at 41 distances from 5 m to 1 km (shown on both sides of the well): 4.90277 m at r = 5 m after 1 d; 5.81894 m at r = 5 m after 10 d; 6.73511 m at r = 5 m after 100 d. Marked: r = 100 m, t = 1 d, s = 2.51924 m._
+
+**Specific-energy diagram and alternate depths**
+
+![Specific-energy diagram and alternate depths — computed by civil-engineering-ai999x](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/alternate-depth-rectangular-diagram.svg)
+
+_Specific-energy diagram of a rectangular channel carrying Q = 6 m³/s in b = 2 m (E computed by the package at 81 depths). Depth y = 0.4 m (supercritical, Fr = 3.78614) has E = 3.26697 m and the alternate depth 3.22281 m; marked: critical depth yc = 0.971683 m at the minimum energy E = 1.45752 m._
+
+**Active earth pressure on a retaining wall**
+
+![Active earth pressure on a retaining wall — computed by civil-engineering-ai999x](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/rankine-active-thrust-diagram.svg)
+
+_Rankine active earth pressure on a 6 m wall retaining soil with φ = 30° and γ = 18 kN/m³ (Ka = 0.333333), drawn as the pressure diagram against the wall: the pressure at each of 40 depths is the base pressure the package returns for a wall of that height. Without surcharge it grows to 36 kPa at the base, resultant Pa = 108 kN/m acting 2 m above the base (arrow); with a 20 kPa surcharge (dashed) the base pressure is 42.6667 kPa and Pa = 148 kN/m._
+
+**Flood routing: inflow and outflow hydrographs**
+
+![Flood routing: inflow and outflow hydrographs — computed by civil-engineering-ai999x](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/muskingum-routing-hydrograph.svg)
+
+_A flood wave routed through a river reach by the Muskingum method (K = 12 h, X = 0.2, Δt = 6 h; C0 = 0.047619, C1 = 0.428571, C2 = 0.52381): inflow per interval as bars, the outflow returned by the package as stems — lower and later; peak inflow 68 m³/s, marked: peak outflow t = 24 h, Q = 45.836 m³/s (attenuation 22.164 m³/s)._
+
+**Flows in a looped pipe network**
+
+![Flows in a looped pipe network — computed by civil-engineering-ai999x](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/hardy-cross-network-network.svg)
+
+_A looped pipe network (5 pipes, 2 loops; lengths [600, 500, 600, 500, 780] m, diameters [300, 250, 200, 250, 200] mm, Hazen–Williams C = 120) balanced by the Hardy Cross method in 14 iterations: arrows show the direction and size of each pipe flow returned by the package (L/s, a negative value flows against the stated pipe direction: 1→2: 71.44, 2→3: 33.1344, 3→4: -16.8656, 4→1: -48.56, 2→4: -1.6944); boxes give each node's demand. The node positions are a layout, not to scale._
 
 ## Capabilities
 
@@ -95,10 +216,10 @@ Capabilities are certified before they ship: each must reproduce hand-worked ref
 ## Citation
 
 ```bibtex
-@software{civil_engineering_ai999x_1_0_0,
+@software{civil_engineering_ai999x_1_0_1,
   title  = {civil-engineering-ai999x: an offline, verified civil engineering solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.0},
+  year   = {2026}, version = {1.0.1},
   url    = {https://huggingface.co/AI999X/civil-engineering-ai999x}
 }
 ```
