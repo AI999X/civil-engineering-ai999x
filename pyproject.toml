@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "civil-engineering-ai999x"
-version = "1.0.2"
+version = "1.0.3"
 description = "Offline civil engineering solver: pipe and open-channel hydraulics, hydrology, groundwater flow, soil mechanics and foundations, water networks and surveying, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"
