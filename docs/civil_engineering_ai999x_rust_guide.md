@@ -1,6 +1,6 @@
 # civil-engineering: the Civil Engineering program — user guide
 
-**civil-engineering-ai999x 1.0.3**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**civil-engineering-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Civil Engineering covers pipe and open-channel hydraulics, hydrology, groundwater flow, soil mechanics and foundations, water networks and surveying. This guide is about `civil-engineering`, the model as a self-contained program for Windows and Linux: 88 capabilities in 7 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/civil-engineering-ai999x/); the Python package (`pip install civil-engineering-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -17,24 +17,24 @@ Civil Engineering covers pipe and open-channel hydraulics, hydrology, groundwate
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS; the newest version is always under https://www.ai999x.com/downloads/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Civil Engineering | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-civil-engineering-1.4.0-windows-x86_64.zip |
-| Desktop app: Civil Engineering | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-civil-engineering-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Civil Engineering | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-civil-engineering-1.4.0-windows-x86_64.zip |
+| Desktop app: Civil Engineering | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-civil-engineering-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
 Civil Engineering in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-civil-engineering-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-civil-engineering.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-civil-engineering-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-civil-engineering-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-civil-engineering-1.4.0-linux-x86_64.tar.gz
 ./ai999x-civil-engineering-1.4.0-linux-x86_64/ai999x-civil-engineering
@@ -43,8 +43,8 @@ tar xzf ai999x-civil-engineering-1.4.0-linux-x86_64.tar.gz
 It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
 ./ai999x-1.4.0-linux-x86_64/ai999x
@@ -55,8 +55,8 @@ tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
 The bundle holds one program per model; `civil-engineering` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
 echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
@@ -69,8 +69,8 @@ The fourth line should print True.
 
 ```powershell
 $F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
 $D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
@@ -99,43 +99,7 @@ $ civil-engineering --version
 civil-engineering-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
 ```
 
-### 2.2 Ask in words
-
-Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
-
-```shell
-$ civil-engineering ask "Manning discharge in a rectangular channel with b = 3 m, y = 1.2 m, S = 0.001 and n = 0.013."
-Read as: Manning discharge in a rectangular channel
-Q = 6.682900203 m^3/s
-V = 1.856361167 m/s
-A = 3.6 m^2
-R = 0.6666666667 m
-  by: Manning discharge in a rectangular channel  (A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n)
-  b = 3 m
-  y = 1.2 m
-  S = 0.001
-  n = 0.013
-  assumes: b, y > 0; 0 < S < 1; 0.005 <= n <= 0.2
-```
-
-### 2.3 Find a capability
-
-Search the capabilities by what you want to know; the first column is the id to pass to info and solve.
-
-```shell
-$ civil-engineering search "manning discharge in a rectangular channel"
-manning_rectangular_discharge        Manning discharge in a rectangular channel  (open-channel hydraulics)
-manning_trapezoidal_discharge        Manning discharge in a trapezoidal channel  (open-channel hydraulics)
-normal_depth_rectangular             Normal depth in a rectangular channel  (open-channel hydraulics)
-gradually_varied_flow_length         Length of a gradually varied flow profile (rectangular channel)  (open-channel hydraulics)
-critical_depth_rectangular           Critical depth in a rectangular channel  (open-channel hydraulics)
-hydraulic_jump_rectangular           Hydraulic jump in a rectangular channel  (open-channel hydraulics)
-rectangular_weir_discharge           Sharp-crested rectangular weir discharge  (open-channel hydraulics)
-channel_froude_number                Froude number of flow in a rectangular channel  (open-channel hydraulics)
-… 12 more
-```
-
-### 2.4 List the capabilities
+### 2.2 List the capabilities
 
 Every capability the program answers: its id (what you pass to solve) and its name.
 
@@ -149,92 +113,19 @@ chezy_from_manning                       Chezy coefficient from Manning's n
 chezy_velocity                           Chezy velocity
 circular_channel_section                 Part-full circular conduit: area, wetted perimeter, hydraulic radius
 coefficient_of_consolidation             Coefficient of consolidation from a consolidation time
-… 80 more
+… 70 more
 ```
 
-### 2.5 What a capability needs
-
-The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
-
-```shell
-$ civil-engineering info manning_rectangular_discharge
-Manning discharge in a rectangular channel
-  A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n
-  in   b        bottom width [m]
-  in   y        flow depth [m]
-  in   S        bed slope, m/m []
-  in   n        Manning roughness coefficient []
-  out  Q        discharge (m^3/s) [m^3/s]
-  out  V        mean velocity (m/s) [m/s]
-  out  A        flow area (m^2) [m^2]
-  out  R        hydraulic radius (m) [m]
-```
-
-### 2.6 Solve
-
-Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
-
-```shell
-$ civil-engineering solve manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001 n=0.013
-Q = 6.682900203 m^3/s
-V = 1.856361167 m/s
-A = 3.6 m^2
-R = 0.6666666667 m
-  by: Manning discharge in a rectangular channel  (A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n)
-  b = 3 m
-  y = 1.2 m
-  S = 0.001
-  n = 0.013
-  assumes: b, y > 0; 0 < S < 1; 0.005 <= n <= 0.2
-```
-
-### 2.7 Machine-readable answer
-
---json prints the same answer as one line of JSON (values in SI): for scripts and other programs.
-
-```shell
-$ civil-engineering solve manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001 n=0.013 --json
-{"outcome":"SOLVED","message":"","value":6.68290020277,"unit":"m^3/s","solved_for":"Q","si":[["b",3.0],["y",1.2],["S",0.001],["n",0.013]],"values":[["Q",6.68290020277,"m^3/s"],["V",1.85636116744,"m/s"],["A",3.6,"m^2"],["R",0.666666666667,"m"]],"target":"Q","phrase":"discharge (m^3/s)","assumptions":["b, y > 0","0 < S < 1","0.005 <= n <= 0.2"],"name":"Manning discharge in a rectangular channel","equation":"A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n"}
-```
-
-### 2.8 When an input is missing
+### 2.3 When an input is missing
 
 No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.
 
 ```shell
 $ civil-engineering solve manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001
-NEEDS_INPUT: manning_rectangular_discharge needs n (Manning roughness coefficient). Example: solve('manning_rectangular_discharge', b='3 m', y='1.2 m', S=0.001, n=0.013).
+INVALID_INPUT: unknown capability 'manning_rectangular_discharge'
 ```
 
-### 2.9 Draw the figures
-
-The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```shell
-$ civil-engineering figures manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001 n=0.013 --out .
-[
-  {
-    "slug": "manning-rectangular-discharge-channel",
-    "title": "Manning discharge of a rectangular channel",
-    "caption": "Uniform flow in a rectangular channel (b = 3 m, y = 1.2 m, S = 0.001, n = 0.013), section to scale. Marked: the returned Q = 6.683 m³/s, V = 1.856 m/s, A = 3.6 m², R = 0.6667 m (Manning). Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.",
-    "file": ".\\manning-rectangular-discharge-channel.svg"
-  },
-  {
-    "slug": "manning-rectangular-discharge-live-1",
-    "title": "Discharge (m^3/s) as flow depth varies",
-    "caption": "Discharge (m^3/s) as y runs from 0.3 to 2.1 m, every other input as you entered it (41 solutions). Marked: your y = 1.2 m gives Q = 6.683. Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.",
-    "file": ".\\manning-rectangular-discharge-live-1.svg"
-  },
-  {
-    "slug": "manning-rectangular-discharge-live-2",
-    "title": "Discharge (m^3/s) as bottom width varies",
-    "caption": "Discharge (m^3/s) as b runs from 0.75 to 5.25 m, every other input as you entered it (29 solutions). Marked: your b = 3 m gives Q = 6.683. Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.",
-    "file": ".\\manning-rectangular-discharge-live-2.svg"
-  }
-]
-```
-
-### 2.10 Many questions at once
+### 2.4 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | civil-engineering batch
 
@@ -247,8 +138,8 @@ One JSON request per line in, one JSON answer per line out, in order: for script
 
 ```shell
 $ civil-engineering batch < cases.jsonl
-{"outcome":"SOLVED","message":"","value":6.68290020277,"unit":"m^3/s","solved_for":"Q","si":[["b",3.0],["y",1.2],["S",0.001],["n",0.013]],"values":[["Q",6.68290020277,"m^3/s"],["V",1.85636116744,"m/s"],["A",3.6,"m^2"],["R",0.666666666667,"m"]],"target":"Q","phrase":"discharge (m^3/s)","assumptions":["b, y > 0","0 < S < 1","0.005 <= n <= 0.2"],"name":"Manning discharge in a rectangular channel","equation":"A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n"}
-{"outcome":"SOLVED","message":"","value":2.51923946839,"unit":"m","solved_for":"s","si":[["Q",0.02893518519],["T",0.005787037037],["S",0.0002],["r",100.0],["t",86400.0]],"values":[["s",2.51923946839,"m"],["u",0.00100000000001,""],["W",6.33153936413,""]],"target":"s","phrase":"drawdown (m)","assumptions":["confined, homogeneous, infinite aquifer","fully penetrating well, constant rate","u <= 50"],"name":"Theis drawdown around a pumped well","equation":"u = r^2 S/(4 T t), W(u) = E1(u) (series for u <= 1, continued fraction above), s = Q W/(4 pi T)"}
+{"outcome":"INVALID_INPUT","message":"unknown capability 'manning_rectangular_discharge'","value":null,"unit":null}
+{"outcome":"SOLVED","message":"","value":2.51923946839,"unit":"m","solved_for":"s","si":[["Q",0.02893518519],["S",0.0002],["T",0.005787037037],["r",100.0],["t",86400.0]],"values":[["s",2.51923946839,"m"],["u",0.00100000000001,""],["W",6.33153936413,""]],"target":"s","phrase":"drawdown (m)","assumptions":["confined, homogeneous, infinite aquifer","fully penetrating well, constant rate","u <= 50"],"name":"Theis drawdown around a pumped well","equation":"u = r^2 S/(4 T t), W(u) = E1(u) (series for u <= 1, continued fraction above), s = Q W/(4 pi T)"}
 ```
 
 ## 3. Writing inputs
@@ -307,30 +198,6 @@ answers = [json.loads(line) for line in out.splitlines()]
 
 `civil-engineering figures <capability> name=value ... --out DIR` draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without `--out` the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.
 
-```shell
-$ civil-engineering figures manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001 n=0.013 --out .
-[
-  {
-    "slug": "manning-rectangular-discharge-channel",
-    "title": "Manning discharge of a rectangular channel",
-    "caption": "Uniform flow in a rectangular channel (b = 3 m, y = 1.2 m, S = 0.001, n = 0.013), section to scale. Marked: the returned Q = 6.683 m³/s, V = 1.856 m/s, A = 3.6 m², R = 0.6667 m (Manning). Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.",
-    "file": ".\\manning-rectangular-discharge-channel.svg"
-  },
-  {
-    "slug": "manning-rectangular-discharge-live-1",
-    "title": "Discharge (m^3/s) as flow depth varies",
-    "caption": "Discharge (m^3/s) as y runs from 0.3 to 2.1 m, every other input as you entered it (41 solutions). Marked: your y = 1.2 m gives Q = 6.683. Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.",
-    "file": ".\\manning-rectangular-discharge-live-1.svg"
-  },
-  {
-    "slug": "manning-rectangular-discharge-live-2",
-    "title": "Discharge (m^3/s) as bottom width varies",
-    "caption": "Discharge (m^3/s) as b runs from 0.75 to 5.25 m, every other input as you entered it (29 solutions). Marked: your b = 3 m gives Q = 6.683. Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.",
-    "file": ".\\manning-rectangular-discharge-live-2.svg"
-  }
-]
-```
-
 ## 7. In a web page or Node.js: WebAssembly
 
 The same model is a WebAssembly module, `civil_engineering_ai999x.wasm` (https://www.ai999x.com/compute/rust/civil_engineering_ai999x.wasm), with a small loader, `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.
@@ -383,11 +250,11 @@ Pa = 110167.2561 N/m
 Pa_h = 103523.3576 N/m
 Pa_v = 37679.42072 N/m
   by: Coulomb active thrust on a rough wall with sloping backfill  (Ka = cos^2 phi/(cos delta [1 + sqrt(sin(phi + delta) sin(phi - beta)/(cos delta cos beta))]^2), Pa = Ka gam H^2/2)
-  phi = 30
-  delta = 20
-  beta = 10
-  gam = 18000 N/m^3
-  H = 6 m
+  phi = 30   []
+  delta = 20   []
+  beta = 10   []
+  gam = 18000 N/m^3   []
+  H = 6 m   []
   assumes: vertical wall back; cohesionless dry backfill; 0 <= delta <= phi; 0 <= beta < phi
 ```
 
@@ -424,11 +291,11 @@ Pp = 179154.008 N/m
 Pp_h = 173049.4832 N/m
 Pp_v = 46368.46928 N/m
   by: Coulomb passive thrust on a rough wall  (Kp = cos^2 phi/(cos delta [1 - sqrt(sin(phi + delta) sin(phi + beta)/(cos delta cos beta))]^2), Pp = Kp gam H^2/2)
-  phi = 30
-  delta = 15
-  beta = 0
-  gam = 18000 N/m^3
-  H = 2 m
+  phi = 30   []
+  delta = 15   []
+  beta = 0   []
+  gam = 18000 N/m^3   []
+  H = 2 m   []
   assumes: vertical wall back; cohesionless dry soil; plane wedge (phi + delta + beta < 90)
 ```
 
@@ -467,9 +334,9 @@ Pa = 108000 N/m
 z_crack = 0 m
 ybar = 2 m
   by: Rankine active earth pressure and thrust on a wall  (Ka = (1 - sin phi)/(1 + sin phi); sigma_a = Ka(gam z + q) - 2c sqrt(Ka); Pa = area of the positive pressure diagram)
-  phi = 30
-  gam = 18000 N/m^3
-  H = 6 m
+  phi = 30   []
+  gam = 18000 N/m^3   []
+  H = 6 m   []
   assumes: smooth vertical wall, horizontal backfill; dry backfill; tension zone ignored
 ```
 
@@ -506,9 +373,9 @@ sigma_base = 117165.1789 Pa
 Pp = 117165.1789 N/m
 ybar = 0.6666666667 m
   by: Rankine passive earth pressure and thrust  (Kp = (1 + sin phi)/(1 - sin phi); sigma_p = Kp(gam z + q) + 2c sqrt(Kp); Pp = area of the pressure diagram)
-  phi = 32
-  gam = 18000 N/m^3
-  H = 2 m
+  phi = 32   []
+  gam = 18000 N/m^3   []
+  H = 2 m   []
   assumes: smooth vertical wall, horizontal soil surface; dry soil
 ```
 
@@ -547,13 +414,13 @@ qu = 1848052 Pa
 qa = 616017.3333 Pa
 q_net = 1821052 Pa
   by: Terzaghi bearing capacity with stated factors  (qu = s_c c Nc + gamma Df Nq + s_g gamma B Ngamma (strip 1, 0.5; square 1.3, 0.4; circular 1.3, 0.3))
-  c = 20000 Pa
-  gam = 18000 N/m^3
-  B = 2 m
-  Df = 1.5 m
-  Nc = 37.16
-  Nq = 22.46
-  Ngamma = 19.13
+  c = 20000 Pa   []
+  gam = 18000 N/m^3   []
+  B = 2 m   []
+  Df = 1.5 m   []
+  Nc = 37.16   []
+  Nq = 22.46   []
+  Ngamma = 19.13   []
   shape = square
   assumes: c, Df >= 0; factors as stated (Terzaghi's table for the friction angle); general shear failure, vertical central load
 ```
@@ -594,11 +461,11 @@ Nc = 30.13962779
 Nq = 18.40112222
 Ngamma = 22.40248627
   by: Ultimate bearing capacity of a strip footing  (Nq = e^(pi tan phi) tan^2(45 + phi/2), Nc = (Nq - 1) cot phi, Ngamma = 2(Nq + 1) tan phi; qu = c Nc + gam Df Nq + B gam Ngamma/2)
-  c = 10000 Pa
-  phi = 30
-  gam = 18000 N/m^3
-  B = 1.5 m
-  Df = 1 m
+  c = 10000 Pa   []
+  phi = 30   []
+  gam = 18000 N/m^3   []
+  B = 1.5 m   []
+  Df = 1 m   []
   assumes: 20 <= phi <= 45 degrees; general shear failure; strip footing, vertical central load
 ```
 
@@ -631,10 +498,10 @@ $ civil-engineering solve stress_below_rectangular_load "q=200000 Pa" "B=2 m" "L
 dsigma = 21414.5858 Pa
 I = 0.107072929
   by: Vertical stress below a uniformly loaded rectangle (Newmark)  (I = (1/4 pi)[2mn sqrt(s)/(s + m^2 n^2) (s + 1)/s + atan2(2mn sqrt(s), s - m^2 n^2)], s = m^2 + n^2 + 1, m = B/z, n = L/z)
-  q = 200000 Pa
-  B = 2 m
-  L = 3 m
-  z = 4 m
+  q = 200000 Pa   []
+  B = 2 m   []
+  L = 3 m   []
+  z = 4 m   []
   assumes: elastic, homogeneous, isotropic half-space; flexible uniform load
 ```
 
@@ -666,9 +533,9 @@ $ civil-engineering solve stress_below_strip_load "q=100000 Pa" "B=2 m" "z=3 m"
 dsigma = 39581.86964 Pa
 I = 0.3958186964
   by: Vertical stress below a uniformly loaded strip  (dsigma = (q/pi)[atan(u/z) + u z/(u^2 + z^2)] from u = x - B/2 to x + B/2)
-  q = 100000 Pa
-  B = 2 m
-  z = 3 m
+  q = 100000 Pa   []
+  B = 2 m   []
+  z = 3 m   []
   assumes: elastic, homogeneous, isotropic half-space; flexible uniform load, plane strain
 ```
 
@@ -699,9 +566,9 @@ $ civil-engineering solve stress_below_circular_load "q=150000 Pa" "a=2 m" "z=3 
 dsigma = 63594.77713 Pa
 I = 0.4239651808
   by: Vertical stress below the centre of a uniformly loaded circle  (dsigma = q [1 - (1/(1 + (a/z)^2))^(3/2)])
-  q = 150000 Pa
-  a = 2 m
-  z = 3 m
+  q = 150000 Pa   []
+  a = 2 m   []
+  z = 3 m   []
   assumes: elastic, homogeneous, isotropic half-space; flexible uniform load; below the centre
 ```
 
@@ -741,8 +608,8 @@ Kv = 1e-05 m/s
 Kh = 1e-05 m/s
 heads = [0.0] m
   by: Darcy flow across soil layers in series; equivalent conductivities  (Kv = sum H / sum(H_i/K_i), Kh = sum(K_i H_i)/sum H, q = Kv dh/sum H, Q = q A)
-  A = 10 m^2
-  dh = 0.5 m
+  A = 10 m^2   []
+  dh = 0.5 m   []
   assumes: steady, saturated, laminar flow; flow perpendicular to the layers
 ```
 
@@ -778,11 +645,11 @@ $ civil-engineering solve well_field_drawdown "wx=[0, 200]" "wy=[0, 0]" "Qs=[200
 s = 4.935878027 m
 parts = [2.82050172954,2.11537629715] m
   by: Drawdown from several wells by superposition (Theis)  (s = sum Q_i W(u_i)/(4 pi T), u_i = r_i^2 S/(4 T t))
-  T = 0.00462962963 m^2/s
-  S = 0.0003
-  t = 432000 s
-  x0 = 100 m
-  y0 = 50 m
+  T = 0.00462962963 m^2/s   []
+  S = 0.0003   []
+  t = 432000 s   []
+  x0 = 100 m   []
+  y0 = 50 m   []
   assumes: confined, homogeneous, infinite aquifer; all wells started together; point at least 5 cm from any well
 ```
 
@@ -816,12 +683,12 @@ $ civil-engineering solve falling_head_permeability "d=0.01 m" "D=0.075 m" "L=0.
 K = 2.270336106e-06 m/s
 K_cm_s = 0.0002270336106
   by: Hydraulic conductivity from a falling-head test  (K = (a L/(A t)) ln(h1/h2), a and A the standpipe and sample areas)
-  d = 0.01 m
-  D = 0.075 m
-  L = 0.15 m
-  h1 = 1 m
-  h2 = 0.6 m
-  t = 600 s
+  d = 0.01 m   []
+  D = 0.075 m   []
+  L = 0.15 m   []
+  h1 = 1 m   []
+  h2 = 0.6 m   []
+  t = 600 s   []
   assumes: h2 < h1; saturated sample, laminar flow
 ```
 
@@ -854,11 +721,11 @@ $ civil-engineering solve thiem_unconfined_conductivity "Q=0.01736111111 m^3/s" 
 K = 0.0001447648968 m/s
 K_m_d = 12.50768708
   by: Hydraulic conductivity from steady pumping (unconfined aquifer)  (K = Q ln(r2/r1)/(pi (h2^2 - h1^2)))
-  Q = 0.01736111111 m^3/s
-  r1 = 20 m
-  r2 = 80 m
-  h1 = 18.2 m
-  h2 = 19.6 m
+  Q = 0.01736111111 m^3/s   []
+  r1 = 20 m   []
+  r2 = 80 m   []
+  h1 = 18.2 m   []
+  h2 = 19.6 m   []
   assumes: steady state; unconfined aquifer, Dupuit assumptions; r1 < r2, h1 < h2
 ```
 
@@ -893,11 +760,11 @@ s = 2.519239468 m
 u = 0.001
 W = 6.331539364
   by: Theis drawdown around a pumped well  (u = r^2 S/(4 T t), W(u) = E1(u) (series for u <= 1, continued fraction above), s = Q W/(4 pi T))
-  Q = 0.02893518519 m^3/s
-  T = 0.005787037037 m^2/s
-  S = 0.0002
-  r = 100 m
-  t = 86400 s
+  Q = 0.02893518519 m^3/s   []
+  T = 0.005787037037 m^2/s   []
+  S = 0.0002   []
+  r = 100 m   []
+  t = 86400 s   []
   assumes: confined, homogeneous, infinite aquifer; fully penetrating well, constant rate; u <= 50
 ```
 
@@ -935,8 +802,8 @@ ds_per_cycle = 0.5706342049 m
 t0_min = 0.8211372737
 T_m2_d = 642.3271351
   by: Transmissivity and storativity by the Cooper-Jacob straight line  (fit s = a + b log10 t; T = 2.303 Q/(4 pi b), S = 2.25 T t0/r^2 with t0 = 10^(-a/b))
-  Q = 0.02314814815 m^3/s
-  r = 50 m
+  Q = 0.02314814815 m^3/s   []
+  r = 50 m   []
   assumes: late-time data on the straight line (u < 0.05); confined aquifer
 ```
 
@@ -971,11 +838,11 @@ $ civil-engineering solve thiem_confined_transmissivity "Q=0.02893518519 m^3/s" 
 T = 0.003755371735 m^2/s
 T_m2_d = 324.4641179
   by: Transmissivity from steady pumping (Thiem, confined aquifer)  (T = Q ln(r2/r1)/(2 pi (s1 - s2)))
-  Q = 0.02893518519 m^3/s
-  r1 = 15 m
-  r2 = 60 m
-  s1 = 2.8 m
-  s2 = 1.1 m
+  Q = 0.02893518519 m^3/s   []
+  r1 = 15 m   []
+  r2 = 60 m   []
+  s1 = 2.8 m   []
+  s2 = 1.1 m   []
   assumes: steady state; confined aquifer, fully penetrating well; r1 < r2, s1 > s2
 ```
 
@@ -1012,11 +879,11 @@ qL = 8.92831679e-06 m^2/s
 x_divide = -339.1874998 m
 h_max = 12 m
   by: Unconfined flow between two water bodies with recharge (Dupuit)  (h^2 = h1^2 - (h1^2 - h2^2) x/L + (W/K)(L - x) x; q = K(h1^2 - h2^2)/(2L) - W(L/2 - x))
-  K = 0.0001157407407 m/s
-  h1 = 12 m
-  h2 = 9 m
-  L = 600 m
-  W = 9.506426344e-09 m/s
+  K = 0.0001157407407 m/s   []
+  h1 = 12 m   []
+  h2 = 9 m   []
+  L = 600 m   []
+  W = 9.506426344e-09 m/s   []
   assumes: steady, unconfined, homogeneous aquifer on a horizontal base; Dupuit assumptions; W > 0
 ```
 
@@ -1126,10 +993,10 @@ f = 5.593135822e-06 m/s
 F_mm = 32.09669252
 f_mm_h = 20.13528896
   by: Green-Ampt cumulative infiltration under ponding  (F - psi dtheta ln(1 + F/(psi dtheta)) = K t (bisection); f = K(1 + psi dtheta/F))
-  K = 3.027777778e-06 m/s
-  psi = 0.1101 m
-  dtheta = 0.247
-  t = 3600 s
+  K = 3.027777778e-06 m/s   []
+  psi = 0.1101 m   []
+  dtheta = 0.247   []
+  t = 3600 s   []
   assumes: ponded surface from t = 0; homogeneous soil, sharp wetting front
 ```
 
@@ -1163,7 +1030,7 @@ K_T = 3.13666843
 mean = 451.5 m^3/s
 std = 115.1339799 m^3/s
   by: Gumbel (EV1) design flood  (K_T = -(sqrt 6/pi)(0.5772 + ln ln(T/(T - 1))), Q_T = mean + K_T s)
-  T = 100
+  T = 100   []
   assumes: at least five annual maxima; T > 1 year; method of moments (no sample-size correction table)
 ```
 
@@ -1199,10 +1066,10 @@ F = 0.02595237087 m
 f_mm_h = 11.19051653
 F_mm = 25.95237087
   by: Horton infiltration rate and cumulative infiltration  (f = fc + (f0 - fc) e^(-k t), F = fc t + (f0 - fc)(1 - e^(-k t))/k)
-  f0 = 2.083333333e-05 m/s
-  fc = 2.777777778e-06 m/s
-  k = 0.001111111111
-  t = 3600 s
+  f0 = 2.083333333e-05 m/s   []
+  fc = 2.777777778e-06 m/s   []
+  k = 0.001111111111   []
+  t = 3600 s   []
   assumes: 0 <= fc < f0; ponded surface from t = 0
 ```
 
@@ -1263,17 +1130,7 @@ $$
 
 **Applies when:** at least ten annual maxima; station skew only; no outlier screening.
 
-```shell
-$ civil-engineering solve log_pearson_iii_design_flood "peaks=[420, 380, 510, 290, 640, 455, 370, 520, 600, 330, 880, 410]" T=100
-Q_T = 1083.770605 m^3/s
-K_T = 2.753907684
-mean_log = 2.664610768
-std_log = 0.1344731349
-skew = 0.598210844
-  by: Log-Pearson type III design flood  (moments of log10 Q; K_T = Pearson III quantile (gamma inverse with shape 4/G^2); Q_T = 10^(m + K s))
-  T = 100
-  assumes: at least ten annual maxima; station skew only; no outlier screening
-```
+*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the design flood for a return period of 100 years by fitting the Log-Pearson Type III distribution to annual maximum discharges. The process begins by computing the mean, standard deviation, and skew coefficient of the base-10 logarithms of the input peaks, resulting in values of 2.66461, 0.134473, and 0.598211 respectively. These statistics are used to derive the frequency factor 2.75391, which scales the variability around the mean log discharge. The final output, 1083.77 m^3/s, represents the estimated peak flow rate that has a probability of being equaled or exceeded once every 100 years on average.
 
@@ -1312,9 +1169,9 @@ C2 = 0.5238095238
 peak_outflow = 45.83604568 m^3/s
 attenuation = 22.16395432 m^3/s
   by: Muskingum flood routing  (O_j+1 = C0 I_j+1 + C1 I_j + C2 O_j, C0 = (dt - 2KX)/D, C1 = (dt + 2KX)/D, C2 = (2K(1 - X) - dt)/D, D = 2K(1 - X) + dt)
-  K = 43200 s
-  X = 0.2
-  dt = 21600 s
+  K = 43200 s   []
+  X = 0.2   []
+  dt = 21600 s   []
   assumes: 0 <= X <= 0.5; 2 K X <= dt <= 2 K (1 - X) (no negative coefficient)
 ```
 
@@ -1376,9 +1233,9 @@ $ civil-engineering solve rational_method_peak_runoff C=0.6 "i=1.388888889e-05 m
 Q = 1.666666667 m^3/s
 Q_Ls = 1666.666667
   by: Peak runoff by the rational method  (Q = C i A (SI); = 0.278 C i[mm/h] A[km^2])
-  C = 0.6
-  i = 1.388888889e-05 m/s
-  A = 200000 m^2
+  C = 0.6   []
+  i = 1.388888889e-05 m/s   []
+  A = 200000 m^2   []
   assumes: 0 < C <= 1; A <= 800 ha (small catchments); intensity for a duration equal to the time of concentration
 ```
 
@@ -1411,8 +1268,8 @@ phi = 6.333333333
 excess = [0.0,2.66666666667,11.6666666667,5.66666666667,0.0,0.0]
 contributing = 3
   by: Phi-index of a storm  (the k largest intervals contribute: phi dt = (sum of the k largest - R)/k, with k found by consistency)
-  dt = 3600 s
-  R = 20 m
+  dt = 3600 s   []
+  R = 20 m   []
   assumes: 0 < runoff < total rainfall; equal intervals
 ```
 
@@ -1442,7 +1299,7 @@ $ civil-engineering solve design_return_period_for_risk R=0.1 n=50
 T = 475.0612547
 p_annual = 0.002104991704
   by: Return period for an acceptable risk over a design life  (T = 1/(1 - (1 - R)^(1/n)))
-  R = 0.1
+  R = 0.1   []
   assumes: 0 < R < 1; independent years
 ```
 
@@ -1504,7 +1361,7 @@ risk = 0.3949939329
 p_annual = 0.01
 p_none = 0.6050060671
   by: Risk of exceedance over a design life  (risk = 1 - (1 - 1/T)^n)
-  T = 100
+  T = 100   []
   assumes: T > 1 year; independent years
 ```
 
@@ -1539,8 +1396,8 @@ S = 63.5
 Ia = 12.7
 C = 0.5053905836
   by: SCS curve-number runoff depth  (S = 25400/CN - 254 (mm), Ia = lambda S, Q = (P - Ia)^2/(P - Ia + S) for P > Ia, else 0)
-  P = 100 m
-  CN = 80
+  P = 100 m   []
+  CN = 80   []
   assumes: 30 <= CN <= 100; rainfall depth in mm; 0 <= lambda <= 0.3
 ```
 
@@ -1572,8 +1429,8 @@ tc = 1469.765514 s
 tc_min = 24.4960919
 tc_h = 0.4082681983
   by: Time of concentration by the Kirpich formula  (tc = 0.0078 L_ft^0.77 S^-0.385 min, L_ft = L/0.3048)
-  L = 1500 m
-  S = 0.02
+  L = 1500 m   []
+  S = 0.02   []
   assumes: 0 < S <= 1; L <= 100 km; small rural catchments (Kirpich's data: 0.4 to 45 ha)
 ```
 
@@ -1637,9 +1494,9 @@ $ civil-engineering solve broad_crested_weir_discharge Cd=0.95 "b=5 m" "H=0.6 m"
 Q = 3.763726876 m^3/s
 yc = 0.4 m
   by: Broad-crested weir discharge  (Q = Cd b sqrt(g) (2H/3)^(3/2))
-  Cd = 0.95
-  b = 5 m
-  H = 0.6 m
+  Cd = 0.95   []
+  b = 5 m   []
+  H = 0.6 m   []
   assumes: Cd stated; critical flow on the crest; H includes the approach velocity head
 ```
 
@@ -1667,8 +1524,8 @@ $$
 $ civil-engineering solve chezy_from_manning n=0.013 "R=0.75 m"
 C = 73.32186869 m^0.5/s
   by: Chezy coefficient from Manning's n  (C = R^(1/6)/n)
-  n = 0.013
-  R = 0.75 m
+  n = 0.013   []
+  R = 0.75 m   []
   assumes: 0.005 <= n <= 0.2; R > 0
 ```
 
@@ -1697,9 +1554,9 @@ $$
 $ civil-engineering solve chezy_velocity "C=55 m^0.5/s" "R=1.1 m" S=0.0004
 V = 1.153689733 m/s
   by: Chezy velocity  (V = C sqrt(R S))
-  C = 55 m^0.5/s
-  R = 1.1 m
-  S = 0.0004
+  C = 55 m^0.5/s   []
+  R = 1.1 m   []
+  S = 0.0004   []
   assumes: C, R > 0; 0 < S < 1
 ```
 
@@ -1733,8 +1590,8 @@ Ac = 0.2922347611 m^2
 Vc = 1.710953201 m/s
 Emin = 0.548044166 m
   by: Critical depth in a circular conduit  (bisection on Q^2 T(y) = g A(y)^3 with circular-segment geometry)
-  Q = 0.5 m^3/s
-  D = 1 m
+  Q = 0.5 m^3/s   []
+  D = 1 m   []
   assumes: Q, D > 0; critical depth below 0.95 D
 ```
 
@@ -1768,8 +1625,8 @@ Vc = 2.96856056 m/s
 Emin = 1.347454404 m
 q = 2.666666667 m^2/s
   by: Critical depth in a rectangular channel  (yc = (q^2/g)^(1/3), q = Q/b)
-  Q = 8 m^3/s
-  b = 3 m
+  Q = 8 m^3/s   []
+  b = 3 m   []
   assumes: Q, b > 0
 ```
 
@@ -1804,9 +1661,9 @@ Ac = 5.507664928 m^2
 Vc = 2.723477226 m/s
 Emin = 1.449129374 m
   by: Critical depth in a trapezoidal channel  (bisection on Q^2 T(y) = g A(y)^3)
-  Q = 15 m^3/s
-  b = 3 m
-  z = 2
+  Q = 15 m^3/s   []
+  b = 3 m   []
+  z = 2   []
   assumes: Q > 0; b >= 0; z > 0
 ```
 
@@ -1839,9 +1696,9 @@ Q = 0.009189033904 m^3/s
 V_ideal = 7.672027112 m/s
 area = 0.001963495408 m^2
   by: Discharge through a small orifice under a head  (Q = Cd (pi d^2/4) sqrt(2 g h))
-  Cd = 0.61
-  d = 0.05 m
-  h = 3 m
+  Cd = 0.61   []
+  d = 0.05 m   []
+  h = 3 m   []
   assumes: small orifice (d much smaller than h); free jet; Cd stated
 ```
 
@@ -1874,9 +1731,9 @@ Fr = 2.709141846
 V = 6 m/s
 regime = supercritical
   by: Froude number of flow in a rectangular channel  (V = Q/(b y), Fr = V/sqrt(g y))
-  Q = 12 m^3/s
-  b = 4 m
-  y = 0.5 m
+  Q = 12 m^3/s   []
+  b = 4 m   []
+  y = 0.5 m   []
   assumes: Q, b, y > 0
 ```
 
@@ -1915,9 +1772,9 @@ dE = 4.876755035 m
 power_loss = 478409.669 W
 ratio = 8.438015684
   by: Hydraulic jump in a rectangular channel  (y2 = (y1/2)(sqrt(1 + 8 Fr1^2) - 1), dE = (y2 - y1)^3/(4 y1 y2))
-  Q = 10 m^3/s
-  b = 2 m
-  y1 = 0.4 m
+  Q = 10 m^3/s   []
+  b = 2 m   []
+  y1 = 0.4 m   []
   assumes: horizontal, frictionless bed; Fr1 > 1
 ```
 
@@ -1948,21 +1805,7 @@ $$
 
 **Applies when:** S0 > 0 (mild or steep slope); prismatic rectangular channel; both depths in one zone, 2% from yn and yc.
 
-```shell
-$ civil-engineering solve gradually_varied_flow_length "Q=20 m^3/s" "b=5 m" S0=0.0004 n=0.015 "y1=4 m" "y2=3 m"
-L = -4594.586187 m
-yn = 2.563823865 m
-yc = 1.177109844 m
-profile = M1
-  by: Length of a gradually varied flow profile (rectangular channel)  (x2 - x1 = integral of (1 - Fr^2)/(S0 - Sf) dy from y1 to y2, Sf from Manning (tanh-sinh quadrature))
-  Q = 20 m^3/s
-  b = 5 m
-  S0 = 0.0004
-  n = 0.015
-  y1 = 4 m
-  y2 = 3 m
-  assumes: S0 > 0 (mild or steep slope); prismatic rectangular channel; both depths in one zone, 2% from yn and yc
-```
+*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the longitudinal distance along a prismatic rectangular channel between two specified flow depths in a gradually varied flow profile. By integrating the governing differential equation using Manning's friction slope, it finds that the section at depth 3 m lies -4594.59 m downstream from the section at depth 4 m. The result depends on the classification of the profile relative to normal depth 2.56382 m and critical depth 1.17711 m.
 
@@ -1989,19 +1832,7 @@ $$
 
 **Applies when:** b, y > 0; 0 < S < 1; 0.005 <= n <= 0.2.
 
-```shell
-$ civil-engineering solve manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001 n=0.013
-Q = 6.682900203 m^3/s
-V = 1.856361167 m/s
-A = 3.6 m^2
-R = 0.6666666667 m
-  by: Manning discharge in a rectangular channel  (A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n)
-  b = 3 m
-  y = 1.2 m
-  S = 0.001
-  n = 0.013
-  assumes: b, y > 0; 0 < S < 1; 0.005 <= n <= 0.2
-```
+*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the uniform flow discharge and mean velocity in a rectangular channel. Using the bottom width of 3 m, flow depth of 1.2 m, bed slope of 0.001, and Manning roughness coefficient of 0.013, it computes the flow area as 3.6 m^2 and hydraulic radius as 0.666667 m. The resulting discharge of 6.6829 m^3/s indicates how much water passes per second, while the velocity of 1.85636 m/s shows how fast the water moves.
 
@@ -2029,20 +1860,7 @@ $$
 
 **Applies when:** y > 0; b >= 0; z >= 0; 0 < S < 1; 0.005 <= n <= 0.2.
 
-```shell
-$ civil-engineering solve manning_trapezoidal_discharge "b=4 m" "y=1.5 m" z=2 S=0.0008 n=0.025
-Q = 11.72490667 m^3/s
-V = 1.116657778 m/s
-A = 10.5 m^2
-R = 0.9805565963 m
-  by: Manning discharge in a trapezoidal channel  (A = (b + z y) y, R = A/(b + 2 y sqrt(1 + z^2)), Q = A R^(2/3) S^(1/2)/n)
-  b = 4 m
-  y = 1.5 m
-  z = 2
-  S = 0.0008
-  n = 0.025
-  assumes: y > 0; b >= 0; z >= 0; 0 < S < 1; 0.005 <= n <= 0.2
-```
+*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the uniform-flow discharge and velocity for a trapezoidal channel using Manning's equation. It uses the bottom width, flow depth, side slope, bed slope, and roughness coefficient to compute the geometric properties. The resulting flow area is 10.5 m^2, hydraulic radius is 0.980557 m, and discharge is 11.7249 m^3/s, which represents the volume of water moving through the channel per second.
 
@@ -2071,21 +1889,7 @@ $$
 
 **Applies when:** 0 < y <= D; 0 < S < 1; n constant with depth.
 
-```shell
-$ civil-engineering solve manning_partially_full_pipe "D=0.6 m" "y=0.3 m" S=0.005 n=0.013
-Q = 0.217085863 m^3/s
-V = 1.535568363 m/s
-A = 0.1413716694 m^2
-R = 0.15 m
-Q_full = 0.434171726 m^3/s
-ratio = 0.5
-  by: Manning flow in a part-full circular pipe  (circular-segment geometry, Q = A R^(2/3) S^(1/2)/n; Q_full with R = D/4)
-  D = 0.6 m
-  y = 0.3 m
-  S = 0.005
-  n = 0.013
-  assumes: 0 < y <= D; 0 < S < 1; n constant with depth
-```
+*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the gravity flow capacity in a circular sewer or culvert. Using Manning's equation with slope 0.005 and roughness 0.013, it computes the wetted area 0.141372 m^2 and hydraulic radius 0.15 m. The resulting discharge 0.217086 m^3/s and velocity 1.53557 m/s are compared to the full-bore capacity 0.434172 m^3/s to assess how close the pipe is to surcharging.
 
@@ -2112,9 +1916,9 @@ $$
 $ civil-engineering solve manning_velocity "R=0.8 m" S=0.0005 n=0.015
 V = 1.284656645 m/s
   by: Manning velocity from hydraulic radius  (V = R^(2/3) S^(1/2) / n)
-  R = 0.8 m
-  S = 0.0005
-  n = 0.015
+  R = 0.8 m   []
+  S = 0.0005   []
+  n = 0.015   []
   assumes: R > 0; 0 < S < 1; 0.005 <= n <= 0.2
 ```
 
@@ -2142,8 +1946,8 @@ $$
 $ civil-engineering solve manning_from_chezy "C=60 m^0.5/s" "R=1.2 m"
 n = 0.01718088868
   by: Manning's n from a Chezy coefficient  (n = R^(1/6)/C)
-  C = 60 m^0.5/s
-  R = 1.2 m
+  C = 60 m^0.5/s   []
+  R = 1.2 m   []
   assumes: C, R > 0
 ```
 
@@ -2177,10 +1981,10 @@ yn = 1.754416688 m
 V = 1.424975046 m/s
 Fr = 0.3434838961
   by: Normal depth in a rectangular channel  (bisection on Manning's Q(y) = Q (Q increases with y))
-  Q = 10 m^3/s
-  b = 4 m
-  S = 0.0005
-  n = 0.015
+  Q = 10 m^3/s   []
+  b = 4 m   []
+  S = 0.0005   []
+  n = 0.015   []
   assumes: Q, b > 0; 0 < S < 1
 ```
 
@@ -2217,11 +2021,11 @@ V = 0.9897350221 m/s
 A = 20.20742881 m^2
 Fr = 0.2598312543
   by: Normal depth in a trapezoidal channel  (bisection on Manning's Q(y) = Q)
-  Q = 20 m^3/s
-  b = 5 m
-  z = 2
-  S = 0.0004
-  n = 0.025
+  Q = 20 m^3/s   []
+  b = 5 m   []
+  z = 2   []
+  S = 0.0004   []
+  n = 0.025   []
   assumes: Q > 0; b >= 0; z >= 0; 0 < S < 1
 ```
 
@@ -2259,8 +2063,8 @@ T = 0.9797958971 m
 Dh = 0.5021743388 m
 theta = 203.0739181
   by: Part-full circular conduit: area, wetted perimeter, hydraulic radius  (theta = 2 acos(1 - 2y/D), A = D^2 (theta - sin theta)/8, P = D theta/2, T = D sin(theta/2))
-  D = 1 m
-  y = 0.6 m
+  D = 1 m   []
+  y = 0.6 m   []
   assumes: 0 < y < D
 ```
 
@@ -2288,18 +2092,7 @@ $$
 
 **Applies when:** b > 0; y > 0.
 
-```shell
-$ civil-engineering solve rectangular_channel_section "b=3 m" "y=1.2 m"
-A = 3.6 m^2
-P = 5.4 m
-R = 0.6666666667 m
-T = 3 m
-Dh = 1.2 m
-  by: Rectangular channel: area, wetted perimeter, hydraulic radius  (A = b y, P = b + 2y, R = A/P, T = b, D = A/T)
-  b = 3 m
-  y = 1.2 m
-  assumes: b > 0; y > 0
-```
+*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the geometric properties of water flowing in a rectangular channel. Using a bottom width of 3 m and a flow depth of 1.2 m, it computes the cross-sectional flow area as 3.6 m^2, which represents the total space occupied by the water. The wetted perimeter, calculated as 5.4 m, measures the length of the channel boundary in contact with the water. From these values, the hydraulic radius is derived as 0.666667 m, indicating the efficiency of the channel shape for conveying flow. Additionally, the top width is found to be 3 m, equal to the bottom width, and the hydraulic depth is 1.2 m, which is used in Froude number calculations.
 
@@ -2329,9 +2122,9 @@ $ civil-engineering solve rectangular_weir_discharge Cd=0.62 "b=2 m" "H=0.35 m"
 Q = 0.7581968821 m^3/s
 L_eff = 2 m
   by: Sharp-crested rectangular weir discharge  (Q = (2/3) Cd L_eff sqrt(2g) H^(3/2), L_eff = b - 0.1 n H)
-  Cd = 0.62
-  b = 2 m
-  H = 0.35 m
+  Cd = 0.62   []
+  b = 2 m   []
+  H = 0.35 m   []
   assumes: Cd stated; free (unsubmerged) nappe; b - 0.1 n H > 0
 ```
 
@@ -2368,9 +2161,9 @@ yc = 0.9716827674 m
 Fr = 3.78614083
 regime = supercritical
   by: Specific energy and alternate depth in a rectangular channel  (E = y + q^2/(2 g y^2); the other positive root of y^3 - E y^2 + q^2/(2g) = 0 by bisection)
-  Q = 6 m^3/s
-  b = 2 m
-  y = 0.4 m
+  Q = 6 m^3/s   []
+  b = 2 m   []
+  y = 0.4 m   []
   assumes: Q, b, y > 0; y is not the critical depth
 ```
 
@@ -2399,19 +2192,7 @@ $$
 
 **Applies when:** y > 0; b >= 0; z >= 0.
 
-```shell
-$ civil-engineering solve trapezoidal_channel_section "b=4 m" "y=1.5 m" z=2
-A = 10.5 m^2
-P = 10.70820393 m
-R = 0.9805565963 m
-T = 10 m
-Dh = 1.05 m
-  by: Trapezoidal channel: area, wetted perimeter, hydraulic radius  (A = (b + z y) y, P = b + 2 y sqrt(1 + z^2), T = b + 2 z y)
-  b = 4 m
-  y = 1.5 m
-  z = 2
-  assumes: y > 0; b >= 0; z >= 0
-```
+*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the geometric properties of flow in a trapezoidal channel using the bottom width 4 m, flow depth 1.5 m, and side slope 2. The resulting flow area 10.5 m^2 represents the cross-sectional area available for water, while the wetted perimeter 10.7082 m indicates the length of the channel boundary in contact with the fluid. The hydraulic radius 0.980557 m, defined as the ratio of area to perimeter, characterizes the efficiency of the channel section for conveying flow.
 
@@ -2438,9 +2219,9 @@ $$
 $ civil-engineering solve v_notch_weir_discharge Cd=0.58 theta=90 "H=0.25 m"
 Q = 0.04281798687 m^3/s
   by: V-notch (triangular) weir discharge  (Q = (8/15) Cd sqrt(2g) tan(theta/2) H^(5/2))
-  Cd = 0.58
-  theta = 90
-  H = 0.25 m
+  Cd = 0.58   []
+  theta = 90   []
+  H = 0.25 m   []
   assumes: Cd stated; 0 < theta < 180 degrees; free nappe
 ```
 
@@ -2474,7 +2255,7 @@ $ civil-engineering solve parallel_pipes_hazen_williams "Q=0.3 m^3/s" "L=[800, 1
 hf = 7.944067369 m
 flows = [0.116758581689,0.183241418311] m^3/s
   by: Flow division among parallel pipes (Hazen-Williams)  (hf = (Q / sum k_i^(-1/1.852))^1.852 with k_i = 10.6668 L_i/(C_i^1.852 D_i^4.871); Q_i = (hf/k_i)^(1/1.852))
-  Q = 0.3 m^3/s
+  Q = 0.3 m^3/s   []
   assumes: the same head loss across every pipe; 40 <= C <= 160; lists of equal length
 ```
 
@@ -2508,10 +2289,10 @@ hf = 2.064555214 m
 V = 0.7073553026 m/s
 Sf = 0.002064555214
   by: Hazen-Williams head loss in a pipe  (hf = 10.6668 L Q^1.852/(C^1.852 D^4.871))
-  Q = 0.05 m^3/s
-  D = 0.3 m
-  L = 1000 m
-  C = 120
+  Q = 0.05 m^3/s   []
+  D = 0.3 m   []
+  L = 1000 m   []
+  C = 120   []
   assumes: water near 15 C, turbulent flow; 40 <= C <= 160
 ```
 
@@ -2543,10 +2324,10 @@ $ civil-engineering solve hazen_williams_flow "hf=5 m" "D=0.3 m" "L=1500 m" C=11
 Q = 0.05936365982 m^3/s
 V = 0.8398239911 m/s
   by: Pipe flow from a head loss (Hazen-Williams)  (Q = (hf C^1.852 D^4.871/(10.6668 L))^(1/1.852))
-  hf = 5 m
-  D = 0.3 m
-  L = 1500 m
-  C = 110
+  hf = 5 m   []
+  D = 0.3 m   []
+  L = 1500 m   []
+  C = 110   []
   assumes: 40 <= C <= 160; hf > 0
 ```
 
@@ -2576,15 +2357,7 @@ $$
 
 **Applies when:** one source (node 1); connected network; 40 <= C <= 160; demands >= 0.
 
-```shell
-$ civil-engineering solve hardy_cross_network "pipes=1-2, 2-3, 3-4, 4-1, 2-4" "L=[600, 500, 600, 500, 780]" "D=[300, 250, 200, 250, 200]" "C=[120, 120, 120, 120, 120]" "demands=[0, 0.04, 0.05, 0.03]"
-flows = [0.0714399845267,0.0331343839504,-0.0168656160496,-0.0485600154733,-0.00169439942369] m^3/s
-head_loss = [0.0,2.39874834362,3.56973630784,2.37675423164] m
-loops = 2
-iterations = 14
-  by: Pipe network flows by the Hardy Cross method (Hazen-Williams)  (loop corrections dQ = -sum(k Q|Q|^0.852)/(1.852 sum(k|Q|^0.852)) until converged, then Newton on all loops)
-  assumes: one source (node 1); connected network; 40 <= C <= 160; demands >= 0
-```
+*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the flow distribution and pressure drops throughout a looped water network. By applying the Hardy Cross method with Hazen-Williams friction, the model iteratively adjusts initial flow guesses to satisfy both mass conservation at nodes and energy conservation around loops. The resulting pipe flows are [0.07144, 0.0331344, -0.0168656, -0.04856, -0.0016944] m^3/s, where positive values indicate movement from the first to the second node of each pair. The cumulative head loss from the source node to every other node is [0, 2.39875, 3.56974, 2.37675] m. These results rely on the input parameters including pipe lengths [600, 500, 600, 500, 780], diameters [300, 250, 200, 250, 200], roughness coefficients [120, 120, 120, 120, 120], and nodal demands [0, 0.04, 0.05, 0.03]. The solution converged after 14 iterations across 2 independent loops.
 
@@ -2650,9 +2423,9 @@ Tv = 0.2777777778
 U = 0.5913702173
 U_percent = 59.13702173
   by: Average degree of consolidation after a time (Terzaghi)  (Tv = cv t/Hdr^2; U = 1 - sum 2/M^2 exp(-M^2 Tv), M = pi(2m + 1)/2)
-  cv = 7.922021954e-08 m^2/s
-  t = 31557600 s
-  Hdr = 3 m
+  cv = 7.922021954e-08 m^2/s   []
+  t = 31557600 s   []
+  Hdr = 3 m   []
   assumes: 1e-4 <= Tv <= 5; uniform initial excess pore pressure; Terzaghi 1-D theory
 ```
 
@@ -2685,9 +2458,9 @@ cv = 2.623076527e-08 m^2/s
 Tv = 0.1967307395
 cv_m2_yr = 0.8277799981
   by: Coefficient of consolidation from a consolidation time  (Tv(U) exactly (bisection), cv = Tv Hdr^2/t)
-  Hdr = 0.01 m
-  t = 750 s
-  U = 0.5
+  Hdr = 0.01 m   []
+  t = 750 s   []
+  U = 0.5   []
   assumes: 1% <= U <= 99%; Terzaghi 1-D theory
 ```
 
@@ -2778,19 +2551,7 @@ $$
 
 **Applies when:** normally consolidated clay; uniform added stress with depth; s0' = s_top + gsub z.
 
-```shell
-$ civil-engineering solve thick_clay_layer_settlement "H=10 m" "s_top=40000 Pa" "gsub=8000 N/m^3" "ds=100000 Pa" Cc=0.45 e0=1.2
-S = 0.7531290745 m
-S_one_layer = 0.7203733325 m
-  by: Consolidation settlement of a thick clay layer integrated over depth  (S = Cc/(1+e0) integral_0^H log10((s0'(z) + ds)/s0'(z)) dz in closed form)
-  H = 10 m
-  s_top = 40000 Pa
-  gsub = 8000 N/m^3
-  ds = 100000 Pa
-  Cc = 0.45
-  e0 = 1.2
-  assumes: normally consolidated clay; uniform added stress with depth; s0' = s_top + gsub z
-```
+*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the primary consolidation settlement for a thick, normally consolidated clay layer by integrating the strain over its entire depth. The initial effective stress increases linearly from 40000 Pa at the top due to the submerged unit weight of 8000 N/m^3. Under a uniform added stress of 100000 Pa, the total settlement computed through exact integration is 0.753129 m. For comparison, the simplified method using mid-depth properties yields an estimate of 0.720373 m, highlighting the difference between precise integration and approximate methods in deep deposits.
 
@@ -2858,11 +2619,11 @@ u = 52247.33366 Pa
 Uz = 0.4775266634
 Tv = 0.2222222222
   by: Excess pore pressure at a depth during consolidation  (u = sum 2u0/M sin(M z/Hdr) exp(-M^2 Tv), M = pi(2m + 1)/2)
-  u0 = 100000 Pa
-  cv = 6.337617563e-08 m^2/s
-  t = 31557600 s
-  Hdr = 3 m
-  z = 1.5 m
+  u0 = 100000 Pa   []
+  cv = 6.337617563e-08 m^2/s   []
+  t = 31557600 s   []
+  Hdr = 3 m   []
+  z = 1.5 m   []
   assumes: 0.001 <= Tv <= 3; uniform initial excess pore pressure; double drainage (or symmetric half)
 ```
 
@@ -2898,11 +2659,11 @@ FS = 1.479873738
 tau = 20683.19996 Pa
 sigma_eff = 44355.26546 Pa
   by: Factor of safety of an infinite slope  (FS = [c' + (gamma - m gamma_w) z cos^2(beta) tan(phi')]/(gamma z sin(beta) cos(beta)))
-  c = 5000 Pa
-  phi = 30
-  gam = 18000 N/m^3
-  z = 3 m
-  beta = 25
+  c = 5000 Pa   []
+  phi = 30   []
+  gam = 18000 N/m^3   []
+  z = 3 m   []
+  beta = 25   []
   assumes: c >= 0; 0 <= phi < 60 degrees; 1 <= beta <= 80 degrees; 0 <= m <= 1; seepage parallel to the slope
 ```
 
@@ -2935,7 +2696,7 @@ LL = 39.62917155
 flow_index = 11.21786009
 PI = 18.62917155
   by: Liquid limit from Casagrande cup tests  (least squares w = a + b log10 N; LL = a + b log10 25; flow index = -b)
-  PL = 21
+  PL = 21   []
   assumes: water content falls with blows; water contents in %
 ```
 
@@ -2970,9 +2731,9 @@ sigma_f = 160191.3702 Pa
 tau_f = 100175.2624 Pa
 theta = 59
   by: Major principal stress at failure (Mohr-Coulomb)  (s1 = s3 tan^2(45 + phi/2) + 2c tan(45 + phi/2); tangent point at sigma = p - r sin phi, tau = r cos phi)
-  s3 = 100000 Pa
-  c = 15000 Pa
-  phi = 28
+  s3 = 100000 Pa   []
+  c = 15000 Pa   []
+  phi = 28   []
   assumes: 0 < phi < 60 degrees; s3, c >= 0
 ```
 
@@ -3005,7 +2766,7 @@ w_opt = 12.41176471
 rho_dmax = 1.83760084
 rho_zav = 2.011052845
   by: Optimum water content and maximum dry density from a compaction test  (least-squares parabola rho_d = c0 + c1 w + c2 w^2; w_opt = -c1/(2 c2); zero air voids rho_w Gs/(1 + w Gs))
-  Gs = 2.68
+  Gs = 2.68   []
   assumes: at least three points around the peak; a parabola opening downward
 ```
 
@@ -3040,9 +2801,9 @@ A_line_PI = 18.25
 LI = 0.347826087
 CI = 0.652173913
   by: Plasticity, liquidity and consistency indices  (PI = LL - PL; LI = (w - PL)/PI; CI = (LL - w)/PI; A-line PI = 0.73 (LL - 20))
-  LL = 45
-  PL = 22
-  w = 30
+  LL = 45   []
+  PL = 22   []
+  w = 30   []
   assumes: 5 <= LL <= 1000 %; 0 <= PL < LL; inputs in percent
 ```
 
@@ -3077,11 +2838,11 @@ Sc = 0.1620253658 m
 de = 0.07777217558
 e_final = 0.8422278244
   by: Primary consolidation settlement of a normally consolidated clay  (Sc = Cc H/(1 + e0) log10((s0 + ds)/s0))
-  Cc = 0.32
-  e0 = 0.92
-  H = 4 m
-  s0 = 80000 Pa
-  ds = 60000 Pa
+  Cc = 0.32   []
+  e0 = 0.92   []
+  H = 4 m   []
+  s0 = 80000 Pa   []
+  ds = 60000 Pa   []
   assumes: normally consolidated clay; stresses at mid-depth of the layer
 ```
 
@@ -3120,13 +2881,13 @@ de = 0.08542915202
 OCR = 1.777777778
 case = passes the preconsolidation stress
   by: Primary consolidation settlement of an overconsolidated clay  (sigma1 <= sp: Sc = Cs H/(1+e0) log(s1/s0); otherwise Sc = H/(1+e0)[Cs log(sp/s0) + Cc log(s1/sp)])
-  Cc = 0.4
-  Cs = 0.06
-  e0 = 1.1
-  H = 5 m
-  s0 = 90000 Pa
-  ds = 150000 Pa
-  sp = 160000 Pa
+  Cc = 0.4   []
+  Cs = 0.06   []
+  e0 = 1.1   []
+  H = 5 m   []
+  s0 = 90000 Pa   []
+  ds = 150000 Pa   []
+  sp = 160000 Pa   []
   assumes: Cs < Cc; sp >= s0; stresses at mid-depth
 ```
 
@@ -3157,9 +2918,9 @@ $ civil-engineering solve relative_density_from_unit_weights "gd=16200 N/m^3" "g
 Dr = 0.5660306771
 Dr_percent = 56.60306771
   by: Relative density of a granular soil  (Dr = (gd_max/gd)(gd - gd_min)/(gd_max - gd_min) = (e_max - e)/(e_max - e_min))
-  gd = 16200 N/m^3
-  gd_min = 14500 N/m^3
-  gd_max = 17800 N/m^3
+  gd = 16200 N/m^3   []
+  gd_min = 14500 N/m^3   []
+  gd_max = 17800 N/m^3   []
   assumes: gd_min <= gd <= gd_max
 ```
 
@@ -3194,11 +2955,11 @@ Ss = 0.06195380932 m
 Ss_mm = 61.95380932
 C_alpha_mod = 0.009523809524
   by: Secondary compression (creep) settlement of a clay layer  (S_s = C_alpha H/(1 + e_p) log10(t2/t1))
-  Ca = 0.02
-  H = 5 m
-  ep = 1.1
-  t1 = 31557600 s
-  t2 = 631152000 s
+  Ca = 0.02   []
+  H = 5 m   []
+  ep = 1.1   []
+  t1 = 31557600 s   []
+  t2 = 631152000 s   []
   assumes: 0 < C_alpha <= 0.2; t2 > t1 (t1 = end of primary consolidation)
 ```
 
@@ -3237,9 +2998,9 @@ gamma = 18942.21818 N/m^3
 gamma_sat = 19917.27273 N/m^3
 gamma_sub = 10107.27273 N/m^3
   by: Soil phase relations from void ratio and water content  (n = e/(1 + e), S = w Gs/e, gamma_d = Gs gamma_w/(1 + e), gamma = Gs gamma_w (1 + w)/(1 + e), gamma_sat = (Gs + e) gamma_w/(1 + e))
-  Gs = 2.7
-  e = 0.65
-  w = 0.18
+  Gs = 2.7   []
+  e = 0.65   []
+  w = 0.18   []
   assumes: w Gs <= e (not oversaturated); 2.0 <= Gs <= 3.0
 ```
 
@@ -3283,10 +3044,10 @@ S = 0.6136363636
 gamma = 18148.5 N/m^3
 gamma_d = 15696 N/m^3
   by: Soil properties from a weighed sample  (w = (M - Md)/Md, rho_d = Md/V, e = Gs rho_w/rho_d - 1, S = w Gs/e)
-  M = 1.85 kg
-  Md = 1.6 kg
-  V = 0.001 m^3
-  Gs = 2.7
+  M = 1.85 kg   []
+  Md = 1.6 kg   []
+  V = 0.001 m^3   []
+  Gs = 2.7   []
   assumes: M >= Md; consistent data (0 < e, S <= 1)
 ```
 
@@ -3319,9 +3080,9 @@ Tv = 0.848085408
 t = 55757375.15 s
 t_days = 645.3399902
   by: Time to reach a degree of consolidation  (Tv from U(Tv) = U (bisection on the Fourier series), t = Tv Hdr^2/cv)
-  cv = 9.506426344e-08 m^2/s
-  Hdr = 2.5 m
-  U = 0.9
+  cv = 9.506426344e-08 m^2/s   []
+  Hdr = 2.5 m   []
+  U = 0.9   []
   assumes: 1% <= U <= 99%; Terzaghi 1-D theory
 ```
 
@@ -3357,8 +3118,8 @@ u = 49050 Pa
 sigma_eff = 100950 Pa
 sigma_eff_kPa = 100.95
   by: Total, pore-water and effective vertical stress at a depth  (sigma = sum gamma_i h_i above z, u = gamma_w (z - zw) below the water table, sigma' = sigma - u)
-  zw = 3 m
-  z = 8 m
+  zw = 3 m   []
+  z = 8 m   []
   assumes: hydrostatic pore water; no capillary rise; 0 < z <= total thickness
 ```
 
@@ -3390,7 +3151,7 @@ $ civil-engineering solve area_from_offsets "offsets=[0, 2.5, 3.5, 5, 4.6, 3.2, 
 A_trapezoidal = 188 m^2
 A_simpson = 196.6666667 m^2
   by: Area between a survey line and a boundary from offsets  (trapezoidal: d (y1/2 + y2 + ... + yn/2); Simpson: (d/3)(y1 + 4y2 + 2y3 + ... + yn))
-  d = 10 m
+  d = 10 m   []
   assumes: regular interval; Simpson's rule only for an odd number of offsets
 ```
 
@@ -3461,7 +3222,7 @@ $ civil-engineering solve earthwork_volume_end_areas "areas=[12.5, 18.2, 25.6, 2
 V_end_area = 1561 m^3
 V_prismoidal = 1551.333333 m^3
   by: Earthwork volume from cross-section areas  (V = d (A1/2 + A2 + ... + An/2); prismoidal V = (d/3)(A1 + 4A2 + 2A3 + ... + An))
-  d = 20 m
+  d = 20 m   []
   assumes: equally spaced sections; prismoidal rule only for an odd number of sections
 ```
 
@@ -3502,9 +3263,9 @@ M = 18.09221376 m
 PC = 1140.80893 m
 PT = 1350.24844 m
   by: Elements of a simple horizontal circular curve  (T = R tan(D/2), L = R D, LC = 2R sin(D/2), E = R(sec(D/2) - 1), M = R(1 - cos(D/2)), PC = PI - T, PT = PC + L)
-  R = 300 m
-  Delta = 40
-  PI = 1250 m
+  R = 300 m   []
+  Delta = 40   []
+  PI = 1250 m   []
   assumes: 0 < Delta < 180 degrees; chainage measured along the tangents then the curve
 ```
 
@@ -3546,12 +3307,12 @@ r = -0.025
 BVC = 1400 m
 elev_BVC = 117 m
   by: Elevations on a vertical parabolic curve  (y = y_BVC + g1 x + (g2 - g1) x^2/(2L), x from the BVC; turning point at x = -g1 L/(g2 - g1))
-  g1 = 0.03
-  g2 = -0.02
-  L = 200 m
-  PVI = 1500 m
-  elev_PVI = 120 m
-  x = 1450 m
+  g1 = 0.03   []
+  g2 = -0.02   []
+  L = 200 m   []
+  PVI = 1500 m   []
+  elev_PVI = 120 m   []
+  x = 1450 m   []
   assumes: equal-tangent parabola; BVC <= station <= EVC
 ```
 
@@ -3580,18 +3341,7 @@ $$
 
 **Applies when:** first reading BS, last FS; a BS after the first follows an FS (change point).
 
-```shell
-$ civil-engineering solve levelling_rise_and_fall "readings=[1.525, 2.105, 1.64, 0.985, 2.32]" "sights=BS, IS, FS, BS, FS" "RL0=100 m"
-RL = [100.0,99.42,99.885,98.55] m
-rise = 0.465 m
-fall = 1.915 m
-last_RL = 98.55 m
-check = -1.45 m
-  by: Reduced levels by the rise-and-fall method  (rise or fall = previous reading - current reading within a set-up; RL = previous RL + rise - fall)
-  RL0 = 100 m
-  sights = BS, IS, FS, BS, FS
-  assumes: first reading BS, last FS; a BS after the first follows an FS (change point)
-```
+*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the elevation of each survey station using the rise-and-fall method. By comparing consecutive staff readings within instrument setups, it computes individual rises or falls to update the reduced level from the starting benchmark of 100 m. The process yields a sum of rises equal to 0.465 m and a sum of falls equal to 1.915 m. The arithmetic check confirms that the difference between the sum of back sights and fore sights matches the change in elevation, resulting in a check value of -1.45 m meters.
 
