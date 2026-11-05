@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "civil-engineering-ai999x"
-version = "1.0.3"
+version = "1.1.0"
 description = "Offline civil engineering solver: pipe and open-channel hydraulics, hydrology, groundwater flow, soil mechanics and foundations, water networks and surveying, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "Apache-2.0"}
-authors = [{name = "Ibnul Jaif Farabi"}]
-maintainers = [{name = "AI999X"}]
+authors = [{name = "AI999X Labs", email = "support@ai999x.com"}, {name = "Ibnul Jaif Farabi", email = "ibnuljaiffarabi@ai999x.com"}]
+maintainers = [{name = "AI999X Labs", email = "support@ai999x.com"}]
 keywords = ["civil engineering", "civil_engineering", "ai999x", "offline", "cpu", "stem", "education", "step-by-step", "latex", "solver", "open channel flow", "manning equation", "hydraulic jump", "weirs", "hazen-williams", "hardy cross", "water networks", "hydrology", "unit hydrograph", "flood frequency", "groundwater", "theis", "soil mechanics", "consolidation", "bearing capacity", "earth pressure", "surveying"]
 classifiers = ["License :: OSI Approved :: Apache Software License", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only", "Operating System :: OS Independent", "Intended Audience :: Education", "Intended Audience :: Science/Research", "Intended Audience :: Developers", "Topic :: Scientific/Engineering", "Topic :: Education", "Development Status :: 5 - Production/Stable"]
 dependencies = ["sympy>=1.12", "mpmath>=1.3"]

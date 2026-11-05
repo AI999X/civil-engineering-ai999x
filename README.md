@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/AI999X/civil-engineering-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/civil-engineering-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/civil-engineering-ai999x)](https://pypi.org/project/civil-engineering-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/civil-engineering-ai999x)
 
-**[Install](https://pypi.org/project/civil-engineering-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/civil-engineering-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/civil-engineering-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
+**[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/civil-engineering-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/civil-engineering-ai999x/)** · **[Guides](https://huggingface.co/AI999X/civil-engineering-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/civil-engineering-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
 License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.3
 
@@ -12,7 +12,318 @@ civil-engineering-ai999x is an offline, deterministic Python solver that answers
 
 **civil-engineering-ai999x** is a compact, deterministic civil engineering engine for Python. It reads a question in plain English (or a typed call), picks a certified civil engineering capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
-[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green)
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
+
+**Run it your way.** civil-engineering-ai999x comes as the AI999X desktop app and as the command-line program `civil-engineering` for Windows and Linux, runs in your browser as WebAssembly, and installs as a Python package. The desktop app, the command line and the browser run the same compiled Rust program on your own device: offline, no Python needed.
+
+## Get it
+
+| Way to run it | For | Get it |
+|---|---|---|
+| **AI999X Civil Engineering desktop app** 1.2.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-civil-engineering-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-civil-engineering-1.2.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.2.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-linux-x86_64.tar.gz) |
+| **Command line** (`civil-engineering`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/civil-engineering-ai999x/#try) |
+| **Python** | Python 3.10+ | `pip install civil-engineering-ai999x` |
+
+Checksums: [SHA256SUMS](https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS) · every version: [https://www.ai999x.com/downloads/desktop/latest/](https://www.ai999x.com/downloads/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+
+## Rust versions
+
+Civil Engineering also comes as native programs compiled from Rust, version 1.2.0 of the AI999X desktop app and command line: they run offline on your computer and need no Python. Each file is in this repository's `rust/` folder, on the [GitHub release v1.0.3](https://github.com/AI999X/civil-engineering-ai999x/releases/tag/v1.0.3) and on the website.
+
+| Program | System | File | Size | Download | Use |
+|---|---|---|---|---|---|
+| Desktop app (Civil Engineering) | Windows x86-64 | `ai999x-civil-engineering-1.2.0-windows-x86_64.zip` | 7.3 MB | [Hub](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/rust/ai999x-civil-engineering-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/civil-engineering-ai999x/releases/download/v1.0.3/ai999x-civil-engineering-1.2.0-windows-x86_64.zip) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-civil-engineering-1.2.0-windows-x86_64.zip) | unzip, then double-click `ai999x-civil-engineering.exe` (no installer) |
+| Desktop app (Civil Engineering) | Linux x86-64 | `ai999x-civil-engineering-1.2.0-linux-x86_64.tar.gz` | 8.2 MB | [Hub](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/rust/ai999x-civil-engineering-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/civil-engineering-ai999x/releases/download/v1.0.3/ai999x-civil-engineering-1.2.0-linux-x86_64.tar.gz) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-civil-engineering-1.2.0-linux-x86_64.tar.gz) | extract, then run `./ai999x-civil-engineering` (X11 or Wayland desktop) |
+| Command line (`civil-engineering`) | Windows x86-64 | `ai999x-civil-engineering-cli-1.2.0-windows-x86_64.zip` | 3.0 MB | [Hub](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/rust/ai999x-civil-engineering-cli-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/civil-engineering-ai999x/releases/download/v1.0.3/ai999x-civil-engineering-cli-1.2.0-windows-x86_64.zip) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) | unzip, then `civil-engineering.exe ask "<question>"` or `civil-engineering.exe solve <capability> name=value` |
+| Command line (`civil-engineering`) | Linux x86-64 | `ai999x-civil-engineering-cli-1.2.0-linux-x86_64.tar.gz` | 2.9 MB | [Hub](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/rust/ai999x-civil-engineering-cli-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/civil-engineering-ai999x/releases/download/v1.0.3/ai999x-civil-engineering-cli-1.2.0-linux-x86_64.tar.gz) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) | extract, then `./civil-engineering ask "<question>"` or `./civil-engineering solve <capability> name=value` |
+
+The command-line archive holds `civil-engineering` with a README of its commands and examples, the licence and the notice. Checksums: [`rust/SHA256SUMS`](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/rust/SHA256SUMS) (`sha256sum -c SHA256SUMS`).
+
+## Quick start
+
+### Desktop app
+
+Download **AI999X Civil Engineering** for your system (above), unpack it and start it; type a question in words or pick a capability, fill in the form and press Compute. Figures and an explanation of the answer appear beside it. The AI999X desktop app has the same, with Civil Engineering among all AI999X models.
+
+Linux, from a terminal:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-civil-engineering-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+tar xzf ai999x-civil-engineering-1.2.0-linux-x86_64.tar.gz
+./ai999x-civil-engineering-1.2.0-linux-x86_64/ai999x-civil-engineering
+```
+
+### Command line
+
+Linux:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.2.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.2.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+civil-engineering --version
+```
+
+Windows (PowerShell):
+
+```powershell
+$F = "ai999x-cli-1.2.0-windows-x86_64.zip"
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/$F" -OutFile $F
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS" -OutFile SHA256SUMS
+(Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
+Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.2.0-windows-x86_64"; $env:Path += ";$D"
+[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
+civil-engineering --version
+```
+
+Every command below was run as shown; the text under it is what the program printed.
+
+**Ask in words** — Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```console
+$ civil-engineering ask "Manning discharge in a rectangular channel with b = 3 m, y = 1.2 m, S = 0.001 and n = 0.013."
+Read as: Manning discharge in a rectangular channel
+Q = 6.682900203 m^3/s
+V = 1.856361167 m/s
+A = 3.6 m^2
+R = 0.6666666667 m
+  by: Manning discharge in a rectangular channel  (A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n)
+  b = 3 m
+  y = 1.2 m
+  S = 0.001
+  n = 0.013
+  assumes: b, y > 0; 0 < S < 1; 0.005 <= n <= 0.2
+```
+
+**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+
+```console
+$ civil-engineering info manning_rectangular_discharge
+Manning discharge in a rectangular channel
+  A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n
+  in   b        bottom width [m]
+  in   y        flow depth [m]
+  in   S        bed slope, m/m []
+  in   n        Manning roughness coefficient []
+  out  Q        discharge (m^3/s) [m^3/s]
+  out  V        mean velocity (m/s) [m/s]
+  out  A        flow area (m^2) [m^2]
+  out  R        hydraulic radius (m) [m]
+```
+
+**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+
+```console
+$ civil-engineering solve manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001 n=0.013
+Q = 6.682900203 m^3/s
+V = 1.856361167 m/s
+A = 3.6 m^2
+R = 0.6666666667 m
+  by: Manning discharge in a rectangular channel  (A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n)
+  b = 3 m
+  y = 1.2 m
+  S = 0.001
+  n = 0.013
+  assumes: b, y > 0; 0 < S < 1; 0.005 <= n <= 0.2
+```
+
+**Draw the figures** — The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
+
+```console
+$ civil-engineering figures manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001 n=0.013 --out .
+[
+  {
+    "slug": "manning-rectangular-discharge-live-1",
+    "title": "Discharge (m^3/s) as flow depth varies",
+    "caption": "Discharge (m^3/s) as y runs from 0.3 to 2.1 m, every other input as you entered it (41 solutions). Marked: your y = 1.2 m gives Q = 6.683. Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.",
+    "file": "./manning-rectangular-discharge-live-1.svg"
+  },
+  {
+    "slug": "manning-rectangular-discharge-live-2",
+    "title": "Discharge (m^3/s) as bottom width varies",
+    "caption": "Discharge (m^3/s) as b runs from 0.75 to 5.25 m, every other input as you entered it (29 solutions). Marked: your b = 3 m gives Q = 6.683. Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.",
+    "file": "./manning-rectangular-discharge-live-2.svg"
+  }
+]
+```
+
+**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | civil-engineering batch
+
+`cases.jsonl`:
+
+```json
+{"key": "manning_rectangular_discharge", "inputs": {"b": "3 m", "y": "1.2 m", "S": 0.001, "n": 0.013}}
+{"key": "theis_drawdown", "inputs": {"Q": "0.02893518519 m^3/s", "T": "0.005787037037 m^2/s", "S": 0.0002, "r": "100 m", "t": "86400 s"}}
+```
+
+```console
+$ civil-engineering batch < cases.jsonl
+{"outcome":"SOLVED","message":"","value":6.68290020277,"unit":"m^3/s","solved_for":"Q","si":[["b",3.0],["y",1.2],["S",0.001],["n",0.013]],"values":[["Q",6.68290020277,"m^3/s"],["V",1.85636116744,"m/s"],["A",3.6,"m^2"],["R",0.666666666667,"m"]],"target":"Q","phrase":"discharge (m^3/s)","assumptions":["b, y > 0","0 < S < 1","0.005 <= n <= 0.2"],"name":"Manning discharge in a rectangular channel","equation":"A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n"}
+{"outcome":"SOLVED","message":"","value":2.51923946839,"unit":"m","solved_for":"s","si":[["Q",0.02893518519],["T",0.005787037037],["S",0.0002],["r",100.0],["t",86400.0]],"values":[["s",2.51923946839,"m"],["u",0.00100000000001,""],["W",6.33153936413,""]],"target":"s","phrase":"drawdown (m)","assumptions":["confined, homogeneous, infinite aquifer","fully penetrating well, constant rate","u <= 50"],"name":"Theis drawdown around a pumped well","equation":"u = r^2 S/(4 T t), W(u) = E1(u) (series for u <= 1, continued fraction above), s = Q W/(4 pi T)"}
+```
+
+### In your browser
+
+Open [Civil Engineering on ai999x.com](https://www.ai999x.com/models/civil-engineering-ai999x/#try), choose a capability and press **Compute**: the model runs on your own device as WebAssembly; nothing is sent anywhere. Change any input (any unit of the right kind) and the answer, its explanation and the figures follow.
+
+In your own page: `civil_engineering_ai999x.wasm` and the loader `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js).
+
+### Python
+
+```bash
+pip install civil-engineering-ai999x
+```
+
+## Worked examples in every form
+
+The same worked example from the command line, from Python and in the browser. Each command-line output is what the program printed.
+
+### Coulomb active thrust on a rough wall with sloping backfill
+
+Coulomb active earth pressure coefficient and thrust per metre on a rough vertical wall (wall friction delta) retaining a cohesionless backfill sloping at beta, with the horizontal and vertical components of the thrust.
+
+Command line:
+
+```console
+$ civil-engineering solve coulomb_active_thrust phi=30 delta=20 beta=10 "gam=18000 N/m^3" "H=6 m"
+Ka = 0.3400223954
+Pa = 110167.2561 N/m
+Pa_h = 103523.3576 N/m
+Pa_v = 37679.42072 N/m
+  by: Coulomb active thrust on a rough wall with sloping backfill  (Ka = cos^2 phi/(cos delta [1 + sqrt(sin(phi + delta) sin(phi - beta)/(cos delta cos beta))]^2), Pa = Ka gam H^2/2)
+  phi = 30
+  delta = 20
+  beta = 10
+  gam = 18000 N/m^3
+  H = 6 m
+  assumes: vertical wall back; cohesionless dry backfill; 0 <= delta <= phi; 0 <= beta < phi
+```
+
+Python:
+
+```python
+import civil_engineering_ai999x as m
+
+a = m.solve("coulomb_active_thrust", phi="30", delta="20", beta="10", gam="18000 N/m^3", H="6 m")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/civil-engineering-ai999x/#cap-coulomb_active_thrust) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the Coulomb active earth pressure coefficient and the resulting thrust on a rough retaining wall. Using the backfill friction angle of 30, wall friction angle of 20, and slope angle of 10, the method computes a coefficient of 0.340022. This coefficient, combined with the unit weight 18000 N/m^3 and height 6 m, yields a total thrust per metre of 110167 N/m N/m. The thrust acts at an angle equal to the wall friction, so it is resolved into a horizontal push of 103523 N/m N/m and a downward vertical force of 37679.4 N/m N/m.
+
+### Coulomb passive thrust on a rough wall
+
+Coulomb (plane-wedge) passive earth pressure coefficient and thrust per metre on a rough vertical wall with wall friction delta and a soil surface rising at beta (plane wedges overestimate the passive resistance when delta is large; keep delta below about phi/2 in design).
+
+Command line:
+
+```console
+$ civil-engineering solve coulomb_passive_thrust phi=30 delta=15 beta=0 "gam=18000 N/m^3" "H=2 m"
+Kp = 4.976500223
+Pp = 179154.008 N/m
+Pp_h = 173049.4832 N/m
+Pp_v = 46368.46928 N/m
+  by: Coulomb passive thrust on a rough wall  (Kp = cos^2 phi/(cos delta [1 - sqrt(sin(phi + delta) sin(phi + beta)/(cos delta cos beta))]^2), Pp = Kp gam H^2/2)
+  phi = 30
+  delta = 15
+  beta = 0
+  gam = 18000 N/m^3
+  H = 2 m
+  assumes: vertical wall back; cohesionless dry soil; plane wedge (phi + delta + beta < 90)
+```
+
+Python:
+
+```python
+import civil_engineering_ai999x as m
+
+a = m.solve("coulomb_passive_thrust", phi="30", delta="15", beta="0", gam="18000 N/m^3", H="2 m")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/civil-engineering-ai999x/#cap-coulomb_passive_thrust) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the passive earth resistance on a rough vertical wall retaining cohesionless dry soil with a sloping backface. Using the plane wedge method, it computes the passive coefficient Kp as 4.9765, which scales the unit weight 18000 N/m^3 and height 2 m to find the total thrust Pp of 179154 N/m N/m. The resulting force acts at an angle delta relative to the normal, yielding a horizontal component of 173049 N/m N/m and a vertical component of 46368.5 N/m N/m. This value is critical for assessing the stability of anchored walls and determining required embedment depths for sheet piles.
+
+### Rankine active earth pressure and thrust on a wall
+
+Rankine active pressure coefficient, active pressure at the base, total active thrust per metre of a smooth vertical wall retaining a horizontal backfill (with optional cohesion and surcharge; the tension zone is ignored), the tension-crack depth and the height of the resultant above the base. Dry backfill.
+
+Command line:
+
+```console
+$ civil-engineering solve rankine_active_thrust phi=30 "gam=18000 N/m^3" "H=6 m"
+Ka = 0.3333333333
+sigma_base = 36000 Pa
+Pa = 108000 N/m
+z_crack = 0 m
+ybar = 2 m
+  by: Rankine active earth pressure and thrust on a wall  (Ka = (1 - sin phi)/(1 + sin phi); sigma_a = Ka(gam z + q) - 2c sqrt(Ka); Pa = area of the positive pressure diagram)
+  phi = 30
+  gam = 18000 N/m^3
+  H = 6 m
+  assumes: smooth vertical wall, horizontal backfill; dry backfill; tension zone ignored
+```
+
+Python:
+
+```python
+import civil_engineering_ai999x as m
+
+a = m.solve("rankine_active_thrust", phi="30", gam="18000 N/m^3", H="6 m")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/civil-engineering-ai999x/#cap-rankine_active_thrust) and press **Compute in your browser**.
+
+_What this means:_ The active thrust is 108000 N/m per metre, with a base pressure of 36000 Pa.
+
+### Rankine passive earth pressure and thrust
+
+Rankine passive pressure coefficient, passive pressure at the base, total passive thrust per metre on a smooth vertical wall with a horizontal soil surface (optional cohesion and surcharge) and the height of the resultant.
+
+Command line:
+
+```console
+$ civil-engineering solve rankine_passive_thrust phi=32 "gam=18000 N/m^3" "H=2 m"
+Kp = 3.254588303
+sigma_base = 117165.1789 Pa
+Pp = 117165.1789 N/m
+ybar = 0.6666666667 m
+  by: Rankine passive earth pressure and thrust  (Kp = (1 + sin phi)/(1 - sin phi); sigma_p = Kp(gam z + q) + 2c sqrt(Kp); Pp = area of the pressure diagram)
+  phi = 32
+  gam = 18000 N/m^3
+  H = 2 m
+  assumes: smooth vertical wall, horizontal soil surface; dry soil
+```
+
+Python:
+
+```python
+import civil_engineering_ai999x as m
+
+a = m.solve("rankine_passive_thrust", phi="32", gam="18000 N/m^3", H="2 m")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/civil-engineering-ai999x/#cap-rankine_passive_thrust) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the resistance provided by the soil when a wall moves towards it. Using a friction angle of 32 degrees, the passive coefficient is found to be 3.25459. For a wall height of 2 m metres with unit weight 18000 N/m^3, the pressure at the base reaches 117165 Pa. The total horizontal force resisting movement is calculated as 117165 N/m newtons per metre of wall length, acting at a height of 0.666667 m metres above the base.
+
+## Documentation
+
+- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/civil-engineering-ai999x/blob/main/docs/civil_engineering_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/civil-engineering-ai999x/blob/main/docs/civil_engineering_ai999x_rust_guide.md)
+- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/civil-engineering-ai999x/blob/main/docs/civil_engineering_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/civil-engineering-ai999x/blob/main/docs/civil_engineering_ai999x_capabilities.md)
+- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/civil-engineering-ai999x/
 
 ## Highlights
 
@@ -20,6 +331,7 @@ civil-engineering-ai999x is an offline, deterministic Python solver that answers
 - **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 566 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `civil-engineering` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** open-channel hydraulics, pipe networks, hydrology, groundwater flow, soil mechanics and foundations, and surveying.
 
@@ -38,7 +350,7 @@ civil-engineering-ai999x is an offline, deterministic Python solver that answers
 | Creator / engineer | Ibnul Jaif Farabi |
 | Organization | AI999X |
 
-## Quickstart
+## Python quick start
 
 ```bash
 pip install civil-engineering-ai999x
@@ -61,7 +373,7 @@ civil_engineering.ask("Who created you?").message
 # -> civil-engineering-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `civil-engineering-ai999x "<question>"`, `civil-engineering-ai999x --capabilities`. The outputs above were produced by running this exact code on civil-engineering-ai999x 1.0.3.
+The Python package also installs a Python command, `civil-engineering-ai999x "<question>"`; for the native program use `civil-engineering` (above). The outputs above were produced by running this exact code on civil-engineering-ai999x 1.0.3.
 
 ## Find the right capability, and draw it
 
@@ -83,7 +395,7 @@ civil_engineering.search("Solve x^2 - 5x + 6 = 0", k=2)
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
-## Worked examples
+## Python worked examples, with their steps
 
 Each question was put to `civil-engineering-ai999x`; the answer is the one it returned, with the steps it took.
 
