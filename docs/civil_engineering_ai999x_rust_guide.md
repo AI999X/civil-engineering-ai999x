@@ -1,4 +1,4 @@
-# civil-engineering: the Civil Engineering program — user guide
+# civil-engineering: the Civil Engineering program, user guide
 
 **civil-engineering-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
@@ -17,63 +17,63 @@ Civil Engineering covers pipe and open-channel hydraulics, hydrology, groundwate
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Civil Engineering | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-civil-engineering-1.4.0-windows-x86_64.zip |
-| Desktop app: Civil Engineering | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-civil-engineering-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Civil Engineering | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-civil-engineering-1.5.0-windows-x86_64.zip |
+| Desktop app: Civil Engineering | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-civil-engineering-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Civil Engineering in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-civil-engineering-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-civil-engineering.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Civil Engineering in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-civil-engineering-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-civil-engineering.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-civil-engineering-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-civil-engineering-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-civil-engineering-1.4.0-linux-x86_64.tar.gz
-./ai999x-civil-engineering-1.4.0-linux-x86_64/ai999x-civil-engineering
+tar xzf ai999x-civil-engineering-1.5.0-linux-x86_64.tar.gz
+./ai999x-civil-engineering-1.5.0-linux-x86_64/ai999x-civil-engineering
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
-./ai999x-1.4.0-linux-x86_64/ai999x
+tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
+./ai999x-1.5.0-linux-x86_64/ai999x
 ```
 
-### Command line — Linux
+### Command line: Linux
 
 The bundle holds one program per model; `civil-engineering` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 civil-engineering --version
 ```
 
-### Command line — Windows (PowerShell)
+### Command line: Windows (PowerShell)
 
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 civil-engineering --version
 ```
@@ -96,10 +96,46 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ civil-engineering --version
-civil-engineering-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
+civil-engineering-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
 ```
 
-### 2.2 List the capabilities
+### 2.2 Ask in words
+
+Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```shell
+$ civil-engineering ask "Manning discharge in a rectangular channel with b = 3 m, y = 1.2 m, S = 0.001 and n = 0.013."
+Read as: Manning discharge in a rectangular channel
+Q = 6.682900203 m^3/s
+V = 1.856361167 m/s
+A = 3.6 m^2
+R = 0.6666666667 m
+  by: Manning discharge in a rectangular channel  (A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n)
+  b = 3 m
+  y = 1.2 m
+  S = 0.001
+  n = 0.013
+  assumes: b, y > 0; 0 < S < 1; 0.005 <= n <= 0.2
+```
+
+### 2.3 Find a capability
+
+Search the capabilities by what you want to know; the first column is the id to pass to info and solve.
+
+```shell
+$ civil-engineering search "manning discharge in a rectangular channel"
+manning_rectangular_discharge        Manning discharge in a rectangular channel  (open-channel hydraulics)
+manning_trapezoidal_discharge        Manning discharge in a trapezoidal channel  (open-channel hydraulics)
+normal_depth_rectangular             Normal depth in a rectangular channel  (open-channel hydraulics)
+gradually_varied_flow_length         Length of a gradually varied flow profile (rectangular channel)  (open-channel hydraulics)
+critical_depth_rectangular           Critical depth in a rectangular channel  (open-channel hydraulics)
+hydraulic_jump_rectangular           Hydraulic jump in a rectangular channel  (open-channel hydraulics)
+rectangular_weir_discharge           Sharp-crested rectangular weir discharge  (open-channel hydraulics)
+channel_froude_number                Froude number of flow in a rectangular channel  (open-channel hydraulics)
+… 12 more
+```
+
+### 2.4 List the capabilities
 
 Every capability the program answers: its id (what you pass to solve) and its name.
 
@@ -113,19 +149,64 @@ chezy_from_manning                       Chezy coefficient from Manning's n
 chezy_velocity                           Chezy velocity
 circular_channel_section                 Part-full circular conduit: area, wetted perimeter, hydraulic radius
 coefficient_of_consolidation             Coefficient of consolidation from a consolidation time
-… 70 more
+… 80 more
 ```
 
-### 2.3 When an input is missing
+### 2.5 What a capability needs
+
+The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+
+```shell
+$ civil-engineering info manning_rectangular_discharge
+Manning discharge in a rectangular channel
+  A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n
+  in   b        bottom width [m]
+  in   y        flow depth [m]
+  in   S        bed slope, m/m []
+  in   n        Manning roughness coefficient []
+  out  Q        discharge (m^3/s) [m^3/s]
+  out  V        mean velocity (m/s) [m/s]
+  out  A        flow area (m^2) [m^2]
+  out  R        hydraulic radius (m) [m]
+```
+
+### 2.6 Solve
+
+Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+
+```shell
+$ civil-engineering solve manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001 n=0.013
+Q = 6.682900203 m^3/s
+V = 1.856361167 m/s
+A = 3.6 m^2
+R = 0.6666666667 m
+  by: Manning discharge in a rectangular channel  (A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n)
+  b = 3 m
+  y = 1.2 m
+  S = 0.001
+  n = 0.013
+  assumes: b, y > 0; 0 < S < 1; 0.005 <= n <= 0.2
+```
+
+### 2.7 Machine-readable answer
+
+--json prints the same answer as one line of JSON (values in SI): for scripts and other programs.
+
+```shell
+$ civil-engineering solve manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001 n=0.013 --json
+{"outcome":"SOLVED","message":"","value":6.68290020277,"unit":"m^3/s","solved_for":"Q","si":[["b",3.0],["y",1.2],["S",0.001],["n",0.013]],"values":[["Q",6.68290020277,"m^3/s"],["V",1.85636116744,"m/s"],["A",3.6,"m^2"],["R",0.666666666667,"m"]],"target":"Q","phrase":"discharge (m^3/s)","assumptions":["b, y > 0","0 < S < 1","0.005 <= n <= 0.2"],"name":"Manning discharge in a rectangular channel","equation":"A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n"}
+```
+
+### 2.8 When an input is missing
 
 No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.
 
 ```shell
 $ civil-engineering solve manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001
-INVALID_INPUT: unknown capability 'manning_rectangular_discharge'
+NEEDS_INPUT: manning_rectangular_discharge needs n (Manning roughness coefficient). Example: solve('manning_rectangular_discharge', b='3 m', y='1.2 m', S=0.001, n=0.013).
 ```
 
-### 2.4 Many questions at once
+### 2.9 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | civil-engineering batch
 
@@ -138,8 +219,8 @@ One JSON request per line in, one JSON answer per line out, in order: for script
 
 ```shell
 $ civil-engineering batch < cases.jsonl
-{"outcome":"INVALID_INPUT","message":"unknown capability 'manning_rectangular_discharge'","value":null,"unit":null}
-{"outcome":"SOLVED","message":"","value":2.51923946839,"unit":"m","solved_for":"s","si":[["Q",0.02893518519],["S",0.0002],["T",0.005787037037],["r",100.0],["t",86400.0]],"values":[["s",2.51923946839,"m"],["u",0.00100000000001,""],["W",6.33153936413,""]],"target":"s","phrase":"drawdown (m)","assumptions":["confined, homogeneous, infinite aquifer","fully penetrating well, constant rate","u <= 50"],"name":"Theis drawdown around a pumped well","equation":"u = r^2 S/(4 T t), W(u) = E1(u) (series for u <= 1, continued fraction above), s = Q W/(4 pi T)"}
+{"outcome":"SOLVED","message":"","value":6.68290020277,"unit":"m^3/s","solved_for":"Q","si":[["b",3.0],["y",1.2],["S",0.001],["n",0.013]],"values":[["Q",6.68290020277,"m^3/s"],["V",1.85636116744,"m/s"],["A",3.6,"m^2"],["R",0.666666666667,"m"]],"target":"Q","phrase":"discharge (m^3/s)","assumptions":["b, y > 0","0 < S < 1","0.005 <= n <= 0.2"],"name":"Manning discharge in a rectangular channel","equation":"A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n"}
+{"outcome":"SOLVED","message":"","value":2.51923946839,"unit":"m","solved_for":"s","si":[["Q",0.02893518519],["T",0.005787037037],["S",0.0002],["r",100.0],["t",86400.0]],"values":[["s",2.51923946839,"m"],["u",0.00100000000001,""],["W",6.33153936413,""]],"target":"s","phrase":"drawdown (m)","assumptions":["confined, homogeneous, infinite aquifer","fully penetrating well, constant rate","u <= 50"],"name":"Theis drawdown around a pumped well","equation":"u = r^2 S/(4 T t), W(u) = E1(u) (series for u <= 1, continued fraction above), s = Q W/(4 pi T)"}
 ```
 
 ## 3. Writing inputs
@@ -221,7 +302,7 @@ By topic. For each: what it does, what it needs and gives, when it applies, and 
 
 <a id="coulomb_active_thrust"></a>
 
-#### Coulomb active thrust on a rough wall with sloping backfill — `coulomb_active_thrust`
+#### Coulomb active thrust on a rough wall with sloping backfill, `coulomb_active_thrust`
 
 Coulomb active earth pressure coefficient and thrust per metre on a rough vertical wall (wall friction delta) retaining a cohesionless backfill sloping at beta, with the horizontal and vertical components of the thrust.
 
@@ -231,12 +312,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `phi` | in | friction angle of the backfill (degrees) | — |
-| `delta` | in | wall friction angle (degrees) | — |
-| `beta` | in | backfill slope angle above horizontal (degrees) | — |
+| `phi` | in | friction angle of the backfill (degrees) | - |
+| `delta` | in | wall friction angle (degrees) | - |
+| `beta` | in | backfill slope angle above horizontal (degrees) | - |
 | `gam` | in | unit weight of the backfill | N/m^3 |
 | `H` | in | wall height | m |
-| `Ka` | out | Coulomb active coefficient | — |
+| `Ka` | out | Coulomb active coefficient | - |
 | `Pa` | out | active thrust per metre, inclined at delta (N/m) | N/m |
 | `Pa_h` | out | horizontal component (N/m) | N/m |
 | `Pa_v` | out | vertical component (N/m) | N/m |
@@ -250,11 +331,11 @@ Pa = 110167.2561 N/m
 Pa_h = 103523.3576 N/m
 Pa_v = 37679.42072 N/m
   by: Coulomb active thrust on a rough wall with sloping backfill  (Ka = cos^2 phi/(cos delta [1 + sqrt(sin(phi + delta) sin(phi - beta)/(cos delta cos beta))]^2), Pa = Ka gam H^2/2)
-  phi = 30   []
-  delta = 20   []
-  beta = 10   []
-  gam = 18000 N/m^3   []
-  H = 6 m   []
+  phi = 30
+  delta = 20
+  beta = 10
+  gam = 18000 N/m^3
+  H = 6 m
   assumes: vertical wall back; cohesionless dry backfill; 0 <= delta <= phi; 0 <= beta < phi
 ```
 
@@ -262,7 +343,7 @@ Pa_v = 37679.42072 N/m
 
 <a id="coulomb_passive_thrust"></a>
 
-#### Coulomb passive thrust on a rough wall — `coulomb_passive_thrust`
+#### Coulomb passive thrust on a rough wall: `coulomb_passive_thrust`
 
 Coulomb (plane-wedge) passive earth pressure coefficient and thrust per metre on a rough vertical wall with wall friction delta and a soil surface rising at beta (plane wedges overestimate the passive resistance when delta is large; keep delta below about phi/2 in design).
 
@@ -272,12 +353,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `phi` | in | friction angle of the backfill (degrees) | — |
-| `delta` | in | wall friction angle (degrees) | — |
-| `beta` | in | backfill slope angle above horizontal (degrees) | — |
+| `phi` | in | friction angle of the backfill (degrees) | - |
+| `delta` | in | wall friction angle (degrees) | - |
+| `beta` | in | backfill slope angle above horizontal (degrees) | - |
 | `gam` | in | unit weight of the backfill | N/m^3 |
 | `H` | in | wall height | m |
-| `Kp` | out | Coulomb passive coefficient | — |
+| `Kp` | out | Coulomb passive coefficient | - |
 | `Pp` | out | passive thrust per metre, inclined at delta (N/m) | N/m |
 | `Pp_h` | out | horizontal component (N/m) | N/m |
 | `Pp_v` | out | vertical component (N/m) | N/m |
@@ -291,11 +372,11 @@ Pp = 179154.008 N/m
 Pp_h = 173049.4832 N/m
 Pp_v = 46368.46928 N/m
   by: Coulomb passive thrust on a rough wall  (Kp = cos^2 phi/(cos delta [1 - sqrt(sin(phi + delta) sin(phi + beta)/(cos delta cos beta))]^2), Pp = Kp gam H^2/2)
-  phi = 30   []
-  delta = 15   []
-  beta = 0   []
-  gam = 18000 N/m^3   []
-  H = 2 m   []
+  phi = 30
+  delta = 15
+  beta = 0
+  gam = 18000 N/m^3
+  H = 2 m
   assumes: vertical wall back; cohesionless dry soil; plane wedge (phi + delta + beta < 90)
 ```
 
@@ -303,7 +384,7 @@ Pp_v = 46368.46928 N/m
 
 <a id="rankine_active_thrust"></a>
 
-#### Rankine active earth pressure and thrust on a wall — `rankine_active_thrust`
+#### Rankine active earth pressure and thrust on a wall, `rankine_active_thrust`
 
 Rankine active pressure coefficient, active pressure at the base, total active thrust per metre of a smooth vertical wall retaining a horizontal backfill (with optional cohesion and surcharge; the tension zone is ignored), the tension-crack depth and the height of the resultant above the base. Dry backfill.
 
@@ -313,12 +394,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `phi` | in | friction angle of the backfill (degrees) | — |
+| `phi` | in | friction angle of the backfill (degrees) | - |
 | `gam` | in | unit weight of the backfill | N/m^3 |
 | `H` | in | wall height | m |
 | `c` | in | cohesion (default 0) (optional) | Pa |
 | `q` | in | uniform surcharge (default 0) (optional) | Pa |
-| `Ka` | out | active earth pressure coefficient | — |
+| `Ka` | out | active earth pressure coefficient | - |
 | `sigma_base` | out | active pressure at the base (Pa) | Pa |
 | `Pa` | out | active thrust per metre of wall (N/m) | N/m |
 | `z_crack` | out | tension-crack depth (m) | m |
@@ -334,9 +415,9 @@ Pa = 108000 N/m
 z_crack = 0 m
 ybar = 2 m
   by: Rankine active earth pressure and thrust on a wall  (Ka = (1 - sin phi)/(1 + sin phi); sigma_a = Ka(gam z + q) - 2c sqrt(Ka); Pa = area of the positive pressure diagram)
-  phi = 30   []
-  gam = 18000 N/m^3   []
-  H = 6 m   []
+  phi = 30
+  gam = 18000 N/m^3
+  H = 6 m
   assumes: smooth vertical wall, horizontal backfill; dry backfill; tension zone ignored
 ```
 
@@ -344,7 +425,7 @@ ybar = 2 m
 
 <a id="rankine_passive_thrust"></a>
 
-#### Rankine passive earth pressure and thrust — `rankine_passive_thrust`
+#### Rankine passive earth pressure and thrust: `rankine_passive_thrust`
 
 Rankine passive pressure coefficient, passive pressure at the base, total passive thrust per metre on a smooth vertical wall with a horizontal soil surface (optional cohesion and surcharge) and the height of the resultant.
 
@@ -354,12 +435,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `phi` | in | friction angle of the soil (degrees) | — |
+| `phi` | in | friction angle of the soil (degrees) | - |
 | `gam` | in | unit weight of the soil | N/m^3 |
 | `H` | in | height of the wall in contact | m |
 | `c` | in | cohesion (default 0) (optional) | Pa |
 | `q` | in | uniform surcharge (default 0) (optional) | Pa |
-| `Kp` | out | passive earth pressure coefficient | — |
+| `Kp` | out | passive earth pressure coefficient | - |
 | `sigma_base` | out | passive pressure at the base (Pa) | Pa |
 | `Pp` | out | passive thrust per metre of wall (N/m) | N/m |
 | `ybar` | out | height of the resultant above the base (m) | m |
@@ -373,9 +454,9 @@ sigma_base = 117165.1789 Pa
 Pp = 117165.1789 N/m
 ybar = 0.6666666667 m
   by: Rankine passive earth pressure and thrust  (Kp = (1 + sin phi)/(1 - sin phi); sigma_p = Kp(gam z + q) + 2c sqrt(Kp); Pp = area of the pressure diagram)
-  phi = 32   []
-  gam = 18000 N/m^3   []
-  H = 2 m   []
+  phi = 32
+  gam = 18000 N/m^3
+  H = 2 m
   assumes: smooth vertical wall, horizontal soil surface; dry soil
 ```
 
@@ -383,7 +464,7 @@ ybar = 0.6666666667 m
 
 <a id="terzaghi_bearing_capacity"></a>
 
-#### Terzaghi bearing capacity with stated factors — `terzaghi_bearing_capacity`
+#### Terzaghi bearing capacity with stated factors, `terzaghi_bearing_capacity`
 
 Ultimate, allowable and net bearing capacity of a strip, square or circular footing by Terzaghi's equation with the bearing capacity factors Nc, Nq and Ngamma stated (from a table): qu = s_c c Nc + q Nq + s_g gamma B Ngamma, s_c = 1.3 and s_g = 0.4 (square) or 0.3 (circular, B = diameter).
 
@@ -397,11 +478,11 @@ $$
 | `gam` | in | unit weight of the soil | N/m^3 |
 | `B` | in | footing width (diameter of a circular footing) | m |
 | `Df` | in | embedment depth | m |
-| `Nc` | in | bearing capacity factor Nc (stated) | — |
-| `Nq` | in | bearing capacity factor Nq (stated) | — |
-| `Ngamma` | in | bearing capacity factor Ngamma (stated) | — |
-| `shape` | in | footing shape: strip, square or circular (default strip) (optional) | — |
-| `FS` | in | factor of safety (default 3) (optional) | — |
+| `Nc` | in | bearing capacity factor Nc (stated) | - |
+| `Nq` | in | bearing capacity factor Nq (stated) | - |
+| `Ngamma` | in | bearing capacity factor Ngamma (stated) | - |
+| `shape` | in | footing shape: strip, square or circular (default strip) (optional) | - |
+| `FS` | in | factor of safety (default 3) (optional) | - |
 | `qu` | out | ultimate bearing capacity (Pa) | Pa |
 | `qa` | out | allowable bearing capacity qu/FS (Pa) | Pa |
 | `q_net` | out | net ultimate bearing capacity qu - gamma Df (Pa) | Pa |
@@ -414,13 +495,13 @@ qu = 1848052 Pa
 qa = 616017.3333 Pa
 q_net = 1821052 Pa
   by: Terzaghi bearing capacity with stated factors  (qu = s_c c Nc + gamma Df Nq + s_g gamma B Ngamma (strip 1, 0.5; square 1.3, 0.4; circular 1.3, 0.3))
-  c = 20000 Pa   []
-  gam = 18000 N/m^3   []
-  B = 2 m   []
-  Df = 1.5 m   []
-  Nc = 37.16   []
-  Nq = 22.46   []
-  Ngamma = 19.13   []
+  c = 20000 Pa
+  gam = 18000 N/m^3
+  B = 2 m
+  Df = 1.5 m
+  Nc = 37.16
+  Nq = 22.46
+  Ngamma = 19.13
   shape = square
   assumes: c, Df >= 0; factors as stated (Terzaghi's table for the friction angle); general shear failure, vertical central load
 ```
@@ -429,7 +510,7 @@ q_net = 1821052 Pa
 
 <a id="strip_footing_bearing_capacity"></a>
 
-#### Ultimate bearing capacity of a strip footing — `strip_footing_bearing_capacity`
+#### Ultimate bearing capacity of a strip footing, `strip_footing_bearing_capacity`
 
 Ultimate and allowable bearing capacity of a strip footing from the general bearing capacity equation with Prandtl-Reissner factors Nc, Nq and Vesic's (1973) Ngamma (no shape, depth or inclination factors; drained parameters, water table well below the footing).
 
@@ -440,16 +521,16 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `c` | in | cohesion | Pa |
-| `phi` | in | friction angle (degrees) | — |
+| `phi` | in | friction angle (degrees) | - |
 | `gam` | in | unit weight of the soil | N/m^3 |
 | `B` | in | footing width | m |
 | `Df` | in | embedment depth | m |
-| `FS` | in | factor of safety for the allowable pressure (default 3) (optional) | — |
+| `FS` | in | factor of safety for the allowable pressure (default 3) (optional) | - |
 | `qu` | out | ultimate bearing capacity (Pa) | Pa |
 | `qa` | out | allowable bearing pressure qu/FS (Pa) | Pa |
-| `Nc` | out | bearing capacity factor Nc | — |
-| `Nq` | out | bearing capacity factor Nq | — |
-| `Ngamma` | out | bearing capacity factor Ngamma (Vesic) | — |
+| `Nc` | out | bearing capacity factor Nc | - |
+| `Nq` | out | bearing capacity factor Nq | - |
+| `Ngamma` | out | bearing capacity factor Ngamma (Vesic) | - |
 
 **Applies when:** 20 <= phi <= 45 degrees; general shear failure; strip footing, vertical central load.
 
@@ -461,11 +542,11 @@ Nc = 30.13962779
 Nq = 18.40112222
 Ngamma = 22.40248627
   by: Ultimate bearing capacity of a strip footing  (Nq = e^(pi tan phi) tan^2(45 + phi/2), Nc = (Nq - 1) cot phi, Ngamma = 2(Nq + 1) tan phi; qu = c Nc + gam Df Nq + B gam Ngamma/2)
-  c = 10000 Pa   []
-  phi = 30   []
-  gam = 18000 N/m^3   []
-  B = 1.5 m   []
-  Df = 1 m   []
+  c = 10000 Pa
+  phi = 30
+  gam = 18000 N/m^3
+  B = 1.5 m
+  Df = 1 m
   assumes: 20 <= phi <= 45 degrees; general shear failure; strip footing, vertical central load
 ```
 
@@ -473,7 +554,7 @@ Ngamma = 22.40248627
 
 <a id="stress_below_rectangular_load"></a>
 
-#### Vertical stress below a uniformly loaded rectangle (Newmark) — `stress_below_rectangular_load`
+#### Vertical stress below a uniformly loaded rectangle (Newmark), `stress_below_rectangular_load`
 
 Increase in vertical stress at depth z below the corner (or the centre, by superposition of four corners) of a flexible rectangular area B x L under a uniform pressure q (Boussinesq integrated by Newmark).
 
@@ -487,9 +568,9 @@ $$
 | `B` | in | width of the loaded area | m |
 | `L` | in | length of the loaded area | m |
 | `z` | in | depth below the surface | m |
-| `position` | in | point below the 'corner' (default) or the 'centre' (optional) | — |
+| `position` | in | point below the 'corner' (default) or the 'centre' (optional) | - |
 | `dsigma` | out | vertical stress increase (Pa) | Pa |
-| `I` | out | influence factor dsigma/q | — |
+| `I` | out | influence factor dsigma/q | - |
 
 **Applies when:** elastic, homogeneous, isotropic half-space; flexible uniform load.
 
@@ -498,10 +579,10 @@ $ civil-engineering solve stress_below_rectangular_load "q=200000 Pa" "B=2 m" "L
 dsigma = 21414.5858 Pa
 I = 0.107072929
   by: Vertical stress below a uniformly loaded rectangle (Newmark)  (I = (1/4 pi)[2mn sqrt(s)/(s + m^2 n^2) (s + 1)/s + atan2(2mn sqrt(s), s - m^2 n^2)], s = m^2 + n^2 + 1, m = B/z, n = L/z)
-  q = 200000 Pa   []
-  B = 2 m   []
-  L = 3 m   []
-  z = 4 m   []
+  q = 200000 Pa
+  B = 2 m
+  L = 3 m
+  z = 4 m
   assumes: elastic, homogeneous, isotropic half-space; flexible uniform load
 ```
 
@@ -509,7 +590,7 @@ I = 0.107072929
 
 <a id="stress_below_strip_load"></a>
 
-#### Vertical stress below a uniformly loaded strip — `stress_below_strip_load`
+#### Vertical stress below a uniformly loaded strip, `stress_below_strip_load`
 
 Increase in vertical stress at depth z and horizontal offset x from the centreline of an infinitely long strip of width B under a uniform pressure q (elastic half-space).
 
@@ -524,7 +605,7 @@ $$
 | `z` | in | depth below the surface | m |
 | `x` | in | horizontal offset from the strip centreline (default 0) (optional) | m |
 | `dsigma` | out | vertical stress increase (Pa) | Pa |
-| `I` | out | influence factor dsigma/q | — |
+| `I` | out | influence factor dsigma/q | - |
 
 **Applies when:** elastic, homogeneous, isotropic half-space; flexible uniform load, plane strain.
 
@@ -533,9 +614,9 @@ $ civil-engineering solve stress_below_strip_load "q=100000 Pa" "B=2 m" "z=3 m"
 dsigma = 39581.86964 Pa
 I = 0.3958186964
   by: Vertical stress below a uniformly loaded strip  (dsigma = (q/pi)[atan(u/z) + u z/(u^2 + z^2)] from u = x - B/2 to x + B/2)
-  q = 100000 Pa   []
-  B = 2 m   []
-  z = 3 m   []
+  q = 100000 Pa
+  B = 2 m
+  z = 3 m
   assumes: elastic, homogeneous, isotropic half-space; flexible uniform load, plane strain
 ```
 
@@ -543,7 +624,7 @@ I = 0.3958186964
 
 <a id="stress_below_circular_load"></a>
 
-#### Vertical stress below the centre of a uniformly loaded circle — `stress_below_circular_load`
+#### Vertical stress below the centre of a uniformly loaded circle, `stress_below_circular_load`
 
 Increase in vertical stress at depth z below the centre of a flexible circular area of radius a carrying a uniform pressure q (Boussinesq, elastic half-space).
 
@@ -557,7 +638,7 @@ $$
 | `a` | in | radius of the loaded area | m |
 | `z` | in | depth below the surface | m |
 | `dsigma` | out | vertical stress increase (Pa) | Pa |
-| `I` | out | influence factor dsigma/q | — |
+| `I` | out | influence factor dsigma/q | - |
 
 **Applies when:** elastic, homogeneous, isotropic half-space; flexible uniform load; below the centre.
 
@@ -566,9 +647,9 @@ $ civil-engineering solve stress_below_circular_load "q=150000 Pa" "a=2 m" "z=3 
 dsigma = 63594.77713 Pa
 I = 0.4239651808
   by: Vertical stress below the centre of a uniformly loaded circle  (dsigma = q [1 - (1/(1 + (a/z)^2))^(3/2)])
-  q = 150000 Pa   []
-  a = 2 m   []
-  z = 3 m   []
+  q = 150000 Pa
+  a = 2 m
+  z = 3 m
   assumes: elastic, homogeneous, isotropic half-space; flexible uniform load; below the centre
 ```
 
@@ -578,7 +659,7 @@ I = 0.4239651808
 
 <a id="darcy_flow_layered_soil"></a>
 
-#### Darcy flow across soil layers in series; equivalent conductivities — `darcy_flow_layered_soil`
+#### Darcy flow across soil layers in series; equivalent conductivities, `darcy_flow_layered_soil`
 
 Flow rate, specific discharge and the heads at the layer interfaces for one-dimensional Darcy flow across one or more soil layers in series (flow perpendicular to the layering), with the equivalent vertical (series) and horizontal (parallel) conductivities. Heads are measured from the downstream face.
 
@@ -588,8 +669,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `H` | in | layer thicknesses in m, in flow order | — |
-| `K` | in | hydraulic conductivity of each layer in m/s | — |
+| `H` | in | layer thicknesses in m, in flow order | - |
+| `K` | in | hydraulic conductivity of each layer in m/s | - |
 | `A` | in | flow cross-section area | m^2 |
 | `dh` | in | head difference across all layers | m |
 | `Q` | out | flow rate (m^3/s) | m^3/s |
@@ -608,8 +689,8 @@ Kv = 1e-05 m/s
 Kh = 1e-05 m/s
 heads = [0.0] m
   by: Darcy flow across soil layers in series; equivalent conductivities  (Kv = sum H / sum(H_i/K_i), Kh = sum(K_i H_i)/sum H, q = Kv dh/sum H, Q = q A)
-  A = 10 m^2   []
-  dh = 0.5 m   []
+  A = 10 m^2
+  dh = 0.5 m
   assumes: steady, saturated, laminar flow; flow perpendicular to the layers
 ```
 
@@ -617,7 +698,7 @@ heads = [0.0] m
 
 <a id="well_field_drawdown"></a>
 
-#### Drawdown from several wells by superposition (Theis) — `well_field_drawdown`
+#### Drawdown from several wells by superposition (Theis), `well_field_drawdown`
 
 Total drawdown at a point from several wells pumping (positive rate) or injecting (negative rate) at constant rates in a confined aquifer, by superposing Theis solutions; with each well's contribution. Coordinates in m, rates in m^3/day.
 
@@ -627,11 +708,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `wx` | in | well x coordinates in m | — |
-| `wy` | in | well y coordinates in m | — |
-| `Qs` | in | pumping rates in m^3/day (negative for injection) | — |
+| `wx` | in | well x coordinates in m | - |
+| `wy` | in | well y coordinates in m | - |
+| `Qs` | in | pumping rates in m^3/day (negative for injection) | - |
 | `T` | in | transmissivity | m^2/s |
-| `S` | in | storativity | — |
+| `S` | in | storativity | - |
 | `t` | in | time since pumping began (all wells together) | s |
 | `x0` | in | x coordinate of the point | m |
 | `y0` | in | y coordinate of the point | m |
@@ -645,11 +726,11 @@ $ civil-engineering solve well_field_drawdown "wx=[0, 200]" "wy=[0, 0]" "Qs=[200
 s = 4.935878027 m
 parts = [2.82050172954,2.11537629715] m
   by: Drawdown from several wells by superposition (Theis)  (s = sum Q_i W(u_i)/(4 pi T), u_i = r_i^2 S/(4 T t))
-  T = 0.00462962963 m^2/s   []
-  S = 0.0003   []
-  t = 432000 s   []
-  x0 = 100 m   []
-  y0 = 50 m   []
+  T = 0.00462962963 m^2/s
+  S = 0.0003
+  t = 432000 s
+  x0 = 100 m
+  y0 = 50 m
   assumes: confined, homogeneous, infinite aquifer; all wells started together; point at least 5 cm from any well
 ```
 
@@ -657,7 +738,7 @@ parts = [2.82050172954,2.11537629715] m
 
 <a id="falling_head_permeability"></a>
 
-#### Hydraulic conductivity from a falling-head test — `falling_head_permeability`
+#### Hydraulic conductivity from a falling-head test, `falling_head_permeability`
 
 Hydraulic conductivity of a soil sample from a falling-head permeameter: standpipe diameter d, sample diameter D and length L, the standpipe head falling from h1 to h2 in time t.
 
@@ -674,7 +755,7 @@ $$
 | `h2` | in | final head | m |
 | `t` | in | elapsed time | s |
 | `K` | out | hydraulic conductivity (m/s) | m/s |
-| `K_cm_s` | out | hydraulic conductivity (cm/s) | — |
+| `K_cm_s` | out | hydraulic conductivity (cm/s) | - |
 
 **Applies when:** h2 < h1; saturated sample, laminar flow.
 
@@ -683,12 +764,12 @@ $ civil-engineering solve falling_head_permeability "d=0.01 m" "D=0.075 m" "L=0.
 K = 2.270336106e-06 m/s
 K_cm_s = 0.0002270336106
   by: Hydraulic conductivity from a falling-head test  (K = (a L/(A t)) ln(h1/h2), a and A the standpipe and sample areas)
-  d = 0.01 m   []
-  D = 0.075 m   []
-  L = 0.15 m   []
-  h1 = 1 m   []
-  h2 = 0.6 m   []
-  t = 600 s   []
+  d = 0.01 m
+  D = 0.075 m
+  L = 0.15 m
+  h1 = 1 m
+  h2 = 0.6 m
+  t = 600 s
   assumes: h2 < h1; saturated sample, laminar flow
 ```
 
@@ -696,7 +777,7 @@ K_cm_s = 0.0002270336106
 
 <a id="thiem_unconfined_conductivity"></a>
 
-#### Hydraulic conductivity from steady pumping (unconfined aquifer) — `thiem_unconfined_conductivity`
+#### Hydraulic conductivity from steady pumping (unconfined aquifer), `thiem_unconfined_conductivity`
 
 Hydraulic conductivity of an unconfined aquifer from the steady saturated thicknesses h1 < h2 in two observation wells at distances r1 < r2 from a well pumped at Q (Thiem-Dupuit equation).
 
@@ -712,7 +793,7 @@ $$
 | `h1` | in | saturated thickness at r1 | m |
 | `h2` | in | saturated thickness at r2 | m |
 | `K` | out | hydraulic conductivity (m/s) | m/s |
-| `K_m_d` | out | hydraulic conductivity (m/day) | — |
+| `K_m_d` | out | hydraulic conductivity (m/day) | - |
 
 **Applies when:** steady state; unconfined aquifer, Dupuit assumptions; r1 < r2, h1 < h2.
 
@@ -721,11 +802,11 @@ $ civil-engineering solve thiem_unconfined_conductivity "Q=0.01736111111 m^3/s" 
 K = 0.0001447648968 m/s
 K_m_d = 12.50768708
   by: Hydraulic conductivity from steady pumping (unconfined aquifer)  (K = Q ln(r2/r1)/(pi (h2^2 - h1^2)))
-  Q = 0.01736111111 m^3/s   []
-  r1 = 20 m   []
-  r2 = 80 m   []
-  h1 = 18.2 m   []
-  h2 = 19.6 m   []
+  Q = 0.01736111111 m^3/s
+  r1 = 20 m
+  r2 = 80 m
+  h1 = 18.2 m
+  h2 = 19.6 m
   assumes: steady state; unconfined aquifer, Dupuit assumptions; r1 < r2, h1 < h2
 ```
 
@@ -733,7 +814,7 @@ K_m_d = 12.50768708
 
 <a id="theis_drawdown"></a>
 
-#### Theis drawdown around a pumped well — `theis_drawdown`
+#### Theis drawdown around a pumped well: `theis_drawdown`
 
 Transient drawdown at distance r and time t from a well pumped at a constant rate in a confined aquifer (Theis), with u and the well function W(u) = E1(u).
 
@@ -745,12 +826,12 @@ $$
 |---|---|---|---|
 | `Q` | in | pumping rate | m^3/s |
 | `T` | in | transmissivity | m^2/s |
-| `S` | in | storativity (storage coefficient) | — |
+| `S` | in | storativity (storage coefficient) | - |
 | `r` | in | distance from the pumped well | m |
 | `t` | in | time since pumping began | s |
 | `s` | out | drawdown (m) | m |
-| `u` | out | u = r^2 S/(4 T t) | — |
-| `W` | out | well function W(u) | — |
+| `u` | out | u = r^2 S/(4 T t) | - |
+| `W` | out | well function W(u) | - |
 
 **Applies when:** confined, homogeneous, infinite aquifer; fully penetrating well, constant rate; u <= 50.
 
@@ -760,11 +841,11 @@ s = 2.519239468 m
 u = 0.001
 W = 6.331539364
   by: Theis drawdown around a pumped well  (u = r^2 S/(4 T t), W(u) = E1(u) (series for u <= 1, continued fraction above), s = Q W/(4 pi T))
-  Q = 0.02893518519 m^3/s   []
-  T = 0.005787037037 m^2/s   []
-  S = 0.0002   []
-  r = 100 m   []
-  t = 86400 s   []
+  Q = 0.02893518519 m^3/s
+  T = 0.005787037037 m^2/s
+  S = 0.0002
+  r = 100 m
+  t = 86400 s
   assumes: confined, homogeneous, infinite aquifer; fully penetrating well, constant rate; u <= 50
 ```
 
@@ -772,7 +853,7 @@ W = 6.331539364
 
 <a id="cooper_jacob_analysis"></a>
 
-#### Transmissivity and storativity by the Cooper-Jacob straight line — `cooper_jacob_analysis`
+#### Transmissivity and storativity by the Cooper-Jacob straight line, `cooper_jacob_analysis`
 
 Transmissivity and storativity of a confined aquifer from a pumping test by the Cooper-Jacob method: a least-squares straight line through drawdown against log10(time) (late-time data, u < 0.05, chosen by the user). Times are in minutes, drawdowns in m.
 
@@ -782,15 +863,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `times` | in | times since pumping began, in minutes | — |
-| `drawdowns` | in | drawdowns at those times, in m | — |
+| `times` | in | times since pumping began, in minutes | - |
+| `drawdowns` | in | drawdowns at those times, in m | - |
 | `Q` | in | pumping rate | m^3/s |
 | `r` | in | distance of the observation well | m |
 | `T` | out | transmissivity (m^2/s) | m^2/s |
-| `S` | out | storativity | — |
+| `S` | out | storativity | - |
 | `ds_per_cycle` | out | drawdown per log cycle of time (m) | m |
-| `t0_min` | out | zero-drawdown intercept time (min) | — |
-| `T_m2_d` | out | transmissivity (m^2/day) | — |
+| `t0_min` | out | zero-drawdown intercept time (min) | - |
+| `T_m2_d` | out | transmissivity (m^2/day) | - |
 
 **Applies when:** late-time data on the straight line (u < 0.05); confined aquifer.
 
@@ -802,8 +883,8 @@ ds_per_cycle = 0.5706342049 m
 t0_min = 0.8211372737
 T_m2_d = 642.3271351
   by: Transmissivity and storativity by the Cooper-Jacob straight line  (fit s = a + b log10 t; T = 2.303 Q/(4 pi b), S = 2.25 T t0/r^2 with t0 = 10^(-a/b))
-  Q = 0.02314814815 m^3/s   []
-  r = 50 m   []
+  Q = 0.02314814815 m^3/s
+  r = 50 m
   assumes: late-time data on the straight line (u < 0.05); confined aquifer
 ```
 
@@ -811,7 +892,7 @@ T_m2_d = 642.3271351
 
 <a id="thiem_confined_transmissivity"></a>
 
-#### Transmissivity from steady pumping (Thiem, confined aquifer) — `thiem_confined_transmissivity`
+#### Transmissivity from steady pumping (Thiem, confined aquifer), `thiem_confined_transmissivity`
 
 Transmissivity (and conductivity, if the aquifer thickness is given) of a confined aquifer from the steady drawdowns in two observation wells at distances r1 < r2 from a well pumped at Q (Thiem equation).
 
@@ -828,7 +909,7 @@ $$
 | `s2` | in | drawdown at r2 | m |
 | `b` | in | aquifer thickness (optional) (optional) | m |
 | `T` | out | transmissivity (m^2/s) | m^2/s |
-| `T_m2_d` | out | transmissivity (m^2/day) | — |
+| `T_m2_d` | out | transmissivity (m^2/day) | - |
 | `K` | out | hydraulic conductivity T/b (m/s) | m/s |
 
 **Applies when:** steady state; confined aquifer, fully penetrating well; r1 < r2, s1 > s2.
@@ -838,11 +919,11 @@ $ civil-engineering solve thiem_confined_transmissivity "Q=0.02893518519 m^3/s" 
 T = 0.003755371735 m^2/s
 T_m2_d = 324.4641179
   by: Transmissivity from steady pumping (Thiem, confined aquifer)  (T = Q ln(r2/r1)/(2 pi (s1 - s2)))
-  Q = 0.02893518519 m^3/s   []
-  r1 = 15 m   []
-  r2 = 60 m   []
-  s1 = 2.8 m   []
-  s2 = 1.1 m   []
+  Q = 0.02893518519 m^3/s
+  r1 = 15 m
+  r2 = 60 m
+  s1 = 2.8 m
+  s2 = 1.1 m
   assumes: steady state; confined aquifer, fully penetrating well; r1 < r2, s1 > s2
 ```
 
@@ -850,7 +931,7 @@ In the worked example, Q = 0.02893518519 m^3/s, r1 = 15 m, r2 = 60 m, s1 = 2.8 m
 
 <a id="dupuit_flow_with_recharge"></a>
 
-#### Unconfined flow between two water bodies with recharge (Dupuit) — `dupuit_flow_with_recharge`
+#### Unconfined flow between two water bodies with recharge (Dupuit), `dupuit_flow_with_recharge`
 
 Steady unconfined flow per unit width between two water bodies (heads h1 at x = 0 and h2 at x = L above the base) with uniform recharge W: the flows at both ends (positive toward x = L), the groundwater divide and the highest water table (Dupuit-Forchheimer).
 
@@ -879,11 +960,11 @@ qL = 8.92831679e-06 m^2/s
 x_divide = -339.1874998 m
 h_max = 12 m
   by: Unconfined flow between two water bodies with recharge (Dupuit)  (h^2 = h1^2 - (h1^2 - h2^2) x/L + (W/K)(L - x) x; q = K(h1^2 - h2^2)/(2L) - W(L/2 - x))
-  K = 0.0001157407407 m/s   []
-  h1 = 12 m   []
-  h2 = 9 m   []
-  L = 600 m   []
-  W = 9.506426344e-09 m/s   []
+  K = 0.0001157407407 m/s
+  h1 = 12 m
+  h2 = 9 m
+  L = 600 m
+  W = 9.506426344e-09 m/s
   assumes: steady, unconfined, homogeneous aquifer on a horizontal base; Dupuit assumptions; W > 0
 ```
 
@@ -893,7 +974,7 @@ h_max = 12 m
 
 <a id="thiessen_polygon_rainfall"></a>
 
-#### Areal rainfall by Thiessen polygons — `thiessen_polygon_rainfall`
+#### Areal rainfall by Thiessen polygons: `thiessen_polygon_rainfall`
 
 Mean areal rainfall over a catchment by the Thiessen (Voronoi) polygon method: each gauge represents the part of the catchment nearer to it than to any other gauge; the areas, weights and the arithmetic mean are also given. Coordinates in km (areas in km^2), rainfall in mm; the boundary is a simple polygon listed vertex by vertex.
 
@@ -903,16 +984,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `gx` | in | gauge x coordinates in km | — |
-| `gy` | in | gauge y coordinates in km | — |
-| `rain` | in | rainfall at each gauge in mm | — |
-| `bx` | in | catchment boundary x coordinates in km | — |
-| `by` | in | catchment boundary y coordinates in km | — |
-| `mean` | out | Thiessen mean rainfall (mm) | — |
-| `areas` | out | area represented by each gauge (km^2) | — |
-| `weights` | out | Thiessen weight of each gauge | — |
-| `arithmetic_mean` | out | arithmetic mean (mm) | — |
-| `catchment_area` | out | catchment area (km^2) | — |
+| `gx` | in | gauge x coordinates in km | - |
+| `gy` | in | gauge y coordinates in km | - |
+| `rain` | in | rainfall at each gauge in mm | - |
+| `bx` | in | catchment boundary x coordinates in km | - |
+| `by` | in | catchment boundary y coordinates in km | - |
+| `mean` | out | Thiessen mean rainfall (mm) | - |
+| `areas` | out | area represented by each gauge (km^2) | - |
+| `weights` | out | Thiessen weight of each gauge | - |
+| `arithmetic_mean` | out | arithmetic mean (mm) | - |
+| `catchment_area` | out | catchment area (km^2) | - |
 
 **Applies when:** distinct gauge locations; simple (non-self-intersecting) boundary polygon.
 
@@ -931,7 +1012,7 @@ catchment_area = 100
 
 <a id="unit_hydrograph_convolution"></a>
 
-#### Direct runoff hydrograph by unit-hydrograph convolution — `unit_hydrograph_convolution`
+#### Direct runoff hydrograph by unit-hydrograph convolution, `unit_hydrograph_convolution`
 
 The direct runoff (and total) hydrograph of a storm: the convolution of the excess-rainfall depths of successive periods with the unit hydrograph of the same period, plus a constant base flow.
 
@@ -941,13 +1022,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `excess` | in | excess rainfall in cm per period (one per period) | — |
-| `uh` | in | unit-hydrograph ordinates in m^3/s per cm of excess, one per period | — |
+| `excess` | in | excess rainfall in cm per period (one per period) | - |
+| `uh` | in | unit-hydrograph ordinates in m^3/s per cm of excess, one per period | - |
 | `baseflow` | in | constant base flow (default 0) (optional) | m^3/s |
 | `DRO` | out | direct runoff ordinates (m^3/s) | m^3/s |
 | `total` | out | total flow ordinates (m^3/s) | m^3/s |
 | `peak` | out | peak total flow (m^3/s) | m^3/s |
-| `peak_period` | out | period of the peak (1-based) | — |
+| `peak_period` | out | period of the peak (1-based) | - |
 
 **Applies when:** excess depths and the unit hydrograph share one period; linear, time-invariant catchment.
 
@@ -965,7 +1046,7 @@ peak_period = 4
 
 <a id="green_ampt_infiltration"></a>
 
-#### Green-Ampt cumulative infiltration under ponding — `green_ampt_infiltration`
+#### Green-Ampt cumulative infiltration under ponding, `green_ampt_infiltration`
 
 Cumulative infiltration and infiltration rate at time t for a soil ponded from t = 0, by the Green-Ampt model (implicit equation solved to full precision).
 
@@ -977,12 +1058,12 @@ $$
 |---|---|---|---|
 | `K` | in | saturated hydraulic conductivity | m/s |
 | `psi` | in | wetting-front suction head | m |
-| `dtheta` | in | moisture deficit (porosity minus initial water content) | — |
+| `dtheta` | in | moisture deficit (porosity minus initial water content) | - |
 | `t` | in | time since ponding began | s |
 | `F` | out | cumulative infiltration (m) | m |
 | `f` | out | infiltration rate (m/s) | m/s |
-| `F_mm` | out | cumulative infiltration (mm) | — |
-| `f_mm_h` | out | infiltration rate (mm/h) | — |
+| `F_mm` | out | cumulative infiltration (mm) | - |
+| `f_mm_h` | out | infiltration rate (mm/h) | - |
 
 **Applies when:** ponded surface from t = 0; homogeneous soil, sharp wetting front.
 
@@ -993,10 +1074,10 @@ f = 5.593135822e-06 m/s
 F_mm = 32.09669252
 f_mm_h = 20.13528896
   by: Green-Ampt cumulative infiltration under ponding  (F - psi dtheta ln(1 + F/(psi dtheta)) = K t (bisection); f = K(1 + psi dtheta/F))
-  K = 3.027777778e-06 m/s   []
-  psi = 0.1101 m   []
-  dtheta = 0.247   []
-  t = 3600 s   []
+  K = 3.027777778e-06 m/s
+  psi = 0.1101 m
+  dtheta = 0.247
+  t = 3600 s
   assumes: ponded surface from t = 0; homogeneous soil, sharp wetting front
 ```
 
@@ -1004,7 +1085,7 @@ f_mm_h = 20.13528896
 
 <a id="gumbel_design_flood"></a>
 
-#### Gumbel (EV1) design flood — `gumbel_design_flood`
+#### Gumbel (EV1) design flood: `gumbel_design_flood`
 
 The T-year flood from a series of annual maximum discharges by the Gumbel (extreme value type I) distribution fitted by the method of moments (Chow's frequency factor for a long record; sample standard deviation with n - 1).
 
@@ -1014,10 +1095,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `peaks` | in | annual maximum discharges in m^3/s | — |
-| `T` | in | return period (years) | — |
+| `peaks` | in | annual maximum discharges in m^3/s | - |
+| `T` | in | return period (years) | - |
 | `Q_T` | out | T-year flood (m^3/s) | m^3/s |
-| `K_T` | out | frequency factor | — |
+| `K_T` | out | frequency factor | - |
 | `mean` | out | mean annual maximum (m^3/s) | m^3/s |
 | `std` | out | sample standard deviation (m^3/s) | m^3/s |
 
@@ -1030,7 +1111,7 @@ K_T = 3.13666843
 mean = 451.5 m^3/s
 std = 115.1339799 m^3/s
   by: Gumbel (EV1) design flood  (K_T = -(sqrt 6/pi)(0.5772 + ln ln(T/(T - 1))), Q_T = mean + K_T s)
-  T = 100   []
+  T = 100
   assumes: at least five annual maxima; T > 1 year; method of moments (no sample-size correction table)
 ```
 
@@ -1038,7 +1119,7 @@ std = 115.1339799 m^3/s
 
 <a id="horton_infiltration"></a>
 
-#### Horton infiltration rate and cumulative infiltration — `horton_infiltration`
+#### Horton infiltration rate and cumulative infiltration, `horton_infiltration`
 
 Infiltration capacity at time t and cumulative infiltration from the start of ponding by Horton's equation.
 
@@ -1050,12 +1131,12 @@ $$
 |---|---|---|---|
 | `f0` | in | initial infiltration capacity | m/s |
 | `fc` | in | final (constant) infiltration capacity | m/s |
-| `k` | in | Horton decay constant | — |
+| `k` | in | Horton decay constant | - |
 | `t` | in | time since ponding began | s |
 | `f` | out | infiltration capacity at t (m/s) | m/s |
 | `F` | out | cumulative infiltration (m) | m |
-| `f_mm_h` | out | infiltration capacity (mm/h) | — |
-| `F_mm` | out | cumulative infiltration (mm) | — |
+| `f_mm_h` | out | infiltration capacity (mm/h) | - |
+| `F_mm` | out | cumulative infiltration (mm) | - |
 
 **Applies when:** 0 <= fc < f0; ponded surface from t = 0.
 
@@ -1066,10 +1147,10 @@ F = 0.02595237087 m
 f_mm_h = 11.19051653
 F_mm = 25.95237087
   by: Horton infiltration rate and cumulative infiltration  (f = fc + (f0 - fc) e^(-k t), F = fc t + (f0 - fc)(1 - e^(-k t))/k)
-  f0 = 2.083333333e-05 m/s   []
-  fc = 2.777777778e-06 m/s   []
-  k = 0.001111111111   []
-  t = 3600 s   []
+  f0 = 2.083333333e-05 m/s
+  fc = 2.777777778e-06 m/s
+  k = 0.001111111111
+  t = 3600 s
   assumes: 0 <= fc < f0; ponded surface from t = 0
 ```
 
@@ -1077,7 +1158,7 @@ F_mm = 25.95237087
 
 <a id="kling_gupta_efficiency"></a>
 
-#### Kling-Gupta efficiency — `kling_gupta_efficiency`
+#### Kling-Gupta efficiency: `kling_gupta_efficiency`
 
 Kling-Gupta efficiency of simulated against observed values (Gupta et al. 2009) with its components: the correlation r, the variability ratio alpha (population standard deviations) and the bias ratio beta.
 
@@ -1087,12 +1168,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `obs` | in | observed values (any unit) | — |
-| `sim` | in | simulated values, same unit and order | — |
-| `KGE` | out | Kling-Gupta efficiency | — |
-| `r` | out | Pearson correlation | — |
-| `alpha` | out | ratio of standard deviations sim/obs | — |
-| `beta` | out | ratio of means sim/obs | — |
+| `obs` | in | observed values (any unit) | - |
+| `sim` | in | simulated values, same unit and order | - |
+| `KGE` | out | Kling-Gupta efficiency | - |
+| `r` | out | Pearson correlation | - |
+| `alpha` | out | ratio of standard deviations sim/obs | - |
+| `beta` | out | ratio of means sim/obs | - |
 
 **Applies when:** paired series of equal length; both series vary.
 
@@ -1110,7 +1191,7 @@ beta = 1
 
 <a id="log_pearson_iii_design_flood"></a>
 
-#### Log-Pearson type III design flood — `log_pearson_iii_design_flood`
+#### Log-Pearson type III design flood: `log_pearson_iii_design_flood`
 
 The T-year flood by the log-Pearson type III distribution fitted by moments of the base-10 logarithms (station skew only, no regional skew weighting or outlier tests), frequency factor from the exact Pearson III quantile.
 
@@ -1120,23 +1201,33 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `peaks` | in | annual maximum discharges in m^3/s | — |
-| `T` | in | return period (years) | — |
+| `peaks` | in | annual maximum discharges in m^3/s | - |
+| `T` | in | return period (years) | - |
 | `Q_T` | out | T-year flood (m^3/s) | m^3/s |
-| `K_T` | out | Pearson III frequency factor | — |
-| `mean_log` | out | mean of log10 Q | — |
-| `std_log` | out | standard deviation of log10 Q | — |
-| `skew` | out | skew coefficient of log10 Q (unbiased) | — |
+| `K_T` | out | Pearson III frequency factor | - |
+| `mean_log` | out | mean of log10 Q | - |
+| `std_log` | out | standard deviation of log10 Q | - |
+| `skew` | out | skew coefficient of log10 Q (unbiased) | - |
 
 **Applies when:** at least ten annual maxima; station skew only; no outlier screening.
 
-*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ civil-engineering solve log_pearson_iii_design_flood "peaks=[420, 380, 510, 290, 640, 455, 370, 520, 600, 330, 880, 410]" T=100
+Q_T = 1083.770605 m^3/s
+K_T = 2.753907684
+mean_log = 2.664610768
+std_log = 0.1344731349
+skew = 0.598210844
+  by: Log-Pearson type III design flood  (moments of log10 Q; K_T = Pearson III quantile (gamma inverse with shape 4/G^2); Q_T = 10^(m + K s))
+  T = 100
+  assumes: at least ten annual maxima; station skew only; no outlier screening
+```
 
 **What the worked example means:** This calculation determines the design flood for a return period of 100 years by fitting the Log-Pearson Type III distribution to annual maximum discharges. The process begins by computing the mean, standard deviation, and skew coefficient of the base-10 logarithms of the input peaks, resulting in values of 2.66461, 0.134473, and 0.598211 respectively. These statistics are used to derive the frequency factor 2.75391, which scales the variability around the mean log discharge. The final output, 1083.77 m^3/s, represents the estimated peak flow rate that has a probability of being equaled or exceeded once every 100 years on average.
 
 <a id="muskingum_routing"></a>
 
-#### Muskingum flood routing — `muskingum_routing`
+#### Muskingum flood routing: `muskingum_routing`
 
 Routes an inflow hydrograph through a river reach by the Muskingum method (storage S = K[X I + (1 - X) O]), giving the outflow ordinates, routing coefficients, peak outflow and attenuation. The first outflow equals the first inflow unless stated.
 
@@ -1146,15 +1237,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `inflow` | in | inflow ordinates in m^3/s at equal intervals | — |
+| `inflow` | in | inflow ordinates in m^3/s at equal intervals | - |
 | `K` | in | storage (travel-time) constant | s |
-| `X` | in | weighting factor (0 to 0.5) | — |
+| `X` | in | weighting factor (0 to 0.5) | - |
 | `dt` | in | routing interval | s |
 | `O1` | in | initial outflow (default: the first inflow) (optional) | m^3/s |
 | `outflow` | out | outflow ordinates (m^3/s) | m^3/s |
-| `C0` | out | coefficient C0 | — |
-| `C1` | out | coefficient C1 | — |
-| `C2` | out | coefficient C2 | — |
+| `C0` | out | coefficient C0 | - |
+| `C1` | out | coefficient C1 | - |
+| `C2` | out | coefficient C2 | - |
 | `peak_outflow` | out | peak outflow (m^3/s) | m^3/s |
 | `attenuation` | out | peak attenuation (m^3/s) | m^3/s |
 
@@ -1169,9 +1260,9 @@ C2 = 0.5238095238
 peak_outflow = 45.83604568 m^3/s
 attenuation = 22.16395432 m^3/s
   by: Muskingum flood routing  (O_j+1 = C0 I_j+1 + C1 I_j + C2 O_j, C0 = (dt - 2KX)/D, C1 = (dt + 2KX)/D, C2 = (2K(1 - X) - dt)/D, D = 2K(1 - X) + dt)
-  K = 43200 s   []
-  X = 0.2   []
-  dt = 21600 s   []
+  K = 43200 s
+  X = 0.2
+  dt = 21600 s
   assumes: 0 <= X <= 0.5; 2 K X <= dt <= 2 K (1 - X) (no negative coefficient)
 ```
 
@@ -1179,7 +1270,7 @@ attenuation = 22.16395432 m^3/s
 
 <a id="nash_sutcliffe_efficiency"></a>
 
-#### Nash-Sutcliffe efficiency, RMSE and percent bias — `nash_sutcliffe_efficiency`
+#### Nash-Sutcliffe efficiency, RMSE and percent bias, `nash_sutcliffe_efficiency`
 
 Goodness of fit of simulated to observed flows: Nash-Sutcliffe efficiency, root-mean-square error and percent bias (positive when the model underestimates, as hydroeval defines it).
 
@@ -1189,11 +1280,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `obs` | in | observed values (any unit) | — |
-| `sim` | in | simulated values, same unit and order | — |
-| `NSE` | out | Nash-Sutcliffe efficiency | — |
-| `RMSE` | out | root-mean-square error (unit of the data) | — |
-| `PBIAS` | out | percent bias 100 sum(obs - sim)/sum(obs) | — |
+| `obs` | in | observed values (any unit) | - |
+| `sim` | in | simulated values, same unit and order | - |
+| `NSE` | out | Nash-Sutcliffe efficiency | - |
+| `RMSE` | out | root-mean-square error (unit of the data) | - |
+| `PBIAS` | out | percent bias 100 sum(obs - sim)/sum(obs) | - |
 
 **Applies when:** paired series of equal length; observed values not all equal.
 
@@ -1210,7 +1301,7 @@ In the worked example, obs = [12, 30, 55, 41, 22, 15], sim = [10, 34, 50, 44, 20
 
 <a id="rational_method_peak_runoff"></a>
 
-#### Peak runoff by the rational method — `rational_method_peak_runoff`
+#### Peak runoff by the rational method: `rational_method_peak_runoff`
 
 The peak runoff Q = C i A of a small catchment from the runoff coefficient, the rainfall intensity for a duration equal to the time of concentration, and the catchment area.
 
@@ -1220,11 +1311,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `C` | in | runoff coefficient (0 to 1) | — |
+| `C` | in | runoff coefficient (0 to 1) | - |
 | `i` | in | rainfall intensity | m/s |
 | `A` | in | catchment area | m^2 |
 | `Q` | out | peak runoff (m^3/s) | m^3/s |
-| `Q_Ls` | out | peak runoff (L/s) | — |
+| `Q_Ls` | out | peak runoff (L/s) | - |
 
 **Applies when:** 0 < C <= 1; A <= 800 ha (small catchments); intensity for a duration equal to the time of concentration.
 
@@ -1233,9 +1324,9 @@ $ civil-engineering solve rational_method_peak_runoff C=0.6 "i=1.388888889e-05 m
 Q = 1.666666667 m^3/s
 Q_Ls = 1666.666667
   by: Peak runoff by the rational method  (Q = C i A (SI); = 0.278 C i[mm/h] A[km^2])
-  C = 0.6   []
-  i = 1.388888889e-05 m/s   []
-  A = 200000 m^2   []
+  C = 0.6
+  i = 1.388888889e-05 m/s
+  A = 200000 m^2
   assumes: 0 < C <= 1; A <= 800 ha (small catchments); intensity for a duration equal to the time of concentration
 ```
 
@@ -1243,7 +1334,7 @@ Q_Ls = 1666.666667
 
 <a id="phi_index"></a>
 
-#### Phi-index of a storm — `phi_index`
+#### Phi-index of a storm: `phi_index`
 
 The constant loss rate (phi-index) that, subtracted from every interval of a rainfall hyetograph, leaves exactly the observed runoff depth; with the excess rainfall of each interval.
 
@@ -1253,12 +1344,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `rain` | in | rainfall depth in each interval in mm | — |
+| `rain` | in | rainfall depth in each interval in mm | - |
 | `dt` | in | duration of one interval | s |
 | `R` | in | observed direct runoff depth | m |
-| `phi` | out | phi-index (mm/h) | — |
-| `excess` | out | excess rainfall in each interval (mm) | — |
-| `contributing` | out | number of intervals producing runoff | — |
+| `phi` | out | phi-index (mm/h) | - |
+| `excess` | out | excess rainfall in each interval (mm) | - |
+| `contributing` | out | number of intervals producing runoff | - |
 
 **Applies when:** 0 < runoff < total rainfall; equal intervals.
 
@@ -1268,8 +1359,8 @@ phi = 6.333333333
 excess = [0.0,2.66666666667,11.6666666667,5.66666666667,0.0,0.0]
 contributing = 3
   by: Phi-index of a storm  (the k largest intervals contribute: phi dt = (sum of the k largest - R)/k, with k found by consistency)
-  dt = 3600 s   []
-  R = 20 m   []
+  dt = 3600 s
+  R = 20 m
   assumes: 0 < runoff < total rainfall; equal intervals
 ```
 
@@ -1277,7 +1368,7 @@ contributing = 3
 
 <a id="design_return_period_for_risk"></a>
 
-#### Return period for an acceptable risk over a design life — `design_return_period_for_risk`
+#### Return period for an acceptable risk over a design life, `design_return_period_for_risk`
 
 The design return period whose event has only the stated probability R of being exceeded during an n-year life.
 
@@ -1287,10 +1378,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `R` | in | acceptable risk of exceedance (fraction, or % in a question) | — |
-| `n` | in | design life (whole years) | — |
-| `T` | out | required return period (years) | — |
-| `p_annual` | out | annual exceedance probability | — |
+| `R` | in | acceptable risk of exceedance (fraction, or % in a question) | - |
+| `n` | in | design life (whole years) | - |
+| `T` | out | required return period (years) | - |
+| `p_annual` | out | annual exceedance probability | - |
 
 **Applies when:** 0 < R < 1; independent years.
 
@@ -1299,7 +1390,7 @@ $ civil-engineering solve design_return_period_for_risk R=0.1 n=50
 T = 475.0612547
 p_annual = 0.002104991704
   by: Return period for an acceptable risk over a design life  (T = 1/(1 - (1 - R)^(1/n)))
-  R = 0.1   []
+  R = 0.1
   assumes: 0 < R < 1; independent years
 ```
 
@@ -1307,7 +1398,7 @@ p_annual = 0.002104991704
 
 <a id="weibull_plotting_positions"></a>
 
-#### Return periods by the Weibull plotting position — `weibull_plotting_positions`
+#### Return periods by the Weibull plotting position, `weibull_plotting_positions`
 
 Ranks annual maxima from largest to smallest and gives each its exceedance probability m/(n + 1) and return period (n + 1)/m (Weibull plotting position).
 
@@ -1317,10 +1408,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `peaks` | in | annual maxima (any unit; the ranking keeps it) | — |
-| `ranked` | out | values ranked from largest to smallest | — |
-| `T` | out | return period of each (years) | — |
-| `P` | out | exceedance probability of each | — |
+| `peaks` | in | annual maxima (any unit; the ranking keeps it) | - |
+| `ranked` | out | values ranked from largest to smallest | - |
+| `T` | out | return period of each (years) | - |
+| `P` | out | exceedance probability of each | - |
 
 **Applies when:** annual series; ties keep distinct ranks.
 
@@ -1337,7 +1428,7 @@ P = [0.166666666667,0.333333333333,0.5,0.666666666667,0.833333333333]
 
 <a id="flood_exceedance_risk"></a>
 
-#### Risk of exceedance over a design life — `flood_exceedance_risk`
+#### Risk of exceedance over a design life: `flood_exceedance_risk`
 
 Probability that an event of return period T is equalled or exceeded at least once in n years (independent years), with the annual exceedance probability.
 
@@ -1347,11 +1438,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `T` | in | return period (years) | — |
-| `n` | in | design life or period (whole years) | — |
-| `risk` | out | probability of at least one exceedance in n years | — |
-| `p_annual` | out | annual exceedance probability 1/T | — |
-| `p_none` | out | probability of no exceedance | — |
+| `T` | in | return period (years) | - |
+| `n` | in | design life or period (whole years) | - |
+| `risk` | out | probability of at least one exceedance in n years | - |
+| `p_annual` | out | annual exceedance probability 1/T | - |
+| `p_none` | out | probability of no exceedance | - |
 
 **Applies when:** T > 1 year; independent years.
 
@@ -1361,7 +1452,7 @@ risk = 0.3949939329
 p_annual = 0.01
 p_none = 0.6050060671
   by: Risk of exceedance over a design life  (risk = 1 - (1 - 1/T)^n)
-  T = 100   []
+  T = 100
   assumes: T > 1 year; independent years
 ```
 
@@ -1369,7 +1460,7 @@ p_none = 0.6050060671
 
 <a id="scs_curve_number_runoff"></a>
 
-#### SCS curve-number runoff depth — `scs_curve_number_runoff`
+#### SCS curve-number runoff depth: `scs_curve_number_runoff`
 
 Direct runoff depth from a storm rainfall depth by the SCS (NRCS) curve-number method, with the potential retention S and the initial abstraction Ia = lambda S (lambda = 0.2 unless stated).
 
@@ -1380,12 +1471,12 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `P` | in | storm rainfall depth | m |
-| `CN` | in | curve number (30 to 100) | — |
-| `lam` | in | initial-abstraction ratio (default 0.2) (optional) | — |
-| `Q` | out | runoff depth (mm) | — |
-| `S` | out | potential maximum retention (mm) | — |
-| `Ia` | out | initial abstraction (mm) | — |
-| `C` | out | runoff ratio Q/P | — |
+| `CN` | in | curve number (30 to 100) | - |
+| `lam` | in | initial-abstraction ratio (default 0.2) (optional) | - |
+| `Q` | out | runoff depth (mm) | - |
+| `S` | out | potential maximum retention (mm) | - |
+| `Ia` | out | initial abstraction (mm) | - |
+| `C` | out | runoff ratio Q/P | - |
 
 **Applies when:** 30 <= CN <= 100; rainfall depth in mm; 0 <= lambda <= 0.3.
 
@@ -1396,8 +1487,8 @@ S = 63.5
 Ia = 12.7
 C = 0.5053905836
   by: SCS curve-number runoff depth  (S = 25400/CN - 254 (mm), Ia = lambda S, Q = (P - Ia)^2/(P - Ia + S) for P > Ia, else 0)
-  P = 100 m   []
-  CN = 80   []
+  P = 100 m
+  CN = 80
   assumes: 30 <= CN <= 100; rainfall depth in mm; 0 <= lambda <= 0.3
 ```
 
@@ -1405,7 +1496,7 @@ C = 0.5053905836
 
 <a id="kirpich_time_of_concentration"></a>
 
-#### Time of concentration by the Kirpich formula — `kirpich_time_of_concentration`
+#### Time of concentration by the Kirpich formula, `kirpich_time_of_concentration`
 
 The time of concentration tc = 0.0078 L^0.77 S^-0.385 minutes (L in feet; equivalent to 0.0195 L^0.77 S^-0.385 with L in metres) of a small rural catchment from the flow length and the average slope.
 
@@ -1416,10 +1507,10 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `L` | in | length of the longest flow path | m |
-| `S` | in | average slope (m/m) | — |
+| `S` | in | average slope (m/m) | - |
 | `tc` | out | time of concentration (s) | s |
-| `tc_min` | out | time of concentration (min) | — |
-| `tc_h` | out | time of concentration (h) | — |
+| `tc_min` | out | time of concentration (min) | - |
+| `tc_h` | out | time of concentration (h) | - |
 
 **Applies when:** 0 < S <= 1; L <= 100 km; small rural catchments (Kirpich's data: 0.4 to 45 ha).
 
@@ -1429,8 +1520,8 @@ tc = 1469.765514 s
 tc_min = 24.4960919
 tc_h = 0.4082681983
   by: Time of concentration by the Kirpich formula  (tc = 0.0078 L_ft^0.77 S^-0.385 min, L_ft = L/0.3048)
-  L = 1500 m   []
-  S = 0.02   []
+  L = 1500 m
+  S = 0.02
   assumes: 0 < S <= 1; L <= 100 km; small rural catchments (Kirpich's data: 0.4 to 45 ha)
 ```
 
@@ -1438,7 +1529,7 @@ tc_h = 0.4082681983
 
 <a id="unit_hydrograph_derivation"></a>
 
-#### Unit hydrograph from a storm by least-squares deconvolution — `unit_hydrograph_derivation`
+#### Unit hydrograph from a storm by least-squares deconvolution, `unit_hydrograph_derivation`
 
 The unit hydrograph that best reproduces an observed direct-runoff hydrograph from its excess-rainfall depths (least-squares solution of the convolution equations), with the RMS misfit.
 
@@ -1448,8 +1539,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `dro` | in | observed direct runoff ordinates in m^3/s (base flow removed) | — |
-| `excess` | in | excess rainfall in cm per period | — |
+| `dro` | in | observed direct runoff ordinates in m^3/s (base flow removed) | - |
+| `excess` | in | excess rainfall in cm per period | - |
 | `uh` | out | unit-hydrograph ordinates (m^3/s per cm) | m^3/s |
 | `rms_residual` | out | RMS misfit of the reconstructed runoff (m^3/s) | m^3/s |
 | `peak` | out | unit-hydrograph peak (m^3/s per cm) | m^3/s |
@@ -1471,7 +1562,7 @@ peak = 25.65372537 m^3/s
 
 <a id="broad_crested_weir_discharge"></a>
 
-#### Broad-crested weir discharge — `broad_crested_weir_discharge`
+#### Broad-crested weir discharge: `broad_crested_weir_discharge`
 
 Discharge over a broad-crested weir for a stated discharge coefficient (critical depth 2H/3 on the crest, approach velocity head included in H).
 
@@ -1481,7 +1572,7 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Cd` | in | discharge coefficient (stated, e.g. 0.95) | — |
+| `Cd` | in | discharge coefficient (stated, e.g. 0.95) | - |
 | `b` | in | crest width | m |
 | `H` | in | upstream head over the crest | m |
 | `Q` | out | discharge (m^3/s) | m^3/s |
@@ -1494,9 +1585,9 @@ $ civil-engineering solve broad_crested_weir_discharge Cd=0.95 "b=5 m" "H=0.6 m"
 Q = 3.763726876 m^3/s
 yc = 0.4 m
   by: Broad-crested weir discharge  (Q = Cd b sqrt(g) (2H/3)^(3/2))
-  Cd = 0.95   []
-  b = 5 m   []
-  H = 0.6 m   []
+  Cd = 0.95
+  b = 5 m
+  H = 0.6 m
   assumes: Cd stated; critical flow on the crest; H includes the approach velocity head
 ```
 
@@ -1504,7 +1595,7 @@ yc = 0.4 m
 
 <a id="chezy_from_manning"></a>
 
-#### Chezy coefficient from Manning's n — `chezy_from_manning`
+#### Chezy coefficient from Manning's n: `chezy_from_manning`
 
 The Chezy coefficient equivalent to a Manning roughness n at hydraulic radius R (SI units).
 
@@ -1514,7 +1605,7 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | Manning roughness coefficient | — |
+| `n` | in | Manning roughness coefficient | - |
 | `R` | in | hydraulic radius | m |
 | `C` | out | Chezy coefficient (m^(1/2)/s) | m^0.5/s |
 
@@ -1524,8 +1615,8 @@ $$
 $ civil-engineering solve chezy_from_manning n=0.013 "R=0.75 m"
 C = 73.32186869 m^0.5/s
   by: Chezy coefficient from Manning's n  (C = R^(1/6)/n)
-  n = 0.013   []
-  R = 0.75 m   []
+  n = 0.013
+  R = 0.75 m
   assumes: 0.005 <= n <= 0.2; R > 0
 ```
 
@@ -1533,7 +1624,7 @@ C = 73.32186869 m^0.5/s
 
 <a id="chezy_velocity"></a>
 
-#### Chezy velocity — `chezy_velocity`
+#### Chezy velocity: `chezy_velocity`
 
 Mean velocity of uniform flow from the Chezy equation for a Chezy coefficient C (m^(1/2)/s), hydraulic radius R and slope S.
 
@@ -1545,7 +1636,7 @@ $$
 |---|---|---|---|
 | `C` | in | Chezy coefficient (m^(1/2)/s) | m^0.5/s |
 | `R` | in | hydraulic radius | m |
-| `S` | in | channel (energy) slope, m/m | — |
+| `S` | in | channel (energy) slope, m/m | - |
 | `V` | out | mean velocity (m/s) | m/s |
 
 **Applies when:** C, R > 0; 0 < S < 1.
@@ -1554,9 +1645,9 @@ $$
 $ civil-engineering solve chezy_velocity "C=55 m^0.5/s" "R=1.1 m" S=0.0004
 V = 1.153689733 m/s
   by: Chezy velocity  (V = C sqrt(R S))
-  C = 55 m^0.5/s   []
-  R = 1.1 m   []
-  S = 0.0004   []
+  C = 55 m^0.5/s
+  R = 1.1 m
+  S = 0.0004
   assumes: C, R > 0; 0 < S < 1
 ```
 
@@ -1564,7 +1655,7 @@ V = 1.153689733 m/s
 
 <a id="critical_depth_circular"></a>
 
-#### Critical depth in a circular conduit — `critical_depth_circular`
+#### Critical depth in a circular conduit: `critical_depth_circular`
 
 Critical depth, area, velocity and minimum specific energy for a discharge Q in a circular pipe or culvert flowing part full (refused when the critical depth would exceed 0.95 D).
 
@@ -1590,8 +1681,8 @@ Ac = 0.2922347611 m^2
 Vc = 1.710953201 m/s
 Emin = 0.548044166 m
   by: Critical depth in a circular conduit  (bisection on Q^2 T(y) = g A(y)^3 with circular-segment geometry)
-  Q = 0.5 m^3/s   []
-  D = 1 m   []
+  Q = 0.5 m^3/s
+  D = 1 m
   assumes: Q, D > 0; critical depth below 0.95 D
 ```
 
@@ -1599,7 +1690,7 @@ Emin = 0.548044166 m
 
 <a id="critical_depth_rectangular"></a>
 
-#### Critical depth in a rectangular channel — `critical_depth_rectangular`
+#### Critical depth in a rectangular channel: `critical_depth_rectangular`
 
 Critical depth, critical velocity and minimum specific energy for a discharge Q in a rectangular channel.
 
@@ -1625,8 +1716,8 @@ Vc = 2.96856056 m/s
 Emin = 1.347454404 m
 q = 2.666666667 m^2/s
   by: Critical depth in a rectangular channel  (yc = (q^2/g)^(1/3), q = Q/b)
-  Q = 8 m^3/s   []
-  b = 3 m   []
+  Q = 8 m^3/s
+  b = 3 m
   assumes: Q, b > 0
 ```
 
@@ -1634,7 +1725,7 @@ q = 2.666666667 m^2/s
 
 <a id="critical_depth_trapezoidal"></a>
 
-#### Critical depth in a trapezoidal channel — `critical_depth_trapezoidal`
+#### Critical depth in a trapezoidal channel: `critical_depth_trapezoidal`
 
 Critical depth, area, velocity and minimum specific energy for a discharge Q in a trapezoidal (or triangular, b = 0) channel, from Q^2 T = g A^3.
 
@@ -1646,7 +1737,7 @@ $$
 |---|---|---|---|
 | `Q` | in | discharge | m^3/s |
 | `b` | in | bottom width | m |
-| `z` | in | side slope, horizontal per unit vertical | — |
+| `z` | in | side slope, horizontal per unit vertical | - |
 | `yc` | out | critical depth (m) | m |
 | `Ac` | out | critical flow area (m^2) | m^2 |
 | `Vc` | out | critical velocity (m/s) | m/s |
@@ -1661,9 +1752,9 @@ Ac = 5.507664928 m^2
 Vc = 2.723477226 m/s
 Emin = 1.449129374 m
   by: Critical depth in a trapezoidal channel  (bisection on Q^2 T(y) = g A(y)^3)
-  Q = 15 m^3/s   []
-  b = 3 m   []
-  z = 2   []
+  Q = 15 m^3/s
+  b = 3 m
+  z = 2
   assumes: Q > 0; b >= 0; z > 0
 ```
 
@@ -1671,7 +1762,7 @@ Emin = 1.449129374 m
 
 <a id="orifice_discharge"></a>
 
-#### Discharge through a small orifice under a head — `orifice_discharge`
+#### Discharge through a small orifice under a head, `orifice_discharge`
 
 Discharge through a small sharp-edged orifice of diameter d under a constant head h for a stated discharge coefficient (Torricelli's velocity times Cd times the orifice area).
 
@@ -1681,7 +1772,7 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Cd` | in | discharge coefficient (stated, e.g. 0.61) | — |
+| `Cd` | in | discharge coefficient (stated, e.g. 0.61) | - |
 | `d` | in | orifice diameter | m |
 | `h` | in | head above the orifice centre | m |
 | `Q` | out | discharge (m^3/s) | m^3/s |
@@ -1696,9 +1787,9 @@ Q = 0.009189033904 m^3/s
 V_ideal = 7.672027112 m/s
 area = 0.001963495408 m^2
   by: Discharge through a small orifice under a head  (Q = Cd (pi d^2/4) sqrt(2 g h))
-  Cd = 0.61   []
-  d = 0.05 m   []
-  h = 3 m   []
+  Cd = 0.61
+  d = 0.05 m
+  h = 3 m
   assumes: small orifice (d much smaller than h); free jet; Cd stated
 ```
 
@@ -1706,7 +1797,7 @@ area = 0.001963495408 m^2
 
 <a id="channel_froude_number"></a>
 
-#### Froude number of flow in a rectangular channel — `channel_froude_number`
+#### Froude number of flow in a rectangular channel, `channel_froude_number`
 
 Froude number V/sqrt(g y) of flow at depth y in a rectangular channel, and whether the flow is subcritical, critical or supercritical.
 
@@ -1719,9 +1810,9 @@ $$
 | `Q` | in | discharge | m^3/s |
 | `b` | in | channel width | m |
 | `y` | in | flow depth | m |
-| `Fr` | out | Froude number | — |
+| `Fr` | out | Froude number | - |
 | `V` | out | mean velocity (m/s) | m/s |
-| `regime` | out | flow regime: subcritical, critical or supercritical | — |
+| `regime` | out | flow regime: subcritical, critical or supercritical | - |
 
 **Applies when:** Q, b, y > 0.
 
@@ -1731,9 +1822,9 @@ Fr = 2.709141846
 V = 6 m/s
 regime = supercritical
   by: Froude number of flow in a rectangular channel  (V = Q/(b y), Fr = V/sqrt(g y))
-  Q = 12 m^3/s   []
-  b = 4 m   []
-  y = 0.5 m   []
+  Q = 12 m^3/s
+  b = 4 m
+  y = 0.5 m
   assumes: Q, b, y > 0
 ```
 
@@ -1741,7 +1832,7 @@ regime = supercritical
 
 <a id="hydraulic_jump_rectangular"></a>
 
-#### Hydraulic jump in a rectangular channel — `hydraulic_jump_rectangular`
+#### Hydraulic jump in a rectangular channel: `hydraulic_jump_rectangular`
 
 Sequent (conjugate) depth, energy loss and dissipated power of a hydraulic jump in a horizontal rectangular channel (Belanger's equation from the momentum balance).
 
@@ -1755,11 +1846,11 @@ $$
 | `b` | in | channel width | m |
 | `y1` | in | upstream (supercritical) depth | m |
 | `y2` | out | sequent depth after the jump (m) | m |
-| `Fr1` | out | upstream Froude number | — |
-| `Fr2` | out | downstream Froude number | — |
+| `Fr1` | out | upstream Froude number | - |
+| `Fr2` | out | downstream Froude number | - |
 | `dE` | out | head lost in the jump (m) | m |
 | `power_loss` | out | power dissipated gamma Q dE (W) | W |
-| `ratio` | out | depth ratio y2/y1 | — |
+| `ratio` | out | depth ratio y2/y1 | - |
 
 **Applies when:** horizontal, frictionless bed; Fr1 > 1.
 
@@ -1772,9 +1863,9 @@ dE = 4.876755035 m
 power_loss = 478409.669 W
 ratio = 8.438015684
   by: Hydraulic jump in a rectangular channel  (y2 = (y1/2)(sqrt(1 + 8 Fr1^2) - 1), dE = (y2 - y1)^3/(4 y1 y2))
-  Q = 10 m^3/s   []
-  b = 2 m   []
-  y1 = 0.4 m   []
+  Q = 10 m^3/s
+  b = 2 m
+  y1 = 0.4 m
   assumes: horizontal, frictionless bed; Fr1 > 1
 ```
 
@@ -1782,7 +1873,7 @@ ratio = 8.438015684
 
 <a id="gradually_varied_flow_length"></a>
 
-#### Length of a gradually varied flow profile (rectangular channel) — `gradually_varied_flow_length`
+#### Length of a gradually varied flow profile (rectangular channel), `gradually_varied_flow_length`
 
 Distance along a prismatic rectangular channel between two sections of a gradually varied flow profile, by integrating dx/dy = (1 - Fr^2)/(S0 - Sf) exactly (not the direct-step approximation), with the profile type (M1, M2, M3, S1, S2, S3). Positive L: the section at depth y2 lies downstream of the one at depth y1.
 
@@ -1794,24 +1885,38 @@ $$
 |---|---|---|---|
 | `Q` | in | discharge | m^3/s |
 | `b` | in | channel width | m |
-| `S0` | in | bed slope, m/m (positive) | — |
-| `n` | in | Manning roughness coefficient | — |
+| `S0` | in | bed slope, m/m (positive) | - |
+| `n` | in | Manning roughness coefficient | - |
 | `y1` | in | depth at the first section | m |
 | `y2` | in | depth at the second section | m |
 | `L` | out | distance from section 1 to section 2, positive downstream (m) | m |
 | `yn` | out | normal depth (m) | m |
 | `yc` | out | critical depth (m) | m |
-| `profile` | out | profile type (M1 ... S3) | — |
+| `profile` | out | profile type (M1 ... S3) | - |
 
 **Applies when:** S0 > 0 (mild or steep slope); prismatic rectangular channel; both depths in one zone, 2% from yn and yc.
 
-*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ civil-engineering solve gradually_varied_flow_length "Q=20 m^3/s" "b=5 m" S0=0.0004 n=0.015 "y1=4 m" "y2=3 m"
+L = -4594.586187 m
+yn = 2.563823865 m
+yc = 1.177109844 m
+profile = M1
+  by: Length of a gradually varied flow profile (rectangular channel)  (x2 - x1 = integral of (1 - Fr^2)/(S0 - Sf) dy from y1 to y2, Sf from Manning (tanh-sinh quadrature))
+  Q = 20 m^3/s
+  b = 5 m
+  S0 = 0.0004
+  n = 0.015
+  y1 = 4 m
+  y2 = 3 m
+  assumes: S0 > 0 (mild or steep slope); prismatic rectangular channel; both depths in one zone, 2% from yn and yc
+```
 
 **What the worked example means:** This calculation determines the longitudinal distance along a prismatic rectangular channel between two specified flow depths in a gradually varied flow profile. By integrating the governing differential equation using Manning's friction slope, it finds that the section at depth 3 m lies -4594.59 m downstream from the section at depth 4 m. The result depends on the classification of the profile relative to normal depth 2.56382 m and critical depth 1.17711 m.
 
 <a id="manning_rectangular_discharge"></a>
 
-#### Manning discharge in a rectangular channel — `manning_rectangular_discharge`
+#### Manning discharge in a rectangular channel, `manning_rectangular_discharge`
 
 Uniform-flow discharge and velocity in a rectangular channel from Manning's equation.
 
@@ -1823,8 +1928,8 @@ $$
 |---|---|---|---|
 | `b` | in | bottom width | m |
 | `y` | in | flow depth | m |
-| `S` | in | bed slope, m/m | — |
-| `n` | in | Manning roughness coefficient | — |
+| `S` | in | bed slope, m/m | - |
+| `n` | in | Manning roughness coefficient | - |
 | `Q` | out | discharge (m^3/s) | m^3/s |
 | `V` | out | mean velocity (m/s) | m/s |
 | `A` | out | flow area (m^2) | m^2 |
@@ -1832,13 +1937,25 @@ $$
 
 **Applies when:** b, y > 0; 0 < S < 1; 0.005 <= n <= 0.2.
 
-*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ civil-engineering solve manning_rectangular_discharge "b=3 m" "y=1.2 m" S=0.001 n=0.013
+Q = 6.682900203 m^3/s
+V = 1.856361167 m/s
+A = 3.6 m^2
+R = 0.6666666667 m
+  by: Manning discharge in a rectangular channel  (A = b y, R = A/(b + 2y), Q = A R^(2/3) S^(1/2)/n)
+  b = 3 m
+  y = 1.2 m
+  S = 0.001
+  n = 0.013
+  assumes: b, y > 0; 0 < S < 1; 0.005 <= n <= 0.2
+```
 
 **What the worked example means:** This calculation determines the uniform flow discharge and mean velocity in a rectangular channel. Using the bottom width of 3 m, flow depth of 1.2 m, bed slope of 0.001, and Manning roughness coefficient of 0.013, it computes the flow area as 3.6 m^2 and hydraulic radius as 0.666667 m. The resulting discharge of 6.6829 m^3/s indicates how much water passes per second, while the velocity of 1.85636 m/s shows how fast the water moves.
 
 <a id="manning_trapezoidal_discharge"></a>
 
-#### Manning discharge in a trapezoidal channel — `manning_trapezoidal_discharge`
+#### Manning discharge in a trapezoidal channel, `manning_trapezoidal_discharge`
 
 Uniform-flow discharge and velocity in a trapezoidal channel (side slopes z H:1V) from Manning's equation.
 
@@ -1850,9 +1967,9 @@ $$
 |---|---|---|---|
 | `b` | in | bottom width | m |
 | `y` | in | flow depth | m |
-| `z` | in | side slope, horizontal per unit vertical | — |
-| `S` | in | bed slope, m/m | — |
-| `n` | in | Manning roughness coefficient | — |
+| `z` | in | side slope, horizontal per unit vertical | - |
+| `S` | in | bed slope, m/m | - |
+| `n` | in | Manning roughness coefficient | - |
 | `Q` | out | discharge (m^3/s) | m^3/s |
 | `V` | out | mean velocity (m/s) | m/s |
 | `A` | out | flow area (m^2) | m^2 |
@@ -1860,13 +1977,26 @@ $$
 
 **Applies when:** y > 0; b >= 0; z >= 0; 0 < S < 1; 0.005 <= n <= 0.2.
 
-*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ civil-engineering solve manning_trapezoidal_discharge "b=4 m" "y=1.5 m" z=2 S=0.0008 n=0.025
+Q = 11.72490667 m^3/s
+V = 1.116657778 m/s
+A = 10.5 m^2
+R = 0.9805565963 m
+  by: Manning discharge in a trapezoidal channel  (A = (b + z y) y, R = A/(b + 2 y sqrt(1 + z^2)), Q = A R^(2/3) S^(1/2)/n)
+  b = 4 m
+  y = 1.5 m
+  z = 2
+  S = 0.0008
+  n = 0.025
+  assumes: y > 0; b >= 0; z >= 0; 0 < S < 1; 0.005 <= n <= 0.2
+```
 
 **What the worked example means:** This calculation determines the uniform-flow discharge and velocity for a trapezoidal channel using Manning's equation. It uses the bottom width, flow depth, side slope, bed slope, and roughness coefficient to compute the geometric properties. The resulting flow area is 10.5 m^2, hydraulic radius is 0.980557 m, and discharge is 11.7249 m^3/s, which represents the volume of water moving through the channel per second.
 
 <a id="manning_partially_full_pipe"></a>
 
-#### Manning flow in a part-full circular pipe — `manning_partially_full_pipe`
+#### Manning flow in a part-full circular pipe: `manning_partially_full_pipe`
 
 Gravity (open-channel) discharge and velocity in a circular sewer or culvert flowing at depth y, from Manning's equation, with the full-bore capacity and the ratio Q/Q_full (n taken as constant with depth).
 
@@ -1878,24 +2008,38 @@ $$
 |---|---|---|---|
 | `D` | in | pipe diameter | m |
 | `y` | in | flow depth | m |
-| `S` | in | pipe slope, m/m | — |
-| `n` | in | Manning roughness coefficient | — |
+| `S` | in | pipe slope, m/m | - |
+| `n` | in | Manning roughness coefficient | - |
 | `Q` | out | discharge (m^3/s) | m^3/s |
 | `V` | out | mean velocity (m/s) | m/s |
 | `A` | out | flow area (m^2) | m^2 |
 | `R` | out | hydraulic radius (m) | m |
 | `Q_full` | out | full-bore capacity (m^3/s) | m^3/s |
-| `ratio` | out | Q/Q_full | — |
+| `ratio` | out | Q/Q_full | - |
 
 **Applies when:** 0 < y <= D; 0 < S < 1; n constant with depth.
 
-*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ civil-engineering solve manning_partially_full_pipe "D=0.6 m" "y=0.3 m" S=0.005 n=0.013
+Q = 0.217085863 m^3/s
+V = 1.535568363 m/s
+A = 0.1413716694 m^2
+R = 0.15 m
+Q_full = 0.434171726 m^3/s
+ratio = 0.5
+  by: Manning flow in a part-full circular pipe  (circular-segment geometry, Q = A R^(2/3) S^(1/2)/n; Q_full with R = D/4)
+  D = 0.6 m
+  y = 0.3 m
+  S = 0.005
+  n = 0.013
+  assumes: 0 < y <= D; 0 < S < 1; n constant with depth
+```
 
 **What the worked example means:** This calculation determines the gravity flow capacity in a circular sewer or culvert. Using Manning's equation with slope 0.005 and roughness 0.013, it computes the wetted area 0.141372 m^2 and hydraulic radius 0.15 m. The resulting discharge 0.217086 m^3/s and velocity 1.53557 m/s are compared to the full-bore capacity 0.434172 m^3/s to assess how close the pipe is to surcharging.
 
 <a id="manning_velocity"></a>
 
-#### Manning velocity from hydraulic radius — `manning_velocity`
+#### Manning velocity from hydraulic radius: `manning_velocity`
 
 Mean velocity of uniform flow from Manning's equation (SI) for a hydraulic radius R, slope S and roughness n.
 
@@ -1906,8 +2050,8 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `R` | in | hydraulic radius | m |
-| `S` | in | channel (energy) slope, m/m | — |
-| `n` | in | Manning roughness coefficient | — |
+| `S` | in | channel (energy) slope, m/m | - |
+| `n` | in | Manning roughness coefficient | - |
 | `V` | out | mean velocity (m/s) | m/s |
 
 **Applies when:** R > 0; 0 < S < 1; 0.005 <= n <= 0.2.
@@ -1916,9 +2060,9 @@ $$
 $ civil-engineering solve manning_velocity "R=0.8 m" S=0.0005 n=0.015
 V = 1.284656645 m/s
   by: Manning velocity from hydraulic radius  (V = R^(2/3) S^(1/2) / n)
-  R = 0.8 m   []
-  S = 0.0005   []
-  n = 0.015   []
+  R = 0.8 m
+  S = 0.0005
+  n = 0.015
   assumes: R > 0; 0 < S < 1; 0.005 <= n <= 0.2
 ```
 
@@ -1926,7 +2070,7 @@ V = 1.284656645 m/s
 
 <a id="manning_from_chezy"></a>
 
-#### Manning's n from a Chezy coefficient — `manning_from_chezy`
+#### Manning's n from a Chezy coefficient: `manning_from_chezy`
 
 The Manning roughness n equivalent to a Chezy coefficient C at hydraulic radius R (SI units).
 
@@ -1938,7 +2082,7 @@ $$
 |---|---|---|---|
 | `C` | in | Chezy coefficient (m^(1/2)/s) | m^0.5/s |
 | `R` | in | hydraulic radius | m |
-| `n` | out | Manning roughness coefficient | — |
+| `n` | out | Manning roughness coefficient | - |
 
 **Applies when:** C, R > 0.
 
@@ -1946,8 +2090,8 @@ $$
 $ civil-engineering solve manning_from_chezy "C=60 m^0.5/s" "R=1.2 m"
 n = 0.01718088868
   by: Manning's n from a Chezy coefficient  (n = R^(1/6)/C)
-  C = 60 m^0.5/s   []
-  R = 1.2 m   []
+  C = 60 m^0.5/s
+  R = 1.2 m
   assumes: C, R > 0
 ```
 
@@ -1955,7 +2099,7 @@ n = 0.01718088868
 
 <a id="normal_depth_rectangular"></a>
 
-#### Normal depth in a rectangular channel — `normal_depth_rectangular`
+#### Normal depth in a rectangular channel: `normal_depth_rectangular`
 
 The uniform-flow (normal) depth that carries a discharge Q in a rectangular channel (Manning), with the velocity and Froude number at that depth.
 
@@ -1967,11 +2111,11 @@ $$
 |---|---|---|---|
 | `Q` | in | discharge | m^3/s |
 | `b` | in | bottom width | m |
-| `S` | in | bed slope, m/m | — |
-| `n` | in | Manning roughness coefficient | — |
+| `S` | in | bed slope, m/m | - |
+| `n` | in | Manning roughness coefficient | - |
 | `yn` | out | normal depth (m) | m |
 | `V` | out | velocity at normal depth (m/s) | m/s |
-| `Fr` | out | Froude number at normal depth | — |
+| `Fr` | out | Froude number at normal depth | - |
 
 **Applies when:** Q, b > 0; 0 < S < 1.
 
@@ -1981,10 +2125,10 @@ yn = 1.754416688 m
 V = 1.424975046 m/s
 Fr = 0.3434838961
   by: Normal depth in a rectangular channel  (bisection on Manning's Q(y) = Q (Q increases with y))
-  Q = 10 m^3/s   []
-  b = 4 m   []
-  S = 0.0005   []
-  n = 0.015   []
+  Q = 10 m^3/s
+  b = 4 m
+  S = 0.0005
+  n = 0.015
   assumes: Q, b > 0; 0 < S < 1
 ```
 
@@ -1992,7 +2136,7 @@ Fr = 0.3434838961
 
 <a id="normal_depth_trapezoidal"></a>
 
-#### Normal depth in a trapezoidal channel — `normal_depth_trapezoidal`
+#### Normal depth in a trapezoidal channel: `normal_depth_trapezoidal`
 
 The uniform-flow (normal) depth that carries a discharge Q in a trapezoidal channel (Manning), with the velocity, area and Froude number (on the hydraulic depth A/T).
 
@@ -2004,13 +2148,13 @@ $$
 |---|---|---|---|
 | `Q` | in | discharge | m^3/s |
 | `b` | in | bottom width | m |
-| `z` | in | side slope, horizontal per unit vertical | — |
-| `S` | in | bed slope, m/m | — |
-| `n` | in | Manning roughness coefficient | — |
+| `z` | in | side slope, horizontal per unit vertical | - |
+| `S` | in | bed slope, m/m | - |
+| `n` | in | Manning roughness coefficient | - |
 | `yn` | out | normal depth (m) | m |
 | `V` | out | velocity at normal depth (m/s) | m/s |
 | `A` | out | flow area (m^2) | m^2 |
-| `Fr` | out | Froude number on the hydraulic depth | — |
+| `Fr` | out | Froude number on the hydraulic depth | - |
 
 **Applies when:** Q > 0; b >= 0; z >= 0; 0 < S < 1.
 
@@ -2021,11 +2165,11 @@ V = 0.9897350221 m/s
 A = 20.20742881 m^2
 Fr = 0.2598312543
   by: Normal depth in a trapezoidal channel  (bisection on Manning's Q(y) = Q)
-  Q = 20 m^3/s   []
-  b = 5 m   []
-  z = 2   []
-  S = 0.0004   []
-  n = 0.025   []
+  Q = 20 m^3/s
+  b = 5 m
+  z = 2
+  S = 0.0004
+  n = 0.025
   assumes: Q > 0; b >= 0; z >= 0; 0 < S < 1
 ```
 
@@ -2033,7 +2177,7 @@ Fr = 0.2598312543
 
 <a id="circular_channel_section"></a>
 
-#### Part-full circular conduit: area, wetted perimeter, hydraulic radius — `circular_channel_section`
+#### Part-full circular conduit: area, wetted perimeter, hydraulic radius, `circular_channel_section`
 
 Flow area, wetted perimeter, hydraulic radius, top width and hydraulic depth of a circular pipe or culvert flowing part full at depth y, with the central angle of the wetted arc.
 
@@ -2050,7 +2194,7 @@ $$
 | `R` | out | hydraulic radius A/P (m) | m |
 | `T` | out | top width (m) | m |
 | `Dh` | out | hydraulic depth A/T (m) | m |
-| `theta` | out | central angle of the wetted arc (degrees) | — |
+| `theta` | out | central angle of the wetted arc (degrees) | - |
 
 **Applies when:** 0 < y < D.
 
@@ -2063,8 +2207,8 @@ T = 0.9797958971 m
 Dh = 0.5021743388 m
 theta = 203.0739181
   by: Part-full circular conduit: area, wetted perimeter, hydraulic radius  (theta = 2 acos(1 - 2y/D), A = D^2 (theta - sin theta)/8, P = D theta/2, T = D sin(theta/2))
-  D = 1 m   []
-  y = 0.6 m   []
+  D = 1 m
+  y = 0.6 m
   assumes: 0 < y < D
 ```
 
@@ -2072,7 +2216,7 @@ theta = 203.0739181
 
 <a id="rectangular_channel_section"></a>
 
-#### Rectangular channel: area, wetted perimeter, hydraulic radius — `rectangular_channel_section`
+#### Rectangular channel: area, wetted perimeter, hydraulic radius, `rectangular_channel_section`
 
 Flow area, wetted perimeter, hydraulic radius, top width and hydraulic depth of a rectangular channel flowing at depth y.
 
@@ -2092,13 +2236,24 @@ $$
 
 **Applies when:** b > 0; y > 0.
 
-*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ civil-engineering solve rectangular_channel_section "b=3 m" "y=1.2 m"
+A = 3.6 m^2
+P = 5.4 m
+R = 0.6666666667 m
+T = 3 m
+Dh = 1.2 m
+  by: Rectangular channel: area, wetted perimeter, hydraulic radius  (A = b y, P = b + 2y, R = A/P, T = b, D = A/T)
+  b = 3 m
+  y = 1.2 m
+  assumes: b > 0; y > 0
+```
 
 **What the worked example means:** This calculation determines the geometric properties of water flowing in a rectangular channel. Using a bottom width of 3 m and a flow depth of 1.2 m, it computes the cross-sectional flow area as 3.6 m^2, which represents the total space occupied by the water. The wetted perimeter, calculated as 5.4 m, measures the length of the channel boundary in contact with the water. From these values, the hydraulic radius is derived as 0.666667 m, indicating the efficiency of the channel shape for conveying flow. Additionally, the top width is found to be 3 m, equal to the bottom width, and the hydraulic depth is 1.2 m, which is used in Froude number calculations.
 
 <a id="rectangular_weir_discharge"></a>
 
-#### Sharp-crested rectangular weir discharge — `rectangular_weir_discharge`
+#### Sharp-crested rectangular weir discharge: `rectangular_weir_discharge`
 
 Discharge over a sharp-crested rectangular weir for a stated discharge coefficient Cd and head H, with Francis' allowance of 0.1 H per end contraction (0, 1 or 2 contractions).
 
@@ -2108,10 +2263,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Cd` | in | discharge coefficient (stated, e.g. 0.62) | — |
+| `Cd` | in | discharge coefficient (stated, e.g. 0.62) | - |
 | `b` | in | crest length | m |
 | `H` | in | head over the crest | m |
-| `contractions` | in | number of end contractions (0, 1 or 2; default 0) (optional) | — |
+| `contractions` | in | number of end contractions (0, 1 or 2; default 0) (optional) | - |
 | `Q` | out | discharge (m^3/s) | m^3/s |
 | `L_eff` | out | effective crest length (m) | m |
 
@@ -2122,9 +2277,9 @@ $ civil-engineering solve rectangular_weir_discharge Cd=0.62 "b=2 m" "H=0.35 m"
 Q = 0.7581968821 m^3/s
 L_eff = 2 m
   by: Sharp-crested rectangular weir discharge  (Q = (2/3) Cd L_eff sqrt(2g) H^(3/2), L_eff = b - 0.1 n H)
-  Cd = 0.62   []
-  b = 2 m   []
-  H = 0.35 m   []
+  Cd = 0.62
+  b = 2 m
+  H = 0.35 m
   assumes: Cd stated; free (unsubmerged) nappe; b - 0.1 n H > 0
 ```
 
@@ -2132,7 +2287,7 @@ L_eff = 2 m
 
 <a id="alternate_depth_rectangular"></a>
 
-#### Specific energy and alternate depth in a rectangular channel — `alternate_depth_rectangular`
+#### Specific energy and alternate depth in a rectangular channel, `alternate_depth_rectangular`
 
 The specific energy of flow at depth y in a rectangular channel and the alternate depth with the same specific energy on the other side of critical depth.
 
@@ -2148,8 +2303,8 @@ $$
 | `E` | out | specific energy y + V^2/2g (m) | m |
 | `y_alt` | out | alternate depth (m) | m |
 | `yc` | out | critical depth (m) | m |
-| `Fr` | out | Froude number at depth y | — |
-| `regime` | out | flow regime at depth y | — |
+| `Fr` | out | Froude number at depth y | - |
+| `regime` | out | flow regime at depth y | - |
 
 **Applies when:** Q, b, y > 0; y is not the critical depth.
 
@@ -2161,9 +2316,9 @@ yc = 0.9716827674 m
 Fr = 3.78614083
 regime = supercritical
   by: Specific energy and alternate depth in a rectangular channel  (E = y + q^2/(2 g y^2); the other positive root of y^3 - E y^2 + q^2/(2g) = 0 by bisection)
-  Q = 6 m^3/s   []
-  b = 2 m   []
-  y = 0.4 m   []
+  Q = 6 m^3/s
+  b = 2 m
+  y = 0.4 m
   assumes: Q, b, y > 0; y is not the critical depth
 ```
 
@@ -2171,7 +2326,7 @@ regime = supercritical
 
 <a id="trapezoidal_channel_section"></a>
 
-#### Trapezoidal channel: area, wetted perimeter, hydraulic radius — `trapezoidal_channel_section`
+#### Trapezoidal channel: area, wetted perimeter, hydraulic radius, `trapezoidal_channel_section`
 
 Flow area, wetted perimeter, hydraulic radius, top width and hydraulic depth of a trapezoidal channel with bottom width b and side slopes z (horizontal : vertical); b = 0 is a triangular channel.
 
@@ -2183,7 +2338,7 @@ $$
 |---|---|---|---|
 | `b` | in | bottom width | m |
 | `y` | in | flow depth | m |
-| `z` | in | side slope, horizontal per unit vertical | — |
+| `z` | in | side slope, horizontal per unit vertical | - |
 | `A` | out | flow area (m^2) | m^2 |
 | `P` | out | wetted perimeter (m) | m |
 | `R` | out | hydraulic radius A/P (m) | m |
@@ -2192,13 +2347,25 @@ $$
 
 **Applies when:** y > 0; b >= 0; z >= 0.
 
-*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ civil-engineering solve trapezoidal_channel_section "b=4 m" "y=1.5 m" z=2
+A = 10.5 m^2
+P = 10.70820393 m
+R = 0.9805565963 m
+T = 10 m
+Dh = 1.05 m
+  by: Trapezoidal channel: area, wetted perimeter, hydraulic radius  (A = (b + z y) y, P = b + 2 y sqrt(1 + z^2), T = b + 2 z y)
+  b = 4 m
+  y = 1.5 m
+  z = 2
+  assumes: y > 0; b >= 0; z >= 0
+```
 
 **What the worked example means:** This calculation determines the geometric properties of flow in a trapezoidal channel using the bottom width 4 m, flow depth 1.5 m, and side slope 2. The resulting flow area 10.5 m^2 represents the cross-sectional area available for water, while the wetted perimeter 10.7082 m indicates the length of the channel boundary in contact with the fluid. The hydraulic radius 0.980557 m, defined as the ratio of area to perimeter, characterizes the efficiency of the channel section for conveying flow.
 
 <a id="v_notch_weir_discharge"></a>
 
-#### V-notch (triangular) weir discharge — `v_notch_weir_discharge`
+#### V-notch (triangular) weir discharge: `v_notch_weir_discharge`
 
 Discharge over a sharp-crested triangular (V-notch) weir of notch angle theta for a stated discharge coefficient.
 
@@ -2208,8 +2375,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Cd` | in | discharge coefficient (stated, e.g. 0.58) | — |
-| `theta` | in | notch angle (degrees) | — |
+| `Cd` | in | discharge coefficient (stated, e.g. 0.58) | - |
+| `theta` | in | notch angle (degrees) | - |
 | `H` | in | head above the vertex | m |
 | `Q` | out | discharge (m^3/s) | m^3/s |
 
@@ -2219,9 +2386,9 @@ $$
 $ civil-engineering solve v_notch_weir_discharge Cd=0.58 theta=90 "H=0.25 m"
 Q = 0.04281798687 m^3/s
   by: V-notch (triangular) weir discharge  (Q = (8/15) Cd sqrt(2g) tan(theta/2) H^(5/2))
-  Cd = 0.58   []
-  theta = 90   []
-  H = 0.25 m   []
+  Cd = 0.58
+  theta = 90
+  H = 0.25 m
   assumes: Cd stated; 0 < theta < 180 degrees; free nappe
 ```
 
@@ -2231,7 +2398,7 @@ Q = 0.04281798687 m^3/s
 
 <a id="parallel_pipes_hazen_williams"></a>
 
-#### Flow division among parallel pipes (Hazen-Williams) — `parallel_pipes_hazen_williams`
+#### Flow division among parallel pipes (Hazen-Williams), `parallel_pipes_hazen_williams`
 
 How a total flow Q divides among two or more pipes in parallel between the same two junctions, and the common head loss, from the Hazen-Williams formula.
 
@@ -2242,9 +2409,9 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `Q` | in | total flow | m^3/s |
-| `L` | in | pipe lengths in m (one per pipe) | — |
-| `D` | in | pipe diameters in mm (one per pipe) | — |
-| `C` | in | Hazen-Williams C of each pipe | — |
+| `L` | in | pipe lengths in m (one per pipe) | - |
+| `D` | in | pipe diameters in mm (one per pipe) | - |
+| `C` | in | Hazen-Williams C of each pipe | - |
 | `hf` | out | head loss between the junctions (m) | m |
 | `flows` | out | flow in each pipe (m^3/s) | m^3/s |
 
@@ -2255,7 +2422,7 @@ $ civil-engineering solve parallel_pipes_hazen_williams "Q=0.3 m^3/s" "L=[800, 1
 hf = 7.944067369 m
 flows = [0.116758581689,0.183241418311] m^3/s
   by: Flow division among parallel pipes (Hazen-Williams)  (hf = (Q / sum k_i^(-1/1.852))^1.852 with k_i = 10.6668 L_i/(C_i^1.852 D_i^4.871); Q_i = (hf/k_i)^(1/1.852))
-  Q = 0.3 m^3/s   []
+  Q = 0.3 m^3/s
   assumes: the same head loss across every pipe; 40 <= C <= 160; lists of equal length
 ```
 
@@ -2263,7 +2430,7 @@ flows = [0.116758581689,0.183241418311] m^3/s
 
 <a id="hazen_williams_head_loss"></a>
 
-#### Hazen-Williams head loss in a pipe — `hazen_williams_head_loss`
+#### Hazen-Williams head loss in a pipe: `hazen_williams_head_loss`
 
 Friction head loss, velocity and friction slope for water flowing at Q through a pipe, from the Hazen-Williams formula (SI form used by EPANET).
 
@@ -2276,10 +2443,10 @@ $$
 | `Q` | in | discharge | m^3/s |
 | `D` | in | pipe diameter | m |
 | `L` | in | pipe length | m |
-| `C` | in | Hazen-Williams roughness coefficient | — |
+| `C` | in | Hazen-Williams roughness coefficient | - |
 | `hf` | out | friction head loss (m) | m |
 | `V` | out | mean velocity (m/s) | m/s |
-| `Sf` | out | friction slope hf/L (m/m) | — |
+| `Sf` | out | friction slope hf/L (m/m) | - |
 
 **Applies when:** water near 15 C, turbulent flow; 40 <= C <= 160.
 
@@ -2289,10 +2456,10 @@ hf = 2.064555214 m
 V = 0.7073553026 m/s
 Sf = 0.002064555214
   by: Hazen-Williams head loss in a pipe  (hf = 10.6668 L Q^1.852/(C^1.852 D^4.871))
-  Q = 0.05 m^3/s   []
-  D = 0.3 m   []
-  L = 1000 m   []
-  C = 120   []
+  Q = 0.05 m^3/s
+  D = 0.3 m
+  L = 1000 m
+  C = 120
   assumes: water near 15 C, turbulent flow; 40 <= C <= 160
 ```
 
@@ -2300,7 +2467,7 @@ Sf = 0.002064555214
 
 <a id="hazen_williams_flow"></a>
 
-#### Pipe flow from a head loss (Hazen-Williams) — `hazen_williams_flow`
+#### Pipe flow from a head loss (Hazen-Williams), `hazen_williams_flow`
 
 The discharge a pipe carries under a given friction head loss (for example between two reservoirs), from the Hazen-Williams formula.
 
@@ -2313,7 +2480,7 @@ $$
 | `hf` | in | friction head loss | m |
 | `D` | in | pipe diameter | m |
 | `L` | in | pipe length | m |
-| `C` | in | Hazen-Williams roughness coefficient | — |
+| `C` | in | Hazen-Williams roughness coefficient | - |
 | `Q` | out | discharge (m^3/s) | m^3/s |
 | `V` | out | mean velocity (m/s) | m/s |
 
@@ -2324,10 +2491,10 @@ $ civil-engineering solve hazen_williams_flow "hf=5 m" "D=0.3 m" "L=1500 m" C=11
 Q = 0.05936365982 m^3/s
 V = 0.8398239911 m/s
   by: Pipe flow from a head loss (Hazen-Williams)  (Q = (hf C^1.852 D^4.871/(10.6668 L))^(1/1.852))
-  hf = 5 m   []
-  D = 0.3 m   []
-  L = 1500 m   []
-  C = 110   []
+  hf = 5 m
+  D = 0.3 m
+  L = 1500 m
+  C = 110
   assumes: 40 <= C <= 160; hf > 0
 ```
 
@@ -2335,7 +2502,7 @@ V = 0.8398239911 m/s
 
 <a id="hardy_cross_network"></a>
 
-#### Pipe network flows by the Hardy Cross method (Hazen-Williams) — `hardy_cross_network`
+#### Pipe network flows by the Hardy Cross method (Hazen-Williams), `hardy_cross_network`
 
 Steady flows in every pipe of a looped water network and the head loss from the source to every node, by Hardy Cross loop corrections (finished with simultaneous loop corrections to full precision), Hazen-Williams friction. Nodes are numbered 1..N; node 1 is the source and supplies the total demand.
 
@@ -2345,25 +2512,33 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `pipes` | in | pipes as node pairs 1-2, 2-3, ... (the flow sign follows this direction) | — |
-| `L` | in | pipe lengths in m (in pipe order) | — |
-| `D` | in | pipe diameters in mm (in pipe order) | — |
-| `C` | in | Hazen-Williams C of each pipe (in pipe order) | — |
-| `demands` | in | demand at nodes 1..N in m^3/s (node 1, the source, takes 0) | — |
+| `pipes` | in | pipes as node pairs 1-2, 2-3, ... (the flow sign follows this direction) | - |
+| `L` | in | pipe lengths in m (in pipe order) | - |
+| `D` | in | pipe diameters in mm (in pipe order) | - |
+| `C` | in | Hazen-Williams C of each pipe (in pipe order) | - |
+| `demands` | in | demand at nodes 1..N in m^3/s (node 1, the source, takes 0) | - |
 | `flows` | out | flow in each pipe, positive from its first to its second node (m^3/s) | m^3/s |
 | `head_loss` | out | head loss from node 1 to each node (m) | m |
-| `loops` | out | independent loops | — |
-| `iterations` | out | Hardy Cross sweeps before the Newton finish | — |
+| `loops` | out | independent loops | - |
+| `iterations` | out | Hardy Cross sweeps before the Newton finish | - |
 
 **Applies when:** one source (node 1); connected network; 40 <= C <= 160; demands >= 0.
 
-*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ civil-engineering solve hardy_cross_network "pipes=1-2, 2-3, 3-4, 4-1, 2-4" "L=[600, 500, 600, 500, 780]" "D=[300, 250, 200, 250, 200]" "C=[120, 120, 120, 120, 120]" "demands=[0, 0.04, 0.05, 0.03]"
+flows = [0.0714399845267,0.0331343839504,-0.0168656160496,-0.0485600154733,-0.00169439942369] m^3/s
+head_loss = [0.0,2.39874834362,3.56973630784,2.37675423164] m
+loops = 2
+iterations = 14
+  by: Pipe network flows by the Hardy Cross method (Hazen-Williams)  (loop corrections dQ = -sum(k Q|Q|^0.852)/(1.852 sum(k|Q|^0.852)) until converged, then Newton on all loops)
+  assumes: one source (node 1); connected network; 40 <= C <= 160; demands >= 0
+```
 
 **What the worked example means:** This calculation determines the flow distribution and pressure drops throughout a looped water network. By applying the Hardy Cross method with Hazen-Williams friction, the model iteratively adjusts initial flow guesses to satisfy both mass conservation at nodes and energy conservation around loops. The resulting pipe flows are [0.07144, 0.0331344, -0.0168656, -0.04856, -0.0016944] m^3/s, where positive values indicate movement from the first to the second node of each pair. The cumulative head loss from the source node to every other node is [0, 2.39875, 3.56974, 2.37675] m. These results rely on the input parameters including pipe lengths [600, 500, 600, 500, 780], diameters [300, 250, 200, 250, 200], roughness coefficients [120, 120, 120, 120, 120], and nodal demands [0, 0.04, 0.05, 0.03]. The solution converged after 14 iterations across 2 independent loops.
 
 <a id="three_reservoir_problem"></a>
 
-#### Three-reservoir problem (Hazen-Williams) — `three_reservoir_problem`
+#### Three-reservoir problem (Hazen-Williams): `three_reservoir_problem`
 
 Head at the junction of three pipes from three reservoirs and the flow in each pipe (positive toward the junction), with Hazen-Williams friction and no demand at the junction.
 
@@ -2373,10 +2548,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `z` | in | reservoir water levels in m (three) | — |
-| `L` | in | pipe lengths in m (three) | — |
-| `D` | in | pipe diameters in mm (three) | — |
-| `C` | in | Hazen-Williams C of each pipe (three) | — |
+| `z` | in | reservoir water levels in m (three) | - |
+| `L` | in | pipe lengths in m (three) | - |
+| `D` | in | pipe diameters in mm (three) | - |
+| `C` | in | Hazen-Williams C of each pipe (three) | - |
 | `h_junction` | out | piezometric head at the junction (m) | m |
 | `flows` | out | flow in each pipe toward the junction (m^3/s) | m^3/s |
 
@@ -2396,7 +2571,7 @@ flows = [0.299838366058,-0.0389148570849,-0.260923508973] m^3/s
 
 <a id="degree_of_consolidation"></a>
 
-#### Average degree of consolidation after a time (Terzaghi) — `degree_of_consolidation`
+#### Average degree of consolidation after a time (Terzaghi), `degree_of_consolidation`
 
 Time factor and average degree of one-dimensional consolidation of a clay layer after time t (Terzaghi, uniform initial excess pore pressure), and the settlement reached if the final consolidation settlement is given. Hdr is the drainage path: half the thickness for double drainage, the full thickness for single drainage.
 
@@ -2410,9 +2585,9 @@ $$
 | `t` | in | time since loading | s |
 | `Hdr` | in | drainage path length | m |
 | `Sc` | in | final consolidation settlement (optional) (optional) | m |
-| `Tv` | out | time factor cv t/Hdr^2 | — |
-| `U` | out | average degree of consolidation | — |
-| `U_percent` | out | average degree of consolidation (%) | — |
+| `Tv` | out | time factor cv t/Hdr^2 | - |
+| `U` | out | average degree of consolidation | - |
+| `U_percent` | out | average degree of consolidation (%) | - |
 | `St` | out | settlement at time t (m) | m |
 
 **Applies when:** 1e-4 <= Tv <= 5; uniform initial excess pore pressure; Terzaghi 1-D theory.
@@ -2423,9 +2598,9 @@ Tv = 0.2777777778
 U = 0.5913702173
 U_percent = 59.13702173
   by: Average degree of consolidation after a time (Terzaghi)  (Tv = cv t/Hdr^2; U = 1 - sum 2/M^2 exp(-M^2 Tv), M = pi(2m + 1)/2)
-  cv = 7.922021954e-08 m^2/s   []
-  t = 31557600 s   []
-  Hdr = 3 m   []
+  cv = 7.922021954e-08 m^2/s
+  t = 31557600 s
+  Hdr = 3 m
   assumes: 1e-4 <= Tv <= 5; uniform initial excess pore pressure; Terzaghi 1-D theory
 ```
 
@@ -2433,7 +2608,7 @@ In the worked example, cv = 7.922021954e-08 m^2/s, t = 31557600 s, Hdr = 3 m go 
 
 <a id="coefficient_of_consolidation"></a>
 
-#### Coefficient of consolidation from a consolidation time — `coefficient_of_consolidation`
+#### Coefficient of consolidation from a consolidation time, `coefficient_of_consolidation`
 
 Coefficient of consolidation from the time at which a degree of consolidation is reached (for example t50 by Casagrande's method or t90 by Taylor's), using the exact time factor rather than the rounded 0.197 or 0.848.
 
@@ -2445,10 +2620,10 @@ $$
 |---|---|---|---|
 | `Hdr` | in | drainage path length (half the specimen height for double drainage) | m |
 | `t` | in | time to reach U | s |
-| `U` | in | degree of consolidation reached (fraction, or % in a question) | — |
+| `U` | in | degree of consolidation reached (fraction, or % in a question) | - |
 | `cv` | out | coefficient of consolidation (m^2/s) | m^2/s |
-| `Tv` | out | time factor for U | — |
-| `cv_m2_yr` | out | coefficient of consolidation (m^2/yr) | — |
+| `Tv` | out | time factor for U | - |
+| `cv_m2_yr` | out | coefficient of consolidation (m^2/yr) | - |
 
 **Applies when:** 1% <= U <= 99%; Terzaghi 1-D theory.
 
@@ -2458,9 +2633,9 @@ cv = 2.623076527e-08 m^2/s
 Tv = 0.1967307395
 cv_m2_yr = 0.8277799981
   by: Coefficient of consolidation from a consolidation time  (Tv(U) exactly (bisection), cv = Tv Hdr^2/t)
-  Hdr = 0.01 m   []
-  t = 750 s   []
-  U = 0.5   []
+  Hdr = 0.01 m
+  t = 750 s
+  U = 0.5
   assumes: 1% <= U <= 99%; Terzaghi 1-D theory
 ```
 
@@ -2468,7 +2643,7 @@ cv_m2_yr = 0.8277799981
 
 <a id="direct_shear_strength_parameters"></a>
 
-#### Cohesion and friction angle from direct shear tests — `direct_shear_strength_parameters`
+#### Cohesion and friction angle from direct shear tests, `direct_shear_strength_parameters`
 
 Mohr-Coulomb cohesion and friction angle from direct shear tests by a least-squares line of peak shear stress against normal stress. Stresses in kPa.
 
@@ -2478,11 +2653,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `sigma` | in | normal stresses in kPa | — |
-| `tau` | in | shear stresses at failure in kPa | — |
-| `phi` | out | friction angle (degrees) | — |
-| `c` | out | cohesion intercept (kPa) | — |
-| `tan_phi` | out | slope tan(phi) | — |
+| `sigma` | in | normal stresses in kPa | - |
+| `tau` | in | shear stresses at failure in kPa | - |
+| `phi` | out | friction angle (degrees) | - |
+| `c` | out | cohesion intercept (kPa) | - |
+| `tan_phi` | out | slope tan(phi) | - |
 
 **Applies when:** at least two tests; shear strength rises with normal stress.
 
@@ -2499,7 +2674,7 @@ tan_phi = 0.5742857143
 
 <a id="triaxial_strength_parameters"></a>
 
-#### Cohesion and friction angle from triaxial tests — `triaxial_strength_parameters`
+#### Cohesion and friction angle from triaxial tests, `triaxial_strength_parameters`
 
 Mohr-Coulomb cohesion and friction angle from two or more triaxial tests at failure, by a least-squares line through the stress points (p, q) = ((s1 + s3)/2, (s1 - s3)/2): sin phi = slope, c = intercept/cos phi. Stresses in kPa (effective or total, consistently).
 
@@ -2509,11 +2684,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `s3` | in | confining (minor principal) stresses at failure in kPa | — |
-| `s1` | in | major principal stresses at failure in kPa | — |
-| `phi` | out | friction angle (degrees) | — |
-| `c` | out | cohesion (kPa) | — |
-| `alpha` | out | slope angle of the Kf line (degrees) | — |
+| `s3` | in | confining (minor principal) stresses at failure in kPa | - |
+| `s1` | in | major principal stresses at failure in kPa | - |
+| `phi` | out | friction angle (degrees) | - |
+| `c` | out | cohesion (kPa) | - |
+| `alpha` | out | slope angle of the Kf line (degrees) | - |
 
 **Applies when:** at least two tests; s1 > s3; a non-negative intercept.
 
@@ -2530,7 +2705,7 @@ alpha = 24.32720568
 
 <a id="thick_clay_layer_settlement"></a>
 
-#### Consolidation settlement of a thick clay layer integrated over depth — `thick_clay_layer_settlement`
+#### Consolidation settlement of a thick clay layer integrated over depth, `thick_clay_layer_settlement`
 
 Primary consolidation settlement of a thick normally consolidated clay layer under a uniform added stress, with the initial effective stress rising linearly with depth (integrated exactly over the thickness), and the usual single-layer estimate at mid-depth for comparison.
 
@@ -2544,20 +2719,32 @@ $$
 | `s_top` | in | initial effective vertical stress at the top of the clay | Pa |
 | `gsub` | in | submerged unit weight of the clay | N/m^3 |
 | `ds` | in | uniform added vertical stress | Pa |
-| `Cc` | in | compression index | — |
-| `e0` | in | initial void ratio | — |
+| `Cc` | in | compression index | - |
+| `e0` | in | initial void ratio | - |
 | `S` | out | settlement integrated over depth (m) | m |
 | `S_one_layer` | out | single-layer estimate at mid-depth (m) | m |
 
 **Applies when:** normally consolidated clay; uniform added stress with depth; s0' = s_top + gsub z.
 
-*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ civil-engineering solve thick_clay_layer_settlement "H=10 m" "s_top=40000 Pa" "gsub=8000 N/m^3" "ds=100000 Pa" Cc=0.45 e0=1.2
+S = 0.7531290745 m
+S_one_layer = 0.7203733325 m
+  by: Consolidation settlement of a thick clay layer integrated over depth  (S = Cc/(1+e0) integral_0^H log10((s0'(z) + ds)/s0'(z)) dz in closed form)
+  H = 10 m
+  s_top = 40000 Pa
+  gsub = 8000 N/m^3
+  ds = 100000 Pa
+  Cc = 0.45
+  e0 = 1.2
+  assumes: normally consolidated clay; uniform added stress with depth; s0' = s_top + gsub z
+```
 
 **What the worked example means:** This calculation determines the primary consolidation settlement for a thick, normally consolidated clay layer by integrating the strain over its entire depth. The initial effective stress increases linearly from 40000 Pa at the top due to the submerged unit weight of 8000 N/m^3. Under a uniform added stress of 100000 Pa, the total settlement computed through exact integration is 0.753129 m. For comparison, the simplified method using mid-depth properties yields an estimate of 0.720373 m, highlighting the difference between precise integration and approximate methods in deep deposits.
 
 <a id="grain_size_coefficients"></a>
 
-#### Effective sizes and gradation coefficients from a sieve analysis — `grain_size_coefficients`
+#### Effective sizes and gradation coefficients from a sieve analysis, `grain_size_coefficients`
 
 D10, D30 and D60 by log-linear interpolation of the grading curve, and the coefficients of uniformity Cu and curvature Cc. Sieve sizes in mm, percent passing in %.
 
@@ -2567,13 +2754,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `sizes` | in | sieve sizes in mm | — |
-| `passing` | in | percent passing each sieve, in % | — |
-| `D10` | out | D10 (mm) | — |
-| `D30` | out | D30 (mm) | — |
-| `D60` | out | D60 (mm) | — |
-| `Cu` | out | coefficient of uniformity D60/D10 | — |
-| `Cc` | out | coefficient of curvature D30^2/(D10 D60) | — |
+| `sizes` | in | sieve sizes in mm | - |
+| `passing` | in | percent passing each sieve, in % | - |
+| `D10` | out | D10 (mm) | - |
+| `D30` | out | D30 (mm) | - |
+| `D60` | out | D60 (mm) | - |
+| `Cu` | out | coefficient of uniformity D60/D10 | - |
+| `Cc` | out | coefficient of curvature D30^2/(D10 D60) | - |
 
 **Applies when:** percent passing rises strictly with size; the curve spans 10% to 60%.
 
@@ -2592,7 +2779,7 @@ Cc = 0.9652553618
 
 <a id="excess_pore_pressure_isochrone"></a>
 
-#### Excess pore pressure at a depth during consolidation — `excess_pore_pressure_isochrone`
+#### Excess pore pressure at a depth during consolidation, `excess_pore_pressure_isochrone`
 
 Excess pore-water pressure and local degree of consolidation at depth z and time t in a doubly drained clay layer of thickness 2 Hdr under a uniform initial excess pressure u0 (Terzaghi); z is measured from the top drainage face (for a singly drained layer of thickness Hdr, use 0 <= z <= Hdr).
 
@@ -2608,8 +2795,8 @@ $$
 | `Hdr` | in | drainage path length | m |
 | `z` | in | depth below the top drainage face | m |
 | `u` | out | excess pore pressure (Pa) | Pa |
-| `Uz` | out | local degree of consolidation 1 - u/u0 | — |
-| `Tv` | out | time factor | — |
+| `Uz` | out | local degree of consolidation 1 - u/u0 | - |
+| `Tv` | out | time factor | - |
 
 **Applies when:** 0.001 <= Tv <= 3; uniform initial excess pore pressure; double drainage (or symmetric half).
 
@@ -2619,11 +2806,11 @@ u = 52247.33366 Pa
 Uz = 0.4775266634
 Tv = 0.2222222222
   by: Excess pore pressure at a depth during consolidation  (u = sum 2u0/M sin(M z/Hdr) exp(-M^2 Tv), M = pi(2m + 1)/2)
-  u0 = 100000 Pa   []
-  cv = 6.337617563e-08 m^2/s   []
-  t = 31557600 s   []
-  Hdr = 3 m   []
-  z = 1.5 m   []
+  u0 = 100000 Pa
+  cv = 6.337617563e-08 m^2/s
+  t = 31557600 s
+  Hdr = 3 m
+  z = 1.5 m
   assumes: 0.001 <= Tv <= 3; uniform initial excess pore pressure; double drainage (or symmetric half)
 ```
 
@@ -2631,7 +2818,7 @@ Tv = 0.2222222222
 
 <a id="infinite_slope_factor_of_safety"></a>
 
-#### Factor of safety of an infinite slope — `infinite_slope_factor_of_safety`
+#### Factor of safety of an infinite slope: `infinite_slope_factor_of_safety`
 
 The factor of safety against translational sliding of an infinite slope on a plane at depth z, with seepage parallel to the slope and the water table at a height m z above the slip plane (m = 0 dry, m = 1 at the surface).
 
@@ -2642,12 +2829,12 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `c` | in | effective cohesion | Pa |
-| `phi` | in | effective friction angle (degrees) | — |
+| `phi` | in | effective friction angle (degrees) | - |
 | `gam` | in | unit weight of the soil (saturated below the water table) | N/m^3 |
 | `z` | in | depth of the slip plane (vertical) | m |
-| `beta` | in | slope angle (degrees) | — |
-| `m` | in | water-table height above the slip plane as a fraction of z (default 0, dry) (optional) | — |
-| `FS` | out | factor of safety | — |
+| `beta` | in | slope angle (degrees) | - |
+| `m` | in | water-table height above the slip plane as a fraction of z (default 0, dry) (optional) | - |
+| `FS` | out | factor of safety | - |
 | `tau` | out | driving shear stress on the slip plane (Pa) | Pa |
 | `sigma_eff` | out | effective normal stress on the slip plane (Pa) | Pa |
 
@@ -2659,11 +2846,11 @@ FS = 1.479873738
 tau = 20683.19996 Pa
 sigma_eff = 44355.26546 Pa
   by: Factor of safety of an infinite slope  (FS = [c' + (gamma - m gamma_w) z cos^2(beta) tan(phi')]/(gamma z sin(beta) cos(beta)))
-  c = 5000 Pa   []
-  phi = 30   []
-  gam = 18000 N/m^3   []
-  z = 3 m   []
-  beta = 25   []
+  c = 5000 Pa
+  phi = 30
+  gam = 18000 N/m^3
+  z = 3 m
+  beta = 25
   assumes: c >= 0; 0 <= phi < 60 degrees; 1 <= beta <= 80 degrees; 0 <= m <= 1; seepage parallel to the slope
 ```
 
@@ -2671,7 +2858,7 @@ sigma_eff = 44355.26546 Pa
 
 <a id="liquid_limit_flow_curve"></a>
 
-#### Liquid limit from Casagrande cup tests — `liquid_limit_flow_curve`
+#### Liquid limit from Casagrande cup tests: `liquid_limit_flow_curve`
 
 Liquid limit (water content at 25 blows) and flow index from Casagrande cup tests by a least-squares line of water content against log10(blows), with the plasticity index when the plastic limit is given. Water contents in percent.
 
@@ -2681,12 +2868,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `blows` | in | number of blows of each test | — |
-| `w` | in | water content of each test in % | — |
-| `PL` | in | plastic limit in % (optional) (optional) | — |
-| `LL` | out | liquid limit (%) | — |
-| `flow_index` | out | flow index (% per log cycle of blows) | — |
-| `PI` | out | plasticity index LL - PL (%) | — |
+| `blows` | in | number of blows of each test | - |
+| `w` | in | water content of each test in % | - |
+| `PL` | in | plastic limit in % (optional) (optional) | - |
+| `LL` | out | liquid limit (%) | - |
+| `flow_index` | out | flow index (% per log cycle of blows) | - |
+| `PI` | out | plasticity index LL - PL (%) | - |
 
 **Applies when:** water content falls with blows; water contents in %.
 
@@ -2696,7 +2883,7 @@ LL = 39.62917155
 flow_index = 11.21786009
 PI = 18.62917155
   by: Liquid limit from Casagrande cup tests  (least squares w = a + b log10 N; LL = a + b log10 25; flow index = -b)
-  PL = 21   []
+  PL = 21
   assumes: water content falls with blows; water contents in %
 ```
 
@@ -2704,7 +2891,7 @@ PI = 18.62917155
 
 <a id="mohr_coulomb_failure_stress"></a>
 
-#### Major principal stress at failure (Mohr-Coulomb) — `mohr_coulomb_failure_stress`
+#### Major principal stress at failure (Mohr-Coulomb), `mohr_coulomb_failure_stress`
 
 Major principal stress at failure for a given minor principal stress (triaxial test), with the normal and shear stresses on the failure plane and its angle to the major principal plane (45 + phi/2).
 
@@ -2716,11 +2903,11 @@ $$
 |---|---|---|---|
 | `s3` | in | minor principal (confining) stress | Pa |
 | `c` | in | cohesion | Pa |
-| `phi` | in | friction angle (degrees) | — |
+| `phi` | in | friction angle (degrees) | - |
 | `s1` | out | major principal stress at failure (Pa) | Pa |
 | `sigma_f` | out | normal stress on the failure plane (Pa) | Pa |
 | `tau_f` | out | shear stress on the failure plane (Pa) | Pa |
-| `theta` | out | failure plane angle from the major principal plane (degrees) | — |
+| `theta` | out | failure plane angle from the major principal plane (degrees) | - |
 
 **Applies when:** 0 < phi < 60 degrees; s3, c >= 0.
 
@@ -2731,9 +2918,9 @@ sigma_f = 160191.3702 Pa
 tau_f = 100175.2624 Pa
 theta = 59
   by: Major principal stress at failure (Mohr-Coulomb)  (s1 = s3 tan^2(45 + phi/2) + 2c tan(45 + phi/2); tangent point at sigma = p - r sin phi, tau = r cos phi)
-  s3 = 100000 Pa   []
-  c = 15000 Pa   []
-  phi = 28   []
+  s3 = 100000 Pa
+  c = 15000 Pa
+  phi = 28
   assumes: 0 < phi < 60 degrees; s3, c >= 0
 ```
 
@@ -2741,7 +2928,7 @@ theta = 59
 
 <a id="proctor_compaction_optimum"></a>
 
-#### Optimum water content and maximum dry density from a compaction test — `proctor_compaction_optimum`
+#### Optimum water content and maximum dry density from a compaction test, `proctor_compaction_optimum`
 
 Optimum water content and maximum dry density from Proctor compaction points by a least-squares parabola, with the zero-air-voids dry density at the optimum when Gs is given. Water contents in %, dry densities in Mg/m^3.
 
@@ -2751,12 +2938,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `w` | in | water contents in % | — |
-| `rho_d` | in | dry densities in Mg/m^3 | — |
-| `Gs` | in | specific gravity of the solids (optional) (optional) | — |
-| `w_opt` | out | optimum water content (%) | — |
-| `rho_dmax` | out | maximum dry density (Mg/m^3) | — |
-| `rho_zav` | out | zero-air-voids dry density at the optimum (Mg/m^3) | — |
+| `w` | in | water contents in % | - |
+| `rho_d` | in | dry densities in Mg/m^3 | - |
+| `Gs` | in | specific gravity of the solids (optional) (optional) | - |
+| `w_opt` | out | optimum water content (%) | - |
+| `rho_dmax` | out | maximum dry density (Mg/m^3) | - |
+| `rho_zav` | out | zero-air-voids dry density at the optimum (Mg/m^3) | - |
 
 **Applies when:** at least three points around the peak; a parabola opening downward.
 
@@ -2766,7 +2953,7 @@ w_opt = 12.41176471
 rho_dmax = 1.83760084
 rho_zav = 2.011052845
   by: Optimum water content and maximum dry density from a compaction test  (least-squares parabola rho_d = c0 + c1 w + c2 w^2; w_opt = -c1/(2 c2); zero air voids rho_w Gs/(1 + w Gs))
-  Gs = 2.68   []
+  Gs = 2.68
   assumes: at least three points around the peak; a parabola opening downward
 ```
 
@@ -2774,7 +2961,7 @@ rho_zav = 2.011052845
 
 <a id="plasticity_liquidity_index"></a>
 
-#### Plasticity, liquidity and consistency indices — `plasticity_liquidity_index`
+#### Plasticity, liquidity and consistency indices, `plasticity_liquidity_index`
 
 The plasticity index PI = LL - PL, the Casagrande A-line value 0.73 (LL - 20) and, with the natural water content, the liquidity index (w - PL)/PI and consistency index (LL - w)/PI. Limits and water content in percent.
 
@@ -2784,13 +2971,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `LL` | in | liquid limit in % | — |
-| `PL` | in | plastic limit in % | — |
-| `w` | in | natural water content in % (optional) (optional) | — |
-| `PI` | out | plasticity index (%) | — |
-| `A_line_PI` | out | plasticity index on the A-line at this LL (%) | — |
-| `LI` | out | liquidity index | — |
-| `CI` | out | consistency index | — |
+| `LL` | in | liquid limit in % | - |
+| `PL` | in | plastic limit in % | - |
+| `w` | in | natural water content in % (optional) (optional) | - |
+| `PI` | out | plasticity index (%) | - |
+| `A_line_PI` | out | plasticity index on the A-line at this LL (%) | - |
+| `LI` | out | liquidity index | - |
+| `CI` | out | consistency index | - |
 
 **Applies when:** 5 <= LL <= 1000 %; 0 <= PL < LL; inputs in percent.
 
@@ -2801,9 +2988,9 @@ A_line_PI = 18.25
 LI = 0.347826087
 CI = 0.652173913
   by: Plasticity, liquidity and consistency indices  (PI = LL - PL; LI = (w - PL)/PI; CI = (LL - w)/PI; A-line PI = 0.73 (LL - 20))
-  LL = 45   []
-  PL = 22   []
-  w = 30   []
+  LL = 45
+  PL = 22
+  w = 30
   assumes: 5 <= LL <= 1000 %; 0 <= PL < LL; inputs in percent
 ```
 
@@ -2811,7 +2998,7 @@ CI = 0.652173913
 
 <a id="consolidation_settlement_nc"></a>
 
-#### Primary consolidation settlement of a normally consolidated clay — `consolidation_settlement_nc`
+#### Primary consolidation settlement of a normally consolidated clay, `consolidation_settlement_nc`
 
 Primary consolidation settlement of a normally consolidated clay layer of thickness H from the compression index Cc, the initial void ratio and the initial and added effective stresses at mid-depth.
 
@@ -2821,14 +3008,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Cc` | in | compression index | — |
-| `e0` | in | initial void ratio | — |
+| `Cc` | in | compression index | - |
+| `e0` | in | initial void ratio | - |
 | `H` | in | clay layer thickness | m |
 | `s0` | in | initial effective vertical stress at mid-depth | Pa |
 | `ds` | in | added vertical stress at mid-depth | Pa |
 | `Sc` | out | consolidation settlement (m) | m |
-| `de` | out | change in void ratio | — |
-| `e_final` | out | final void ratio | — |
+| `de` | out | change in void ratio | - |
+| `e_final` | out | final void ratio | - |
 
 **Applies when:** normally consolidated clay; stresses at mid-depth of the layer.
 
@@ -2838,11 +3025,11 @@ Sc = 0.1620253658 m
 de = 0.07777217558
 e_final = 0.8422278244
   by: Primary consolidation settlement of a normally consolidated clay  (Sc = Cc H/(1 + e0) log10((s0 + ds)/s0))
-  Cc = 0.32   []
-  e0 = 0.92   []
-  H = 4 m   []
-  s0 = 80000 Pa   []
-  ds = 60000 Pa   []
+  Cc = 0.32
+  e0 = 0.92
+  H = 4 m
+  s0 = 80000 Pa
+  ds = 60000 Pa
   assumes: normally consolidated clay; stresses at mid-depth of the layer
 ```
 
@@ -2850,7 +3037,7 @@ e_final = 0.8422278244
 
 <a id="consolidation_settlement_oc"></a>
 
-#### Primary consolidation settlement of an overconsolidated clay — `consolidation_settlement_oc`
+#### Primary consolidation settlement of an overconsolidated clay, `consolidation_settlement_oc`
 
 Primary consolidation settlement of an overconsolidated clay: recompression with the swelling index Cs up to the preconsolidation stress, then virgin compression with Cc.
 
@@ -2860,17 +3047,17 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Cc` | in | compression index | — |
-| `Cs` | in | swelling (recompression) index | — |
-| `e0` | in | initial void ratio | — |
+| `Cc` | in | compression index | - |
+| `Cs` | in | swelling (recompression) index | - |
+| `e0` | in | initial void ratio | - |
 | `H` | in | clay layer thickness | m |
 | `s0` | in | initial effective vertical stress at mid-depth | Pa |
 | `ds` | in | added vertical stress at mid-depth | Pa |
 | `sp` | in | preconsolidation stress | Pa |
 | `Sc` | out | consolidation settlement (m) | m |
-| `de` | out | change in void ratio | — |
-| `OCR` | out | overconsolidation ratio sp/s0 | — |
-| `case` | out | whether the load passes the preconsolidation stress | — |
+| `de` | out | change in void ratio | - |
+| `OCR` | out | overconsolidation ratio sp/s0 | - |
+| `case` | out | whether the load passes the preconsolidation stress | - |
 
 **Applies when:** Cs < Cc; sp >= s0; stresses at mid-depth.
 
@@ -2881,13 +3068,13 @@ de = 0.08542915202
 OCR = 1.777777778
 case = passes the preconsolidation stress
   by: Primary consolidation settlement of an overconsolidated clay  (sigma1 <= sp: Sc = Cs H/(1+e0) log(s1/s0); otherwise Sc = H/(1+e0)[Cs log(sp/s0) + Cc log(s1/sp)])
-  Cc = 0.4   []
-  Cs = 0.06   []
-  e0 = 1.1   []
-  H = 5 m   []
-  s0 = 90000 Pa   []
-  ds = 150000 Pa   []
-  sp = 160000 Pa   []
+  Cc = 0.4
+  Cs = 0.06
+  e0 = 1.1
+  H = 5 m
+  s0 = 90000 Pa
+  ds = 150000 Pa
+  sp = 160000 Pa
   assumes: Cs < Cc; sp >= s0; stresses at mid-depth
 ```
 
@@ -2895,7 +3082,7 @@ case = passes the preconsolidation stress
 
 <a id="relative_density_from_unit_weights"></a>
 
-#### Relative density of a granular soil — `relative_density_from_unit_weights`
+#### Relative density of a granular soil: `relative_density_from_unit_weights`
 
 Relative density (density index) of a sand from its in-place dry unit weight and the minimum and maximum dry unit weights of the laboratory tests.
 
@@ -2908,8 +3095,8 @@ $$
 | `gd` | in | in-place dry unit weight | N/m^3 |
 | `gd_min` | in | minimum dry unit weight | N/m^3 |
 | `gd_max` | in | maximum dry unit weight | N/m^3 |
-| `Dr` | out | relative density (fraction) | — |
-| `Dr_percent` | out | relative density (%) | — |
+| `Dr` | out | relative density (fraction) | - |
+| `Dr_percent` | out | relative density (%) | - |
 
 **Applies when:** gd_min <= gd <= gd_max.
 
@@ -2918,9 +3105,9 @@ $ civil-engineering solve relative_density_from_unit_weights "gd=16200 N/m^3" "g
 Dr = 0.5660306771
 Dr_percent = 56.60306771
   by: Relative density of a granular soil  (Dr = (gd_max/gd)(gd - gd_min)/(gd_max - gd_min) = (e_max - e)/(e_max - e_min))
-  gd = 16200 N/m^3   []
-  gd_min = 14500 N/m^3   []
-  gd_max = 17800 N/m^3   []
+  gd = 16200 N/m^3
+  gd_min = 14500 N/m^3
+  gd_max = 17800 N/m^3
   assumes: gd_min <= gd <= gd_max
 ```
 
@@ -2928,7 +3115,7 @@ Dr_percent = 56.60306771
 
 <a id="secondary_compression_settlement"></a>
 
-#### Secondary compression (creep) settlement of a clay layer — `secondary_compression_settlement`
+#### Secondary compression (creep) settlement of a clay layer, `secondary_compression_settlement`
 
 The secondary compression settlement S_s = C_alpha H/(1 + e_p) log10(t2/t1) of a clay layer of thickness H after the end of primary consolidation t1, up to a later time t2.
 
@@ -2938,14 +3125,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Ca` | in | secondary compression index C_alpha | — |
+| `Ca` | in | secondary compression index C_alpha | - |
 | `H` | in | layer thickness (at the end of primary consolidation) | m |
-| `ep` | in | void ratio at the end of primary consolidation | — |
+| `ep` | in | void ratio at the end of primary consolidation | - |
 | `t1` | in | time at the end of primary consolidation | s |
 | `t2` | in | later time | s |
 | `Ss` | out | secondary compression settlement (m) | m |
-| `Ss_mm` | out | settlement (mm) | — |
-| `C_alpha_mod` | out | modified secondary compression index C_alpha/(1 + e_p) | — |
+| `Ss_mm` | out | settlement (mm) | - |
+| `C_alpha_mod` | out | modified secondary compression index C_alpha/(1 + e_p) | - |
 
 **Applies when:** 0 < C_alpha <= 0.2; t2 > t1 (t1 = end of primary consolidation).
 
@@ -2955,11 +3142,11 @@ Ss = 0.06195380932 m
 Ss_mm = 61.95380932
 C_alpha_mod = 0.009523809524
   by: Secondary compression (creep) settlement of a clay layer  (S_s = C_alpha H/(1 + e_p) log10(t2/t1))
-  Ca = 0.02   []
-  H = 5 m   []
-  ep = 1.1   []
-  t1 = 31557600 s   []
-  t2 = 631152000 s   []
+  Ca = 0.02
+  H = 5 m
+  ep = 1.1
+  t1 = 31557600 s
+  t2 = 631152000 s
   assumes: 0 < C_alpha <= 0.2; t2 > t1 (t1 = end of primary consolidation)
 ```
 
@@ -2967,7 +3154,7 @@ C_alpha_mod = 0.009523809524
 
 <a id="soil_phase_relations"></a>
 
-#### Soil phase relations from void ratio and water content — `soil_phase_relations`
+#### Soil phase relations from void ratio and water content, `soil_phase_relations`
 
 Porosity, degree of saturation and the dry, bulk, saturated and submerged unit weights of a soil from its specific gravity of solids Gs, void ratio e and water content w (unit weight of water 9.81 kN/m^3).
 
@@ -2977,11 +3164,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Gs` | in | specific gravity of the solids | — |
-| `e` | in | void ratio | — |
-| `w` | in | water content (fraction, or % in a question) | — |
-| `n` | out | porosity e/(1 + e) | — |
-| `S` | out | degree of saturation w Gs/e | — |
+| `Gs` | in | specific gravity of the solids | - |
+| `e` | in | void ratio | - |
+| `w` | in | water content (fraction, or % in a question) | - |
+| `n` | out | porosity e/(1 + e) | - |
+| `S` | out | degree of saturation w Gs/e | - |
 | `gamma_d` | out | dry unit weight (N/m^3) | N/m^3 |
 | `gamma` | out | bulk (moist) unit weight (N/m^3) | N/m^3 |
 | `gamma_sat` | out | saturated unit weight (N/m^3) | N/m^3 |
@@ -2998,9 +3185,9 @@ gamma = 18942.21818 N/m^3
 gamma_sat = 19917.27273 N/m^3
 gamma_sub = 10107.27273 N/m^3
   by: Soil phase relations from void ratio and water content  (n = e/(1 + e), S = w Gs/e, gamma_d = Gs gamma_w/(1 + e), gamma = Gs gamma_w (1 + w)/(1 + e), gamma_sat = (Gs + e) gamma_w/(1 + e))
-  Gs = 2.7   []
-  e = 0.65   []
-  w = 0.18   []
+  Gs = 2.7
+  e = 0.65
+  w = 0.18
   assumes: w Gs <= e (not oversaturated); 2.0 <= Gs <= 3.0
 ```
 
@@ -3008,7 +3195,7 @@ gamma_sub = 10107.27273 N/m^3
 
 <a id="soil_phase_from_lab_masses"></a>
 
-#### Soil properties from a weighed sample — `soil_phase_from_lab_masses`
+#### Soil properties from a weighed sample: `soil_phase_from_lab_masses`
 
 Water content, bulk and dry densities and unit weights, void ratio, porosity and degree of saturation of a soil sample from its wet mass, oven-dry mass, volume and the specific gravity of the solids.
 
@@ -3021,13 +3208,13 @@ $$
 | `M` | in | wet (moist) mass of the sample | kg |
 | `Md` | in | oven-dry mass of the sample | kg |
 | `V` | in | volume of the sample | m^3 |
-| `Gs` | in | specific gravity of the solids | — |
-| `w` | out | water content | — |
+| `Gs` | in | specific gravity of the solids | - |
+| `w` | out | water content | - |
 | `rho` | out | bulk density (kg/m^3) | kg/m^3 |
 | `rho_d` | out | dry density (kg/m^3) | kg/m^3 |
-| `e` | out | void ratio | — |
-| `n` | out | porosity | — |
-| `S` | out | degree of saturation | — |
+| `e` | out | void ratio | - |
+| `n` | out | porosity | - |
+| `S` | out | degree of saturation | - |
 | `gamma` | out | bulk unit weight (N/m^3) | N/m^3 |
 | `gamma_d` | out | dry unit weight (N/m^3) | N/m^3 |
 
@@ -3044,10 +3231,10 @@ S = 0.6136363636
 gamma = 18148.5 N/m^3
 gamma_d = 15696 N/m^3
   by: Soil properties from a weighed sample  (w = (M - Md)/Md, rho_d = Md/V, e = Gs rho_w/rho_d - 1, S = w Gs/e)
-  M = 1.85 kg   []
-  Md = 1.6 kg   []
-  V = 0.001 m^3   []
-  Gs = 2.7   []
+  M = 1.85 kg
+  Md = 1.6 kg
+  V = 0.001 m^3
+  Gs = 2.7
   assumes: M >= Md; consistent data (0 < e, S <= 1)
 ```
 
@@ -3055,7 +3242,7 @@ gamma_d = 15696 N/m^3
 
 <a id="consolidation_time"></a>
 
-#### Time to reach a degree of consolidation — `consolidation_time`
+#### Time to reach a degree of consolidation: `consolidation_time`
 
 Time needed for a clay layer to reach an average degree of consolidation U (Terzaghi), with the time factor.
 
@@ -3067,10 +3254,10 @@ $$
 |---|---|---|---|
 | `cv` | in | coefficient of consolidation | m^2/s |
 | `Hdr` | in | drainage path length | m |
-| `U` | in | average degree of consolidation (fraction, or % in a question) | — |
-| `Tv` | out | time factor | — |
+| `U` | in | average degree of consolidation (fraction, or % in a question) | - |
+| `Tv` | out | time factor | - |
 | `t` | out | time (s) | s |
-| `t_days` | out | time (days) | — |
+| `t_days` | out | time (days) | - |
 
 **Applies when:** 1% <= U <= 99%; Terzaghi 1-D theory.
 
@@ -3080,9 +3267,9 @@ Tv = 0.848085408
 t = 55757375.15 s
 t_days = 645.3399902
   by: Time to reach a degree of consolidation  (Tv from U(Tv) = U (bisection on the Fourier series), t = Tv Hdr^2/cv)
-  cv = 9.506426344e-08 m^2/s   []
-  Hdr = 2.5 m   []
-  U = 0.9   []
+  cv = 9.506426344e-08 m^2/s
+  Hdr = 2.5 m
+  U = 0.9
   assumes: 1% <= U <= 99%; Terzaghi 1-D theory
 ```
 
@@ -3090,7 +3277,7 @@ t_days = 645.3399902
 
 <a id="effective_stress_at_depth"></a>
 
-#### Total, pore-water and effective vertical stress at a depth — `effective_stress_at_depth`
+#### Total, pore-water and effective vertical stress at a depth, `effective_stress_at_depth`
 
 Total vertical stress, hydrostatic pore-water pressure and effective vertical stress at depth z in a layered soil with a water table at depth zw (no capillary rise, hydrostatic water). Each layer's unit weight is the one that applies there (moist above the water table, saturated below), in kN/m^3.
 
@@ -3100,14 +3287,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `H` | in | layer thicknesses in m, from the surface down | — |
-| `gam` | in | unit weight of each layer in kN/m^3 | — |
+| `H` | in | layer thicknesses in m, from the surface down | - |
+| `gam` | in | unit weight of each layer in kN/m^3 | - |
 | `zw` | in | depth of the water table | m |
 | `z` | in | depth of the point | m |
 | `sigma` | out | total vertical stress (Pa) | Pa |
 | `u` | out | pore-water pressure (Pa) | Pa |
 | `sigma_eff` | out | effective vertical stress (Pa) | Pa |
-| `sigma_eff_kPa` | out | effective vertical stress (kPa) | — |
+| `sigma_eff_kPa` | out | effective vertical stress (kPa) | - |
 
 **Applies when:** hydrostatic pore water; no capillary rise; 0 < z <= total thickness.
 
@@ -3118,8 +3305,8 @@ u = 49050 Pa
 sigma_eff = 100950 Pa
 sigma_eff_kPa = 100.95
   by: Total, pore-water and effective vertical stress at a depth  (sigma = sum gamma_i h_i above z, u = gamma_w (z - zw) below the water table, sigma' = sigma - u)
-  zw = 3 m   []
-  z = 8 m   []
+  zw = 3 m
+  z = 8 m
   assumes: hydrostatic pore water; no capillary rise; 0 < z <= total thickness
 ```
 
@@ -3129,7 +3316,7 @@ sigma_eff_kPa = 100.95
 
 <a id="area_from_offsets"></a>
 
-#### Area between a survey line and a boundary from offsets — `area_from_offsets`
+#### Area between a survey line and a boundary from offsets, `area_from_offsets`
 
 Area between a chain line and an irregular boundary from offsets at a regular interval, by the trapezoidal rule and, for an odd number of offsets, Simpson's one-third rule. Offsets in m.
 
@@ -3139,7 +3326,7 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `offsets` | in | offsets in m at the regular interval | — |
+| `offsets` | in | offsets in m at the regular interval | - |
 | `d` | in | interval between offsets | m |
 | `A_trapezoidal` | out | area by the trapezoidal rule (m^2) | m^2 |
 | `A_simpson` | out | area by Simpson's rule (m^2) | m^2 |
@@ -3151,7 +3338,7 @@ $ civil-engineering solve area_from_offsets "offsets=[0, 2.5, 3.5, 5, 4.6, 3.2, 
 A_trapezoidal = 188 m^2
 A_simpson = 196.6666667 m^2
   by: Area between a survey line and a boundary from offsets  (trapezoidal: d (y1/2 + y2 + ... + yn/2); Simpson: (d/3)(y1 + 4y2 + 2y3 + ... + yn))
-  d = 10 m   []
+  d = 10 m
   assumes: regular interval; Simpson's rule only for an odd number of offsets
 ```
 
@@ -3159,7 +3346,7 @@ A_simpson = 196.6666667 m^2
 
 <a id="traverse_bowditch_adjustment"></a>
 
-#### Closed traverse: misclosure and Bowditch (compass rule) adjustment — `traverse_bowditch_adjustment`
+#### Closed traverse: misclosure and Bowditch (compass rule) adjustment, `traverse_bowditch_adjustment`
 
 Latitudes and departures of a closed loop traverse from whole-circle bearings (azimuths clockwise from north, degrees) and distances (m), the misclosure and relative precision (1 in X), the coordinates adjusted by the Bowditch (compass) rule, and the enclosed area. The last leg returns to the starting station.
 
@@ -3169,14 +3356,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `az` | in | azimuths (whole-circle bearings) of the legs in degrees | — |
-| `d` | in | leg lengths in m | — |
+| `az` | in | azimuths (whole-circle bearings) of the legs in degrees | - |
+| `d` | in | leg lengths in m | - |
 | `E0` | in | easting of the starting station (default 0) (optional) | m |
 | `N0` | in | northing of the starting station (default 0) (optional) | m |
 | `misclosure_E` | out | misclosure in departure (m) | m |
 | `misclosure_N` | out | misclosure in latitude (m) | m |
 | `linear_misclosure` | out | linear misclosure (m) | m |
-| `precision` | out | relative precision X in 1:X (0 if it closes exactly) | — |
+| `precision` | out | relative precision X in 1:X (0 if it closes exactly) | - |
 | `E` | out | adjusted eastings of the stations (m) | m |
 | `N` | out | adjusted northings of the stations (m) | m |
 | `area` | out | enclosed area (m^2) | m^2 |
@@ -3200,7 +3387,7 @@ area = 9999.999767 m^2
 
 <a id="earthwork_volume_end_areas"></a>
 
-#### Earthwork volume from cross-section areas — `earthwork_volume_end_areas`
+#### Earthwork volume from cross-section areas: `earthwork_volume_end_areas`
 
 Volume of cut or fill between equally spaced cross-sections by the average-end-area method, and by the prismoidal (Simpson) rule when the number of sections is odd. Areas in m^2.
 
@@ -3210,7 +3397,7 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `areas` | in | cross-section areas in m^2, in order | — |
+| `areas` | in | cross-section areas in m^2, in order | - |
 | `d` | in | spacing between sections | m |
 | `V_end_area` | out | volume by average end areas (m^3) | m^3 |
 | `V_prismoidal` | out | volume by the prismoidal rule (m^3) | m^3 |
@@ -3222,7 +3409,7 @@ $ civil-engineering solve earthwork_volume_end_areas "areas=[12.5, 18.2, 25.6, 2
 V_end_area = 1561 m^3
 V_prismoidal = 1551.333333 m^3
   by: Earthwork volume from cross-section areas  (V = d (A1/2 + A2 + ... + An/2); prismoidal V = (d/3)(A1 + 4A2 + 2A3 + ... + An))
-  d = 20 m   []
+  d = 20 m
   assumes: equally spaced sections; prismoidal rule only for an odd number of sections
 ```
 
@@ -3230,7 +3417,7 @@ V_prismoidal = 1551.333333 m^3
 
 <a id="horizontal_circular_curve"></a>
 
-#### Elements of a simple horizontal circular curve — `horizontal_circular_curve`
+#### Elements of a simple horizontal circular curve, `horizontal_circular_curve`
 
 Tangent length, curve length, long chord, external distance, middle ordinate and the chainages of the tangent points of a simple circular curve of radius R joining tangents that deflect by Delta at the intersection point PI.
 
@@ -3241,7 +3428,7 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `R` | in | curve radius | m |
-| `Delta` | in | deflection (intersection) angle (degrees) | — |
+| `Delta` | in | deflection (intersection) angle (degrees) | - |
 | `PI` | in | chainage of the intersection point (default 0) (optional) | m |
 | `T` | out | tangent length (m) | m |
 | `L` | out | curve length (m) | m |
@@ -3263,9 +3450,9 @@ M = 18.09221376 m
 PC = 1140.80893 m
 PT = 1350.24844 m
   by: Elements of a simple horizontal circular curve  (T = R tan(D/2), L = R D, LC = 2R sin(D/2), E = R(sec(D/2) - 1), M = R(1 - cos(D/2)), PC = PI - T, PT = PC + L)
-  R = 300 m   []
-  Delta = 40   []
-  PI = 1250 m   []
+  R = 300 m
+  Delta = 40
+  PI = 1250 m
   assumes: 0 < Delta < 180 degrees; chainage measured along the tangents then the curve
 ```
 
@@ -3273,7 +3460,7 @@ PT = 1350.24844 m
 
 <a id="vertical_parabolic_curve"></a>
 
-#### Elevations on a vertical parabolic curve — `vertical_parabolic_curve`
+#### Elevations on a vertical parabolic curve: `vertical_parabolic_curve`
 
 Elevation at a station on an equal-tangent parabolic vertical curve, with the highest (crest) or lowest (sag) point on the curve and the rate of change of grade. Grades are fractions or percentages; stations and lengths in m.
 
@@ -3283,8 +3470,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `g1` | in | entering grade (fraction, or %) | — |
-| `g2` | in | leaving grade (fraction, or %) | — |
+| `g1` | in | entering grade (fraction, or %) | - |
+| `g2` | in | leaving grade (fraction, or %) | - |
 | `L` | in | curve length (horizontal) | m |
 | `PVI` | in | station of the intersection point | m |
 | `elev_PVI` | in | elevation of the intersection point | m |
@@ -3292,7 +3479,7 @@ $$
 | `elev` | out | elevation at the station (m) | m |
 | `x_turn` | out | station of the highest/lowest point on the curve (m) | m |
 | `elev_turn` | out | elevation of that point (m) | m |
-| `r` | out | rate of change of grade (% per m) | — |
+| `r` | out | rate of change of grade (% per m) | - |
 | `BVC` | out | station of the beginning of the curve (m) | m |
 | `elev_BVC` | out | elevation of the BVC (m) | m |
 
@@ -3307,12 +3494,12 @@ r = -0.025
 BVC = 1400 m
 elev_BVC = 117 m
   by: Elevations on a vertical parabolic curve  (y = y_BVC + g1 x + (g2 - g1) x^2/(2L), x from the BVC; turning point at x = -g1 L/(g2 - g1))
-  g1 = 0.03   []
-  g2 = -0.02   []
-  L = 200 m   []
-  PVI = 1500 m   []
-  elev_PVI = 120 m   []
-  x = 1450 m   []
+  g1 = 0.03
+  g2 = -0.02
+  L = 200 m
+  PVI = 1500 m
+  elev_PVI = 120 m
+  x = 1450 m
   assumes: equal-tangent parabola; BVC <= station <= EVC
 ```
 
@@ -3320,7 +3507,7 @@ elev_BVC = 117 m
 
 <a id="levelling_rise_and_fall"></a>
 
-#### Reduced levels by the rise-and-fall method — `levelling_rise_and_fall`
+#### Reduced levels by the rise-and-fall method, `levelling_rise_and_fall`
 
 Reduced levels of every station of a levelling run from staff readings (m) and their sight types (BS, IS, FS in reading order; a BS after an FS is the new set-up on the same change point), with the total rise and fall and the arithmetic check sum BS - sum FS (= last RL - first RL).
 
@@ -3330,8 +3517,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `readings` | in | staff readings in m, in reading order | — |
-| `sights` | in | sight type of each reading: BS, IS or FS | — |
+| `readings` | in | staff readings in m, in reading order | - |
+| `sights` | in | sight type of each reading: BS, IS or FS | - |
 | `RL0` | in | reduced level of the first station (benchmark) | m |
 | `RL` | out | reduced level of each station (m) | m |
 | `rise` | out | sum of rises (m) | m |
@@ -3341,8 +3528,19 @@ $$
 
 **Applies when:** first reading BS, last FS; a BS after the first follows an FS (change point).
 
-*Not in `civil-engineering` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ civil-engineering solve levelling_rise_and_fall "readings=[1.525, 2.105, 1.64, 0.985, 2.32]" "sights=BS, IS, FS, BS, FS" "RL0=100 m"
+RL = [100.0,99.42,99.885,98.55] m
+rise = 0.465 m
+fall = 1.915 m
+last_RL = 98.55 m
+check = -1.45 m
+  by: Reduced levels by the rise-and-fall method  (rise or fall = previous reading - current reading within a set-up; RL = previous RL + rise - fall)
+  RL0 = 100 m
+  sights = BS, IS, FS, BS, FS
+  assumes: first reading BS, last FS; a BS after the first follows an FS (change point)
+```
 
 **What the worked example means:** This calculation determines the elevation of each survey station using the rise-and-fall method. By comparing consecutive staff readings within instrument setups, it computes individual rises or falls to update the reduced level from the starting benchmark of 100 m. The process yields a sum of rises equal to 0.465 m and a sum of falls equal to 1.915 m. The arithmetic check confirms that the difference between the sum of back sights and fore sights matches the change in elevation, resulting in a check value of -1.45 m meters.
 
-Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.
+Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.

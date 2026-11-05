@@ -155,7 +155,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 <a id="rectangular_channel_section"></a>
 
-### Rectangular channel: area, wetted perimeter, hydraulic radius — `rectangular_channel_section`
+### Rectangular channel: area, wetted perimeter, hydraulic radius, `rectangular_channel_section`
 
 Flow area, wetted perimeter, hydraulic radius, top width and hydraulic depth of a rectangular channel flowing at depth y.
 
@@ -210,7 +210,7 @@ civil_engineering_ai999x.solve('rectangular_channel_section', b=0.6, y=0.25)
 
 <a id="trapezoidal_channel_section"></a>
 
-### Trapezoidal channel: area, wetted perimeter, hydraulic radius — `trapezoidal_channel_section`
+### Trapezoidal channel: area, wetted perimeter, hydraulic radius, `trapezoidal_channel_section`
 
 Flow area, wetted perimeter, hydraulic radius, top width and hydraulic depth of a trapezoidal channel with bottom width b and side slopes z (horizontal : vertical); $b = 0$ is a triangular channel.
 
@@ -266,7 +266,7 @@ civil_engineering_ai999x.solve('trapezoidal_channel_section', b=0.0, y=0.8, z=1.
 
 <a id="circular_channel_section"></a>
 
-### Part-full circular conduit: area, wetted perimeter, hydraulic radius — `circular_channel_section`
+### Part-full circular conduit: area, wetted perimeter, hydraulic radius, `circular_channel_section`
 
 Flow area, wetted perimeter, hydraulic radius, top width and hydraulic depth of a circular pipe or culvert flowing part full at depth y, with the central angle of the wetted arc.
 
@@ -322,7 +322,7 @@ civil_engineering_ai999x.solve('circular_channel_section', D=0.45, y=0.1)
 
 <a id="manning_velocity"></a>
 
-### Manning velocity from hydraulic radius — `manning_velocity`
+### Manning velocity from hydraulic radius: `manning_velocity`
 
 Mean velocity of uniform flow from Manning's equation (SI) for a hydraulic radius R, slope S and roughness n.
 
@@ -370,7 +370,7 @@ civil_engineering_ai999x.solve('manning_velocity', R=2.5, S=0.0002, n=0.035)
 
 <a id="manning_rectangular_discharge"></a>
 
-### Manning discharge in a rectangular channel — `manning_rectangular_discharge`
+### Manning discharge in a rectangular channel, `manning_rectangular_discharge`
 
 Uniform-flow discharge and velocity in a rectangular channel from Manning's equation.
 
@@ -425,7 +425,7 @@ civil_engineering_ai999x.solve('manning_rectangular_discharge', b=6.0, y=2.0, S=
 
 <a id="manning_trapezoidal_discharge"></a>
 
-### Manning discharge in a trapezoidal channel — `manning_trapezoidal_discharge`
+### Manning discharge in a trapezoidal channel, `manning_trapezoidal_discharge`
 
 Uniform-flow discharge and velocity in a trapezoidal channel (side slopes z H:1V) from Manning's equation.
 
@@ -481,7 +481,7 @@ civil_engineering_ai999x.solve('manning_trapezoidal_discharge', b=2.0, y=0.9, z=
 
 <a id="manning_partially_full_pipe"></a>
 
-### Manning flow in a part-full circular pipe — `manning_partially_full_pipe`
+### Manning flow in a part-full circular pipe: `manning_partially_full_pipe`
 
 Gravity (open-channel) discharge and velocity in a circular sewer or culvert flowing at depth y, from Manning's equation, with the full-bore capacity and the ratio Q/Q_full (n taken as constant with depth).
 
@@ -539,7 +539,7 @@ civil_engineering_ai999x.solve('manning_partially_full_pipe', D=1.2, y=0.9, S=0.
 
 <a id="normal_depth_rectangular"></a>
 
-### Normal depth in a rectangular channel — `normal_depth_rectangular`
+### Normal depth in a rectangular channel: `normal_depth_rectangular`
 
 The uniform-flow (normal) depth that carries a discharge Q in a rectangular channel (Manning), with the velocity and Froude number at that depth.
 
@@ -593,7 +593,7 @@ civil_engineering_ai999x.solve('normal_depth_rectangular', Q=2.5, b=1.5, S=0.002
 
 <a id="normal_depth_trapezoidal"></a>
 
-### Normal depth in a trapezoidal channel — `normal_depth_trapezoidal`
+### Normal depth in a trapezoidal channel: `normal_depth_trapezoidal`
 
 The uniform-flow (normal) depth that carries a discharge Q in a trapezoidal channel (Manning), with the velocity, area and Froude number (on the hydraulic depth A/T).
 
@@ -649,7 +649,7 @@ civil_engineering_ai999x.solve('normal_depth_trapezoidal', Q=1.2, b=1.0, z=1.0, 
 
 <a id="chezy_velocity"></a>
 
-### Chezy velocity — `chezy_velocity`
+### Chezy velocity: `chezy_velocity`
 
 Mean velocity of uniform flow from the Chezy equation for a Chezy coefficient C $(m^{1/2}/s)$, hydraulic radius R and slope S.
 
@@ -696,7 +696,7 @@ civil_engineering_ai999x.solve('chezy_velocity', C=40.0, R=0.5, S=0.002)
 
 <a id="chezy_from_manning"></a>
 
-### Chezy coefficient from Manning's n — `chezy_from_manning`
+### Chezy coefficient from Manning's n: `chezy_from_manning`
 
 The Chezy coefficient equivalent to a Manning roughness n at hydraulic radius R (SI units).
 
@@ -746,7 +746,7 @@ civil_engineering_ai999x.solve('chezy_from_manning', n=0.03, R=2.0)
 
 <a id="manning_from_chezy"></a>
 
-### Manning's n from a Chezy coefficient — `manning_from_chezy`
+### Manning's n from a Chezy coefficient: `manning_from_chezy`
 
 The Manning roughness n equivalent to a Chezy coefficient C at hydraulic radius R (SI units).
 
@@ -796,7 +796,7 @@ civil_engineering_ai999x.solve('manning_from_chezy', C=35.0, R=0.4)
 
 <a id="channel_froude_number"></a>
 
-### Froude number of flow in a rectangular channel — `channel_froude_number`
+### Froude number of flow in a rectangular channel, `channel_froude_number`
 
 Froude number V/sqrt(g y) of flow at depth y in a rectangular channel, and whether the flow is subcritical, critical or supercritical.
 
@@ -826,7 +826,7 @@ $$
 
 ![flow regime: subcritical, critical or supercritical (regime) over Q (discharge) from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/channel-froude-number-decision)
 
-*flow regime: subcritical, critical or supercritical (regime) over Q (discharge) from 1.2 m^3/s to 120 m^3/s and b (channel width) from 0.4 m to 40 m (logarithmic axes): each of the 31 × 21 cells is one run of civil-engineering-ai999x, coloured by the verdict it returned — subcritical: 208 cells, supercritical: 443 cells. Other inputs as in the worked example: y = 0.5 m. Marked: the worked example, Q = 12 m^3/s, b = 4 m → supercritical.*
+*flow regime: subcritical, critical or supercritical (regime) over Q (discharge) from 1.2 m^3/s to 120 m^3/s and b (channel width) from 0.4 m to 40 m (logarithmic axes): each of the 31 × 21 cells is one run of civil-engineering-ai999x, coloured by the verdict it returned, subcritical: 208 cells, supercritical: 443 cells. Other inputs as in the worked example: y = 0.5 m. Marked: the worked example, Q = 12 m^3/s, b = 4 m → supercritical.*
 
 ```python
 civil_engineering_ai999x.solve('channel_froude_number', Q=12.0, b=4.0, y=0.5)
@@ -849,7 +849,7 @@ civil_engineering_ai999x.solve('channel_froude_number', Q=3.0, b=2.5, y=1.4)
 
 <a id="critical_depth_rectangular"></a>
 
-### Critical depth in a rectangular channel — `critical_depth_rectangular`
+### Critical depth in a rectangular channel: `critical_depth_rectangular`
 
 Critical depth, critical velocity and minimum specific energy for a discharge Q in a rectangular channel.
 
@@ -902,7 +902,7 @@ civil_engineering_ai999x.solve('critical_depth_rectangular', Q=0.5, b=1.2)
 
 <a id="critical_depth_trapezoidal"></a>
 
-### Critical depth in a trapezoidal channel — `critical_depth_trapezoidal`
+### Critical depth in a trapezoidal channel: `critical_depth_trapezoidal`
 
 Critical depth, area, velocity and minimum specific energy for a discharge Q in a trapezoidal (or triangular, b = 0) channel, from $Q^{2}$ $T = g$ $A^{3.}$
 
@@ -956,7 +956,7 @@ civil_engineering_ai999x.solve('critical_depth_trapezoidal', Q=0.8, b=0.0, z=1.0
 
 <a id="critical_depth_circular"></a>
 
-### Critical depth in a circular conduit — `critical_depth_circular`
+### Critical depth in a circular conduit: `critical_depth_circular`
 
 Critical depth, area, velocity and minimum specific energy for a discharge Q in a circular pipe or culvert flowing part full (refused when the critical depth would exceed 0.95 D).
 
@@ -1010,7 +1010,7 @@ civil_engineering_ai999x.solve('critical_depth_circular', Q=0.05, D=0.4)
 
 <a id="alternate_depth_rectangular"></a>
 
-### Specific energy and alternate depth in a rectangular channel — `alternate_depth_rectangular`
+### Specific energy and alternate depth in a rectangular channel, `alternate_depth_rectangular`
 
 The specific energy of flow at depth y in a rectangular channel and the alternate depth with the same specific energy on the other side of critical depth.
 
@@ -1042,7 +1042,7 @@ $$
 
 ![flow regime at depth y (regime) over Q (discharge) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/alternate-depth-rectangular-decision)
 
-*flow regime at depth y (regime) over Q (discharge) from 0.6 m^3/s to 60 m^3/s and b (channel width) from 0.2 m to 20 m (logarithmic axes): each of the 31 × 21 cells is one run of civil-engineering-ai999x, coloured by the verdict it returned — subcritical: 169 cells, supercritical: 482 cells. Other inputs as in the worked example: y = 0.4 m. Marked: the worked example, Q = 6 m^3/s, b = 2 m → supercritical.*
+*flow regime at depth y (regime) over Q (discharge) from 0.6 m^3/s to 60 m^3/s and b (channel width) from 0.2 m to 20 m (logarithmic axes): each of the 31 × 21 cells is one run of civil-engineering-ai999x, coloured by the verdict it returned, subcritical: 169 cells, supercritical: 482 cells. Other inputs as in the worked example: y = 0.4 m. Marked: the worked example, Q = 6 m^3/s, b = 2 m → supercritical.*
 
 ![E (specific energy y + V^2/2g (m)) against y (flow depth) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/alternate-depth-rectangular-curve)
 
@@ -1069,7 +1069,7 @@ civil_engineering_ai999x.solve('alternate_depth_rectangular', Q=6.0, b=2.0, y=1.
 
 <a id="hydraulic_jump_rectangular"></a>
 
-### Hydraulic jump in a rectangular channel — `hydraulic_jump_rectangular`
+### Hydraulic jump in a rectangular channel: `hydraulic_jump_rectangular`
 
 Sequent (conjugate) depth, energy loss and dissipated power of a hydraulic jump in a horizontal rectangular channel (Belanger's equation from the momentum balance).
 
@@ -1126,7 +1126,7 @@ civil_engineering_ai999x.solve('hydraulic_jump_rectangular', Q=3.0, b=1.5, y1=0.
 
 <a id="gradually_varied_flow_length"></a>
 
-### Length of a gradually varied flow profile (rectangular channel) — `gradually_varied_flow_length`
+### Length of a gradually varied flow profile (rectangular channel), `gradually_varied_flow_length`
 
 Distance along a prismatic rectangular channel between two sections of a gradually varied flow profile, by integrating $dx/dy = (1 - Fr^{2})/(S_{0} - Sf)$ exactly (not the direct-step approximation), with the profile type (M1, M2, M3, S1, S2, S3). Positive L: the section at depth y2 lies downstream of the one at depth y1.
 
@@ -1160,7 +1160,7 @@ $$
 
 ![profile type (M1 ](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/gradually-varied-flow-length-decision)
 
-*profile type (M1 ... S3) (profile) over Q (discharge) from 2 m^3/s to 200 m^3/s and b (channel width) from 0.5 m to 50 m (logarithmic axes): each of the 31 × 21 cells is one run of civil-engineering-ai999x, coloured by the verdict it returned — M1: 337 cells, M2: 107 cells, M3: 120 cells; blank cells: inputs the capability refuses. Other inputs as in the worked example: S0 = 0.0004, n = 0.015, y1 = 4.0 m, y2 = 3.0 m. Marked: the worked example, Q = 20 m^3/s, b = 5 m → M1.*
+*profile type (M1 ... S3) (profile) over Q (discharge) from 2 m^3/s to 200 m^3/s and b (channel width) from 0.5 m to 50 m (logarithmic axes): each of the 31 × 21 cells is one run of civil-engineering-ai999x, coloured by the verdict it returned, M1: 337 cells, M2: 107 cells, M3: 120 cells; blank cells: inputs the capability refuses. Other inputs as in the worked example: S0 = 0.0004, n = 0.015, y1 = 4.0 m, y2 = 3.0 m. Marked: the worked example, Q = 20 m^3/s, b = 5 m → M1.*
 
 ```python
 civil_engineering_ai999x.solve('gradually_varied_flow_length', Q=20.0, b=5.0, S0=0.0004, n=0.015, y1=4.0, y2=3.0)
@@ -1184,7 +1184,7 @@ civil_engineering_ai999x.solve('gradually_varied_flow_length', Q=20.0, b=5.0, S0
 
 <a id="rectangular_weir_discharge"></a>
 
-### Sharp-crested rectangular weir discharge — `rectangular_weir_discharge`
+### Sharp-crested rectangular weir discharge: `rectangular_weir_discharge`
 
 Discharge over a sharp-crested rectangular weir for a stated discharge coefficient Cd and head H, with Francis' allowance of 0.1 H per end contraction (0, 1 or 2 contractions).
 
@@ -1238,7 +1238,7 @@ civil_engineering_ai999x.solve('rectangular_weir_discharge', Cd=0.6, b=1.5, H=0.
 
 <a id="v_notch_weir_discharge"></a>
 
-### V-notch (triangular) weir discharge — `v_notch_weir_discharge`
+### V-notch (triangular) weir discharge: `v_notch_weir_discharge`
 
 Discharge over a sharp-crested triangular (V-notch) weir of notch angle theta for a stated discharge coefficient.
 
@@ -1290,7 +1290,7 @@ civil_engineering_ai999x.solve('v_notch_weir_discharge', Cd=0.6, theta=60.0, H=0
 
 <a id="broad_crested_weir_discharge"></a>
 
-### Broad-crested weir discharge — `broad_crested_weir_discharge`
+### Broad-crested weir discharge: `broad_crested_weir_discharge`
 
 Discharge over a broad-crested weir for a stated discharge coefficient (critical depth $2H/3$ on the crest, approach velocity head included in H).
 
@@ -1342,7 +1342,7 @@ civil_engineering_ai999x.solve('broad_crested_weir_discharge', Cd=1.0, b=2.0, H=
 
 <a id="orifice_discharge"></a>
 
-### Discharge through a small orifice under a head — `orifice_discharge`
+### Discharge through a small orifice under a head, `orifice_discharge`
 
 Discharge through a small sharp-edged orifice of diameter d under a constant head h for a stated discharge coefficient (Torricelli's velocity times Cd times the orifice area).
 
@@ -1396,7 +1396,7 @@ civil_engineering_ai999x.solve('orifice_discharge', Cd=0.6, d=0.1, h=1.2)
 
 <a id="hazen_williams_head_loss"></a>
 
-### Hazen-Williams head loss in a pipe — `hazen_williams_head_loss`
+### Hazen-Williams head loss in a pipe: `hazen_williams_head_loss`
 
 Friction head loss, velocity and friction slope for water flowing at Q through a pipe, from the Hazen-Williams formula (SI form used by EPANET).
 
@@ -1447,7 +1447,7 @@ civil_engineering_ai999x.solve('hazen_williams_head_loss', Q=0.008, D=0.1, L=250
 
 <a id="hazen_williams_flow"></a>
 
-### Pipe flow from a head loss (Hazen-Williams) — `hazen_williams_flow`
+### Pipe flow from a head loss (Hazen-Williams), `hazen_williams_flow`
 
 The discharge a pipe carries under a given friction head loss (for example between two reservoirs), from the Hazen-Williams formula.
 
@@ -1496,7 +1496,7 @@ civil_engineering_ai999x.solve('hazen_williams_flow', hf=12.0, D=0.15, L=800.0, 
 
 <a id="parallel_pipes_hazen_williams"></a>
 
-### Flow division among parallel pipes (Hazen-Williams) — `parallel_pipes_hazen_williams`
+### Flow division among parallel pipes (Hazen-Williams), `parallel_pipes_hazen_williams`
 
 How a total flow Q divides among two or more pipes in parallel between the same two junctions, and the common head loss, from the Hazen-Williams formula.
 
@@ -1549,7 +1549,7 @@ civil_engineering_ai999x.solve('parallel_pipes_hazen_williams', Q=0.15, L=[500, 
 
 <a id="hardy_cross_network"></a>
 
-### Pipe network flows by the Hardy Cross method (Hazen-Williams) — `hardy_cross_network`
+### Pipe network flows by the Hardy Cross method (Hazen-Williams), `hardy_cross_network`
 
 Steady flows in every pipe of a looped water network and the head loss from the source to every node, by Hardy Cross loop corrections (finished with simultaneous loop corrections to full precision), Hazen-Williams friction. Nodes are numbered 1..N; node 1 is the source and supplies the total demand.
 
@@ -1609,7 +1609,7 @@ civil_engineering_ai999x.solve('hardy_cross_network', pipes='1-2, 2-3, 3-4, 4-1'
 
 <a id="three_reservoir_problem"></a>
 
-### Three-reservoir problem (Hazen-Williams) — `three_reservoir_problem`
+### Three-reservoir problem (Hazen-Williams): `three_reservoir_problem`
 
 Head at the junction of three pipes from three reservoirs and the flow in each pipe (positive toward the junction), with Hazen-Williams friction and no demand at the junction.
 
@@ -1658,7 +1658,7 @@ civil_engineering_ai999x.solve('three_reservoir_problem', z=[100, 95, 60], L=[10
 
 <a id="scs_curve_number_runoff"></a>
 
-### SCS curve-number runoff depth — `scs_curve_number_runoff`
+### SCS curve-number runoff depth: `scs_curve_number_runoff`
 
 Direct runoff depth from a storm rainfall depth by the SCS (NRCS) curve-number method, with the potential retention S and the initial abstraction $Ia = \lambda$ S (lambda = 0.2 unless stated).
 
@@ -1713,7 +1713,7 @@ civil_engineering_ai999x.solve('scs_curve_number_runoff', P=60.0, CN=70.0, lam=0
 
 <a id="unit_hydrograph_convolution"></a>
 
-### Direct runoff hydrograph by unit-hydrograph convolution — `unit_hydrograph_convolution`
+### Direct runoff hydrograph by unit-hydrograph convolution, `unit_hydrograph_convolution`
 
 The direct runoff (and total) hydrograph of a storm: the convolution of the excess-rainfall depths of successive periods with the unit hydrograph of the same period, plus a constant base flow.
 
@@ -1763,7 +1763,7 @@ civil_engineering_ai999x.solve('unit_hydrograph_convolution', excess=[2.0, 0.8],
 
 <a id="unit_hydrograph_derivation"></a>
 
-### Unit hydrograph from a storm by least-squares deconvolution — `unit_hydrograph_derivation`
+### Unit hydrograph from a storm by least-squares deconvolution, `unit_hydrograph_derivation`
 
 The unit hydrograph that best reproduces an observed direct-runoff hydrograph from its excess-rainfall depths (least-squares solution of the convolution equations), with the RMS misfit.
 
@@ -1811,7 +1811,7 @@ civil_engineering_ai999x.solve('unit_hydrograph_derivation', dro=[2, 20, 70, 105
 
 <a id="thiessen_polygon_rainfall"></a>
 
-### Areal rainfall by Thiessen polygons — `thiessen_polygon_rainfall`
+### Areal rainfall by Thiessen polygons: `thiessen_polygon_rainfall`
 
 Mean areal rainfall over a catchment by the Thiessen (Voronoi) polygon method: each gauge represents the part of the catchment nearer to it than to any other gauge; the areas, weights and the arithmetic mean are also given. Coordinates in km (areas in km^2), rainfall in mm; the boundary is a simple polygon listed vertex by vertex.
 
@@ -1864,7 +1864,7 @@ civil_engineering_ai999x.solve('thiessen_polygon_rainfall', gx=[1, 6, 9, 4], gy=
 
 <a id="flood_exceedance_risk"></a>
 
-### Risk of exceedance over a design life — `flood_exceedance_risk`
+### Risk of exceedance over a design life: `flood_exceedance_risk`
 
 Probability that an event of return period T is equalled or exceeded at least once in n years (independent years), with the annual exceedance probability.
 
@@ -1917,7 +1917,7 @@ civil_engineering_ai999x.solve('flood_exceedance_risk', T=25.0, n=10)
 
 <a id="design_return_period_for_risk"></a>
 
-### Return period for an acceptable risk over a design life — `design_return_period_for_risk`
+### Return period for an acceptable risk over a design life, `design_return_period_for_risk`
 
 The design return period whose event has only the stated probability R of being exceeded during an n-year life.
 
@@ -1969,7 +1969,7 @@ civil_engineering_ai999x.solve('design_return_period_for_risk', R=0.05, n=25)
 
 <a id="gumbel_design_flood"></a>
 
-### Gumbel (EV1) design flood — `gumbel_design_flood`
+### Gumbel (EV1) design flood: `gumbel_design_flood`
 
 The T-year flood from a series of annual maximum discharges by the Gumbel (extreme value type I) distribution fitted by the method of moments (Chow's frequency factor for a long record; sample standard deviation with n - 1).
 
@@ -2018,7 +2018,7 @@ civil_engineering_ai999x.solve('gumbel_design_flood', peaks=[1200, 980, 1450, 11
 
 <a id="log_pearson_iii_design_flood"></a>
 
-### Log-Pearson type III design flood — `log_pearson_iii_design_flood`
+### Log-Pearson type III design flood: `log_pearson_iii_design_flood`
 
 The T-year flood by the log-Pearson type III distribution fitted by moments of the base-10 logarithms (station skew only, no regional skew weighting or outlier tests), frequency factor from the exact Pearson III quantile.
 
@@ -2068,7 +2068,7 @@ civil_engineering_ai999x.solve('log_pearson_iii_design_flood', peaks=[1200, 980,
 
 <a id="weibull_plotting_positions"></a>
 
-### Return periods by the Weibull plotting position — `weibull_plotting_positions`
+### Return periods by the Weibull plotting position, `weibull_plotting_positions`
 
 Ranks annual maxima from largest to smallest and gives each its exceedance probability $m/(n + 1)$ and return period $(n + 1)/m$ (Weibull plotting position).
 
@@ -2114,7 +2114,7 @@ civil_engineering_ai999x.solve('weibull_plotting_positions', peaks=[12.5, 18.2, 
 
 <a id="nash_sutcliffe_efficiency"></a>
 
-### Nash-Sutcliffe efficiency, RMSE and percent bias — `nash_sutcliffe_efficiency`
+### Nash-Sutcliffe efficiency, RMSE and percent bias, `nash_sutcliffe_efficiency`
 
 Goodness of fit of simulated to observed flows: Nash-Sutcliffe efficiency, root-mean-square error and percent bias (positive when the model underestimates, as hydroeval defines it).
 
@@ -2162,7 +2162,7 @@ civil_engineering_ai999x.solve('nash_sutcliffe_efficiency', obs=[3.2, 4.1, 8.7, 
 
 <a id="kling_gupta_efficiency"></a>
 
-### Kling-Gupta efficiency — `kling_gupta_efficiency`
+### Kling-Gupta efficiency: `kling_gupta_efficiency`
 
 Kling-Gupta efficiency of simulated against observed values (Gupta et al. 2009) with its components: the correlation r, the variability ratio alpha (population standard deviations) and the bias ratio beta.
 
@@ -2211,7 +2211,7 @@ civil_engineering_ai999x.solve('kling_gupta_efficiency', obs=[3.2, 4.1, 8.7, 15.
 
 <a id="horton_infiltration"></a>
 
-### Horton infiltration rate and cumulative infiltration — `horton_infiltration`
+### Horton infiltration rate and cumulative infiltration, `horton_infiltration`
 
 Infiltration capacity at time t and cumulative infiltration from the start of ponding by Horton's equation.
 
@@ -2263,7 +2263,7 @@ civil_engineering_ai999x.solve('horton_infiltration', f0=1.3888888888888888e-05,
 
 <a id="green_ampt_infiltration"></a>
 
-### Green-Ampt cumulative infiltration under ponding — `green_ampt_infiltration`
+### Green-Ampt cumulative infiltration under ponding, `green_ampt_infiltration`
 
 Cumulative infiltration and infiltration rate at time t for a soil ponded from $t = 0$, by the Green-Ampt model (implicit equation solved to full precision).
 
@@ -2314,7 +2314,7 @@ civil_engineering_ai999x.solve('green_ampt_infiltration', K=9.444444444444443e-0
 
 <a id="phi_index"></a>
 
-### Phi-index of a storm — `phi_index`
+### Phi-index of a storm: `phi_index`
 
 The constant loss rate (phi-index) that, subtracted from every interval of a rainfall hyetograph, leaves exactly the observed runoff depth; with the excess rainfall of each interval.
 
@@ -2367,7 +2367,7 @@ civil_engineering_ai999x.solve('phi_index', rain=[2.5, 7.5, 12.0, 5.0, 1.5], dt=
 
 <a id="muskingum_routing"></a>
 
-### Muskingum flood routing — `muskingum_routing`
+### Muskingum flood routing: `muskingum_routing`
 
 Routes an inflow hydrograph through a river reach by the Muskingum method (storage $S = K$[X $I + (1 - X)$ O]), giving the outflow ordinates, routing coefficients, peak outflow and attenuation. The first outflow equals the first inflow unless stated.
 
@@ -2398,7 +2398,7 @@ $$
 
 ![A flood wave routed through a river reach by the Muskingum method (K = 12 h, X = 0](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/muskingum-routing-hydrograph.svg)
 
-*A flood wave routed through a river reach by the Muskingum method (K = 12 h, X = 0.2, Δt = 6 h; C0 = 0.047619, C1 = 0.428571, C2 = 0.52381): inflow per interval as bars, the outflow returned by the package as stems — lower and later; peak inflow 68 m³/s, marked: peak outflow t = 24 h, Q = 45.836 m³/s (attenuation 22.164 m³/s).*
+*A flood wave routed through a river reach by the Muskingum method (K = 12 h, X = 0.2, Δt = 6 h; C0 = 0.047619, C1 = 0.428571, C2 = 0.52381): inflow per interval as bars, the outflow returned by the package as stems, lower and later; peak inflow 68 m³/s, marked: peak outflow t = 24 h, Q = 45.836 m³/s (attenuation 22.164 m³/s).*
 
 ![outflow ordinates (m^3/s) (outflow) returned by civil-engineering-ai999x for the worked example, one value for each position in the list (9 values, first 10 m^3/s, last 22](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/muskingum-routing-series)
 
@@ -2430,7 +2430,7 @@ civil_engineering_ai999x.solve('muskingum_routing', inflow=[20, 80, 210, 240, 19
 
 <a id="darcy_flow_layered_soil"></a>
 
-### Darcy flow across soil layers in series; equivalent conductivities — `darcy_flow_layered_soil`
+### Darcy flow across soil layers in series; equivalent conductivities, `darcy_flow_layered_soil`
 
 Flow rate, specific discharge and the heads at the layer interfaces for one-dimensional Darcy flow across one or more soil layers in series (flow perpendicular to the layering), with the equivalent vertical (series) and horizontal (parallel) conductivities. Heads are measured from the downstream face.
 
@@ -2486,7 +2486,7 @@ civil_engineering_ai999x.solve('darcy_flow_layered_soil', H=[1.5, 2.0, 1.0], K=[
 
 <a id="falling_head_permeability"></a>
 
-### Hydraulic conductivity from a falling-head test — `falling_head_permeability`
+### Hydraulic conductivity from a falling-head test, `falling_head_permeability`
 
 Hydraulic conductivity of a soil sample from a falling-head permeameter: standpipe diameter d, sample diameter D and length L, the standpipe head falling from h1 to h2 in time t.
 
@@ -2538,7 +2538,7 @@ civil_engineering_ai999x.solve('falling_head_permeability', d=0.006, D=0.1, L=0.
 
 <a id="thiem_confined_transmissivity"></a>
 
-### Transmissivity from steady pumping (Thiem, confined aquifer) — `thiem_confined_transmissivity`
+### Transmissivity from steady pumping (Thiem, confined aquifer), `thiem_confined_transmissivity`
 
 Transmissivity (and conductivity, if the aquifer thickness is given) of a confined aquifer from the steady drawdowns in two observation wells at distances $r_{1} < r_{2}$ from a well pumped at Q (Thiem equation).
 
@@ -2595,7 +2595,7 @@ civil_engineering_ai999x.solve('thiem_confined_transmissivity', Q=0.013888888888
 
 <a id="thiem_unconfined_conductivity"></a>
 
-### Hydraulic conductivity from steady pumping (unconfined aquifer) — `thiem_unconfined_conductivity`
+### Hydraulic conductivity from steady pumping (unconfined aquifer), `thiem_unconfined_conductivity`
 
 Hydraulic conductivity of an unconfined aquifer from the steady saturated thicknesses $h_{1} < h_{2}$ in two observation wells at distances $r_{1} < r_{2}$ from a well pumped at Q (Thiem-Dupuit equation).
 
@@ -2649,7 +2649,7 @@ civil_engineering_ai999x.solve('thiem_unconfined_conductivity', Q=0.009259259259
 
 <a id="theis_drawdown"></a>
 
-### Theis drawdown around a pumped well — `theis_drawdown`
+### Theis drawdown around a pumped well: `theis_drawdown`
 
 Transient drawdown at distance r and time t from a well pumped at a constant rate in a confined aquifer (Theis), with u and the well function W(u) = E1(u).
 
@@ -2704,7 +2704,7 @@ civil_engineering_ai999x.solve('theis_drawdown', Q=0.011574074074074073, T=0.001
 
 <a id="cooper_jacob_analysis"></a>
 
-### Transmissivity and storativity by the Cooper-Jacob straight line — `cooper_jacob_analysis`
+### Transmissivity and storativity by the Cooper-Jacob straight line, `cooper_jacob_analysis`
 
 Transmissivity and storativity of a confined aquifer from a pumping test by the Cooper-Jacob method: a least-squares straight line through drawdown against log10(time) (late-time data, $u < 0.05$, chosen by the user). Times are in minutes, drawdowns in m.
 
@@ -2760,7 +2760,7 @@ civil_engineering_ai999x.solve('cooper_jacob_analysis', times=[30, 60, 120, 240,
 
 <a id="well_field_drawdown"></a>
 
-### Drawdown from several wells by superposition (Theis) — `well_field_drawdown`
+### Drawdown from several wells by superposition (Theis), `well_field_drawdown`
 
 Total drawdown at a point from several wells pumping (positive rate) or injecting (negative rate) at constant rates in a confined aquifer, by superposing Theis solutions; with each well's contribution. Coordinates in m, rates in m^3/day.
 
@@ -2817,7 +2817,7 @@ civil_engineering_ai999x.solve('well_field_drawdown', wx=[-150, 150, 0], wy=[0, 
 
 <a id="dupuit_flow_with_recharge"></a>
 
-### Unconfined flow between two water bodies with recharge (Dupuit) — `dupuit_flow_with_recharge`
+### Unconfined flow between two water bodies with recharge (Dupuit), `dupuit_flow_with_recharge`
 
 Steady unconfined flow per unit width between two water bodies (heads h1 at $x = 0$ and h2 at $x = L$ above the base) with uniform recharge W: the flows at both ends (positive toward x = L), the groundwater divide and the highest water table (Dupuit-Forchheimer).
 
@@ -2869,7 +2869,7 @@ civil_engineering_ai999x.solve('dupuit_flow_with_recharge', K=2.3148148148148147
 
 <a id="soil_phase_relations"></a>
 
-### Soil phase relations from void ratio and water content — `soil_phase_relations`
+### Soil phase relations from void ratio and water content, `soil_phase_relations`
 
 Porosity, degree of saturation and the dry, bulk, saturated and submerged unit weights of a soil from its specific gravity of solids Gs, void ratio e and water content w (unit weight of water 9.81 kN/m^3).
 
@@ -2926,7 +2926,7 @@ civil_engineering_ai999x.solve('soil_phase_relations', Gs=2.65, e=0.9, w=0.3)
 
 <a id="soil_phase_from_lab_masses"></a>
 
-### Soil properties from a weighed sample — `soil_phase_from_lab_masses`
+### Soil properties from a weighed sample: `soil_phase_from_lab_masses`
 
 Water content, bulk and dry densities and unit weights, void ratio, porosity and degree of saturation of a soil sample from its wet mass, oven-dry mass, volume and the specific gravity of the solids.
 
@@ -2986,7 +2986,7 @@ civil_engineering_ai999x.solve('soil_phase_from_lab_masses', M=0.205000000000000
 
 <a id="relative_density_from_unit_weights"></a>
 
-### Relative density of a granular soil — `relative_density_from_unit_weights`
+### Relative density of a granular soil: `relative_density_from_unit_weights`
 
 Relative density (density index) of a sand from its in-place dry unit weight and the minimum and maximum dry unit weights of the laboratory tests.
 
@@ -3035,7 +3035,7 @@ civil_engineering_ai999x.solve('relative_density_from_unit_weights', gd=15000.0,
 
 <a id="liquid_limit_flow_curve"></a>
 
-### Liquid limit from Casagrande cup tests — `liquid_limit_flow_curve`
+### Liquid limit from Casagrande cup tests: `liquid_limit_flow_curve`
 
 Liquid limit (water content at 25 blows) and flow index from Casagrande cup tests by a least-squares line of water content against log10(blows), with the plasticity index when the plastic limit is given. Water contents in percent.
 
@@ -3084,7 +3084,7 @@ civil_engineering_ai999x.solve('liquid_limit_flow_curve', blows=[12, 20, 28, 35]
 
 <a id="grain_size_coefficients"></a>
 
-### Effective sizes and gradation coefficients from a sieve analysis — `grain_size_coefficients`
+### Effective sizes and gradation coefficients from a sieve analysis, `grain_size_coefficients`
 
 D10, D30 and D60 by log-linear interpolation of the grading curve, and the coefficients of uniformity Cu and curvature Cc. Sieve sizes in mm, percent passing in %.
 
@@ -3134,7 +3134,7 @@ civil_engineering_ai999x.solve('grain_size_coefficients', sizes=[19, 9.5, 4.75, 
 
 <a id="effective_stress_at_depth"></a>
 
-### Total, pore-water and effective vertical stress at a depth — `effective_stress_at_depth`
+### Total, pore-water and effective vertical stress at a depth, `effective_stress_at_depth`
 
 Total vertical stress, hydrostatic pore-water pressure and effective vertical stress at depth z in a layered soil with a water table at depth zw (no capillary rise, hydrostatic water). Each layer's unit weight is the one that applies there (moist above the water table, saturated below), in $kN/m^{3.}$
 
@@ -3190,7 +3190,7 @@ civil_engineering_ai999x.solve('effective_stress_at_depth', H=[2, 4, 6], gam=[16
 
 <a id="consolidation_settlement_nc"></a>
 
-### Primary consolidation settlement of a normally consolidated clay — `consolidation_settlement_nc`
+### Primary consolidation settlement of a normally consolidated clay, `consolidation_settlement_nc`
 
 Primary consolidation settlement of a normally consolidated clay layer of thickness H from the compression index Cc, the initial void ratio and the initial and added effective stresses at mid-depth.
 
@@ -3241,7 +3241,7 @@ civil_engineering_ai999x.solve('consolidation_settlement_nc', Cc=0.5, e0=1.4, H=
 
 <a id="consolidation_settlement_oc"></a>
 
-### Primary consolidation settlement of an overconsolidated clay — `consolidation_settlement_oc`
+### Primary consolidation settlement of an overconsolidated clay, `consolidation_settlement_oc`
 
 Primary consolidation settlement of an overconsolidated clay: recompression with the swelling index Cs up to the preconsolidation stress, then virgin compression with Cc.
 
@@ -3296,7 +3296,7 @@ civil_engineering_ai999x.solve('consolidation_settlement_oc', Cc=0.35, Cs=0.05, 
 
 <a id="thick_clay_layer_settlement"></a>
 
-### Consolidation settlement of a thick clay layer integrated over depth — `thick_clay_layer_settlement`
+### Consolidation settlement of a thick clay layer integrated over depth, `thick_clay_layer_settlement`
 
 Primary consolidation settlement of a thick normally consolidated clay layer under a uniform added stress, with the initial effective stress rising linearly with depth (integrated exactly over the thickness), and the usual single-layer estimate at mid-depth for comparison.
 
@@ -3347,7 +3347,7 @@ civil_engineering_ai999x.solve('thick_clay_layer_settlement', H=16.0, s_top=2500
 
 <a id="degree_of_consolidation"></a>
 
-### Average degree of consolidation after a time (Terzaghi) — `degree_of_consolidation`
+### Average degree of consolidation after a time (Terzaghi), `degree_of_consolidation`
 
 Time factor and average degree of one-dimensional consolidation of a clay layer after time t (Terzaghi, uniform initial excess pore pressure), and the settlement reached if the final consolidation settlement is given. Hdr is the drainage path: half the thickness for double drainage, the full thickness for single drainage.
 
@@ -3398,7 +3398,7 @@ civil_engineering_ai999x.solve('degree_of_consolidation', cv=1.267523512561158e-
 
 <a id="consolidation_time"></a>
 
-### Time to reach a degree of consolidation — `consolidation_time`
+### Time to reach a degree of consolidation: `consolidation_time`
 
 Time needed for a clay layer to reach an average degree of consolidation U (Terzaghi), with the time factor.
 
@@ -3448,7 +3448,7 @@ civil_engineering_ai999x.solve('consolidation_time', cv=4.753213172104342e-08, H
 
 <a id="coefficient_of_consolidation"></a>
 
-### Coefficient of consolidation from a consolidation time — `coefficient_of_consolidation`
+### Coefficient of consolidation from a consolidation time, `coefficient_of_consolidation`
 
 Coefficient of consolidation from the time at which a degree of consolidation is reached (for example t50 by Casagrande's method or t90 by Taylor's), using the exact time factor rather than the rounded 0.197 or 0.848.
 
@@ -3497,7 +3497,7 @@ civil_engineering_ai999x.solve('coefficient_of_consolidation', Hdr=0.0095, t=288
 
 <a id="excess_pore_pressure_isochrone"></a>
 
-### Excess pore pressure at a depth during consolidation — `excess_pore_pressure_isochrone`
+### Excess pore pressure at a depth during consolidation, `excess_pore_pressure_isochrone`
 
 Excess pore-water pressure and local degree of consolidation at depth z and time t in a doubly drained clay layer of thickness 2 Hdr under a uniform initial excess pressure u0 (Terzaghi); z is measured from the top drainage face (for a singly drained layer of thickness Hdr, use 0 <= z <= Hdr).
 
@@ -3552,7 +3552,7 @@ civil_engineering_ai999x.solve('excess_pore_pressure_isochrone', u0=80000.0, cv=
 
 <a id="stress_below_circular_load"></a>
 
-### Vertical stress below the centre of a uniformly loaded circle — `stress_below_circular_load`
+### Vertical stress below the centre of a uniformly loaded circle, `stress_below_circular_load`
 
 Increase in vertical stress at depth z below the centre of a flexible circular area of radius a carrying a uniform pressure q (Boussinesq, elastic half-space).
 
@@ -3600,7 +3600,7 @@ civil_engineering_ai999x.solve('stress_below_circular_load', q=100000.0, a=5.0, 
 
 <a id="stress_below_rectangular_load"></a>
 
-### Vertical stress below a uniformly loaded rectangle (Newmark) — `stress_below_rectangular_load`
+### Vertical stress below a uniformly loaded rectangle (Newmark), `stress_below_rectangular_load`
 
 Increase in vertical stress at depth z below the corner (or the centre, by superposition of four corners) of a flexible rectangular area B x L under a uniform pressure q (Boussinesq integrated by Newmark).
 
@@ -3650,7 +3650,7 @@ civil_engineering_ai999x.solve('stress_below_rectangular_load', q=120000.0, B=4.
 
 <a id="stress_below_strip_load"></a>
 
-### Vertical stress below a uniformly loaded strip — `stress_below_strip_load`
+### Vertical stress below a uniformly loaded strip, `stress_below_strip_load`
 
 Increase in vertical stress at depth z and horizontal offset x from the centreline of an infinitely long strip of width B under a uniform pressure q (elastic half-space).
 
@@ -3699,7 +3699,7 @@ civil_engineering_ai999x.solve('stress_below_strip_load', q=150000.0, B=3.0, z=2
 
 <a id="strip_footing_bearing_capacity"></a>
 
-### Ultimate bearing capacity of a strip footing — `strip_footing_bearing_capacity`
+### Ultimate bearing capacity of a strip footing, `strip_footing_bearing_capacity`
 
 Ultimate and allowable bearing capacity of a strip footing from the general bearing capacity equation with Prandtl-Reissner factors Nc, Nq and Vesic's (1973) Ngamma (no shape, depth or inclination factors; drained parameters, water table well below the footing).
 
@@ -3758,7 +3758,7 @@ civil_engineering_ai999x.solve('strip_footing_bearing_capacity', c=0.0, phi=35.0
 
 <a id="rankine_active_thrust"></a>
 
-### Rankine active earth pressure and thrust on a wall — `rankine_active_thrust`
+### Rankine active earth pressure and thrust on a wall, `rankine_active_thrust`
 
 Rankine active pressure coefficient, active pressure at the base, total active thrust per metre of a smooth vertical wall retaining a horizontal backfill (with optional cohesion and surcharge; the tension zone is ignored), the tension-crack depth and the height of the resultant above the base. Dry backfill.
 
@@ -3816,7 +3816,7 @@ civil_engineering_ai999x.solve('rankine_active_thrust', phi=25.0, gam=19000.0, H
 
 <a id="rankine_passive_thrust"></a>
 
-### Rankine passive earth pressure and thrust — `rankine_passive_thrust`
+### Rankine passive earth pressure and thrust: `rankine_passive_thrust`
 
 Rankine passive pressure coefficient, passive pressure at the base, total passive thrust per metre on a smooth vertical wall with a horizontal soil surface (optional cohesion and surcharge) and the height of the resultant.
 
@@ -3873,7 +3873,7 @@ civil_engineering_ai999x.solve('rankine_passive_thrust', phi=25.0, gam=19000.0, 
 
 <a id="coulomb_active_thrust"></a>
 
-### Coulomb active thrust on a rough wall with sloping backfill — `coulomb_active_thrust`
+### Coulomb active thrust on a rough wall with sloping backfill, `coulomb_active_thrust`
 
 Coulomb active earth pressure coefficient and thrust per metre on a rough vertical wall (wall friction delta) retaining a cohesionless backfill sloping at beta, with the horizontal and vertical components of the thrust.
 
@@ -3930,7 +3930,7 @@ civil_engineering_ai999x.solve('coulomb_active_thrust', phi=35.0, delta=23.0, be
 
 <a id="coulomb_passive_thrust"></a>
 
-### Coulomb passive thrust on a rough wall — `coulomb_passive_thrust`
+### Coulomb passive thrust on a rough wall: `coulomb_passive_thrust`
 
 Coulomb (plane-wedge) passive earth pressure coefficient and thrust per metre on a rough vertical wall with wall friction delta and a soil surface rising at beta (plane wedges overestimate the passive resistance when delta is large; keep delta below about $\phi/2$ in design).
 
@@ -3987,7 +3987,7 @@ civil_engineering_ai999x.solve('coulomb_passive_thrust', phi=34.0, delta=12.0, b
 
 <a id="mohr_coulomb_failure_stress"></a>
 
-### Major principal stress at failure (Mohr-Coulomb) — `mohr_coulomb_failure_stress`
+### Major principal stress at failure (Mohr-Coulomb), `mohr_coulomb_failure_stress`
 
 Major principal stress at failure for a given minor principal stress (triaxial test), with the normal and shear stresses on the failure plane and its angle to the major principal plane $(45 + \phi/2)$.
 
@@ -4042,7 +4042,7 @@ civil_engineering_ai999x.solve('mohr_coulomb_failure_stress', s3=200000.0, c=0.0
 
 <a id="triaxial_strength_parameters"></a>
 
-### Cohesion and friction angle from triaxial tests — `triaxial_strength_parameters`
+### Cohesion and friction angle from triaxial tests, `triaxial_strength_parameters`
 
 Mohr-Coulomb cohesion and friction angle from two or more triaxial tests at failure, by a least-squares line through the stress points (p, q) = ($(s_{1} + s_{3})/2$, (s1 - s3)/2): sin phi = slope, c = intercept/cos phi. Stresses in kPa (effective or total, consistently).
 
@@ -4090,7 +4090,7 @@ civil_engineering_ai999x.solve('triaxial_strength_parameters', s3=[50, 150], s1=
 
 <a id="direct_shear_strength_parameters"></a>
 
-### Cohesion and friction angle from direct shear tests — `direct_shear_strength_parameters`
+### Cohesion and friction angle from direct shear tests, `direct_shear_strength_parameters`
 
 Mohr-Coulomb cohesion and friction angle from direct shear tests by a least-squares line of peak shear stress against normal stress. Stresses in kPa.
 
@@ -4138,7 +4138,7 @@ civil_engineering_ai999x.solve('direct_shear_strength_parameters', sigma=[100, 2
 
 <a id="proctor_compaction_optimum"></a>
 
-### Optimum water content and maximum dry density from a compaction test — `proctor_compaction_optimum`
+### Optimum water content and maximum dry density from a compaction test, `proctor_compaction_optimum`
 
 Optimum water content and maximum dry density from Proctor compaction points by a least-squares parabola, with the zero-air-voids dry density at the optimum when Gs is given. Water contents in %, dry densities in $Mg/m^{3.}$
 
@@ -4187,7 +4187,7 @@ civil_engineering_ai999x.solve('proctor_compaction_optimum', w=[12, 14, 16, 18, 
 
 <a id="traverse_bowditch_adjustment"></a>
 
-### Closed traverse: misclosure and Bowditch (compass rule) adjustment — `traverse_bowditch_adjustment`
+### Closed traverse: misclosure and Bowditch (compass rule) adjustment, `traverse_bowditch_adjustment`
 
 Latitudes and departures of a closed loop traverse from whole-circle bearings (azimuths clockwise from north, degrees) and distances (m), the misclosure and relative precision (1 in X), the coordinates adjusted by the Bowditch (compass) rule, and the enclosed area. The last leg returns to the starting station.
 
@@ -4241,7 +4241,7 @@ civil_engineering_ai999x.solve('traverse_bowditch_adjustment', az=[30.5, 112.25,
 
 <a id="levelling_rise_and_fall"></a>
 
-### Reduced levels by the rise-and-fall method — `levelling_rise_and_fall`
+### Reduced levels by the rise-and-fall method, `levelling_rise_and_fall`
 
 Reduced levels of every station of a levelling run from staff readings (m) and their sight types (BS, IS, FS in reading order; a BS after an FS is the new set-up on the same change point), with the total rise and fall and the arithmetic check sum BS - sum FS (= last RL - first RL).
 
@@ -4292,7 +4292,7 @@ civil_engineering_ai999x.solve('levelling_rise_and_fall', readings=[2.15, 1.725,
 
 <a id="horizontal_circular_curve"></a>
 
-### Elements of a simple horizontal circular curve — `horizontal_circular_curve`
+### Elements of a simple horizontal circular curve, `horizontal_circular_curve`
 
 Tangent length, curve length, long chord, external distance, middle ordinate and the chainages of the tangent points of a simple circular curve of radius R joining tangents that deflect by Delta at the intersection point PI.
 
@@ -4350,7 +4350,7 @@ civil_engineering_ai999x.solve('horizontal_circular_curve', R=600.0, Delta=25.5,
 
 <a id="vertical_parabolic_curve"></a>
 
-### Elevations on a vertical parabolic curve — `vertical_parabolic_curve`
+### Elevations on a vertical parabolic curve: `vertical_parabolic_curve`
 
 Elevation at a station on an equal-tangent parabolic vertical curve, with the highest (crest) or lowest (sag) point on the curve and the rate of change of grade. Grades are fractions or percentages; stations and lengths in m.
 
@@ -4410,7 +4410,7 @@ civil_engineering_ai999x.solve('vertical_parabolic_curve', g1=-0.025, g2=0.015, 
 
 <a id="earthwork_volume_end_areas"></a>
 
-### Earthwork volume from cross-section areas — `earthwork_volume_end_areas`
+### Earthwork volume from cross-section areas: `earthwork_volume_end_areas`
 
 Volume of cut or fill between equally spaced cross-sections by the average-end-area method, and by the prismoidal (Simpson) rule when the number of sections is odd. Areas in $m^{2.}$
 
@@ -4457,7 +4457,7 @@ civil_engineering_ai999x.solve('earthwork_volume_end_areas', areas=[30, 42, 51, 
 
 <a id="area_from_offsets"></a>
 
-### Area between a survey line and a boundary from offsets — `area_from_offsets`
+### Area between a survey line and a boundary from offsets, `area_from_offsets`
 
 Area between a chain line and an irregular boundary from offsets at a regular interval, by the trapezoidal rule and, for an odd number of offsets, Simpson's one-third rule. Offsets in m.
 
@@ -4508,7 +4508,7 @@ civil_engineering_ai999x.solve('area_from_offsets', offsets=[3.2, 5.1, 6.8, 7.5,
 
 <a id="rational_method_peak_runoff"></a>
 
-### Peak runoff by the rational method — `rational_method_peak_runoff`
+### Peak runoff by the rational method: `rational_method_peak_runoff`
 
 The peak runoff $Q = C$ i A of a small catchment from the runoff coefficient, the rainfall intensity for a duration equal to the time of concentration, and the catchment area.
 
@@ -4557,7 +4557,7 @@ civil_engineering_ai999x.solve('rational_method_peak_runoff', C=0.85, i=3.333333
 
 <a id="kirpich_time_of_concentration"></a>
 
-### Time of concentration by the Kirpich formula — `kirpich_time_of_concentration`
+### Time of concentration by the Kirpich formula, `kirpich_time_of_concentration`
 
 The time of concentration $tc = 0.0078$ $L^{0.77}$ $S^{-0.385}$ minutes (L in feet; equivalent to 0.0195 $L^{0.77}$ $S^{-0.385}$ with L in metres) of a small rural catchment from the flow length and the average slope.
 
@@ -4610,7 +4610,7 @@ civil_engineering_ai999x.solve('kirpich_time_of_concentration', L=300.0, S=0.05)
 
 <a id="infinite_slope_factor_of_safety"></a>
 
-### Factor of safety of an infinite slope — `infinite_slope_factor_of_safety`
+### Factor of safety of an infinite slope: `infinite_slope_factor_of_safety`
 
 The factor of safety against translational sliding of an infinite slope on a plane at depth z, with seepage parallel to the slope and the water table at a height m z above the slip plane (m = 0 dry, $m = 1$ at the surface).
 
@@ -4667,7 +4667,7 @@ civil_engineering_ai999x.solve('infinite_slope_factor_of_safety', c=0.0, phi=32.
 
 <a id="terzaghi_bearing_capacity"></a>
 
-### Terzaghi bearing capacity with stated factors — `terzaghi_bearing_capacity`
+### Terzaghi bearing capacity with stated factors, `terzaghi_bearing_capacity`
 
 Ultimate, allowable and net bearing capacity of a strip, square or circular footing by Terzaghi's equation with the bearing capacity factors Nc, Nq and Ngamma stated (from a table): $qu = s_c$ c Nc + q Nq + s_g gamma B Ngamma, $s_c = 1.3$ and $s_g = 0.4$ (square) or 0.3 (circular, B = diameter).
 
@@ -4727,7 +4727,7 @@ civil_engineering_ai999x.solve('terzaghi_bearing_capacity', c=0.0, gam=19000.0, 
 
 <a id="plasticity_liquidity_index"></a>
 
-### Plasticity, liquidity and consistency indices — `plasticity_liquidity_index`
+### Plasticity, liquidity and consistency indices, `plasticity_liquidity_index`
 
 The plasticity index $PI = LL - PL$, the Casagrande A-line value 0.73 $(LL - 20)$ and, with the natural water content, the liquidity index (w - PL)/PI and consistency index (LL - w)/PI. Limits and water content in percent.
 
@@ -4778,7 +4778,7 @@ civil_engineering_ai999x.solve('plasticity_liquidity_index', LL=62.0, PL=28.0)
 
 <a id="secondary_compression_settlement"></a>
 
-### Secondary compression (creep) settlement of a clay layer — `secondary_compression_settlement`
+### Secondary compression (creep) settlement of a clay layer, `secondary_compression_settlement`
 
 The secondary compression settlement $S_s = C_alpha$ $H/(1 + e_p)$ log10(t2/t1) of a clay layer of thickness H after the end of primary consolidation t1, up to a later time t2.
 

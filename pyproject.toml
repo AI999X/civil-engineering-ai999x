@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "civil-engineering-ai999x"
-version = "1.1.0"
+version = "1.5.0"
 description = "Offline civil engineering solver: pipe and open-channel hydraulics, hydrology, groundwater flow, soil mechanics and foundations, water networks and surveying, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -16,9 +16,8 @@ classifiers = ["License :: OSI Approved :: Apache Software License", "Programmin
 dependencies = ["sympy>=1.12", "mpmath>=1.3"]
 
 [project.optional-dependencies]
-search = ["onnxruntime>=1.17", "tokenizers>=0.15", "numpy>=1.24"]
 plot = ["matplotlib>=3.7"]
-all = ["matplotlib>=3.7", "numpy>=1.24", "onnxruntime>=1.17", "tokenizers>=0.15"]
+all = ["matplotlib>=3.7", "numpy>=1.24"]
 
 [project.scripts]
 civil-engineering-ai999x = "civil_engineering_ai999x.cli:main"
