@@ -1,5 +1,5 @@
 {
- "package": "1.6.0",
+ "package": "1.6.1",
  "pack": "1.0.1",
  "knowledge_db": null,
  "files": {
@@ -7,8 +7,8 @@
   "dictionary/terms.json": "3781eac9e78cc74a52dfbb7f7c6ecd5f218e2a208be5aad6dabd1094f82ddc60",
   "knowledge/relations.json": "4ee39cc8ffecb2835fac05766a0b8a64449b6cc37e1ea6b5f5150c8e0e98ae0f",
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
-  "capabilities/procedures.py": "e4fab67b380de6616db790179b9778af01a5609b3ea6a5de025b833565806a54",
-  "capabilities/procedures_certified.json": "fcdf0c333779474b0c8a80c74c4caf78d54e37a132a5beb95cf63db657fcc5e6",
+  "capabilities/procedures.py": "fd09a56bb0df43ce53fde1bf4d229a91ceed501c45c503de6e20a618b217699a",
+  "capabilities/procedures_certified.json": "a59e0378a8a1e916d1565d536678f030c9adc36fd3d57d1e2499986b867fe7f2",
   "civil_engineering_knowledge_public.sqlite": "667d2f85c4e2c559272c4b04f05526960c201d411e70eb87ec1db3b0a29ec987"
  },
  "engine": [

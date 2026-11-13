@@ -1766,11 +1766,15 @@ proc("three_reservoir_problem", "Three-reservoir problem (Hazen-Williams)", "pip
 
 # =============================================================================================== hydrology
 def _mm(sym, meaning, names=(), show="mm", **kw):
-    return _in(sym, "length", "mm", meaning, names, show, **kw)
+    # a depth is a length in SI metres like every other length (it was read in mm here while the contract and every
+    # solve() said metres: "P = 100 mm" became 0.1 mm and the runoff 0 — a wrong answer found 2026-11-13); the
+    # procedures below convert to mm themselves
+    return _in(sym, "length", "length", meaning, names, show, **kw)
 
 
 def scs_runoff(P, CN, lam=0.2):
     _finite(P=P, CN=CN, lam=lam)
+    P = P * 1000.0                                        # metres (SI) to mm, the method's unit
     _need(P >= 0, "the rainfall depth must be zero or positive")
     _need(30 <= CN <= 100, "the curve number must lie between 30 and 100")
     _need(0 <= lam <= 0.3, "the initial-abstraction ratio must lie between 0 and 0.3")
@@ -1782,6 +1786,7 @@ def scs_runoff(P, CN, lam=0.2):
 
 def _ref_scs(P, CN, lam=0.2):
     from scipy.integrate import solve_ivp
+    P = P * 1000.0                                        # metres (SI) to mm
     S = (1000.0 / CN - 10.0) * 25.4                     # retention in inches, converted to mm
     Ia = lam * S
     Pe = P - Ia
@@ -1802,9 +1807,9 @@ proc("scs_curve_number_runoff", "SCS curve-number runoff depth", "hydrology",
      [_o("Q", "number", "runoff depth (mm)"), _o("S", "number", "potential maximum retention (mm)"),
       _o("Ia", "number", "initial abstraction (mm)"), _o("C", "number", "runoff ratio Q/P")],
      scs_runoff, _ref_scs,
-     lambda P, CN, lam=0.2: (lambda S: (lambda Ia: {"Q": _r((P - Ia) ** 2 / (P - Ia + S) if P > Ia else 0.0), "S": _r(S),
-                                                  "Ia": _r(Ia), "C": 0.0})(lam * S))(1000.0 / CN - 10.0),
-     lambda rng: (lambda CN: {"CN": CN, "P": (25400 / CN - 254) * rng.uniform(0.3, 3) + 5})(rng.uniform(50, 98)),
+     lambda P, CN, lam=0.2: (lambda P, S: (lambda Ia: {"Q": _r((P - Ia) ** 2 / (P - Ia + S) if P > Ia else 0.0), "S": _r(S),
+                                                     "Ia": _r(Ia), "C": 0.0})(lam * S))(P * 1000.0, 1000.0 / CN - 10.0),
+     lambda rng: (lambda CN: {"CN": CN, "P": ((25400 / CN - 254) * rng.uniform(0.3, 3) + 5) / 1000.0})(rng.uniform(50, 98)),
      [{"P": 100, "CN": 80}, {"P": 60, "CN": 70, "lam": 0.05}], ["scs curve number runoff", "curve number runoff",
                                                                 "scs runoff"],
      conditions=["30 <= CN <= 100", "rainfall depth in mm", "0 <= lambda <= 0.3"], invalid=[{"P": 100, "CN": 120}],
@@ -2438,6 +2443,7 @@ def phi_index(rain, dt, R):
     P = _vec("rainfall", rain, nonneg=True)
     _pos(dt=dt)
     _finite(R=R)
+    R = R * 1000.0                                        # metres (SI) to mm, the unit of the rainfall depths
     _need(0 < R < sum(P), "the runoff depth must be positive and less than the total rainfall")
     order = sorted(P, reverse=True)
     phi = None
@@ -2455,6 +2461,7 @@ def phi_index(rain, dt, R):
 def _ref_phi(rain, dt, R):
     import numpy as np
     P = np.asarray(rain, float)
+    R = R * 1000.0                                        # metres (SI) to mm
     loss = _brentq(lambda f: float(np.maximum(P - f, 0.0).sum()) - R, 0.0, float(P.max()))
     ex = np.maximum(P - loss, 0.0)
     return {"phi": loss / (dt / 3600), "excess": list(ex)}
@@ -2463,7 +2470,7 @@ def _ref_phi(rain, dt, R):
 def _rand_phi(rng):
     while True:
         P = [round(rng.uniform(0.5, 30), 1) for _ in range(rng.randint(3, 10))]
-        x = {"rain": P, "dt": rng.choice([0.5, 1.0, 2.0]) * 3600, "R": round(sum(P) * rng.uniform(0.1, 0.6), 2)}
+        x = {"rain": P, "dt": rng.choice([0.5, 1.0, 2.0]) * 3600, "R": round(sum(P) * rng.uniform(0.1, 0.6), 2) / 1000.0}
         out = phi_index(**x)
         if out["contributing"] < len(P):
             return x
@@ -2478,8 +2485,8 @@ proc("phi_index", "Phi-index of a storm", "hydrology",
      [_o("phi", "number", "phi-index (mm/h)"), _o("excess", "number", "excess rainfall in each interval (mm)"),
       _o("contributing", "number", "number of intervals producing runoff")],
      phi_index, _ref_phi,
-     lambda rain, dt, R: {"phi": _r((sum(rain) - R) / len(rain) / (dt / 3600)),
-                          "excess": _r([p - (sum(rain) - R) / len(rain) for p in rain]), "contributing": len(rain)},
+     lambda rain, dt, R: {"phi": _r((sum(rain) - R * 1000.0) / len(rain) / (dt / 3600)),
+                          "excess": _r([p - (sum(rain) - R * 1000.0) / len(rain) for p in rain]), "contributing": len(rain)},
      _rand_phi,
      [{"rain": [4, 9, 18, 12, 3, 1], "dt": 1, "R": 20}, {"rain": [2.5, 7.5, 12.0, 5.0, 1.5], "dt": 0.5, "R": 9}],
      ["phi index", "phi-index of a storm"], conditions=["0 < runoff < total rainfall", "equal intervals"],

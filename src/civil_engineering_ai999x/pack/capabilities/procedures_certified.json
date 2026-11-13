@@ -89,7 +89,7 @@
   "plasticity_liquidity_index",
   "secondary_compression_settlement"
  ],
- "generated": "2026-10-24",
+ "generated": "2026-11-13",
  "tool": "tools/certify_procedures.py",
  "report": "release/procedure_certification.json",
  "weak_references": {
