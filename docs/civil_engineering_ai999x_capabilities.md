@@ -1692,12 +1692,12 @@ $$
 *Q (runoff depth (mm)) over P (storm rainfall depth) from 10 m to 1000 m and CN (curve number (30 to 100)) from 40 to 120 (logarithmic horizontal axis): each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 0 to dark 991.091); iso-lines at Q = 200, 400, 600, 800; blank cells: inputs the capability refuses. Marked: the worked example, P = 100 m, CN = 80, Q = 50.5391.*
 
 ```python
-civil_engineering_ai999x.solve('scs_curve_number_runoff', P=100.0, CN=80.0)
+civil_engineering_ai999x.solve('scs_curve_number_runoff', P=0.1, CN=80.0)
 # -> Q = 50.5391, S = 63.5, Ia = 12.7, C = 0.505391   (SOLVED)
 ```
 
 ```python
-civil_engineering_ai999x.solve('scs_curve_number_runoff', P=60.0, CN=70.0, lam=0.05)
+civil_engineering_ai999x.solve('scs_curve_number_runoff', P=0.06, CN=70.0, lam=0.05)
 # -> Q = 18.2143, S = 108.857, Ia = 5.44286, C = 0.303572   (SOLVED)
 ```
 
@@ -1707,7 +1707,7 @@ civil_engineering_ai999x.solve('scs_curve_number_runoff', P=60.0, CN=70.0, lam=0
 |---|---|---|
 | Scs curve number runoff with rainfall = 100 mm and curve number = 80. | SOLVED | Q = 50.5391, S = 63.5, Ia = 12.7, C = 0.505391 |
 | Scs curve number runoff with rainfall = 60 mm, curve number = 70 and initial abstraction ratio = 0.05. | SOLVED | Q = 18.2143, S = 108.857, Ia = 5.44286, C = 0.303572 |
-| Scs curve number runoff with rainfall = 100 mm. | NEEDS_INPUT | scs_curve_number_runoff needs CN (curve number (30 to 100)). Example: solve('scs_curve_number_runoff', P='100 m', CN=80) |
+| Scs curve number runoff with rainfall = 100 mm. | NEEDS_INPUT | scs_curve_number_runoff needs CN (curve number (30 to 100)). Example: solve('scs_curve_number_runoff', P='0.1 m', CN=80) |
 | Scs curve number runoff with rainfall = 100 mm and curve number = 80 and colour = 3. | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: civil_engineering_ai999x.template |
 | Scs curve number runoff with rainfall = 100 mm and curve number = 120. | INVALID_INPUT | SCS curve-number runoff depth: the curve number must lie between 30 and 100. |
 
@@ -2347,12 +2347,12 @@ $$
 *phi (phi-index (mm/h)) against dt (duration of one interval) from 1800 s to 5400 s. One curve for each value of R (observed direct runoff depth): 20 m, 10 m, 40 m. Other inputs as in the worked example: rain = [4, 9, 18, 12, 3, 1]. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, dt = 3600 s, phi = 6.33333.*
 
 ```python
-civil_engineering_ai999x.solve('phi_index', rain=[4, 9, 18, 12, 3, 1], dt=3600.0, R=20.0)
+civil_engineering_ai999x.solve('phi_index', rain=[4, 9, 18, 12, 3, 1], dt=3600.0, R=0.02)
 # -> phi = 6.33333, excess = [0.0, 2.66666666667, 11.6666666667, 5.66666666667, 0.0, 0.0], contributing = 3   (SOLVED)
 ```
 
 ```python
-civil_engineering_ai999x.solve('phi_index', rain=[2.5, 7.5, 12.0, 5.0, 1.5], dt=1800.0, R=9.0)
+civil_engineering_ai999x.solve('phi_index', rain=[2.5, 7.5, 12.0, 5.0, 1.5], dt=1800.0, R=0.009000000000000001)
 # -> phi = 10.5, excess = [0.0, 2.25, 6.75, 0.0, 0.0], contributing = 2   (SOLVED)
 ```
 

@@ -2967,6 +2967,7 @@ fn f_phi_index(mut v_rain: Py, mut v_dt: Py, mut v_R: Py) -> R {
     v_P = f__vec(Py::str("rainfall"), v_rain.clone(), Py::None, Py::Bool(false), Py::Bool(true))?;
     let _ = f__pos(Py::dict(vec![(Py::str("dt"), v_dt.clone())]))?;
     let _ = f__finite(Py::dict(vec![(Py::str("R"), v_R.clone())]))?;
+    v_R = py::mul(&v_R.clone(), &Py::Float(1000.0))?;
     let _ = f__need({ let t1845 = Py::Int(0i64); Py::Bool({ let t1846 = v_R.clone(); if py::lt(&t1845, &t1846)? { { let t1847 = py::sum(&v_P.clone(), None)?; if py::lt(&t1846, &t1847)? { true } else { false } } } else { false } }) }, Py::str("the runoff depth must be positive and less than the total rainfall"))?;
     v_order = py::sorted(&v_P.clone(), (Py::Bool(true)).truthy())?;
     v_phi = Py::None;
@@ -3147,6 +3148,7 @@ fn f_scs_runoff(mut v_P: Py, mut v_CN: Py, mut v_lam: Py) -> R {
     let mut v_Q: Py = Py::None;
     let mut v_S: Py = Py::None;
     let _ = f__finite(Py::dict(vec![(Py::str("P"), v_P.clone()), (Py::str("CN"), v_CN.clone()), (Py::str("lam"), v_lam.clone())]))?;
+    v_P = py::mul(&v_P.clone(), &Py::Float(1000.0))?;
     let _ = f__need({ let t2081 = v_P.clone(); Py::Bool({ let t2082 = Py::Int(0i64); if py::ge(&t2081, &t2082)? { true } else { false } }) }, Py::str("the rainfall depth must be zero or positive"))?;
     let _ = f__need({ let t2083 = Py::Int(30i64); Py::Bool({ let t2084 = v_CN.clone(); if py::le(&t2083, &t2084)? { { let t2085 = Py::Int(100i64); if py::le(&t2084, &t2085)? { true } else { false } } } else { false } }) }, Py::str("the curve number must lie between 30 and 100"))?;
     let _ = f__need({ let t2086 = Py::Int(0i64); Py::Bool({ let t2087 = v_lam.clone(); if py::le(&t2086, &t2087)? { { let t2088 = Py::Float(0.3); if py::le(&t2087, &t2088)? { true } else { false } } } else { false } }) }, Py::str("the initial-abstraction ratio must lie between 0 and 0.3"))?;
