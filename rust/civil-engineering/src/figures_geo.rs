@@ -174,9 +174,8 @@ fn field_grid(s: &Solved, kind: &str, x: &str, xs: &[f64], logx: bool, y: &str, 
         return None;
     }
     if logz {
-        let (slo, shi) = (lo.log10(), hi.log10());
-        body = body.replace(&format!(">light {} to dark {}<", esc(&num(k::snap(slo, shi))), esc(&num(shi))),
-                            &format!(">light {} to dark {} (log)<", esc(&num(lo)), esc(&num(hi))));
+        // the scale's two ends are written as the real values (the shading is by their logarithm)
+        body = k::relabel_scale(&body, &num(lo), &format!("{} (log scale)", num(hi)));
     }
     let rx: Rg = (xs[0], xs[nx - 1], logx);
     let ry: Rg = (ys[0], ys[ny - 1], logy);
