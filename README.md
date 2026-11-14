@@ -4,7 +4,7 @@
 
 **[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/civil-engineering-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/civil-engineering-ai999x/)** · **[Guides](https://huggingface.co/AI999X/civil-engineering-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/civil-engineering-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.6.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.6.1
 
 Field: **Engineering** · Tasks: Question Answering
 
@@ -306,7 +306,7 @@ _What this means:_ This calculation determines the resistance provided by the so
 
 | Property | Value |
 |---|---|
-| Package | `civil-engineering-ai999x` 1.6.0 (import `civil_engineering_ai999x`) |
+| Package | `civil-engineering-ai999x` 1.6.1 (import `civil_engineering_ai999x`) |
 | Type | Deterministic neuro-symbolic civil engineering engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 88 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -340,7 +340,7 @@ civil_engineering.ask("Who created you?").message
 # -> civil-engineering-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-The Python package also installs a Python command, `civil-engineering-ai999x "<question>"`; for the native program use `civil-engineering` (above). The outputs above were produced by running this exact code on civil-engineering-ai999x 1.6.0.
+The Python package also installs a Python command, `civil-engineering-ai999x "<question>"`; for the native program use `civil-engineering` (above). The outputs above were produced by running this exact code on civil-engineering-ai999x 1.6.1.
 
 ## How every answer is verified
 
@@ -484,10 +484,10 @@ _A looped pipe network (5 pipes, 2 loops; lengths [600, 500, 600, 500, 780] m, d
 ## Citation
 
 ```bibtex
-@software{civil_engineering_ai999x_1_6_0,
+@software{civil_engineering_ai999x_1_6_1,
   title  = {civil-engineering-ai999x: an offline, verified civil engineering solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.6.0},
+  year   = {2026}, version = {1.6.1},
   url    = {https://huggingface.co/AI999X/civil-engineering-ai999x}
 }
 ```

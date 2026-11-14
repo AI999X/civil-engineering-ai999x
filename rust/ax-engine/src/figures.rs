@@ -699,7 +699,10 @@ fn text_numbers(t: &str) -> Vec<(usize, usize, i64)> {
                 i += 1;
             }
             let dotted = (s > 0 && b[s - 1] == b'.') || (i + 1 < b.len() && b[i] == b'.' && b[i + 1].is_ascii_digit());
-            if !dotted && i - s <= 6 {
+            // digits that end a name (V1, x2, H2O) are part of the name, not a number to vary (electrical review,
+            // 2026-11-14: "the number 1 in V1" was swept)
+            let named = s > 0 && (b[s - 1].is_ascii_alphabetic() || b[s - 1] == b'_');
+            if !dotted && !named && i - s <= 6 {
                 if let Ok(v) = t[s..i].parse::<i64>() {
                     out.push((s, i, v));
                 }
@@ -707,6 +710,32 @@ fn text_numbers(t: &str) -> Vec<(usize, usize, i64)> {
         } else {
             i += 1;
         }
+    }
+    out
+}
+
+/// The whole-number element values of a netlist ("R1 1 2 100; V1 1 0 10"), at most two: in each ';'-separated
+/// element the tokens after the name and its two nodes (a value, a source angle); node numbers are never returned.
+fn netlist_values(t: &str) -> Vec<(usize, usize, i64)> {
+    let mut out = vec![];
+    let mut off = 0;
+    for el in t.split(';') {
+        let mut k = 0;
+        let mut pos = 0;
+        for tok in el.split(|c: char| c.is_whitespace() || c == ',') {
+            let start = pos;
+            pos += tok.len() + 1;
+            if tok.is_empty() {
+                continue;
+            }
+            if k >= 3 && out.len() < 2 && tok.len() <= 6 && tok.bytes().all(|c| c.is_ascii_digit()) {
+                if let Ok(v) = tok.parse::<i64>() {
+                    out.push((off + start, off + start + tok.len(), v));
+                }
+            }
+            k += 1;
+        }
+        off += el.len() + 1;
     }
     out
 }
@@ -816,7 +845,14 @@ fn knobs(specs: &[InSpec], given: &[(String, Input)]) -> Vec<Knob> {
                 if ["digit", "base", "binary", "octal", "hexadecimal", "radix", "bit string", "bits"].iter().any(|w| ml.contains(w)) {
                     continue;
                 }
-                let nums = text_numbers(&t);
+                // a node is a label, not a quantity: a node input ("node_b" = 0) is never varied, and in a netlist only
+                // the element values are (the node numbers after each element's name stay; electrical review,
+                // 2026-11-14: curves over "the number 1 marked [ ] in netlist" and over node_b were meaningless)
+                let netlist = ml.contains("node") && (ml.contains("elements separated") || ml.contains("netlist"));
+                if ml.contains("node") && !netlist {
+                    continue;
+                }
+                let nums = if netlist { netlist_values(&t) } else { text_numbers(&t) };
                 for &(s, e, n) in &nums {
                     // a number written more than once is marked where it is varied: "the number 2 in 2x^2 - 3x + 1"
                     // swept the exponent under a title that read as the coefficient (math foundations review, 11-13)
@@ -920,6 +956,11 @@ fn knob_range(k: &Knob) -> (f64, f64) {
     } else if k.x0 != 0.0 {
         let (a, b) = (k.x0 * 0.25, k.x0 * 1.75);
         (a.min(b), a.max(b))
+    } else if (k.label.to_lowercase().contains("altitude") || k.label.to_lowercase().contains("elevation"))
+        && matches!(k.unit.as_str(), "m" | "") {
+        // an altitude of 0 (sea level) swept over ±1 m showed nothing; the lower atmosphere is the useful range
+        // (aerospace review, 2026-11-13)
+        (0.0, 11000.0)
     } else {
         (-1.0, 1.0)
     };
@@ -1660,7 +1701,11 @@ fn fig_sweep(cx: &mut Ctx, b: &Base, k: &Knob, n: usize) -> Option<(String, Stri
         }
     }
     let bands: Vec<(f64, Option<String>)> = if cat_changes { pts.iter().map(|p| (p.0, p.2.clone())).collect() } else { vec![] };
-    let y0 = tracks.first().and_then(|t| track_val(&b.outs, t)).map(cy);
+    // a value that is rounding noise around zero against the curve's own size is written 0 (a log Bayes factor of
+    // 0 was marked "1.446e-16"; bayesian statistics verification, 2026-11-13)
+    let ymax = ys.iter().fold(0.0f64, |a, y| a.max(y.abs()));
+    let y0 = tracks.first().and_then(|t| track_val(&b.outs, t)).map(cy)
+        .map(|y| if ymax > 0.0 && y.abs() < 1e-12 * ymax.max(1.0) { 0.0 } else { y });
     let mut ylab = if series.is_empty() { String::new() } else if tracks.len() == 1 || series.len() == 1 {
         axis_label_of(&b.outs, &tracks[0])
     } else {
@@ -3925,6 +3970,20 @@ mod tests {
     use super::*;
 
     #[test]
+    fn netlist_node_numbers_and_name_digits_are_not_varied() {
+        let t = "V1 1 0 10; R1 1 2 100; R2 2 0 50";
+        let got: Vec<i64> = netlist_values(t).iter().map(|x| x.2).collect();
+        assert_eq!(got, vec![10, 100]);
+        for &(s, e, v) in &netlist_values(t) {
+            assert_eq!(t[s..e].parse::<i64>().unwrap(), v);
+        }
+        // the 2 of x2 and of H2O belongs to the name
+        let got: Vec<i64> = text_numbers("3*x2 + 4").iter().map(|x| x.2).collect();
+        assert_eq!(got, vec![3, 4]);
+        assert!(text_numbers("H2O").is_empty());
+    }
+
+    #[test]
     fn chart_axes_read_in_everyday_units() {
         // the meaning names the unit
         let (l, u) = reading_unit("Pa", "arterial partial pressure of CO2 (e.g. in mmHg)", 5333.0).unwrap();
@@ -4010,7 +4069,8 @@ mod tests {
         let (s, e, n) = text_numbers("2^n/n^3")[0];
         let k = Knob { text: Some(("2^n/n^3".into(), s, e)), ..Knob::plain("f", n as f64, true, "f".into(), String::new()) };
         assert!(matches!(&apply(&g, &k, 5.0)[0].1, Input::Text(t) if t == "5^n/n^3"));
-        assert_eq!(text_numbers("x = 1.5, H2O"), vec![(10, 11, 2)]);
+        // a decimal is not a whole number, and the 2 of H2O is part of a name (2026-11-14)
+        assert_eq!(text_numbers("x = 1.5, H2O, 7"), vec![(14, 15, 7)]);
     }
 
     #[test]

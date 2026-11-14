@@ -21,7 +21,7 @@ figcaption{font-size:9pt;color:#555}
 .pb{page-break-after:always}
 </style></head><body>
 <h1>civil-engineering: the Civil Engineering program, user guide</h1>
-<p><strong>civil-engineering-ai999x 1.6.0</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
+<p><strong>civil-engineering-ai999x 1.6.1</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
 <p>Civil Engineering covers pipe and open-channel hydraulics, hydrology, groundwater flow, soil mechanics and foundations, water networks and surveying. This guide is about <code>civil-engineering</code>, the model as a self-contained program for Windows and Linux: 88 capabilities in 7 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model&#x27;s page (https://www.ai999x.com/models/civil-engineering-ai999x/); the Python package (<code>pip install civil-engineering-ai999x</code>) has its own guide. Every command output printed here is what the program printed.</p>
 <h2>Contents</h2>
 <ul><li>1. Get it: desktop app, command line, browser, Python</li><li>2. Quick start</li><li>3. Writing inputs</li><li>4. Outcomes and exit codes</li><li>5. Scripts and agents: batch and JSON</li><li>6. Figures</li><li>7. In a web page or Node.js: WebAssembly</li><li>8. Every capability</li></ul>
@@ -616,15 +616,15 @@ Q_Ls = 1666.666667
 <div class="math">\[\sum_i \max(P_i - \phi\,\Delta t,\,0) = R\]</div>
 <table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>rain</code></td><td>in</td><td>rainfall depth in each interval in mm</td><td>, </td></tr><tr><td><code>dt</code></td><td>in</td><td>duration of one interval</td><td>s</td></tr><tr><td><code>R</code></td><td>in</td><td>observed direct runoff depth</td><td>m</td></tr><tr><td><code>phi</code></td><td>out</td><td>phi-index (mm/h)</td><td>, </td></tr><tr><td><code>excess</code></td><td>out</td><td>excess rainfall in each interval (mm)</td><td>, </td></tr><tr><td><code>contributing</code></td><td>out</td><td>number of intervals producing runoff</td><td>, </td></tr></tbody></table>
 <p><strong>Applies when:</strong> 0 &lt; runoff &lt; total rainfall; equal intervals.</p>
-<pre><code class="shell">$ civil-engineering solve phi_index &quot;rain=[4, 9, 18, 12, 3, 1]&quot; &quot;dt=3600 s&quot; &quot;R=20 m&quot;
+<pre><code class="shell">$ civil-engineering solve phi_index &quot;rain=[4, 9, 18, 12, 3, 1]&quot; &quot;dt=3600 s&quot; &quot;R=0.02 m&quot;
 phi = 6.333333333
 excess = [0.0,2.66666666667,11.6666666667,5.66666666667,0.0,0.0]
 contributing = 3
   by: Phi-index of a storm  (the k largest intervals contribute: phi dt = (sum of the k largest - R)/k, with k found by consistency)
   dt = 3600 s
-  R = 20 m
+  R = 0.02 m
   assumes: 0 &lt; runoff &lt; total rainfall; equal intervals</code></pre>
-<p><strong>What the worked example means:</strong> This calculation finds the constant loss rate, known as the phi-index, that reduces the given rainfall hyetograph to match the observed direct runoff depth. By applying a uniform subtraction of 6.33333 to each interval, exactly 3 intervals generate excess rainfall totaling 20 m. This result indicates the average infiltration capacity during the storm, allowing engineers to separate effective rainfall from losses for hydrograph analysis.</p>
+<p><strong>What the worked example means:</strong> This calculation finds the constant loss rate, known as the phi-index, that reduces the given rainfall hyetograph to match the observed direct runoff depth. By applying a uniform subtraction of 6.33333 to each interval, exactly 3 intervals generate excess rainfall totaling 0.02 m. This result indicates the average infiltration capacity during the storm, allowing engineers to separate effective rainfall from losses for hydrograph analysis.</p>
 <h4 id="design_return_period_for_risk">Return period for an acceptable risk over a design life, <code>design_return_period_for_risk</code></h4>
 <p>The design return period whose event has only the stated probability R of being exceeded during an n-year life.</p>
 <div class="math">\[T = \frac{1}{1-(1-R)^{1/n}}\]</div>
@@ -667,16 +667,16 @@ p_none = 0.6050060671
 <div class="math">\[Q = \frac{(P-I_a)^2}{P-I_a+S},\quad S = \frac{25400}{CN}-254,\quad I_a = \lambda S\]</div>
 <table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>P</code></td><td>in</td><td>storm rainfall depth</td><td>m</td></tr><tr><td><code>CN</code></td><td>in</td><td>curve number (30 to 100)</td><td>, </td></tr><tr><td><code>lam</code></td><td>in</td><td>initial-abstraction ratio (default 0.2) (optional)</td><td>, </td></tr><tr><td><code>Q</code></td><td>out</td><td>runoff depth (mm)</td><td>, </td></tr><tr><td><code>S</code></td><td>out</td><td>potential maximum retention (mm)</td><td>, </td></tr><tr><td><code>Ia</code></td><td>out</td><td>initial abstraction (mm)</td><td>, </td></tr><tr><td><code>C</code></td><td>out</td><td>runoff ratio Q/P</td><td>, </td></tr></tbody></table>
 <p><strong>Applies when:</strong> 30 &lt;= CN &lt;= 100; rainfall depth in mm; 0 &lt;= lambda &lt;= 0.3.</p>
-<pre><code class="shell">$ civil-engineering solve scs_curve_number_runoff &quot;P=100 m&quot; CN=80
+<pre><code class="shell">$ civil-engineering solve scs_curve_number_runoff &quot;P=0.1 m&quot; CN=80
 Q = 50.53905836
 S = 63.5
 Ia = 12.7
 C = 0.5053905836
   by: SCS curve-number runoff depth  (S = 25400/CN - 254 (mm), Ia = lambda S, Q = (P - Ia)^2/(P - Ia + S) for P &gt; Ia, else 0)
-  P = 100 m
+  P = 0.1 m
   CN = 80
   assumes: 30 &lt;= CN &lt;= 100; rainfall depth in mm; 0 &lt;= lambda &lt;= 0.3</code></pre>
-<p><strong>What the worked example means:</strong> The computed runoff depth is 50.5391 for a rainfall depth of 100 m, resulting in a runoff ratio of 0.505391.</p>
+<p><strong>What the worked example means:</strong> The computed runoff depth is 50.5391 for a rainfall depth of 0.1 m, resulting in a runoff ratio of 0.505391.</p>
 <h4 id="kirpich_time_of_concentration">Time of concentration by the Kirpich formula, <code>kirpich_time_of_concentration</code></h4>
 <p>The time of concentration tc = 0.0078 L^0.77 S^-0.385 minutes (L in feet; equivalent to 0.0195 L^0.77 S^-0.385 with L in metres) of a small rural catchment from the flow length and the average slope.</p>
 <div class="math">\[t_c = 0.0078\,L^{0.77}S^{-0.385}\ \text{(min, L in ft)}\]</div>

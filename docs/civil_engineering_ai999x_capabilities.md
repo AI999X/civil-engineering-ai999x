@@ -1683,13 +1683,13 @@ $$
 - **Assumes:** $30  \leq  CN  \leq  100$; rainfall depth in mm; $0  \leq  \lambda  \leq  0.3$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q (runoff depth (mm)) against P (storm rainfall depth) from 10 m to 1000 m on a logarithmic axis](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/scs-curve-number-runoff-curve)
+![Q (runoff depth (mm)) against P (storm rainfall depth) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/scs-curve-number-runoff-curve)
 
-*Q (runoff depth (mm)) against P (storm rainfall depth) from 10 m to 1000 m on a logarithmic axis. One curve for each value of CN (curve number (30 to 100)): 80, 40. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, P = 100 m, Q = 50.5391.*
+*Q (runoff depth (mm)) against P (storm rainfall depth) from 0.01 m to 1 m on a logarithmic axis. One curve for each value of CN (curve number (30 to 100)): 80, 40. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, P = 0.1 m, Q = 50.5391.*
 
-![Q (runoff depth (mm)) over P (storm rainfall depth) from 10 m to 1000 m and CN (curve number (30 to 100)) from 40 to 120 (logarithmic horizontal axis): each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 0 to dark 991](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/scs-curve-number-runoff-field)
+![Q (runoff depth (mm)) over P (storm rainfall depth) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/scs-curve-number-runoff-field)
 
-*Q (runoff depth (mm)) over P (storm rainfall depth) from 10 m to 1000 m and CN (curve number (30 to 100)) from 40 to 120 (logarithmic horizontal axis): each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 0 to dark 991.091); iso-lines at Q = 200, 400, 600, 800; blank cells: inputs the capability refuses. Marked: the worked example, P = 100 m, CN = 80, Q = 50.5391.*
+*Q (runoff depth (mm)) over P (storm rainfall depth) from 0.01 m to 1 m and CN (curve number (30 to 100)) from 40 to 120 (logarithmic horizontal axis): each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 0 to dark 991.091); iso-lines at Q = 200, 400, 600, 800; blank cells: inputs the capability refuses. Marked: the worked example, P = 0.1 m, CN = 80, Q = 50.5391.*
 
 ```python
 civil_engineering_ai999x.solve('scs_curve_number_runoff', P=0.1, CN=80.0)
@@ -2340,11 +2340,11 @@ $$
 
 ![Hyetograph of a storm (rain [4, 9, 18, 12, 3, 1] mm per interval of 1 h) and the returned φ-index 6](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/phi-index-hyetograph)
 
-*Hyetograph of a storm (rain [4, 9, 18, 12, 3, 1] mm per interval of 1 h) and the returned φ-index 6.33333 mm/h: the constant loss that leaves the observed runoff of 20.0 mm. Marked: the returned excess rainfall of each interval (0, 2.66667, 11.6667, 5.66667, 0, 0 mm), from 3 contributing intervals.*
+*Hyetograph of a storm (rain [4, 9, 18, 12, 3, 1] mm per interval of 1 h) and the returned φ-index 6.33333 mm/h: the constant loss that leaves the observed runoff of 0.02 mm. Marked: the returned excess rainfall of each interval (0, 2.66667, 11.6667, 5.66667, 0, 0 mm), from 3 contributing intervals.*
 
 ![phi (phi-index (mm/h)) against dt (duration of one interval) from 1800 s to 5400 s](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/phi-index-curve)
 
-*phi (phi-index (mm/h)) against dt (duration of one interval) from 1800 s to 5400 s. One curve for each value of R (observed direct runoff depth): 20 m, 10 m, 40 m. Other inputs as in the worked example: rain = [4, 9, 18, 12, 3, 1]. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, dt = 3600 s, phi = 6.33333.*
+*phi (phi-index (mm/h)) against dt (duration of one interval) from 1800 s to 5400 s. One curve for each value of R (observed direct runoff depth): 0.02 m, 0.01 m, 0.04 m. Other inputs as in the worked example: rain = [4, 9, 18, 12, 3, 1]. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, dt = 3600 s, phi = 6.33333.*
 
 ```python
 civil_engineering_ai999x.solve('phi_index', rain=[4, 9, 18, 12, 3, 1], dt=3600.0, R=0.02)

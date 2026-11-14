@@ -1,6 +1,6 @@
 # civil-engineering: the Civil Engineering program, user guide
 
-**civil-engineering-ai999x 1.6.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**civil-engineering-ai999x 1.6.1**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Civil Engineering covers pipe and open-channel hydraulics, hydrology, groundwater flow, soil mechanics and foundations, water networks and surveying. This guide is about `civil-engineering`, the model as a self-contained program for Windows and Linux: 88 capabilities in 7 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/civil-engineering-ai999x/); the Python package (`pip install civil-engineering-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -1354,17 +1354,17 @@ $$
 **Applies when:** 0 < runoff < total rainfall; equal intervals.
 
 ```shell
-$ civil-engineering solve phi_index "rain=[4, 9, 18, 12, 3, 1]" "dt=3600 s" "R=20 m"
+$ civil-engineering solve phi_index "rain=[4, 9, 18, 12, 3, 1]" "dt=3600 s" "R=0.02 m"
 phi = 6.333333333
 excess = [0.0,2.66666666667,11.6666666667,5.66666666667,0.0,0.0]
 contributing = 3
   by: Phi-index of a storm  (the k largest intervals contribute: phi dt = (sum of the k largest - R)/k, with k found by consistency)
   dt = 3600 s
-  R = 20 m
+  R = 0.02 m
   assumes: 0 < runoff < total rainfall; equal intervals
 ```
 
-**What the worked example means:** This calculation finds the constant loss rate, known as the phi-index, that reduces the given rainfall hyetograph to match the observed direct runoff depth. By applying a uniform subtraction of 6.33333 to each interval, exactly 3 intervals generate excess rainfall totaling 20 m. This result indicates the average infiltration capacity during the storm, allowing engineers to separate effective rainfall from losses for hydrograph analysis.
+**What the worked example means:** This calculation finds the constant loss rate, known as the phi-index, that reduces the given rainfall hyetograph to match the observed direct runoff depth. By applying a uniform subtraction of 6.33333 to each interval, exactly 3 intervals generate excess rainfall totaling 0.02 m. This result indicates the average infiltration capacity during the storm, allowing engineers to separate effective rainfall from losses for hydrograph analysis.
 
 <a id="design_return_period_for_risk"></a>
 
@@ -1481,18 +1481,18 @@ $$
 **Applies when:** 30 <= CN <= 100; rainfall depth in mm; 0 <= lambda <= 0.3.
 
 ```shell
-$ civil-engineering solve scs_curve_number_runoff "P=100 m" CN=80
+$ civil-engineering solve scs_curve_number_runoff "P=0.1 m" CN=80
 Q = 50.53905836
 S = 63.5
 Ia = 12.7
 C = 0.5053905836
   by: SCS curve-number runoff depth  (S = 25400/CN - 254 (mm), Ia = lambda S, Q = (P - Ia)^2/(P - Ia + S) for P > Ia, else 0)
-  P = 100 m
+  P = 0.1 m
   CN = 80
   assumes: 30 <= CN <= 100; rainfall depth in mm; 0 <= lambda <= 0.3
 ```
 
-**What the worked example means:** The computed runoff depth is 50.5391 for a rainfall depth of 100 m, resulting in a runoff ratio of 0.505391.
+**What the worked example means:** The computed runoff depth is 50.5391 for a rainfall depth of 0.1 m, resulting in a runoff ratio of 0.505391.
 
 <a id="kirpich_time_of_concentration"></a>
 
