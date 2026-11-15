@@ -824,10 +824,6 @@ $$
 
 *Rectangular channel carrying Q = 12.0 m³/s, b = 4.0 m at depth y = 0.5 m (to scale); dashed: the critical depth yc = 0.971683 m from the package's critical-depth capability. Marked: the returned V = 6 m/s, Fr = 2.70914, regime: supercritical.*
 
-![flow regime: subcritical, critical or supercritical (regime) over Q (discharge) from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/channel-froude-number-decision)
-
-*flow regime: subcritical, critical or supercritical (regime) over Q (discharge) from 1.2 m^3/s to 120 m^3/s and b (channel width) from 0.4 m to 40 m (logarithmic axes): each of the 31 × 21 cells is one run of civil-engineering-ai999x, coloured by the verdict it returned, subcritical: 208 cells, supercritical: 443 cells. Other inputs as in the worked example: y = 0.5 m. Marked: the worked example, Q = 12 m^3/s, b = 4 m → supercritical.*
-
 ```python
 civil_engineering_ai999x.solve('channel_froude_number', Q=12.0, b=4.0, y=0.5)
 # -> Fr = 2.70914, V = 6 m/s, regime = supercritical   (SOLVED)
@@ -1039,10 +1035,6 @@ $$
 ![Specific-energy diagram of a rectangular channel carrying Q = 6 m³/s in b = 2 m (E computed by the package at 81 depths)](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/alternate-depth-rectangular-diagram.svg)
 
 *Specific-energy diagram of a rectangular channel carrying Q = 6 m³/s in b = 2 m (E computed by the package at 81 depths). Depth y = 0.4 m (supercritical, Fr = 3.78614) has E = 3.26697 m and the alternate depth 3.22281 m; marked: critical depth yc = 0.971683 m at the minimum energy E = 1.45752 m.*
-
-![flow regime at depth y (regime) over Q (discharge) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/alternate-depth-rectangular-decision)
-
-*flow regime at depth y (regime) over Q (discharge) from 0.6 m^3/s to 60 m^3/s and b (channel width) from 0.2 m to 20 m (logarithmic axes): each of the 31 × 21 cells is one run of civil-engineering-ai999x, coloured by the verdict it returned, subcritical: 169 cells, supercritical: 482 cells. Other inputs as in the worked example: y = 0.4 m. Marked: the worked example, Q = 6 m^3/s, b = 2 m → supercritical.*
 
 ![E (specific energy y + V^2/2g (m)) against y (flow depth) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/alternate-depth-rectangular-curve)
 
@@ -2137,10 +2129,6 @@ $$
 - **Assumes:** paired series of equal length; observed values not all equal
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![NSE (Nash-Sutcliffe efficiency) as value 6 of obs (observed values (any unit)) moves from 0 to 76](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/nash-sutcliffe-efficiency-sensitivity)
-
-*NSE (Nash-Sutcliffe efficiency) as value 6 of obs (observed values (any unit)) moves from 0 to 76.5, the other values as given ([12, 30, 55, 41, 22, 15]); 41 runs of civil-engineering-ai999x. Other inputs: sim = [10, 34, 50, 44, 20, 17]. Marked: the worked example, obs[6] = 15, NSE = 0.954238.*
-
 ```python
 civil_engineering_ai999x.solve('nash_sutcliffe_efficiency', obs=[12, 30, 55, 41, 22, 15], sim=[10, 34, 50, 44, 20, 17])
 # -> NSE = 0.954238, RMSE = 3.21455, PBIAS = 0   (SOLVED)
@@ -2185,10 +2173,6 @@ $$
 - **Method:** $KGE = 1 - \sqrt{\left($r - 1$\right)^{2} + \left(\alpha - 1\right)^{2} + \left(\beta - 1\right)^{2}}$
 - **Assumes:** paired series of equal length; both series vary
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
-
-![KGE (Kling-Gupta efficiency) as value 6 of obs (observed values (any unit)) moves from 0 to 76](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/kling-gupta-efficiency-sensitivity)
-
-*KGE (Kling-Gupta efficiency) as value 6 of obs (observed values (any unit)) moves from 0 to 76.5, the other values as given ([12, 30, 55, 41, 22, 15]); 41 runs of civil-engineering-ai999x. Other inputs: sim = [10, 34, 50, 44, 20, 17]. Marked: the worked example, obs[6] = 15, KGE = 0.962739.*
 
 ```python
 civil_engineering_ai999x.solve('kling_gupta_efficiency', obs=[12, 30, 55, 41, 22, 15], sim=[10, 34, 50, 44, 20, 17])
