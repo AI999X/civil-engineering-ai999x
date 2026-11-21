@@ -10,8 +10,8 @@ Civil Engineering covers pipe and open-channel hydraulics, hydrology, groundwate
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-civil-engineering-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-civil-engineering-1.6.6-linux-x86_64.tar.gz) |
-| **Command line** `civil-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-civil-engineering-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-civil-engineering-1.6.7-linux-x86_64.tar.gz) |
+| **Command line** `civil-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/civil-engineering-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install civil-engineering-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -157,93 +157,6 @@ print(a.outcome, a.values)
 # SOLVED {'u': 52247.3336591, 'Uz': 0.477526663409, 'Tv': 0.222222222222}
 ```
 
-## Command line: 15 examples
-
-Each command below was run with `civil-engineering` of this release; the lines under it are the answer it printed (the full answer goes on with the method, every input in SI units and the conditions it assumes).
-
-```text
-$ civil-engineering solve coulomb_active_thrust phi=30 delta=20 beta=10 "gam=18000 N/m^3" "H=6 m"
-Ka = 0.3400223954
-Pa = 110167.2561 N/m
-Pa_h = 103523.3576 N/m
-Pa_v = 37679.42072 N/m
-
-$ civil-engineering solve darcy_flow_layered_soil "H=[2]" "K=[1e-05]" "A=10 m^2" "dh=0.5 m"
-Q = 2.5e-05 m^3/s
-q = 2.5e-06 m/s
-Kv = 1e-05 m/s
-Kh = 1e-05 m/s
-heads = [0.0] m
-
-$ civil-engineering solve thiessen_polygon_rainfall "gx=[2, 8, 5]" "gy=[2, 3, 9]" "rain=[45, 60, 38]" "bx=[0, 10, 10, 0]" "by=[0, 0, 10, 10]"
-mean = 47.23995192
-areas = [29.6650641026,32.5608974359,37.7740384615]
-weights = [0.296650641026,0.325608974359,0.377740384615]
-arithmetic_mean = 47.66666667
-catchment_area = 100
-
-$ civil-engineering solve broad_crested_weir_discharge Cd=0.95 "b=5 m" "H=0.6 m"
-Q = 3.763726876 m^3/s
-yc = 0.4 m
-
-$ civil-engineering solve parallel_pipes_hazen_williams "Q=0.3 m^3/s" "L=[800, 1200]" "D=[300, 400]" "C=[120, 110]"
-hf = 7.944067369 m
-flows = [0.116758581689,0.183241418311] m^3/s
-
-$ civil-engineering solve degree_of_consolidation "cv=7.922021954e-08 m^2/s" "t=31557600 s" "Hdr=3 m"
-Tv = 0.2777777778
-U = 0.5913702173
-U_percent = 59.13702173
-
-$ civil-engineering solve area_from_offsets "offsets=[0, 2.5, 3.5, 5, 4.6, 3.2, 0]" "d=10 m"
-A_trapezoidal = 188 m^2
-A_simpson = 196.6666667 m^2
-
-$ civil-engineering solve coulomb_passive_thrust phi=30 delta=15 beta=0 "gam=18000 N/m^3" "H=2 m"
-Kp = 4.976500223
-Pp = 179154.008 N/m
-Pp_h = 173049.4832 N/m
-Pp_v = 46368.46928 N/m
-
-$ civil-engineering solve well_field_drawdown "wx=[0, 200]" "wy=[0, 0]" "Qs=[2000, 1500]" "T=0.00462962963 m^2/s" S=0.0003 "t=432000 s" "x0=100 m" "y0=50 m"
-s = 4.935878027 m
-parts = [2.82050172954,2.11537629715] m
-
-$ civil-engineering solve unit_hydrograph_convolution "excess=[1.5, 2.5, 1]" "uh=[0, 10, 30, 22, 12, 5, 0]"
-DRO = [0.0,15.0,70.0,118.0,103.0,59.5,24.5,5.0,0.0] m^3/s
-total = [0.0,15.0,70.0,118.0,103.0,59.5,24.5,5.0,0.0] m^3/s
-peak = 118 m^3/s
-peak_period = 4
-
-$ civil-engineering solve chezy_from_manning n=0.013 "R=0.75 m"
-C = 73.32186869 m^0.5/s
-
-$ civil-engineering solve hazen_williams_head_loss "Q=0.05 m^3/s" "D=0.3 m" "L=1000 m" C=120
-hf = 2.064555214 m
-V = 0.7073553026 m/s
-Sf = 0.002064555214
-
-$ civil-engineering solve coefficient_of_consolidation "Hdr=0.01 m" "t=750 s" U=0.5
-cv = 2.623076527e-08 m^2/s
-Tv = 0.1967307395
-cv_m2_yr = 0.8277799981
-
-$ civil-engineering solve traverse_bowditch_adjustment "az=[45, 135.01, 225, 315]" "d=[100, 100.02, 99.98, 100]"
-misclosure_E = 0.01593938435 m
-misclosure_N = -0.0123427325 m
-linear_misclosure = 0.02015953915 m
-precision = 19841.72341
-E = [0.0,70.7066932726,141.415182997,70.7146629647] m
-N = [0.0,70.7137638018,-0.020312884737,-70.7137638018] m
-
-$ civil-engineering solve rankine_active_thrust phi=30 "gam=18000 N/m^3" "H=6 m"
-Ka = 0.3333333333
-sigma_base = 36000 Pa
-Pa = 108000 N/m
-z_crack = 0 m
-ybar = 2 m
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/civil-engineering-ai999x/blob/main/docs/civil_engineering_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/civil-engineering-ai999x/blob/main/docs/civil_engineering_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/civil-engineering-ai999x/blob/main/docs/civil_engineering_ai999x_desktop_guide.md)
@@ -252,13 +165,13 @@ ybar = 2 m
 
 Every calculation, with its formula, a worked example and its figures: **[Civil Engineering on ai999x.com](https://www.ai999x.com/models/civil-engineering-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.7 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/civil-engineering-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.6`; the [GitHub release](https://github.com/AI999X/civil-engineering-ai999x/releases/tag/v1.6.6) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/civil-engineering-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.7`; the [GitHub release](https://github.com/AI999X/civil-engineering-ai999x/releases/tag/v1.6.7) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 
