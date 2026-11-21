@@ -180,13 +180,17 @@ $$
 - **Assumes:** $b > 0$; $y > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rectangular channel (b = 3](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rectangular-channel-section-channel)
+![Rectangular channel (b = 3 m, y = 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rectangular-channel-section-channel)
 
-*Rectangular channel (b = 3.0 m, y = 1.2 m) drawn to scale with its water. Marked: the returned A = 3.6 m², P = 5.4 m, R = 0.6667 m, T = 3 m, D_h = 1.2 m.*
+*Rectangular channel (b = 3 m, y = 1.2 m) drawn to scale with its water. Marked: the returned A = 3.6 m², P = 5.4 m, R = 0.6667 m, T = 3 m, D_h = 1.2 m. Your inputs: b = 3 m, y = 1.2 m.*
 
-![A (flow area (m^2)) against b (bottom width) from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rectangular-channel-section-curve)
+![Flow area as b runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rectangular-channel-section-live-1)
 
-*A (flow area (m^2)) against b (bottom width) from 1.5 m to 4.5 m. One curve for each value of y (flow depth): 1.2 m, 0.6 m, 2.4 m. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, b = 3 m, A = 3.6 m^2.*
+*Flow area as b runs from 1.8 to 4.2 m, every other input as you entered it (41 solutions). Marked: your b = 3 m gives A = 3.6. Your inputs: b = 3 m, y = 1.2 m.*
+
+![Flow area as y runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rectangular-channel-section-live-2)
+
+*Flow area as y runs from 0.72 to 1.68 m, every other input as you entered it (29 solutions). Marked: your y = 1.2 m gives A = 3.6. Your inputs: b = 3 m, y = 1.2 m.*
 
 ```python
 civil_engineering_ai999x.solve('rectangular_channel_section', b=3.0, y=1.2)
@@ -236,13 +240,17 @@ $$
 - **Assumes:** $y > 0$; $b  \geq  0$; $z  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Trapezoidal channel (b = 4](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/trapezoidal-channel-section-channel)
+![Trapezoidal channel (b = 4 m, y = 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/trapezoidal-channel-section-channel)
 
-*Trapezoidal channel (b = 4.0 m, y = 1.5 m, z = 2.0 (H:1V)) drawn to scale with its water. Marked: the returned A = 10.5 m², P = 10.71 m, R = 0.9806 m, T = 10 m, D_h = 1.05 m.*
+*Trapezoidal channel (b = 4 m, y = 1.5 m, side slope z = 2 horizontal to 1 vertical) drawn to scale with its water. Marked: the returned A = 10.5 m², P = 10.71 m, R = 0.9806 m, T = 10 m, D_h = 1.05 m. Your inputs: b = 4 m, y = 1.5 m, z = 2.*
 
-![A (flow area (m^2)) against y (flow depth) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/trapezoidal-channel-section-curve)
+![Flow area as y runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/trapezoidal-channel-section-live-1)
 
-*A (flow area (m^2)) against y (flow depth) from 0.15 m to 15 m on a logarithmic axis. Other inputs as in the worked example: b = 4.0 m, z = 2.0. 41 points computed by civil-engineering-ai999x; marked: the worked example, y = 1.5 m, A = 10.5 m^2.*
+*Flow area as y runs from 0.9 to 2.1 m, every other input as you entered it (41 solutions). Marked: your y = 1.5 m gives A = 10.5. Your inputs: b = 4 m, y = 1.5 m, z = 2.*
+
+![Flow area as z runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/trapezoidal-channel-section-live-2)
+
+*Flow area as z runs from 0.5 to 3.5, every other input as you entered it (29 solutions). Marked: your z = 2 gives A = 10.5. Your inputs: b = 4 m, y = 1.5 m, z = 2.*
 
 ```python
 civil_engineering_ai999x.solve('trapezoidal_channel_section', b=4.0, y=1.5, z=2.0)
@@ -292,13 +300,17 @@ $$
 - **Assumes:** $0 < y < D$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Circular conduit flowing part full (D = 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/circular-channel-section-channel)
+![Circular conduit flowing part full (D = 1 m, y = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/circular-channel-section-channel)
 
-*Circular conduit flowing part full (D = 1.0 m, y = 0.6 m), to scale. Marked: the returned A = 0.492 m², P = 1.772 m, R = 0.2776 m, T = 0.9798 m, D_h = 0.5022 m, θ = 203.1 rad.*
+*Circular conduit flowing part full (D = 1 m, y = 0.6 m), to scale. Marked: the returned A = 0.492 m², P = 1.772 m, R = 0.2776 m, T = 0.9798 m, D_h = 0.5022 m, θ = 203.1° (θ: the central angle of the wetted arc). Your inputs: D = 1 m, y = 0.6 m.*
 
-![A (flow area (m^2)) against D (pipe diameter) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/circular-channel-section-curve)
+![Flow area as y runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/circular-channel-section-live-1)
 
-*A (flow area (m^2)) against D (pipe diameter) from 0.5 m to 1.5 m. One curve for each value of y (flow depth): 0.6 m, 0.3 m, 1.2 m. 27 points per curve computed by civil-engineering-ai999x; marked: the worked example, D = 1 m, A = 0.492028 m^2.*
+*Flow area as y runs from 0.36 to 0.84 m, every other input as you entered it (41 solutions). Marked: your y = 0.6 m gives A = 0.492. Your inputs: D = 1 m, y = 0.6 m.*
+
+![Flow area as D runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/circular-channel-section-live-2)
+
+*Flow area as D runs from 0.6286 to 1.4 m, every other input as you entered it (28 solutions). Marked: your D = 1 m gives A = 0.492. Your inputs: D = 1 m, y = 0.6 m.*
 
 ```python
 civil_engineering_ai999x.solve('circular_channel_section', D=1.0, y=0.6)
@@ -344,9 +356,13 @@ $$
 - **Assumes:** $R > 0$; $0 < S < 1$; $0.005  \leq  n  \leq  0.2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![V (mean velocity (m/s)) against n (Manning roughness coefficient) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-velocity-curve)
+![Mean velocity as n runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-velocity-live-1)
 
-*V (mean velocity (m/s)) against n (Manning roughness coefficient) from 0.0075 to 0.0225. One curve for each value of R (hydraulic radius): 0.8 m, 0.4 m, 1.6 m. Other inputs as in the worked example: S = 0.0005. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, n = 0.015, V = 1.28466 m/s.*
+*Mean velocity as n runs from 0.005437 to 0.02625, every other input as you entered it (38 solutions). Marked: your n = 0.015 gives V = 1.285. Your inputs: R = 0.8 m, S = 0.0005, n = 0.015.*
+
+![Mean velocity as R runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-velocity-live-2)
+
+*Mean velocity as R runs from 0.48 to 1.12 m, every other input as you entered it (29 solutions). Marked: your R = 0.8 m gives V = 1.285. Your inputs: R = 0.8 m, S = 0.0005, n = 0.015.*
 
 ```python
 civil_engineering_ai999x.solve('manning_velocity', R=0.8, S=0.0005, n=0.015)
@@ -396,13 +412,17 @@ $$
 - **Assumes:** b, $y > 0$; $0 < S < 1$; $0.005  \leq  n  \leq  0.2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Uniform flow in a rectangular channel (b = 3](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-rectangular-discharge-channel)
+![Uniform flow in a rectangular channel (b = 3 m, y = 1](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/manning-rectangular-discharge-channel.svg)
 
-*Uniform flow in a rectangular channel (b = 3.0 m, y = 1.2 m, S = 0.001, n = 0.013), section to scale. Marked: the returned Q = 6.683 m³/s, V = 1.856 m/s, A = 3.6 m², R = 0.6667 m (Manning).*
+*Uniform flow in a rectangular channel (b = 3 m, y = 1.2 m, S = 0.001, n = 0.013), section to scale. Marked: the returned Q = 6.683 m³/s, V = 1.856 m/s, A = 3.6 m², R = 0.6667 m (Manning). Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.*
 
-![Q (discharge (m^3/s)) against y (flow depth) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-rectangular-discharge-curve)
+![Discharge as y runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-rectangular-discharge-live-1)
 
-*Q (discharge (m^3/s)) against y (flow depth) from 0.12 m to 12 m on a logarithmic axis. One curve for each value of b (bottom width): 3 m, 1.5 m, 6 m. Other inputs as in the worked example: S = 0.001, n = 0.013. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, y = 1.2 m, Q = 6.6829 m^3/s.*
+*Discharge as y runs from 0.72 to 1.68 m, every other input as you entered it (41 solutions). Marked: your y = 1.2 m gives Q = 6.683. Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.*
+
+![Discharge as b runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-rectangular-discharge-live-2)
+
+*Discharge as b runs from 1.8 to 4.2 m, every other input as you entered it (29 solutions). Marked: your b = 3 m gives Q = 6.683. Your inputs: b = 3 m, y = 1.2 m, S = 0.001, n = 0.013.*
 
 ```python
 civil_engineering_ai999x.solve('manning_rectangular_discharge', b=3.0, y=1.2, S=0.001, n=0.013)
@@ -452,13 +472,17 @@ $$
 - **Assumes:** $y > 0$; $b  \geq  0$; $z  \geq  0$; $0 < S < 1$; $0.005  \leq  n  \leq  0.2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Uniform flow in a trapezoidal channel (b = 4](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-trapezoidal-discharge-channel)
+![Uniform flow in a trapezoidal channel (b = 4 m, y = 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-trapezoidal-discharge-channel)
 
-*Uniform flow in a trapezoidal channel (b = 4.0 m, y = 1.5 m, z = 2.0 (H:1V), S = 0.0008, n = 0.025), section to scale. Marked: the returned Q = 11.72 m³/s, V = 1.117 m/s, A = 10.5 m², R = 0.9806 m (Manning).*
+*Uniform flow in a trapezoidal channel (b = 4 m, y = 1.5 m, z = 2 H:1V, S = 0.0008, n = 0.025), section to scale. Marked: the returned Q = 11.72 m³/s, V = 1.117 m/s, A = 10.5 m², R = 0.9806 m (Manning). Your inputs: b = 4 m, y = 1.5 m, z = 2, S = 0.0008, n = 0.025.*
 
-![Q (discharge (m^3/s)) against z (side slope, horizontal per unit vertical) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-trapezoidal-discharge-curve)
+![Discharge as y runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-trapezoidal-discharge-live-1)
 
-*Q (discharge (m^3/s)) against z (side slope, horizontal per unit vertical) from 0.2 to 20 on a logarithmic axis. One curve for each value of y (flow depth): 1.5 m, 0.75 m, 3 m. Other inputs as in the worked example: b = 4.0 m, S = 0.0008, n = 0.025. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, z = 2, Q = 11.7249 m^3/s.*
+*Discharge as y runs from 0.9 to 2.1 m, every other input as you entered it (41 solutions). Marked: your y = 1.5 m gives Q = 11.72. Your inputs: b = 4 m, y = 1.5 m, z = 2, S = 0.0008, n = 0.025.*
+
+![Discharge as n runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-trapezoidal-discharge-live-2)
+
+*Discharge as n runs from 0.00625 to 0.04375, every other input as you entered it (29 solutions). Marked: your n = 0.025 gives Q = 11.72. Your inputs: b = 4 m, y = 1.5 m, z = 2, S = 0.0008, n = 0.025.*
 
 ```python
 civil_engineering_ai999x.solve('manning_trapezoidal_discharge', b=4.0, y=1.5, z=2.0, S=0.0008, n=0.025)
@@ -511,11 +535,15 @@ $$
 
 ![A pipe flowing part full (D = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-partially-full-pipe-channel)
 
-*A pipe flowing part full (D = 0.6 m, y = 0.3 m, S = 0.005, n = 0.013), section to scale. Marked: the returned Q = 0.2171 m³/s, V = 1.536 m/s, A = 0.1414 m², R = 0.15 m, Q full = 0.4342 m³/s, Q/Q full = 0.5 (Manning).*
+*A pipe flowing part full (D = 0.6 m, y = 0.3 m, S = 0.005, n = 0.013), section to scale. Marked: the returned Q = 0.2171 m³/s, V = 1.536 m/s, A = 0.1414 m², R = 0.15 m, Q full = 0.4342 m³/s, Q/Q full = 0.5 (Manning). Your inputs: D = 0.6 m, y = 0.3 m, S = 0.005, n = 0.013.*
 
-![Q (discharge (m^3/s)) against n (Manning roughness coefficient) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-partially-full-pipe-curve)
+![Discharge and full-bore capacity as D runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-partially-full-pipe-live-1)
 
-*Q (discharge (m^3/s)) against n (Manning roughness coefficient) from 0.0065 to 0.0195. One curve for each value of D (pipe diameter): 0.6 m, 0.3 m, 1.2 m. Other inputs as in the worked example: y = 0.3 m, S = 0.005. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, n = 0.013, Q = 0.217086 m^3/s.*
+*Discharge and full-bore capacity as D runs from 0.36 to 0.84 m, every other input as you entered it (41 solutions). Marked: your D = 0.6 m gives Q = 0.2171. Your inputs: D = 0.6 m, y = 0.3 m, S = 0.005, n = 0.013.*
+
+![Discharge as y runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-partially-full-pipe-live-2)
+
+*Discharge as y runs from 0.18 to 0.42 m, every other input as you entered it (29 solutions). Marked: your y = 0.3 m gives Q = 0.2171. Your inputs: D = 0.6 m, y = 0.3 m, S = 0.005, n = 0.013.*
 
 ```python
 civil_engineering_ai999x.solve('manning_partially_full_pipe', D=0.6, y=0.3, S=0.005, n=0.013)
@@ -564,13 +592,17 @@ $$
 - **Assumes:** Q, $b > 0$; $0 < S < 1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rectangular channel carrying Q = 10](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/normal-depth-rectangular-channel)
+![Rectangular channel carrying Q = 10 m³/s, b = 4 m, S = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/normal-depth-rectangular-channel)
 
-*Rectangular channel carrying Q = 10.0 m³/s, b = 4.0 m, S = 0.0005, n = 0.015, drawn to scale at the returned normal depth yn = 1.75442 m (V = 1.42498 m/s, Fr = 0.343484); dashed: the critical depth yc = 0.860473 m from the package's critical-depth capability.*
+*Rectangular channel carrying Q = 10 m³/s, b = 4 m, S = 0.0005, n = 0.015, drawn to scale at the returned normal depth (yn = 1.754 m, V = 1.425 m/s, Fr = 0.3435); dashed: the critical depth yc = 0.8605 m from the model's critical-depth capability. Your inputs: Q = 10 m^3/s, b = 4 m, S = 0.0005, n = 0.015.*
 
-![yn (normal depth (m)) against b (bottom width) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/normal-depth-rectangular-curve)
+![Normal depth as b runs from 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/normal-depth-rectangular-live-1)
 
-*yn (normal depth (m)) against b (bottom width) from 0.4 m to 40 m on a logarithmic axis. One curve for each value of Q (discharge): 10 m^3/s, 5 m^3/s, 20 m^3/s. Other inputs as in the worked example: S = 0.0005, n = 0.015. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, b = 4 m, yn = 1.75442 m.*
+*Normal depth as b runs from 2.4 to 5.6 m, every other input as you entered it (41 solutions). Marked: your b = 4 m gives yn = 1.754. Your inputs: Q = 10 m^3/s, b = 4 m, S = 0.0005, n = 0.015.*
+
+![Normal depth as n runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/normal-depth-rectangular-live-2)
+
+*Normal depth as n runs from 0.005357 to 0.02625, every other input as you entered it (27 solutions). Marked: your n = 0.015 gives yn = 1.754. Your inputs: Q = 10 m^3/s, b = 4 m, S = 0.0005, n = 0.015.*
 
 ```python
 civil_engineering_ai999x.solve('normal_depth_rectangular', Q=10.0, b=4.0, S=0.0005, n=0.015)
@@ -620,13 +652,17 @@ $$
 - **Assumes:** $Q > 0$; $b  \geq  0$; $z  \geq  0$; $0 < S < 1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Trapezoidal channel carrying Q = 20](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/normal-depth-trapezoidal-channel)
+![Trapezoidal channel carrying Q = 20 m³/s, b = 5 m, z = 2 H:1V, S = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/normal-depth-trapezoidal-channel)
 
-*Trapezoidal channel carrying Q = 20.0 m³/s, b = 5.0 m, z = 2.0 (H:1V), S = 0.0004, n = 0.025, drawn to scale at the returned normal depth yn = 2.16558 m (V = 0.989735 m/s, A = 20.2074 m², Fr = 0.259831); dashed: the critical depth yc = 1.01997 m from the package's critical-depth capability.*
+*Trapezoidal channel carrying Q = 20 m³/s, b = 5 m, z = 2 H:1V, S = 0.0004, n = 0.025, drawn to scale at the returned normal depth (yn = 2.166 m, V = 0.9897 m/s, A = 20.21 m², Fr = 0.2598); dashed: the critical depth yc = 1.02 m from the model's critical-depth capability. Your inputs: Q = 20 m^3/s, b = 5 m, z = 2, S = 0.0004, n = 0.025.*
 
-![yn (normal depth (m)) against Q (discharge) from 10 m^3/s to 30 m^3/s](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/normal-depth-trapezoidal-curve)
+![Normal depth as n runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/normal-depth-trapezoidal-live-1)
 
-*yn (normal depth (m)) against Q (discharge) from 10 m^3/s to 30 m^3/s. Other inputs as in the worked example: b = 5.0 m, z = 2.0, S = 0.0004, n = 0.025. 31 points computed by civil-engineering-ai999x; marked: the worked example, Q = 20 m^3/s, yn = 2.16558 m.*
+*Normal depth as n runs from 0.00625 to 0.04375, every other input as you entered it (41 solutions). Marked: your n = 0.025 gives yn = 2.166. Your inputs: Q = 20 m^3/s, b = 5 m, z = 2, S = 0.0004, n = 0.025.*
+
+![Normal depth as Q runs from 12 to 28 m^3/s, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/normal-depth-trapezoidal-live-2)
+
+*Normal depth as Q runs from 12 to 28 m^3/s, every other input as you entered it (29 solutions). Marked: your Q = 20 m^3/s gives yn = 2.166. Your inputs: Q = 20 m^3/s, b = 5 m, z = 2, S = 0.0004, n = 0.025.*
 
 ```python
 civil_engineering_ai999x.solve('normal_depth_trapezoidal', Q=20.0, b=5.0, z=2.0, S=0.0004, n=0.025)
@@ -671,9 +707,13 @@ $$
 - **Assumes:** C, $R > 0$; $0 < S < 1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![V (mean velocity (m/s)) against R (hydraulic radius) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/chezy-velocity-curve)
+![Mean velocity as C runs from 33 to 77 m^0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/chezy-velocity-live-1)
 
-*V (mean velocity (m/s)) against R (hydraulic radius) from 0.55 m to 1.65 m. One curve for each value of C (Chezy coefficient (m^(1/2)/s)): 55 m^0.5/s, 27.5 m^0.5/s, 110 m^0.5/s. Other inputs as in the worked example: S = 0.0004. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, R = 1.1 m, V = 1.15369 m/s.*
+*Mean velocity as C runs from 33 to 77 m^0.5/s, every other input as you entered it (41 solutions). Marked: your C = 55 m^0.5/s gives V = 1.154. Your inputs: C = 55 m^0.5/s, R = 1.1 m, S = 0.0004.*
+
+![Mean velocity as R runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/chezy-velocity-live-2)
+
+*Mean velocity as R runs from 0.66 to 1.54 m, every other input as you entered it (29 solutions). Marked: your R = 1.1 m gives V = 1.154. Your inputs: C = 55 m^0.5/s, R = 1.1 m, S = 0.0004.*
 
 ```python
 civil_engineering_ai999x.solve('chezy_velocity', C=55.0, R=1.1, S=0.0004)
@@ -717,13 +757,17 @@ $$
 - **Assumes:** $0.005  \leq  n  \leq  0.2$; $R > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![C (Chezy coefficient (m^(1/2)/s)) against n (Manning roughness coefficient) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/chezy-from-manning-curve)
-
-*C (Chezy coefficient (m^(1/2)/s)) against n (Manning roughness coefficient) from 0.0065 to 0.0195. One curve for each value of R (hydraulic radius): 0.75 m, 0.375 m, 1.5 m. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, n = 0.013, C = 73.3219 m^0.5/s.*
-
 ![C (Chezy coefficient (m^(1/2)/s)) over n (Manning roughness coefficient) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/chezy-from-manning-field)
 
-*C (Chezy coefficient (m^(1/2)/s)) over n (Manning roughness coefficient) from 0.0065 to 0.0195 and R (hydraulic radius) from 0.375 m to 1.125 m: each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 43.5482 m^0.5/s to dark 156.896 m^0.5/s); iso-lines at C = 60, 80, 100, 120, 140 m^0.5/s. Marked: the worked example, n = 0.013, R = 0.75 m, C = 73.3219 m^0.5/s.*
+*C (Chezy coefficient (m^(1/2)/s)) over n (Manning roughness coefficient) from 0.0065 to 0.0195 and R (hydraulic radius) from 375 mm to 1.125 m: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 43.55 m^0.5/s to dark 156.9 m^0.5/s); iso-lines at C = 60, 80, 100, 120, 140. Marked: the given point, n = 0.013, R = 750 mm, C = 73.32 m^0.5/s. Your inputs: n = 0.013, R = 0.75 m.*
+
+![Chezy coefficient as n runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/chezy-from-manning-live-1)
+
+*Chezy coefficient as n runs from 0.0052 to 0.02275, every other input as you entered it (37 solutions). Marked: your n = 0.013 gives C = 73.32. Your inputs: n = 0.013, R = 0.75 m.*
+
+![Chezy coefficient as R runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/chezy-from-manning-live-2)
+
+*Chezy coefficient as R runs from 0.45 to 1.05 m, every other input as you entered it (29 solutions). Marked: your R = 0.75 m gives C = 73.32. Your inputs: n = 0.013, R = 0.75 m.*
 
 ```python
 civil_engineering_ai999x.solve('chezy_from_manning', n=0.013, R=0.75)
@@ -767,13 +811,17 @@ $$
 - **Assumes:** C, $R > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![n (Manning roughness coefficient) against C (Chezy coefficient (m^(1/2)/s)) from 30 m^0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-from-chezy-curve)
-
-*n (Manning roughness coefficient) against C (Chezy coefficient (m^(1/2)/s)) from 30 m^0.5/s to 90 m^0.5/s. One curve for each value of R (hydraulic radius): 1.2 m, 0.6 m, 2.4 m. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, C = 60 m^0.5/s, n = 0.0171809.*
-
 ![n (Manning roughness coefficient) over C (Chezy coefficient (m^(1/2)/s)) from 30 m^0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-from-chezy-field)
 
-*n (Manning roughness coefficient) over C (Chezy coefficient (m^(1/2)/s)) from 30 m^0.5/s to 90 m^0.5/s and R (hydraulic radius) from 0.6 m to 1.8 m: each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 0.0102043 to dark 0.0367641); iso-lines at n = 0.015, 0.02, 0.025, 0.03, 0.035. Marked: the worked example, C = 60 m^0.5/s, R = 1.2 m, n = 0.0171809.*
+*n (Manning roughness coefficient) over C (Chezy coefficient (m^(1/2)/s)) from 30 m^0.5/s to 90 m^0.5/s and R (hydraulic radius) from 600 mm to 1.8 m: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0.0102 to dark 0.03676); iso-lines at n = 0.015, 0.02, 0.025, 0.03, 0.035. Marked: the given point, C = 60 m^0.5/s, R = 1.2 m, n = 0.01718. Your inputs: C = 60 m^0.5/s, R = 1.2 m.*
+
+![Manning roughness coefficient as C runs from 36 to 84 m^0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-from-chezy-live-1)
+
+*Manning roughness coefficient as C runs from 36 to 84 m^0.5/s, every other input as you entered it (41 solutions). Marked: your C = 60 m^0.5/s gives n = 0.01718. Your inputs: C = 60 m^0.5/s, R = 1.2 m.*
+
+![Manning roughness coefficient as R runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/manning-from-chezy-live-2)
+
+*Manning roughness coefficient as R runs from 0.72 to 1.68 m, every other input as you entered it (29 solutions). Marked: your R = 1.2 m gives n = 0.01718. Your inputs: C = 60 m^0.5/s, R = 1.2 m.*
 
 ```python
 civil_engineering_ai999x.solve('manning_from_chezy', C=60.0, R=1.2)
@@ -820,9 +868,17 @@ $$
 - **Assumes:** Q, b, $y > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rectangular channel carrying Q = 12](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/channel-froude-number-channel)
+![Rectangular channel carrying Q = 12 m³/s, b = 4 m at depth y = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/channel-froude-number-channel)
 
-*Rectangular channel carrying Q = 12.0 m³/s, b = 4.0 m at depth y = 0.5 m (to scale); dashed: the critical depth yc = 0.971683 m from the package's critical-depth capability. Marked: the returned V = 6 m/s, Fr = 2.70914, regime: supercritical.*
+*Rectangular channel carrying Q = 12 m³/s, b = 4 m at depth y = 0.5 m (to scale); dashed: the critical depth yc = 0.9717 m from the model's critical-depth capability. Marked: the returned V = 6 m/s, Fr = 2.709, supercritical. Your inputs: Q = 12 m^3/s, b = 4 m, y = 0.5 m.*
+
+![Froude number as y runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/channel-froude-number-live-1)
+
+*Froude number as y runs from 0.3 to 0.7 m, every other input as you entered it (41 solutions). Marked: your y = 0.5 m gives Fr = 2.709. Your inputs: Q = 12 m^3/s, b = 4 m, y = 0.5 m.*
+
+![Froude number as b runs from 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/channel-froude-number-live-2)
+
+*Froude number as b runs from 2.4 to 5.6 m, every other input as you entered it (27 solutions). Marked: your b = 4 m gives Fr = 2.709. Your inputs: Q = 12 m^3/s, b = 4 m, y = 0.5 m.*
 
 ```python
 civil_engineering_ai999x.solve('channel_froude_number', Q=12.0, b=4.0, y=0.5)
@@ -869,13 +925,17 @@ $$
 - **Assumes:** Q, $b > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Specific-energy diagram of a rectangular channel carrying Q = 8](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-rectangular-diagram)
+![Specific-energy diagram of a rectangular channel carrying Q = 8 m³/s in b = 3 m: each point is the specific energy the model returns at a depth (33 depths)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-rectangular-diagram)
 
-*Specific-energy diagram of a rectangular channel carrying Q = 8.0 m³/s in b = 3.0 m: each point is the specific energy the package returns at a depth (81 depths). Marked: the returned critical depth yc = 0.898303 m, minimum specific energy Emin = 1.34745 m, critical velocity 2.96856 m/s, unit discharge q = 2.66667 m²/s.*
+*Specific-energy diagram of a rectangular channel carrying Q = 8 m³/s in b = 3 m: each point is the specific energy the model returns at a depth (33 depths). Marked: the returned critical depth yc = 0.8983 m, minimum specific energy Emin = 1.347 m, critical velocity 2.969 m/s, unit discharge q = 2.667 m²/s. Your inputs: Q = 8 m^3/s, b = 3 m.*
 
-![yc (critical depth (m)) against b (channel width) from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-rectangular-curve)
+![Critical depth and minimum specific energy 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-rectangular-live-1)
 
-*yc (critical depth (m)) against b (channel width) from 1.5 m to 4.5 m. One curve for each value of Q (discharge): 8 m^3/s, 4 m^3/s, 16 m^3/s. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, b = 3 m, yc = 0.898303 m.*
+*Critical depth and minimum specific energy 1.5 yc as Q runs from 4.8 to 11.2 m^3/s, every other input as you entered it (41 solutions). Marked: your Q = 8 m^3/s gives yc = 0.8983. Your inputs: Q = 8 m^3/s, b = 3 m.*
+
+![Critical depth and minimum specific energy 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-rectangular-live-2)
+
+*Critical depth and minimum specific energy 1.5 yc as b runs from 1.8 to 4.2 m, every other input as you entered it (29 solutions). Marked: your b = 3 m gives yc = 0.8983. Your inputs: Q = 8 m^3/s, b = 3 m.*
 
 ```python
 civil_engineering_ai999x.solve('critical_depth_rectangular', Q=8.0, b=3.0)
@@ -923,13 +983,17 @@ $$
 - **Assumes:** $Q > 0$; $b  \geq  0$; $z > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Trapezoidal channel carrying Q = 15](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-trapezoidal-channel)
+![Trapezoidal channel carrying Q = 15 m³/s, b = 3 m, z = 2 H:1V, drawn to scale at the returned critical depth](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-trapezoidal-channel)
 
-*Trapezoidal channel carrying Q = 15.0 m³/s, b = 3.0 m, z = 2.0 (H:1V), drawn to scale at the returned critical depth yc = 1.07108 m. Marked: Ac = 5.50766 m², Vc = 2.72348 m/s, minimum specific energy Emin = 1.44913 m (dashed level).*
+*Trapezoidal channel carrying Q = 15 m³/s, b = 3 m, z = 2 H:1V, drawn to scale at the returned critical depth. Marked: yc = 1.071 m, Ac = 5.508 m², Vc = 2.723 m/s, Emin = 1.449 m (the minimum specific energy as the dashed level). Your inputs: Q = 15 m^3/s, b = 3 m, z = 2.*
 
-![yc (critical depth (m)) against Q (discharge) from 7](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-trapezoidal-curve)
+![Critical depth and minimum specific energy as Q runs from 9 to 21 m^3/s, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-trapezoidal-live-1)
 
-*yc (critical depth (m)) against Q (discharge) from 7.5 m^3/s to 22.5 m^3/s. One curve for each value of b (bottom width): 3 m, 1.5 m, 6 m. Other inputs as in the worked example: z = 2.0. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, Q = 15 m^3/s, yc = 1.07108 m.*
+*Critical depth and minimum specific energy as Q runs from 9 to 21 m^3/s, every other input as you entered it (41 solutions). Marked: your Q = 15 m^3/s gives yc = 1.071. Your inputs: Q = 15 m^3/s, b = 3 m, z = 2.*
+
+![Critical depth and minimum specific energy as b runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-trapezoidal-live-2)
+
+*Critical depth and minimum specific energy as b runs from 1.8 to 4.2 m, every other input as you entered it (29 solutions). Marked: your b = 3 m gives yc = 1.071. Your inputs: Q = 15 m^3/s, b = 3 m, z = 2.*
 
 ```python
 civil_engineering_ai999x.solve('critical_depth_trapezoidal', Q=15.0, b=3.0, z=2.0)
@@ -978,11 +1042,15 @@ $$
 
 ![Circular conduit carrying Q = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-circular-channel)
 
-*Circular conduit carrying Q = 0.5 m³/s, D = 1.0 m, to scale at the returned critical depth yc = 0.398841 m. Marked: Ac = 0.292235 m², Vc = 1.71095 m/s, Emin = 0.548044 m (dashed level).*
+*Circular conduit carrying Q = 0.5 m³/s, D = 1 m, to scale at the returned critical depth. Marked: yc = 0.3988 m, Ac = 0.2922 m², Vc = 1.711 m/s, Emin = 0.548 m (the minimum specific energy as the dashed level). Your inputs: Q = 0.5 m^3/s, D = 1 m.*
 
-![yc (critical depth (m)) against D (pipe diameter) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-circular-curve)
+![Critical depth and minimum specific energy as Q runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-circular-live-1)
 
-*yc (critical depth (m)) against D (pipe diameter) from 0.5 m to 1.5 m. One curve for each value of Q (discharge): 0.5 m^3/s, 0.25 m^3/s, 1 m^3/s. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, D = 1 m, yc = 0.398841 m.*
+*Critical depth and minimum specific energy as Q runs from 0.3 to 0.7 m^3/s, every other input as you entered it (41 solutions). Marked: your Q = 0.5 m^3/s gives yc = 0.3988. Your inputs: Q = 0.5 m^3/s, D = 1 m.*
+
+![Critical depth and minimum specific energy as D runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/critical-depth-circular-live-2)
+
+*Critical depth and minimum specific energy as D runs from 0.6 to 1.4 m, every other input as you entered it (29 solutions). Marked: your D = 1 m gives yc = 0.3988. Your inputs: Q = 0.5 m^3/s, D = 1 m.*
 
 ```python
 civil_engineering_ai999x.solve('critical_depth_circular', Q=0.5, D=1.0)
@@ -1032,13 +1100,17 @@ $$
 - **Assumes:** Q, b, $y > 0$; y is not the critical depth
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Specific-energy diagram of a rectangular channel carrying Q = 6 m³/s in b = 2 m (E computed by the package at 81 depths)](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/alternate-depth-rectangular-diagram.svg)
+![Specific-energy diagram of a rectangular channel carrying Q = 6 m³/s in b = 2 m (E computed by the model at 33 depths)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/alternate-depth-rectangular-diagram)
 
-*Specific-energy diagram of a rectangular channel carrying Q = 6 m³/s in b = 2 m (E computed by the package at 81 depths). Depth y = 0.4 m (supercritical, Fr = 3.78614) has E = 3.26697 m and the alternate depth 3.22281 m; marked: critical depth yc = 0.971683 m at the minimum energy E = 1.45752 m.*
+*Specific-energy diagram of a rectangular channel carrying Q = 6 m³/s in b = 2 m (E computed by the model at 33 depths). Depth y = 0.4 m (supercritical, Fr = 3.786) has E = 3.267 m and the alternate depth 3.223 m; marked: critical depth yc = 0.9717 m at the minimum energy E = 1.458 m (from the model's critical-depth capability). Your inputs: Q = 6 m^3/s, b = 2 m, y = 0.4 m.*
 
-![E (specific energy y + V^2/2g (m)) against y (flow depth) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/alternate-depth-rectangular-curve)
+![E, alternate depth and critical depth as b runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/alternate-depth-rectangular-live-1)
 
-*E (specific energy y + V^2/2g (m)) against y (flow depth) from 0.04 m to 4 m on a logarithmic axis. One curve for each value of Q (discharge): 6 m^3/s, 3 m^3/s, 12 m^3/s. Other inputs as in the worked example: b = 2.0 m. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, y = 0.4 m, E = 3.26697 m.*
+*E, alternate depth and critical depth as b runs from 1.2 to 2.8 m, every other input as you entered it (41 solutions). Marked: your b = 2 m gives E = 3.267. Your inputs: Q = 6 m^3/s, b = 2 m, y = 0.4 m.*
+
+![E and alternate depth as y runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/alternate-depth-rectangular-live-2)
+
+*E and alternate depth as y runs from 0.24 to 0.56 m, every other input as you entered it (27 solutions). Marked: your y = 0.4 m gives E = 3.267. Your inputs: Q = 6 m^3/s, b = 2 m, y = 0.4 m.*
 
 ```python
 civil_engineering_ai999x.solve('alternate_depth_rectangular', Q=6.0, b=2.0, y=0.4)
@@ -1088,13 +1160,17 @@ $$
 - **Assumes:** horizontal, frictionless bed; $Fr1 > 1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Hydraulic jump in a rectangular channel (Q = 10](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hydraulic-jump-rectangular-profile)
+![Hydraulic jump in a rectangular channel (Q = 10 m³/s, b = 2 m) from the supercritical depth y1 = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hydraulic-jump-rectangular-profile)
 
-*Hydraulic jump in a rectangular channel (Q = 10.0 m³/s, b = 2.0 m) from the supercritical depth y1 = 0.4 m to the returned sequent depth y2 = 3.37521 m, depths to scale; the shape and length of the rise are schematic (not computed). Marked: Fr1 = 6.31023, Fr2 = 0.257445, head loss 4.87676 m, power lost 478.41 kW, depth ratio 8.43802.*
+*Hydraulic jump in a rectangular channel (Q = 10 m³/s, b = 2 m) from the supercritical depth y1 = 0.4 m to the returned sequent depth y2 = 3.375 m, depths to scale; the shape and length of the rise are schematic (not computed). Marked: Fr1 = 6.31, Fr2 = 0.2574, head loss 4.877 m, power lost 478.4 kW, depth ratio 8.438. Your inputs: Q = 10 m^3/s, b = 2 m, y1 = 0.4 m.*
 
-![y2 (sequent depth after the jump (m)) against b (channel width) from 1 m to 3 m](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hydraulic-jump-rectangular-curve)
+![Sequent depth after the jump and head lost in the jump as Q runs from 6 to 14 m^3/s, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hydraulic-jump-rectangular-live-1)
 
-*y2 (sequent depth after the jump (m)) against b (channel width) from 1 m to 3 m. One curve for each value of Q (discharge): 10 m^3/s, 5 m^3/s, 20 m^3/s. Other inputs as in the worked example: y1 = 0.4 m. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, b = 2 m, y2 = 3.37521 m.*
+*Sequent depth after the jump and head lost in the jump as Q runs from 6 to 14 m^3/s, every other input as you entered it (41 solutions). Marked: your Q = 10 m^3/s gives y2 = 3.375. Your inputs: Q = 10 m^3/s, b = 2 m, y1 = 0.4 m.*
+
+![Sequent depth after the jump and head lost in the jump as y1 runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hydraulic-jump-rectangular-live-2)
+
+*Sequent depth after the jump and head lost in the jump as y1 runs from 0.24 to 0.56 m, every other input as you entered it (29 solutions). Marked: your y1 = 0.4 m gives y2 = 3.375. Your inputs: Q = 10 m^3/s, b = 2 m, y1 = 0.4 m.*
 
 ```python
 civil_engineering_ai999x.solve('hydraulic_jump_rectangular', Q=10.0, b=2.0, y1=0.4)
@@ -1146,13 +1222,21 @@ $$
 - **Assumes:** $S_{0} > 0$ (mild or steep slope); prismatic rectangular channel; both depths in one zone, 2% from yn and yc
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Gradually varied flow profile in a rectangular channel (Q = 20](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/gradually-varied-flow-length-profile)
+![Gradually varied flow profile in a rectangular channel (Q = 20 m³/s, b = 5 m, S0 = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/gradually-varied-flow-length-profile)
 
-*Gradually varied flow profile in a rectangular channel (Q = 20.0 m³/s, b = 5.0 m, S0 = 0.0004, n = 0.015) from y1 = 4 m at x = 0: the position of 30 intermediate depths is the length the package returns from y1 to that depth. Marked: the returned length L = -4594.59 m to y2 = 3 m, normal depth 2.56382 m, critical depth 1.17711 m, profile type M1.*
+*Gradually varied flow profile in a rectangular channel (Q = 20 m³/s, b = 5 m, S0 = 0.0004, n = 0.015) from y1 = 4 m at x = 0: the position of each of 9 intermediate depths is the length the model returns from y1 to that depth. Marked: the returned length L = -4595 m to y2 = 3 m, normal depth 2.564 m, critical depth 1.177 m, profile type M1. Your inputs: Q = 20 m^3/s, b = 5 m, S0 = 0.0004, n = 0.015, y1 = 4 m, y2 = 3 m.*
 
-![profile type (M1 ](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/gradually-varied-flow-length-decision)
+![Distance from section 1 to section 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/gradually-varied-flow-length-live-1)
 
-*profile type (M1 ... S3) (profile) over Q (discharge) from 2 m^3/s to 200 m^3/s and b (channel width) from 0.5 m to 50 m (logarithmic axes): each of the 31 × 21 cells is one run of civil-engineering-ai999x, coloured by the verdict it returned, M1: 337 cells, M2: 107 cells, M3: 120 cells; blank cells: inputs the capability refuses. Other inputs as in the worked example: S0 = 0.0004, n = 0.015, y1 = 4.0 m, y2 = 3.0 m. Marked: the worked example, Q = 20 m^3/s, b = 5 m → M1.*
+*Distance from section 1 to section 2... as b runs from 3 to 7 m, every other input as you entered it (31 solutions). Values in this range where the inputs admit no answer (10 of 41) are left out. Marked: your b = 5 m gives L = -4595. Shaded by profile type (M1 ... S3): M2, M1. Your inputs: Q = 20 m^3/s, b = 5 m, S0 = 0.0004, n = 0.015, y1 = 4 m, y2 = 3 m.*
+
+![Profile type (M1 ](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/gradually-varied-flow-length-live-2)
+
+*Profile type (M1 ... S3) for 18 5 x 5 combinations of b and y2 around your inputs (the other inputs as entered); the ring marks your inputs, which give M1. Blank cells admit no answer. Your inputs: Q = 20 m^3/s, b = 5 m, S0 = 0.0004, n = 0.015, y1 = 4 m, y2 = 3 m.*
+
+![Distance from section 1 to section 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/gradually-varied-flow-length-live-3)
+
+*Distance from section 1 to section 2... as y2 runs from 2.635 to 4.2 m, every other input as you entered it (17 solutions). Marked: your y2 = 3 m gives L = -4595. Your inputs: Q = 20 m^3/s, b = 5 m, S0 = 0.0004, n = 0.015, y1 = 4 m, y2 = 3 m.*
 
 ```python
 civil_engineering_ai999x.solve('gradually_varied_flow_length', Q=20.0, b=5.0, S0=0.0004, n=0.015, y1=4.0, y2=3.0)
@@ -1202,11 +1286,15 @@ $$
 
 ![Front view of a sharp-crested rectangular weir, notch width b = 2 m, head H = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rectangular-weir-discharge-weir)
 
-*Front view of a sharp-crested rectangular weir, notch width b = 2 m, head H = 0.35 m above the crest (Cd = 0.62, end contractions 0); notch and head to scale, plate outline schematic. Marked: the returned discharge Q = 0.758197 m³/s and effective crest length 2 m.*
+*Front view of a sharp-crested rectangular weir, notch width b = 2 m, head H = 0.35 m above the crest (Cd = 0.62, end contractions 0); notch and head to scale, plate outline schematic. Marked: the returned discharge Q = 0.7582 m³/s and effective crest length 2 m. Your inputs: Cd = 0.62, b = 2 m, H = 0.35 m.*
 
-![Q (discharge (m^3/s)) against H (head over the crest) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rectangular-weir-discharge-curve)
+![Discharge as H runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rectangular-weir-discharge-live-1)
 
-*Q (discharge (m^3/s)) against H (head over the crest) from 0.175 m to 0.525 m. One curve for each value of b (crest length): 2 m, 1 m, 4 m. Other inputs as in the worked example: Cd = 0.62. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, H = 0.35 m, Q = 0.758197 m^3/s.*
+*Discharge as H runs from 0.21 to 0.49 m, every other input as you entered it (41 solutions). Marked: your H = 0.35 m gives Q = 0.7582. Your inputs: Cd = 0.62, b = 2 m, H = 0.35 m.*
+
+![Discharge as b runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rectangular-weir-discharge-live-2)
+
+*Discharge as b runs from 1.2 to 2.8 m, every other input as you entered it (29 solutions). Marked: your b = 2 m gives Q = 0.7582. Your inputs: Cd = 0.62, b = 2 m, H = 0.35 m.*
 
 ```python
 civil_engineering_ai999x.solve('rectangular_weir_discharge', Cd=0.62, b=2.0, H=0.35)
@@ -1254,11 +1342,15 @@ $$
 
 ![Front view of a triangular (V-notch) weir with notch angle θ = 90° and head H = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/v-notch-weir-discharge-weir)
 
-*Front view of a triangular (V-notch) weir with notch angle θ = 90° and head H = 0.25 m above the vertex (Cd = 0.58), notch and head to scale. Marked: the returned discharge Q = 0.042818 m³/s.*
+*Front view of a triangular (V-notch) weir with notch angle θ = 90° and head H = 0.25 m above the vertex (Cd = 0.58), notch and head to scale. Marked: the returned discharge Q = 0.04282 m³/s. Your inputs: Cd = 0.58, theta = 90, H = 0.25 m.*
 
-![Q (discharge (m^3/s)) against H (head above the vertex) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/v-notch-weir-discharge-curve)
+![Discharge as H runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/v-notch-weir-discharge-live-1)
 
-*Q (discharge (m^3/s)) against H (head above the vertex) from 0.125 m to 0.375 m. One curve for each value of theta (notch angle (degrees)): 90, 22.5, 67.5. Other inputs as in the worked example: Cd = 0.58. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, H = 0.25 m, Q = 0.042818 m^3/s.*
+*Discharge as H runs from 0.15 to 0.35 m, every other input as you entered it (41 solutions). Marked: your H = 0.25 m gives Q = 42.82 L/s. Your inputs: Cd = 0.58, theta = 90, H = 0.25 m.*
+
+![Discharge as θ runs from 22](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/v-notch-weir-discharge-live-2)
+
+*Discharge as θ runs from 22.5 to 157.5, every other input as you entered it (29 solutions). Marked: your θ = 90 gives Q = 42.82 L/s. Your inputs: Cd = 0.58, theta = 90, H = 0.25 m.*
 
 ```python
 civil_engineering_ai999x.solve('v_notch_weir_discharge', Cd=0.58, theta=90.0, H=0.25)
@@ -1307,11 +1399,15 @@ $$
 
 ![Side view of a broad-crested weir with head H = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/broad-crested-weir-discharge-weir)
 
-*Side view of a broad-crested weir with head H = 0.6 m above the crest (b = 5.0 m, Cd = 0.95); head and the returned critical depth over the crest yc = 0.4 m to scale, crest height and length and the shape of the drawdown schematic. Marked: the returned discharge Q = 3.76373 m³/s.*
+*Side view of a broad-crested weir with head H = 0.6 m above the crest (b = 5 m, Cd = 0.95); head and the returned critical depth over the crest yc = 0.4 m to scale, crest height and length and the shape of the drawdown schematic. Marked: the returned discharge Q = 3.764 m³/s. Your inputs: Cd = 0.95, b = 5 m, H = 0.6 m.*
 
-![Q (discharge (m^3/s)) against H (upstream head over the crest) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/broad-crested-weir-discharge-curve)
+![Discharge as H runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/broad-crested-weir-discharge-live-1)
 
-*Q (discharge (m^3/s)) against H (upstream head over the crest) from 0.3 m to 0.9 m. One curve for each value of b (crest width): 5 m, 2.5 m, 10 m. Other inputs as in the worked example: Cd = 0.95. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, H = 0.6 m, Q = 3.76373 m^3/s.*
+*Discharge as H runs from 0.36 to 0.84 m, every other input as you entered it (41 solutions). Marked: your H = 0.6 m gives Q = 3.764. Your inputs: Cd = 0.95, b = 5 m, H = 0.6 m.*
+
+![Discharge as Cd runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/broad-crested-weir-discharge-live-2)
+
+*Discharge as Cd runs from 0.2375 to 1.154, every other input as you entered it (19 solutions). Marked: your Cd = 0.95 gives Q = 3.764. Your inputs: Cd = 0.95, b = 5 m, H = 0.6 m.*
 
 ```python
 civil_engineering_ai999x.solve('broad_crested_weir_discharge', Cd=0.95, b=5.0, H=0.6)
@@ -1358,13 +1454,17 @@ $$
 - **Assumes:** small orifice (d much smaller than h); free jet; Cd stated
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A tank discharging through a sharp-edged orifice of diameter 50 mm (Cd = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/orifice-discharge-schematic)
+![A tank discharging through a sharp-edged orifice of diameter 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/orifice-discharge-schematic)
 
-*A tank discharging through a sharp-edged orifice of diameter 50 mm (Cd = 0.61) under a head h = 3 m (head to scale; tank and jet schematic). Marked: the returned discharge Q = 9.18903 L/s, ideal jet velocity 7.67203 m/s and orifice area 19.635 cm².*
+*A tank discharging through a sharp-edged orifice of diameter 0.05 m (Cd = 0.61) under a head h = 3 m (head to scale; tank and jet schematic). Marked: the returned discharge Q = 9.189 L/s, ideal jet velocity 7.672 m/s and orifice area 19.63 cm². In SI units: Q = 0.009189 m^3/s. Your inputs: Cd = 0.61, d = 0.05 m, h = 3 m.*
 
-![Q (discharge (m^3/s)) against d (orifice diameter) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/orifice-discharge-curve)
+![Discharge as d runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/orifice-discharge-live-1)
 
-*Q (discharge (m^3/s)) against d (orifice diameter) from 0.025 m to 0.075 m. One curve for each value of h (head above the orifice centre): 3 m, 1.5 m, 6 m. Other inputs as in the worked example: Cd = 0.61. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, d = 0.05 m, Q = 0.00918903 m^3/s.*
+*Discharge as d runs from 0.03 to 0.07 m, every other input as you entered it (41 solutions). Marked: your d = 0.05 m gives Q = 9.189 L/s. Your inputs: Cd = 0.61, d = 0.05 m, h = 3 m.*
+
+![Discharge as Cd runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/orifice-discharge-live-2)
+
+*Discharge as Cd runs from 0.1525 to 0.9695, every other input as you entered it (26 solutions). Marked: your Cd = 0.61 gives Q = 9.189 L/s. Your inputs: Cd = 0.61, d = 0.05 m, h = 3 m.*
 
 ```python
 civil_engineering_ai999x.solve('orifice_discharge', Cd=0.61, d=0.05, h=3.0)
@@ -1413,9 +1513,13 @@ $$
 - **Assumes:** water near 15 C, turbulent flow; $40  \leq  C  \leq  160$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![hf (friction head loss (m)) against D (pipe diameter) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hazen-williams-head-loss-curve)
+![Friction head loss as D runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hazen-williams-head-loss-live-1)
 
-*hf (friction head loss (m)) against D (pipe diameter) from 0.15 m to 0.45 m. One curve for each value of Q (discharge): 0.05 m^3/s, 0.025 m^3/s, 0.1 m^3/s. Other inputs as in the worked example: L = 1000.0 m, C = 120.0. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, D = 0.3 m, hf = 2.06456 m.*
+*Friction head loss as D runs from 0.18 to 0.42 m, every other input as you entered it (41 solutions). Marked: your D = 0.3 m gives hf = 2.065. Your inputs: Q = 0.05 m^3/s, D = 0.3 m, L = 1000 m, C = 120.*
+
+![Friction head loss as Q runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hazen-williams-head-loss-live-2)
+
+*Friction head loss as Q runs from 0.03 to 0.07 m^3/s, every other input as you entered it (29 solutions). Marked: your Q = 0.05 m^3/s gives hf = 2.065. Your inputs: Q = 0.05 m^3/s, D = 0.3 m, L = 1000 m, C = 120.*
 
 ```python
 civil_engineering_ai999x.solve('hazen_williams_head_loss', Q=0.05, D=0.3, L=1000.0, C=120.0)
@@ -1463,9 +1567,13 @@ $$
 - **Assumes:** $40  \leq  C  \leq  160$; $hf > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q (discharge (m^3/s)) against L (pipe length) from 750 m to 2250 m](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hazen-williams-flow-curve)
+![Discharge as D runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hazen-williams-flow-live-1)
 
-*Q (discharge (m^3/s)) against L (pipe length) from 750 m to 2250 m. One curve for each value of D (pipe diameter): 0.3 m, 0.15 m, 0.6 m. Other inputs as in the worked example: hf = 5.0 m, C = 110.0. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, L = 1500 m, Q = 0.0593637 m^3/s.*
+*Discharge as D runs from 0.18 to 0.42 m, every other input as you entered it (41 solutions). Marked: your D = 0.3 m gives Q = 59.36 L/s. Your inputs: hf = 5 m, D = 0.3 m, L = 1500 m, C = 110.*
+
+![Discharge as C runs from 45](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hazen-williams-flow-live-2)
+
+*Discharge as C runs from 45.18 to 157.1, every other input as you entered it (20 solutions). Marked: your C = 110 gives Q = 59.36 L/s. Your inputs: hf = 5 m, D = 0.3 m, L = 1500 m, C = 110.*
 
 ```python
 civil_engineering_ai999x.solve('hazen_williams_flow', hf=5.0, D=0.3, L=1500.0, C=110.0)
@@ -1512,13 +1620,17 @@ $$
 - **Assumes:** the same head loss across every pipe; $40  \leq  C  \leq  160$; lists of equal length
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Pipes in parallel between A and B sharing a total flow Q = 300 L/s (lengths [800, 1200] m, diameters [300, 400] mm, Hazen–Williams C [120, 110]); layout schematic](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/parallel-pipes-hazen-williams-network)
+![Pipes in parallel between A and B sharing a total flow Q = 300 L/s (lengths [800, 1200] m, diameters [300, 400] mm, Hazen-Williams C [120, 110]); layout schematic](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/parallel-pipes-hazen-williams-network)
 
-*Pipes in parallel between A and B sharing a total flow Q = 300 L/s (lengths [800, 1200] m, diameters [300, 400] mm, Hazen–Williams C [120, 110]); layout schematic. Marked: the returned split 116.759, 183.241 L/s and the common head loss 7.94407 m.*
+*Pipes in parallel between A and B sharing a total flow Q = 300 L/s (lengths [800, 1200] m, diameters [300, 400] mm, Hazen-Williams C [120, 110]); layout schematic. Marked: the returned split 116.8, 183.2 L/s and the common head loss 7.944 m. Your inputs: Q = 0.3 m^3/s, L = 800, 1200, D = 300, 400, C = 120, 110.*
 
-![hf (head loss between the junctions (m)) against Q (total flow) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/parallel-pipes-hazen-williams-curve)
+![Head loss between the junctions as Q runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/parallel-pipes-hazen-williams-live-1)
 
-*hf (head loss between the junctions (m)) against Q (total flow) from 0.15 m^3/s to 0.45 m^3/s. Other inputs as in the worked example: L = [800, 1200], D = [300, 400], C = [120, 110]. 31 points computed by civil-engineering-ai999x; marked: the worked example, Q = 0.3 m^3/s, hf = 7.94407 m.*
+*Head loss between the junctions as Q runs from 0.18 to 0.42 m^3/s, every other input as you entered it (41 solutions). Marked: your Q = 0.3 m^3/s gives hf = 7.944. Your inputs: Q = 0.3 m^3/s, L = 800, 1200, D = 300, 400, C = 120, 110.*
+
+![Every entry of flows as computed for your inputs (2 entries: 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/parallel-pipes-hazen-williams-live-2)
+
+*Every entry of flows as computed for your inputs (2 entries: 0.1168, 0.1832). Your inputs: Q = 0.3 m^3/s, L = 800, 1200, D = 300, 400, C = 120, 110.*
 
 ```python
 civil_engineering_ai999x.solve('parallel_pipes_hazen_williams', Q=0.3, L=[800, 1200], D=[300, 400], C=[120, 110])
@@ -1568,17 +1680,21 @@ $$
 - **Assumes:** one source (node 1); connected network; $40  \leq  C  \leq  160$; demands >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A looped pipe network (5 pipes, 2 loops; lengths [600, 500, 600, 500, 780] m, diameters [300, 250, 200, 250, 200] mm, Hazen–Williams C = 120) balanced by the Hardy Cross method in 14 iterations: arrows show the direction and size of each pipe flow returned by the package (L/s, a negative value flows against the stated pipe direction: 1→2: 71](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/hardy-cross-network-network.svg)
+![A looped pipe network (5 pipes, 2 loops; lengths [600, 500, 600, 500, 780] m, diameters [300, 250, 200, 250, 200] mm) balanced by the Hardy Cross method in 14 iterations: arrows show the direction and size of each pipe flow returned by the model (L/s, a negative value flows against the stated pipe direction: 1→2: 71](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/hardy-cross-network-network.svg)
 
-*A looped pipe network (5 pipes, 2 loops; lengths [600, 500, 600, 500, 780] m, diameters [300, 250, 200, 250, 200] mm, Hazen–Williams C = 120) balanced by the Hardy Cross method in 14 iterations: arrows show the direction and size of each pipe flow returned by the package (L/s, a negative value flows against the stated pipe direction: 1→2: 71.44, 2→3: 33.1344, 3→4: -16.8656, 4→1: -48.56, 2→4: -1.6944); boxes give each node's demand. The node positions are a layout, not to scale.*
+*A looped pipe network (5 pipes, 2 loops; lengths [600, 500, 600, 500, 780] m, diameters [300, 250, 200, 250, 200] mm) balanced by the Hardy Cross method in 14 iterations: arrows show the direction and size of each pipe flow returned by the model (L/s, a negative value flows against the stated pipe direction: 1→2: 71.44, 2→3: 33.13, 3→4: -16.87, 4→1: -48.56, 2→4: -1.694); boxes give each node's demand. The node positions are a layout, not to scale. In SI units: flows = [0.07144, 0.03313, -0.01687, -0.04856, -0.001694] m³/s. Your inputs: pipes = 1-2, 2-3, 3-4, 4-1, 2-4, L = 600, 500, 600, 500, 780, D = 300, 250, 200, 250, 200, C = 120, 120, 120, 120, 120, demands = 0, 0.04, 0.05, 0.03.*
 
-![flow in each pipe, positive from its first to its second node (m^3/s) (flows) returned by civil-engineering-ai999x for the worked example, one value for each position in the list (5 values, first 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hardy-cross-network-series)
+![Hardy Cross sweeps before the Newton finish as demands[2] runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hardy-cross-network-live-1)
 
-*flow in each pipe, positive from its first to its second node (m^3/s) (flows) returned by civil-engineering-ai999x for the worked example, one value for each position in the list (5 values, first 0.07144 m^3/s, last -0.0016944 m^3/s, largest 0.07144 m^3/s). Inputs: pipes = 1-2, 2-3, 3-4, 4-1, 2-4, L = [600, 500, 600, 500, 780], D = [300, 250, 200, 250, 200], C = [120, 120, 120, 120, 120], demands = [0, 0.04, 0.05, 0.03].*
+*Hardy Cross sweeps before the Newton finish as demands[2] runs from 0.01 to 0.07, every other input as you entered it (41 solutions). Marked: your demands[2] = 0.04 gives iterations = 14. Your inputs: pipes = 1-2, 2-3, 3-4, 4-1, 2-4, L = 600, 500, 600, 500, 780, D = 300, 250, 200, 250, 200, C = 120, 120, 120, 120, 120, demands = 0, 0.04, 0.05, 0.03.*
 
-![The network pipes (pipes as node pairs 1-2, 2-3, ](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hardy-cross-network-graph)
+![The 5 edges as given, drawn with the nodes on a circle](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hardy-cross-network-live-2)
 
-*The network pipes (pipes as node pairs 1-2, 2-3, ... (the flow sign follows this direction)) of the worked example (4 nodes, 5 edges, laid out on a circle). Returned: loops = 2, iterations = 14. Other inputs: L = [600, 500, 600, 500, 780], D = [300, 250, 200, 250, 200], C = [120, 120, 120, 120, 120], demands = [0, 0.04, 0.05, 0.03].*
+*The 5 edges as given, drawn with the nodes on a circle. Under each node: its head_loss. Your inputs: pipes = 1-2, 2-3, 3-4, 4-1, 2-4, L = 600, 500, 600, 500, 780, D = 300, 250, 200, 250, 200, C = 120, 120, 120, 120, 120, demands = 0, 0.04, 0.05, 0.03.*
+
+![Every entry of flows as computed for your inputs (5 entries: 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/hardy-cross-network-live-3)
+
+*Every entry of flows as computed for your inputs (5 entries: 0.07144, 0.03313, -0.01687, -0.04856, -0.001694). Your inputs: pipes = 1-2, 2-3, 3-4, 4-1, 2-4, L = 600, 500, 600, 500, 780, D = 300, 250, 200, 250, 200, C = 120, 120, 120, 120, 120, demands = 0, 0.04, 0.05, 0.03.*
 
 ```python
 civil_engineering_ai999x.solve('hardy_cross_network', pipes='1-2, 2-3, 3-4, 4-1, 2-4', L=[600, 500, 600, 500, 780], D=[300, 250, 200, 250, 200], C=[120, 120, 120, 120, 120], demands=[0, 0.04, 0.05, 0.03])
@@ -1625,9 +1741,13 @@ $$
 - **Assumes:** no demand at the junction; $40  \leq  C  \leq  160$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Three reservoirs with water levels [120, 90, 40] m joined at a junction J by pipes of lengths [2000, 1500, 2500] m and diameters [400, 300, 350] mm (Hazen–Williams C = [120, 120, 120]); elevations to scale, layout schematic](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/three-reservoir-problem-network)
+![Three reservoirs with water levels [120, 90, 40] m joined at a junction J by pipes of lengths [2000, 1500, 2500] m and diameters [400, 300, 350] mm (Hazen-Williams C = [120, 120, 120]); elevations to scale, layout schematic](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/three-reservoir-problem-network)
 
-*Three reservoirs with water levels [120, 90, 40] m joined at a junction J by pipes of lengths [2000, 1500, 2500] m and diameters [400, 300, 350] mm (Hazen–Williams C = [120, 120, 120]); elevations to scale, layout schematic. Marked: the returned piezometric head at the junction 91.9468 m and the pipe flows 299.838, -38.9149, -260.924 L/s (positive towards the junction).*
+*Three reservoirs with water levels [120, 90, 40] m joined at a junction J by pipes of lengths [2000, 1500, 2500] m and diameters [400, 300, 350] mm (Hazen-Williams C = [120, 120, 120]); elevations to scale, layout schematic. Marked: the returned piezometric head at the junction 91.95 m and the pipe flows 299.8, -38.91, -260.9 L/s (positive towards the junction). Your inputs: z = 120, 90, 40, L = 2000, 1500, 2500, D = 400, 300, 350, C = 120, 120, 120.*
+
+![Every entry of flows as computed for your inputs (3 entries: 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/three-reservoir-problem-live-1)
+
+*Every entry of flows as computed for your inputs (3 entries: 0.2998, -0.03891, -0.2609). Your inputs: z = 120, 90, 40, L = 2000, 1500, 2500, D = 400, 300, 350, C = 120, 120, 120.*
 
 ```python
 civil_engineering_ai999x.solve('three_reservoir_problem', z=[120, 90, 40], L=[2000, 1500, 2500], D=[400, 300, 350], C=[120, 120, 120])
@@ -1675,13 +1795,17 @@ $$
 - **Assumes:** $30  \leq  CN  \leq  100$; rainfall depth in mm; $0  \leq  \lambda  \leq  0.3$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q (runoff depth (mm)) against P (storm rainfall depth) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/scs-curve-number-runoff-curve)
+![Q (runoff depth, mm) over P (storm rainfall depth) from 10 mm to 1 m (logarithmic axis) and CN (curve number) from 30 to 100](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/scs-curve-number-runoff-field)
 
-*Q (runoff depth (mm)) against P (storm rainfall depth) from 0.01 m to 1 m on a logarithmic axis. One curve for each value of CN (curve number (30 to 100)): 80, 40. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, P = 0.1 m, Q = 50.5391.*
+*Q (runoff depth, mm) over P (storm rainfall depth) from 10 mm to 1 m (logarithmic axis) and CN (curve number) from 30 to 100. Each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0 to dark 1000); iso-lines at Q = 200, 400, 600, 800. Marked: the given point, Q = 50.54. Your inputs: P = 0.1 m, CN = 80.*
 
-![Q (runoff depth (mm)) over P (storm rainfall depth) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/scs-curve-number-runoff-field)
+![Runoff depth as CN runs from 32 to 98, every other input as you entered it (23 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/scs-curve-number-runoff-live-1)
 
-*Q (runoff depth (mm)) over P (storm rainfall depth) from 0.01 m to 1 m and CN (curve number (30 to 100)) from 40 to 120 (logarithmic horizontal axis): each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 0 to dark 991.091); iso-lines at Q = 200, 400, 600, 800; blank cells: inputs the capability refuses. Marked: the worked example, P = 0.1 m, CN = 80, Q = 50.5391.*
+*Runoff depth as CN runs from 32 to 98, every other input as you entered it (23 solutions). Marked: your CN = 80 gives Q = 50.54. Your inputs: P = 0.1 m, CN = 80.*
+
+![Runoff depth as P runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/scs-curve-number-runoff-live-2)
+
+*Runoff depth as P runs from 0.06 to 0.14 m, every other input as you entered it (29 solutions). Marked: your P = 0.1 m gives Q = 50.54. Your inputs: P = 0.1 m, CN = 80.*
 
 ```python
 civil_engineering_ai999x.solve('scs_curve_number_runoff', P=0.1, CN=80.0)
@@ -1730,9 +1854,17 @@ $$
 - **Assumes:** excess depths and the unit hydrograph share one period; linear, time-invariant catchment
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![direct runoff ordinates (m^3/s) (DRO) returned by civil-engineering-ai999x for the worked example, one value for each position in the list (9 values, first 0 m^3/s, last 0 m^3/s, largest 118 m^3/s); with total (total flow ordinates (m^3/s))](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/unit-hydrograph-convolution-series)
+![Peak total flow as excess[2] runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/unit-hydrograph-convolution-live-1)
 
-*direct runoff ordinates (m^3/s) (DRO) returned by civil-engineering-ai999x for the worked example, one value for each position in the list (9 values, first 0 m^3/s, last 0 m^3/s, largest 118 m^3/s); with total (total flow ordinates (m^3/s)). Inputs: excess = [1.5, 2.5, 1.0], uh = [0, 10, 30, 22, 12, 5, 0].*
+*Peak total flow as excess[2] runs from 0.625 to 4.375, every other input as you entered it (37 solutions). Marked: your excess[2] = 2.5 gives peak = 118. Your inputs: excess = 1.5, 2.5, 1, uh = 0, 10, 30, 22, 12, 5, 0.*
+
+![Every entry of DRO as computed for your inputs (9 entries: 0, 15, 70, 118, 103, 59](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/unit-hydrograph-convolution-live-2)
+
+*Every entry of DRO as computed for your inputs (9 entries: 0, 15, 70, 118, 103, 59.5, 24.5, 5, ...). Your inputs: excess = 1.5, 2.5, 1, uh = 0, 10, 30, 22, 12, 5, 0.*
+
+![Peak total flow as uh[3] runs from 10 to 50, every other input as you entered it (21 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/unit-hydrograph-convolution-live-3)
+
+*Peak total flow as uh[3] runs from 10 to 50, every other input as you entered it (21 solutions). Marked: your uh[3] = 30 gives peak = 118. Your inputs: excess = 1.5, 2.5, 1, uh = 0, 10, 30, 22, 12, 5, 0.*
 
 ```python
 civil_engineering_ai999x.solve('unit_hydrograph_convolution', excess=[1.5, 2.5, 1.0], uh=[0, 10, 30, 22, 12, 5, 0])
@@ -1778,9 +1910,17 @@ $$
 - **Assumes:** len(dro) >= len(excess) + 1; the same period for both
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![unit-hydrograph ordinates (m^3/s per cm) (uh) returned by civil-engineering-ai999x for the worked example, one value for each position in the list (7 values, first -0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/unit-hydrograph-derivation-series)
+![RMS misfit of the reconstructed runoff as dro[3] runs from 30 to 92, every other input as you entered it (33 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/unit-hydrograph-derivation-live-1)
 
-*unit-hydrograph ordinates (m^3/s per cm) (uh) returned by civil-engineering-ai999x for the worked example, one value for each position in the list (7 values, first -0.502835 m^3/s, last 1.55034 m^3/s, largest 25.6537 m^3/s). Inputs: dro = [0, 15, 61, 77, 52, 29, 11, 3], excess = [1.5, 2.0].*
+*RMS misfit of the reconstructed runoff as dro[3] runs from 30 to 92, every other input as you entered it (33 solutions). Marked: your dro[3] = 61 gives rms_residual = 0.4011. Your inputs: dro = 0, 15, 61, 77, 52, 29, 11, 3, excess = 1.5, 2.*
+
+![Every entry of uh as computed for your inputs (7 entries: -0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/unit-hydrograph-derivation-live-2)
+
+*Every entry of uh as computed for your inputs (7 entries: -0.5028, 11.05, 25.65, 17.34, 11.39, 4.27, 1.55). Your inputs: dro = 0, 15, 61, 77, 52, 29, 11, 3, excess = 1.5, 2.*
+
+![RMS misfit of the reconstructed runoff as dro[4] runs from 38 to 116, every other input as you entered it (27 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/unit-hydrograph-derivation-live-3)
+
+*RMS misfit of the reconstructed runoff as dro[4] runs from 38 to 116, every other input as you entered it (27 solutions). Marked: your dro[4] = 77 gives rms_residual = 0.4011. Your inputs: dro = 0, 15, 61, 77, 52, 29, 11, 3, excess = 1.5, 2.*
 
 ```python
 civil_engineering_ai999x.solve('unit_hydrograph_derivation', dro=[0, 15, 61, 77, 52, 29, 11, 3], excess=[1.5, 2.0])
@@ -1831,9 +1971,13 @@ $$
 - **Assumes:** distinct gauge locations; simple (non-self-intersecting) boundary polygon
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Thiessen polygons of 3 rain gauges (at x = [2, 8, 5], y = [2, 3, 9], rainfall [45, 60, 38] mm) inside the catchment boundary (x = [0, 10, 10, 0], y = [0, 0, 10, 10]); each polygon is the boundary clipped by the perpendicular bisectors to the other gauges, and its area agrees with the area the package returned](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiessen-polygon-rainfall-map)
+![Thiessen polygons of 3 rain gauges (at x = [2, 8, 5], y = [2, 3, 9], rainfall [45, 60, 38] mm) inside the catchment boundary (x = [0, 10, 10, 0], y = [0, 0, 10, 10]); each polygon is the boundary cut by the perpendicular bisectors to the other gauges, drawn only because its area agrees with the area the model returned](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiessen-polygon-rainfall-map)
 
-*Thiessen polygons of 3 rain gauges (at x = [2, 8, 5], y = [2, 3, 9], rainfall [45, 60, 38] mm) inside the catchment boundary (x = [0, 10, 10, 0], y = [0, 0, 10, 10]); each polygon is the boundary clipped by the perpendicular bisectors to the other gauges, and its area agrees with the area the package returned. Marked: areas 29.6651, 32.5609, 37.774, weights, the returned Thiessen mean 47.24 mm and arithmetic mean 47.6667 mm.*
+*Thiessen polygons of 3 rain gauges (at x = [2, 8, 5], y = [2, 3, 9], rainfall [45, 60, 38] mm) inside the catchment boundary (x = [0, 10, 10, 0], y = [0, 0, 10, 10]); each polygon is the boundary cut by the perpendicular bisectors to the other gauges, drawn only because its area agrees with the area the model returned. Marked: areas 29.67, 32.56, 37.77, the returned Thiessen mean 47.24 mm and arithmetic mean 47.67 mm. Your inputs: gx = 2, 8, 5, gy = 2, 3, 9, rain = 45, 60, 38, bx = 0, 10, 10, 0, by = 0, 0, 10, 10.*
+
+![Every entry of areas as computed for your inputs (3 entries: 29](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiessen-polygon-rainfall-live-1)
+
+*Every entry of areas as computed for your inputs (3 entries: 29.67, 32.56, 37.77). Your inputs: gx = 2, 8, 5, gy = 2, 3, 9, rain = 45, 60, 38, bx = 0, 10, 10, 0, by = 0, 0, 10, 10.*
 
 ```python
 civil_engineering_ai999x.solve('thiessen_polygon_rainfall', gx=[2, 8, 5], gy=[2, 3, 9], rain=[45, 60, 38], bx=[0, 10, 10, 0], by=[0, 0, 10, 10])
@@ -1879,13 +2023,17 @@ $$
 - **Assumes:** $T > 1$ year; independent years
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![risk (probability of at least one exceedance in n years) against n (design life or period (whole years)) from 1 to 100 on a logarithmic axis](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/flood-exceedance-risk-curve)
+![risk (probability of at least one exceedance in n years) over T (return period (years)) from 10 to 1000 and n (design life, whole years) from 1 to 100 (logarithmic axes where marked)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/flood-exceedance-risk-field)
 
-*risk (probability of at least one exceedance in n years) against n (design life or period (whole years)) from 1 to 100 on a logarithmic axis. One curve for each value of T (return period (years)): 100, 50, 200. 30 points per curve computed by civil-engineering-ai999x; marked: the worked example, n = 50, risk = 0.394994.*
+*risk (probability of at least one exceedance in n years) over T (return period (years)) from 10 to 1000 and n (design life, whole years) from 1 to 100 (logarithmic axes where marked). Each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0.001 to dark 1, logarithmic shading); iso-lines at risk = 0.01, 0.1. Marked: the given point, risk = 0.395. Your inputs: T = 100, n = 50.*
 
-![risk (probability of at least one exceedance in n years) over T (return period (years)) from 10 to 1000 and n (design life or period (whole years)) from 1 to 100 (logarithmic axes): each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/flood-exceedance-risk-field)
+![Probability of at least one exceedance in n](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/flood-exceedance-risk-live-1)
 
-*risk (probability of at least one exceedance in n years) over T (return period (years)) from 10 to 1000 and n (design life or period (whole years)) from 1 to 100 (logarithmic axes): each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 0.001 to dark 0.999973); iso-lines at risk = 0.2, 0.4, 0.6, 0.8. Marked: the worked example, T = 100, n = 50, risk = 0.394994.*
+*Probability of at least one exceedance in n... as T runs from 25 to 175, every other input as you entered it (41 solutions). Marked: your T = 100 gives risk = 0.395. Your inputs: T = 100, n = 50.*
+
+![Probability of at least one exceedance in n](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/flood-exceedance-risk-live-2)
+
+*Probability of at least one exceedance in n... as n runs from 30 to 70, every other input as you entered it (21 solutions). Marked: your n = 50 gives risk = 0.395. Your inputs: T = 100, n = 50.*
 
 ```python
 civil_engineering_ai999x.solve('flood_exceedance_risk', T=100.0, n=50)
@@ -1931,13 +2079,17 @@ $$
 - **Assumes:** $0 < R < 1$; independent years
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![T (required return period (years)) against R (acceptable risk of exceedance (fraction, or % in a question)) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/design-return-period-for-risk-curve)
-
-*T (required return period (years)) against R (acceptable risk of exceedance (fraction, or % in a question)) from 0.02 to 0.98. One curve for each value of n (design life (whole years)): 50, 25, 100. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, R = 0.1, T = 475.061.*
-
 ![T (required return period (years)) over R (acceptable risk of exceedance (fraction, or % in a question)) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/design-return-period-for-risk-field)
 
-*T (required return period (years)) over R (acceptable risk of exceedance (fraction, or % in a question)) from 0.02 to 0.98 and n (design life (whole years)) from 1 to 100 (logarithmic vertical axis): each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 1.02041 to dark 4950.33, logarithmic shading); iso-lines at T = 10, 100, 1000. Marked: the worked example, R = 0.1, n = 50, T = 475.061.*
+*T (required return period (years)) over R (acceptable risk of exceedance (fraction, or % in a question)) from 0.02 to 0.98 and n (design life, whole years) from 1 to 100 (logarithmic axes where marked). Each of the 21 × 15 cells is one solve of the model, shaded by its value (light 1.02 to dark 4950, logarithmic shading); iso-lines at T = 10, 100, 1000. Marked: the given point, T = 475.1. Your inputs: R = 0.1, n = 50.*
+
+![Required return period as R runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/design-return-period-for-risk-live-1)
+
+*Required return period as R runs from 0.025 to 0.175, every other input as you entered it (41 solutions). Marked: your R = 0.1 gives T = 475.1. Your inputs: R = 0.1, n = 50.*
+
+![Required return period as n runs from 30 to 70, every other input as you entered it (21 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/design-return-period-for-risk-live-2)
+
+*Required return period as n runs from 30 to 70, every other input as you entered it (21 solutions). Marked: your n = 50 gives T = 475.1. Your inputs: R = 0.1, n = 50.*
 
 ```python
 civil_engineering_ai999x.solve('design_return_period_for_risk', R=0.1, n=50)
@@ -1985,9 +2137,13 @@ $$
 - **Assumes:** at least five annual maxima; $T > 1$ year; method of moments (no sample-size correction table)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q_T (T-year flood (m^3/s)) against T (return period (years)) from 10 to 1000 on a logarithmic axis](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/gumbel-design-flood-curve)
+![T-year flood as peaks[5] runs from 320 to 960, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/gumbel-design-flood-live-1)
 
-*Q_T (T-year flood (m^3/s)) against T (return period (years)) from 10 to 1000 on a logarithmic axis. Other inputs as in the worked example: peaks = [420, 380, 510, 290, 640, 455, 370, 520, 600…. 41 points computed by civil-engineering-ai999x; marked: the worked example, T = 100, Q_T = 812.637 m^3/s.*
+*T-year flood as peaks[5] runs from 320 to 960, every other input as you entered it (41 solutions). Marked: your peaks[5] = 640 gives Q_T = 812.6. Your inputs: peaks = 420, 380, 510, 290, 640..., T = 100.*
+
+![T-year flood as peaks[3] runs from 255 to 759, every other input as you entered it (30 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/gumbel-design-flood-live-2)
+
+*T-year flood as peaks[3] runs from 255 to 759, every other input as you entered it (30 solutions). Marked: your peaks[3] = 510 gives Q_T = 812.6. Your inputs: peaks = 420, 380, 510, 290, 640..., T = 100.*
 
 ```python
 civil_engineering_ai999x.solve('gumbel_design_flood', peaks=[420, 380, 510, 290, 640, 455, 370, 520, 600, 330], T=100.0)
@@ -2035,9 +2191,13 @@ $$
 - **Assumes:** at least ten annual maxima; station skew only; no outlier screening
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q_T (T-year flood (m^3/s)) against T (return period (years)) from 10 to 1000 on a logarithmic axis](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/log-pearson-iii-design-flood-curve)
+![T-year flood as peaks[4] runs from 145 to 433, every other input as you entered it (38 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/log-pearson-iii-design-flood-live-1)
 
-*Q_T (T-year flood (m^3/s)) against T (return period (years)) from 10 to 1000 on a logarithmic axis. Other inputs as in the worked example: peaks = [420, 380, 510, 290, 640, 455, 370, 520, 600…. 41 points computed by civil-engineering-ai999x; marked: the worked example, T = 100, Q_T = 1083.77 m^3/s.*
+*T-year flood as peaks[4] runs from 145 to 433, every other input as you entered it (38 solutions). Marked: your peaks[4] = 290 gives Q_T = 1084. Your inputs: peaks = 420, 380, 510, 290, 640..., T = 100.*
+
+![T-year flood as peaks[2] runs from 190 to 568, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/log-pearson-iii-design-flood-live-2)
+
+*T-year flood as peaks[2] runs from 190 to 568, every other input as you entered it (29 solutions). Marked: your peaks[2] = 380 gives Q_T = 1084. Your inputs: peaks = 420, 380, 510, 290, 640..., T = 100.*
 
 ```python
 civil_engineering_ai999x.solve('log_pearson_iii_design_flood', peaks=[420, 380, 510, 290, 640, 455, 370, 520, 600, 330, 880, 410], T=100.0)
@@ -2082,9 +2242,21 @@ $$
 - **Assumes:** annual series; ties keep distinct ranks
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Annual peaks [420, 380, 510, 290, 640] ranked from the largest and plotted at the return periods the package returned (Weibull, T = (n + 1)/m): T = 6, 3, 2, 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/weibull-plotting-positions-frequency)
+![Annual peaks [420, 380, 510, 290, 640] ranked from the largest and plotted at the return periods the model returned (Weibull, T = (n + 1)/m): T = 6, 3, 2, 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/weibull-plotting-positions-frequency)
 
-*Annual peaks [420, 380, 510, 290, 640] ranked from the largest and plotted at the return periods the package returned (Weibull, T = (n + 1)/m): T = 6, 3, 2, 1.5, 1.2 years, exceedance probabilities 0.166667, 0.333333, 0.5, 0.666667, 0.833333.*
+*Annual peaks [420, 380, 510, 290, 640] ranked from the largest and plotted at the return periods the model returned (Weibull, T = (n + 1)/m): T = 6, 3, 2, 1.5, 1.2 years, exceedance probabilities 0.1667, 0.3333, 0.5, 0.6667, 0.8333. Your inputs: peaks = 420, 380, 510, 290, 640.*
+
+![Ranked[1], ranked[2] and ranked[3] as peaks[5] runs from 320 to 960, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/weibull-plotting-positions-live-1)
+
+*Ranked[1], ranked[2] and ranked[3] as peaks[5] runs from 320 to 960, every other input as you entered it (41 solutions). Marked: your peaks[5] = 640 gives ranked[1] = 640. Your inputs: peaks = 420, 380, 510, 290, 640.*
+
+![The computed T plotted against P (5 points, from your inputs)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/weibull-plotting-positions-live-2)
+
+*The computed T plotted against P (5 points, from your inputs). Your inputs: peaks = 420, 380, 510, 290, 640.*
+
+![Ranked[1], ranked[2] and ranked[3] as peaks[1] runs from 210 to 630, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/weibull-plotting-positions-live-3)
+
+*Ranked[1], ranked[2] and ranked[3] as peaks[1] runs from 210 to 630, every other input as you entered it (29 solutions). Marked: your peaks[1] = 420 gives ranked[1] = 640. Your inputs: peaks = 420, 380, 510, 290, 640.*
 
 ```python
 civil_engineering_ai999x.solve('weibull_plotting_positions', peaks=[420, 380, 510, 290, 640])
@@ -2128,6 +2300,10 @@ $$
 - **Method:** NSE = 1 - sum(obs - sim)^2/sum(obs - mean obs)^2
 - **Assumes:** paired series of equal length; observed values not all equal
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The answer for your inputs: NSE (Nash-Sutcliffe efficiency) = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/nash-sutcliffe-efficiency-live-1)
+
+*The answer for your inputs: NSE (Nash-Sutcliffe efficiency) = 0.9542. Your inputs: obs = 12, 30, 55, 41, 22, 15, sim = 10, 34, 50, 44, 20, 17.*
 
 ```python
 civil_engineering_ai999x.solve('nash_sutcliffe_efficiency', obs=[12, 30, 55, 41, 22, 15], sim=[10, 34, 50, 44, 20, 17])
@@ -2173,6 +2349,10 @@ $$
 - **Method:** $KGE = 1 - \sqrt{\left($r - 1$\right)^{2} + \left(\alpha - 1\right)^{2} + \left(\beta - 1\right)^{2}}$
 - **Assumes:** paired series of equal length; both series vary
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The answer for your inputs: KGE (Kling-Gupta efficiency) = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/kling-gupta-efficiency-live-1)
+
+*The answer for your inputs: KGE (Kling-Gupta efficiency) = 0.9627. Your inputs: obs = 12, 30, 55, 41, 22, 15, sim = 10, 34, 50, 44, 20, 17.*
 
 ```python
 civil_engineering_ai999x.solve('kling_gupta_efficiency', obs=[12, 30, 55, 41, 22, 15], sim=[10, 34, 50, 44, 20, 17])
@@ -2221,9 +2401,13 @@ $$
 - **Assumes:** $0  \leq  fc < f_{0}$; ponded surface from $t = 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f (infiltration capacity at t (m/s)) against k (Horton decay constant) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/horton-infiltration-curve)
+![Infiltration capacity at t as fc runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/horton-infiltration-live-1)
 
-*f (infiltration capacity at t (m/s)) against k (Horton decay constant) from 0.000111111 to 0.0111111 on a logarithmic axis. One curve for each value of fc (final (constant) infiltration capacity): 2.7778e-06 m/s, 1.3889e-06 m/s, 5.5556e-06 m/s. Other inputs as in the worked example: f0 = 2.0833333333333333e-05 m/s, t = 3600.0 s. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, k = 0.00111111, f = 3.1085e-06 m/s.*
+*Infiltration capacity at t as fc runs from 1.667e-06 to 3.889e-06 m/s, every other input as you entered it (41 solutions). Marked: your fc = 2.778e-06 m/s gives f = 3.108e-06. Your inputs: f0 = 2.0833333333333333e-05 m/s, fc = 2.7777777777777775e-06 m/s, k = 0.0011111111111111111, t = 3600 s.*
+
+![Infiltration capacity at t as k runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/horton-infiltration-live-2)
+
+*Infiltration capacity at t as k runs from 0.0002778 to 0.001944, every other input as you entered it (29 solutions). Marked: your k = 0.001111 gives f = 3.108e-06. Your inputs: f0 = 2.0833333333333333e-05 m/s, fc = 2.7777777777777775e-06 m/s, k = 0.0011111111111111111, t = 3600 s.*
 
 ```python
 civil_engineering_ai999x.solve('horton_infiltration', f0=2.0833333333333333e-05, fc=2.7777777777777775e-06, k=0.0011111111111111111, t=3600.0)
@@ -2241,7 +2425,7 @@ civil_engineering_ai999x.solve('horton_infiltration', f0=1.3888888888888888e-05,
 |---|---|---|
 | Horton infiltration with initial rate = 75 mm/h, final rate = 10 mm/h, decay constant = 4 1/h and time = 1 h. | SOLVED | f = 3.10848e-06 m/s, F = 0.0259524 m, f_mm_h = 11.1905, F_mm = 25.9524 |
 | Horton infiltration with initial rate = 50 mm/h, final rate = 6 mm/h, decay constant = 2.5 1/h and time = 0.5 h. | SOLVED | f = 5.16839e-06 m/s, F = 0.0155575 m, f_mm_h = 18.6062, F_mm = 15.5575 |
-| Horton infiltration with initial rate = 75 mm/h, final rate = 10 mm/h and decay constant = 4 1/h. | NEEDS_INPUT | horton_infiltration needs t (time since ponding began). Example: solve('horton_infiltration', f0='2.08333e-05 m/s', fc=' |
+| Horton infiltration with initial rate = 75 mm/h, final rate = 10 mm/h and decay constant = 4 1/h. | NEEDS_INPUT | horton_infiltration needs t (time since ponding began). Example: solve('horton_infiltration', f0='2.0833333333333333e-05 |
 | Horton infiltration with initial rate = 75 mm/h, final rate = 10 mm/h, decay constant = 4 1/h and time = 1 h and colour = 3. | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: civil_engineering_ai999x.template |
 | Horton infiltration with initial rate = 10 mm/h, final rate = 75 mm/h, decay constant = 4 1/h and time = 1 h. | INVALID_INPUT | Horton infiltration rate and cumulative infiltration: need 0 <= fc < f0. |
 
@@ -2273,9 +2457,13 @@ $$
 - **Assumes:** ponded surface from $t = 0$; homogeneous soil, sharp wetting front
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![F (cumulative infiltration (m)) against K (saturated hydraulic conductivity) from 3](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/green-ampt-infiltration-curve)
+![Cumulative infiltration as K runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/green-ampt-infiltration-live-1)
 
-*F (cumulative infiltration (m)) against K (saturated hydraulic conductivity) from 3.0278e-07 m/s to 3.0278e-05 m/s on a logarithmic axis. One curve for each value of t (time since ponding began): 3600 s, 1800 s, 7200 s. Other inputs as in the worked example: psi = 0.1101 m, dtheta = 0.247. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, K = 3.0278e-06 m/s, F = 0.0320967 m.*
+*Cumulative infiltration as K runs from 1.817e-06 to 4.239e-06 m/s, every other input as you entered it (41 solutions). Marked: your K = 3.028e-06 m/s gives F = 32.1 mm. Your inputs: K = 3.0277777777777776e-06 m/s, psi = 0.1101 m, dtheta = 0.247, t = 3600 s.*
+
+![Cumulative infiltration as t runs from 2160 to 5040 s, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/green-ampt-infiltration-live-2)
+
+*Cumulative infiltration as t runs from 2160 to 5040 s, every other input as you entered it (29 solutions). Marked: your t = 3600 s gives F = 32.1 mm. Your inputs: K = 3.0277777777777776e-06 m/s, psi = 0.1101 m, dtheta = 0.247, t = 3600 s.*
 
 ```python
 civil_engineering_ai999x.solve('green_ampt_infiltration', K=3.0277777777777776e-06, psi=0.1101, dtheta=0.247, t=3600.0)
@@ -2293,7 +2481,7 @@ civil_engineering_ai999x.solve('green_ampt_infiltration', K=9.444444444444443e-0
 |---|---|---|
 | Green ampt infiltration with hydraulic conductivity = 10.9 mm/h, suction head = 110.1 mm, moisture deficit = 0.247 and time = 1 h. | SOLVED | F = 0.0320967 m, f = 5.59314e-06 m/s, F_mm = 32.0967, f_mm_h = 20.1353 |
 | Green ampt infiltration with hydraulic conductivity = 3.4 mm/h, suction head = 166.8 mm, moisture deficit = 0.34 and time = 2 h. | SOLVED | F = 0.0324786 m, f = 2.59357e-06 m/s, F_mm = 32.4786, f_mm_h = 9.33685 |
-| Green ampt infiltration with hydraulic conductivity = 10.9 mm/h, suction head = 110.1 mm and moisture deficit = 0.247. | NEEDS_INPUT | green_ampt_infiltration needs t (time since ponding began). Example: solve('green_ampt_infiltration', K='3.02778e-06 m/s |
+| Green ampt infiltration with hydraulic conductivity = 10.9 mm/h, suction head = 110.1 mm and moisture deficit = 0.247. | NEEDS_INPUT | green_ampt_infiltration needs t (time since ponding began). Example: solve('green_ampt_infiltration', K='3.0277777777777 |
 | Green ampt infiltration with hydraulic conductivity = 10.9 mm/h, suction head = 110.1 mm, moisture deficit = 0.247 and time = 1 h and colour = 3. | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: civil_engineering_ai999x.template |
 
 <a id="phi_index"></a>
@@ -2324,11 +2512,19 @@ $$
 
 ![Hyetograph of a storm (rain [4, 9, 18, 12, 3, 1] mm per interval of 1 h) and the returned φ-index 6](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/phi-index-hyetograph)
 
-*Hyetograph of a storm (rain [4, 9, 18, 12, 3, 1] mm per interval of 1 h) and the returned φ-index 6.33333 mm/h: the constant loss that leaves the observed runoff of 0.02 mm. Marked: the returned excess rainfall of each interval (0, 2.66667, 11.6667, 5.66667, 0, 0 mm), from 3 contributing intervals.*
+*Hyetograph of a storm (rain [4, 9, 18, 12, 3, 1] mm per interval of 1 h) and the returned φ-index 6.333 mm/h: the constant loss that leaves the observed runoff of 20 mm. Marked: the returned excess rainfall of each interval (0, 2.667, 11.67, 5.667, 0, 0 mm), from 3 contributing intervals. Your inputs: rain = 4, 9, 18, 12, 3, 1, dt = 3600 s, R = 0.02 m.*
 
-![phi (phi-index (mm/h)) against dt (duration of one interval) from 1800 s to 5400 s](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/phi-index-curve)
+![Phi-index as R runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/phi-index-live-1)
 
-*phi (phi-index (mm/h)) against dt (duration of one interval) from 1800 s to 5400 s. One curve for each value of R (observed direct runoff depth): 0.02 m, 0.01 m, 0.04 m. Other inputs as in the worked example: rain = [4, 9, 18, 12, 3, 1]. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, dt = 3600 s, phi = 6.33333.*
+*Phi-index as R runs from 0.012 to 0.028 m, every other input as you entered it (35 solutions). Marked: your R = 0.02 m gives φ = 6.333. Your inputs: rain = 4, 9, 18, 12, 3, 1, dt = 3600 s, R = 0.02 m.*
+
+![Every entry of excess as computed for your inputs (6 entries: 0, 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/phi-index-live-2)
+
+*Every entry of excess as computed for your inputs (6 entries: 0, 2.667, 11.67, 5.667, 0, 0). Your inputs: rain = 4, 9, 18, 12, 3, 1, dt = 3600 s, R = 0.02 m.*
+
+![Phi-index as dt runs from 2160 to 5040 s, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/phi-index-live-3)
+
+*Phi-index as dt runs from 2160 to 5040 s, every other input as you entered it (29 solutions). Marked: your dt = 3600 s gives φ = 6.333. Your inputs: rain = 4, 9, 18, 12, 3, 1, dt = 3600 s, R = 0.02 m.*
 
 ```python
 civil_engineering_ai999x.solve('phi_index', rain=[4, 9, 18, 12, 3, 1], dt=3600.0, R=0.02)
@@ -2380,17 +2576,21 @@ $$
 - **Assumes:** $0  \leq  X  \leq  0.5$; 2 K $X  \leq  dt  \leq  2$ K $(1 - X)$ (no negative coefficient)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A flood wave routed through a river reach by the Muskingum method (K = 12 h, X = 0](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/muskingum-routing-hydrograph.svg)
+![A flood wave routed through a river reach by the Muskingum method (K = 12 h, X = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/muskingum-routing-hydrograph)
 
-*A flood wave routed through a river reach by the Muskingum method (K = 12 h, X = 0.2, Δt = 6 h; C0 = 0.047619, C1 = 0.428571, C2 = 0.52381): inflow per interval as bars, the outflow returned by the package as stems, lower and later; peak inflow 68 m³/s, marked: peak outflow t = 24 h, Q = 45.836 m³/s (attenuation 22.164 m³/s).*
+*A flood wave routed through a river reach by the Muskingum method (K = 12 h, X = 0.2, Δt = 6 h; C0 = 0.04762, C1 = 0.4286, C2 = 0.5238): inflow per interval as bars, the outflow returned by the model as stems, lower and later; peak inflow 68 m³/s, marked: peak outflow at t = 24 h, Q = 45.84 m³/s (attenuation 22.16 m³/s). Your inputs: inflow = 10, 30, 68, 50, 40, 31..., K = 43200 s, X = 0.2, dt = 21600 s.*
 
-![outflow ordinates (m^3/s) (outflow) returned by civil-engineering-ai999x for the worked example, one value for each position in the list (9 values, first 10 m^3/s, last 22](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/muskingum-routing-series)
+![Coefficient C0 as K runs from 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/muskingum-routing-live-1)
 
-*outflow ordinates (m^3/s) (outflow) returned by civil-engineering-ai999x for the worked example, one value for each position in the list (9 values, first 10 m^3/s, last 22.5146 m^3/s, largest 45.836 m^3/s). Inputs: inflow = [10, 30, 68, 50, 40, 31, 23, 15, 10], K = 43200.0 s, X = 0.2, dt = 21600.0 s.*
+*Coefficient C0 as K runs from 2.592e+04 to 5.357e+04 s, every other input as you entered it (30 solutions). Marked: your K = 4.32e+04 s gives C0 = 0.04762. Your inputs: inflow = 10, 30, 68, 50, 40, 31..., K = 43200 s, X = 0.2, dt = 21600 s.*
 
-![C0 (coefficient C0) against K (storage (travel-time) constant) from 21600 s to 64800 s](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/muskingum-routing-curve)
+![Every entry of outflow as computed for your inputs (9 entries: 10, 10](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/muskingum-routing-live-2)
 
-*C0 (coefficient C0) against K (storage (travel-time) constant) from 21600 s to 64800 s. One curve for each value of dt (routing interval): 21600 s, 43200 s. Other inputs as in the worked example: inflow = [10, 30, 68, 50, 40, 31, 23, 15, 10], X = 0.2. 23 points per curve computed by civil-engineering-ai999x; marked: the worked example, K = 43200 s, C0 = 0.047619.*
+*Every entry of outflow as computed for your inputs (9 entries: 10, 10.95, 21.83, 42.96, 45.84, 42.63, 36.71, 29.8, ...). Your inputs: inflow = 10, 30, 68, 50, 40, 31..., K = 43200 s, X = 0.2, dt = 21600 s.*
+
+![Coefficient C0 as dt runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/muskingum-routing-live-3)
+
+*Coefficient C0 as dt runs from 1.728e+04 to 3.024e+04 s, every other input as you entered it (22 solutions). Marked: your dt = 2.16e+04 s gives C0 = 0.04762. Your inputs: inflow = 10, 30, 68, 50, 40, 31..., K = 43200 s, X = 0.2, dt = 21600 s.*
 
 ```python
 civil_engineering_ai999x.solve('muskingum_routing', inflow=[10, 30, 68, 50, 40, 31, 23, 15, 10], K=43200.0, X=0.2, dt=21600.0)
@@ -2441,13 +2641,17 @@ $$
 - **Assumes:** steady, saturated, laminar flow; flow perpendicular to the layers
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q (flow rate (m^3/s)) against A (flow cross-section area) from 5 m^2 to 15 m^2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/darcy-flow-layered-soil-curve)
+![Q (flow rate (m^3/s)) over A (flow cross-section area) from 5 m² to 15 m² and dh (head difference across all layers) from 250 mm to 750 mm: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 6](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/darcy-flow-layered-soil-field)
 
-*Q (flow rate (m^3/s)) against A (flow cross-section area) from 5 m^2 to 15 m^2. One curve for each value of dh (head difference across all layers): 0.5 m, 0.25 m, 1 m. Other inputs as in the worked example: H = [2.0], K = [1e-05]. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, A = 10 m^2, Q = 2.5000e-05 m^3/s.*
+*Q (flow rate (m^3/s)) over A (flow cross-section area) from 5 m² to 15 m² and dh (head difference across all layers) from 250 mm to 750 mm: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 6.25e-06 m³/s to dark 5.625e-05 m³/s); iso-lines at Q = 1e-05, 2e-05, 3e-05, 4e-05, 5e-05. Marked: the given point, A = 10 m², dh = 500 mm, Q = 2.5e-05 m³/s. Your inputs: H = 2, K = 1e-05, A = 10 m^2, dh = 0.5 m.*
 
-![Q (flow rate (m^3/s)) over A (flow cross-section area) from 5 m^2 to 15 m^2 and dh (head difference across all layers) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/darcy-flow-layered-soil-field)
+![Flow rate as H[1] runs from 1 to 6, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/darcy-flow-layered-soil-live-1)
 
-*Q (flow rate (m^3/s)) over A (flow cross-section area) from 5 m^2 to 15 m^2 and dh (head difference across all layers) from 0.25 m to 0.75 m: each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 6.2500e-06 m^3/s to dark 5.6250e-05 m^3/s); iso-lines at Q = 1.00e-5, 2.00e-5, 3.00e-5, 4.00e-5, 5.00e-5 m^3/s. Other inputs as in the worked example: H = [2.0], K = [1e-05]. Marked: the worked example, A = 10 m^2, dh = 0.5 m, Q = 2.5000e-05 m^3/s.*
+*Flow rate as H[1] runs from 1 to 6, every other input as you entered it (6 solutions). Marked: your H[1] = 2 gives Q = 1.5 L/min. Your inputs: H = 2, K = 1e-05, A = 10 m^2, dh = 0.5 m.*
+
+![Flow rate as A runs from 6 to 14 m^2, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/darcy-flow-layered-soil-live-2)
+
+*Flow rate as A runs from 6 to 14 m^2, every other input as you entered it (29 solutions). Marked: your A = 10 m^2 gives Q = 1.5 L/min. Your inputs: H = 2, K = 1e-05, A = 10 m^2, dh = 0.5 m.*
 
 ```python
 civil_engineering_ai999x.solve('darcy_flow_layered_soil', H=[2.0], K=[1e-05], A=10.0, dh=0.5)
@@ -2496,9 +2700,13 @@ $$
 - **Assumes:** $h_{2} < h_{1}$; saturated sample, laminar flow
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![K (hydraulic conductivity (m/s)) against D (sample diameter) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/falling-head-permeability-curve)
+![Hydraulic conductivity as h2 runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/falling-head-permeability-live-1)
 
-*K (hydraulic conductivity (m/s)) against D (sample diameter) from 0.0375 m to 0.1125 m. One curve for each value of d (standpipe diameter): 0.01 m, 0.005 m, 0.02 m. Other inputs as in the worked example: L = 0.15 m, h1 = 1.0 m, h2 = 0.6 m, t = 600.0 s. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, D = 0.075 m, K = 2.2703e-06 m/s.*
+*Hydraulic conductivity as h2 runs from 0.36 to 0.84 m, every other input as you entered it (41 solutions). Marked: your h2 = 0.6 m gives K = 2.27e-06. Your inputs: d = 0.01 m, D = 0.075 m, L = 0.15 m, h1 = 1 m, h2 = 0.6 m, t = 600 s.*
+
+![Hydraulic conductivity as d runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/falling-head-permeability-live-2)
+
+*Hydraulic conductivity as d runs from 0.006 to 0.014 m, every other input as you entered it (29 solutions). Marked: your d = 0.01 m gives K = 2.27e-06. Your inputs: d = 0.01 m, D = 0.075 m, L = 0.15 m, h1 = 1 m, h2 = 0.6 m, t = 600 s.*
 
 ```python
 civil_engineering_ai999x.solve('falling_head_permeability', d=0.01, D=0.075, L=0.15, h1=1.0, h2=0.6, t=600.0)
@@ -2551,11 +2759,15 @@ $$
 
 ![Steady radial flow to a well pumping Q = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiem-confined-transmissivity-profile)
 
-*Steady radial flow to a well pumping Q = 0.0289352 m³/s, observed at r1 = 15 m and r2 = 60 m (drawdowns 2.8 m and 1.1 m, the observation points marked). The cone through them is the Thiem relation with the returned transmissivity: T = 324.5 m²/day (T = 0.00375537 m²/s); drawn on both sides of the well.*
+*Steady radial flow to a well pumping Q = 0.02894 m³/s, observed at r1 = 15 m and r2 = 60 m (drawdowns 2.8 m and 1.1 m, the observation points marked). Each point of the cone is the drawdown that, put in place of one observation, makes the model return the same transmissivity (T = 324.5 m²/day); drawn on both sides of the well. In SI units: T = 0.003755 m^2/s. Your inputs: Q = 0.028935185185185185 m^3/s, r1 = 15 m, r2 = 60 m, s1 = 2.8 m, s2 = 1.1 m.*
 
-![T (transmissivity (m^2/s)) against s1 (drawdown at r1) from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiem-confined-transmissivity-curve)
+![Transmissivity as s1 runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiem-confined-transmissivity-live-1)
 
-*T (transmissivity (m^2/s)) against s1 (drawdown at r1) from 1.4 m to 4.2 m. One curve for each value of Q (pumping rate): 0.0289352 m^3/s, 0.0144676 m^3/s, 0.0578704 m^3/s. Other inputs as in the worked example: r1 = 15.0 m, r2 = 60.0 m, s2 = 1.1 m. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, s1 = 2.8 m, T = 0.00375537 m^2/s.*
+*Transmissivity as s1 runs from 1.68 to 3.92 m, every other input as you entered it (41 solutions). Marked: your s1 = 2.8 m gives T = 0.003755. Your inputs: Q = 0.028935185185185185 m^3/s, r1 = 15 m, r2 = 60 m, s1 = 2.8 m, s2 = 1.1 m.*
+
+![Transmissivity as Q runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiem-confined-transmissivity-live-2)
+
+*Transmissivity as Q runs from 0.01736 to 0.04051 m^3/s, every other input as you entered it (29 solutions). Marked: your Q = 0.02894 m^3/s gives T = 0.003755. Your inputs: Q = 0.028935185185185185 m^3/s, r1 = 15 m, r2 = 60 m, s1 = 2.8 m, s2 = 1.1 m.*
 
 ```python
 civil_engineering_ai999x.solve('thiem_confined_transmissivity', Q=0.028935185185185185, r1=15.0, r2=60.0, s1=2.8, s2=1.1)
@@ -2573,7 +2785,7 @@ civil_engineering_ai999x.solve('thiem_confined_transmissivity', Q=0.013888888888
 |---|---|---|
 | Thiem confined transmissivity with pumping rate = 2500 m^3/d, first distance = 15 m, second distance = 60 m, first drawdown = 2.8 m and second drawdown = 1.1 m. | SOLVED | T = 0.00375537 m^2/s, T_m2_d = 324.464 |
 | Thiem confined transmissivity with pumping rate = 1200 m^3/d, first distance = 10 m, second distance = 100 m, first drawdown = 4.2 m, second drawdown = 0.9 m and aquifer thickness = 20 m. | SOLVED | T = 0.00154237 m^2/s, T_m2_d = 133.261, K = 7.71186e-05 m/s |
-| Thiem confined transmissivity with pumping rate = 2500 m^3/d, first distance = 15 m, second distance = 60 m and first drawdown = 2.8 m. | NEEDS_INPUT | thiem_confined_transmissivity needs s2 (drawdown at r2). Example: solve('thiem_confined_transmissivity', Q='0.0289352 m^ |
+| Thiem confined transmissivity with pumping rate = 2500 m^3/d, first distance = 15 m, second distance = 60 m and first drawdown = 2.8 m. | NEEDS_INPUT | thiem_confined_transmissivity needs s2 (drawdown at r2). Example: solve('thiem_confined_transmissivity', Q='0.0289351851 |
 | Thiem confined transmissivity with pumping rate = 2500 m^3/d, first distance = 15 m, second distance = 60 m, first drawdown = 2.8 m and second drawdown = 1.1 m and colour = 3. | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: civil_engineering_ai999x.template |
 | Thiem confined transmissivity with pumping rate = 2500 m^3/d, first distance = 60 m, second distance = 15 m, first drawdown = 2.8 m and second drawdown = 1.1 m. | INVALID_INPUT | Transmissivity from steady pumping (Thiem, confined aquifer): the second observation well must be farther from the pumpe |
 
@@ -2606,11 +2818,15 @@ $$
 
 ![Steady radial flow to a well pumping Q = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiem-unconfined-conductivity-profile)
 
-*Steady radial flow to a well pumping Q = 0.0173611 m³/s, observed at r1 = 20 m and r2 = 80 m (water-table heights 18.2 m and 19.6 m, the observation points marked). The cone through them is the Thiem relation with the returned hydraulic conductivity: K = 12.51 m/day (K = 0.000144765 m/s); drawn on both sides of the well.*
+*Steady radial flow to a well pumping Q = 0.01736 m³/s, observed at r1 = 20 m and r2 = 80 m (water-table heights 18.2 m and 19.6 m, the observation points marked). Each point of the cone is the water-table height that, put in place of one observation, makes the model return the same hydraulic conductivity (K = 12.51 m/day); drawn on both sides of the well. In SI units: K = 0.0001448 m/s. Your inputs: Q = 0.017361111111111112 m^3/s, r1 = 20 m, r2 = 80 m, h1 = 18.2 m, h2 = 19.6 m.*
 
-![K (hydraulic conductivity (m/s)) against h2 (saturated thickness at r2) from 9](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiem-unconfined-conductivity-curve)
+![Hydraulic conductivity as h2 runs from 18](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiem-unconfined-conductivity-live-1)
 
-*K (hydraulic conductivity (m/s)) against h2 (saturated thickness at r2) from 9.8 m to 29.4 m. One curve for each value of Q (pumping rate): 0.0173611 m^3/s, 0.00868056 m^3/s, 0.0347222 m^3/s. Other inputs as in the worked example: r1 = 20.0 m, r2 = 80.0 m, h1 = 18.2 m. 18 points per curve computed by civil-engineering-ai999x; marked: the worked example, h2 = 19.6 m, K = 0.000144765 m/s.*
+*Hydraulic conductivity as h2 runs from 18.42 to 27.44 m, every other input as you entered it (24 solutions). Marked: your h2 = 19.6 m gives K = 0.0001448. Your inputs: Q = 0.017361111111111112 m^3/s, r1 = 20 m, r2 = 80 m, h1 = 18.2 m, h2 = 19.6 m.*
+
+![Hydraulic conductivity as h1 runs from 10](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thiem-unconfined-conductivity-live-2)
+
+*Hydraulic conductivity as h1 runs from 10.92 to 19.24 m, every other input as you entered it (17 solutions). Marked: your h1 = 18.2 m gives K = 0.0001448. Your inputs: Q = 0.017361111111111112 m^3/s, r1 = 20 m, r2 = 80 m, h1 = 18.2 m, h2 = 19.6 m.*
 
 ```python
 civil_engineering_ai999x.solve('thiem_unconfined_conductivity', Q=0.017361111111111112, r1=20.0, r2=80.0, h1=18.2, h2=19.6)
@@ -2659,13 +2875,17 @@ $$
 - **Assumes:** confined, homogeneous, infinite aquifer; fully penetrating well, constant rate; $u  \leq  50$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Drawdown cone around a well pumping Q = 2500 m³/d from a confined aquifer (T = 500 m²/d, S = 0](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/theis-drawdown-profile.svg)
+![Drawdown cone round a well pumping Q = 0](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/theis-drawdown-profile.svg)
 
-*Drawdown cone around a well pumping Q = 2500 m³/d from a confined aquifer (T = 500 m²/d, S = 0.0002) after 1, 10 and 100 days, drawdown computed by the package at 41 distances from 5 m to 1 km (shown on both sides of the well): 4.90277 m at r = 5 m after 1 d; 5.81894 m at r = 5 m after 10 d; 6.73511 m at r = 5 m after 100 d. Marked: r = 100 m, t = 1 d, s = 2.51924 m.*
+*Drawdown cone round a well pumping Q = 0.02894 m³/s from a confined aquifer (T = 0.005787 m²/s, S = 0.0002) at the given time and 10 and 100 times it, drawdown solved by the model at 25 distances from 5 m to 1 km (shown on both sides of the well). Marked: r = 100 m, t = 8.64e+04 s, s = 2.519 m. Your inputs: Q = 0.028935185185185185 m^3/s, T = 0.005787037037037037 m^2/s, S = 0.0002, r = 100 m, t = 86400 s.*
 
-![s (drawdown (m)) against T (transmissivity) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/theis-drawdown-curve)
+![Drawdown as r runs from 60 to 140 m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/theis-drawdown-live-1)
 
-*s (drawdown (m)) against T (transmissivity) from 0.00289352 m^2/s to 0.00868056 m^2/s. One curve for each value of Q (pumping rate): 0.0289352 m^3/s, 0.0144676 m^3/s, 0.0578704 m^3/s. Other inputs as in the worked example: S = 0.0002, r = 100.0 m, t = 86400.0 s. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, T = 0.00578704 m^2/s, s = 2.51924 m.*
+*Drawdown as r runs from 60 to 140 m, every other input as you entered it (41 solutions). Marked: your r = 100 m gives s = 2.519. Your inputs: Q = 0.028935185185185185 m^3/s, T = 0.005787037037037037 m^2/s, S = 0.0002, r = 100 m, t = 86400 s.*
+
+![Drawdown as Q runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/theis-drawdown-live-2)
+
+*Drawdown as Q runs from 0.01736 to 0.04051 m^3/s, every other input as you entered it (29 solutions). Marked: your Q = 0.02894 m^3/s gives s = 2.519. Your inputs: Q = 0.028935185185185185 m^3/s, T = 0.005787037037037037 m^2/s, S = 0.0002, r = 100 m, t = 86400 s.*
 
 ```python
 civil_engineering_ai999x.solve('theis_drawdown', Q=0.028935185185185185, T=0.005787037037037037, S=0.0002, r=100.0, t=86400.0)
@@ -2683,7 +2903,7 @@ civil_engineering_ai999x.solve('theis_drawdown', Q=0.011574074074074073, T=0.001
 |---|---|---|
 | Theis drawdown with pumping rate = 2500 m^3/d, transmissivity = 500 m^2/d, storativity = 0.0002, distance = 100 m and time = 24 h. | SOLVED | s = 2.51924 m, u = 0.001, W = 6.33154 |
 | Theis drawdown with pumping rate = 1000 m^3/d, transmissivity = 150 m^2/d, storativity = 0.001, distance = 60 m and time = 3 h. | SOLVED | s = 1.32988 m, u = 0.048, W = 2.50677 |
-| Theis drawdown with pumping rate = 2500 m^3/d, transmissivity = 500 m^2/d, storativity = 0.0002 and distance = 100 m. | NEEDS_INPUT | theis_drawdown needs t (time since pumping began). Example: solve('theis_drawdown', Q='0.0289352 m^3/s', T='0.00578704 m |
+| Theis drawdown with pumping rate = 2500 m^3/d, transmissivity = 500 m^2/d, storativity = 0.0002 and distance = 100 m. | NEEDS_INPUT | theis_drawdown needs t (time since pumping began). Example: solve('theis_drawdown', Q='0.028935185185185185 m^3/s', T='0 |
 | Theis drawdown with pumping rate = 2500 m^3/d, transmissivity = 500 m^2/d, storativity = 0.0002, distance = 100 m and time = 24 h and colour = 3. | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: civil_engineering_ai999x.template |
 
 <a id="cooper_jacob_analysis"></a>
@@ -2715,13 +2935,17 @@ $$
 - **Assumes:** late-time data on the straight line $(u < 0.05)$; confined aquifer
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Cooper–Jacob analysis of a pumping test (Q = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/cooper-jacob-analysis-fit)
+![Cooper-Jacob analysis of a pumping test (Q = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/cooper-jacob-analysis-fit)
 
-*Cooper–Jacob analysis of a pumping test (Q = 0.0231481 m³/s, observation well at r = 50.0 m): drawdowns [0.62, 0.79, 1.02, 1.19, 1.36, 1.59] m at [10, 20, 50, 100, 200, 500] min on a semi-log plot, and the straight line with the returned slope 0.570634 m per log cycle and zero-drawdown intercept t0 = 0.821137 min. Marked: the returned transmissivity 642.327 m²/day (0.00743434 m²/s) and storativity 0.000329649.*
+*Cooper-Jacob analysis of a pumping test (Q = 0.02315 m³/s, observation well at r = 50 m): drawdowns [0.62, 0.79, 1.02, 1.19, 1.36, 1.59] m at [10, 20, 50, 100, 200, 500] min on a semi-log plot, and the straight line with the returned slope 0.5706 m per log cycle and zero-drawdown intercept t0 = 0.8211 min. Returned: transmissivity 642.3 m²/day, storativity 0.0003296. In SI units: T = 0.007434 m^2/s. Your inputs: times = 10, 20, 50, 100, 200, 500, drawdowns = 0.62, 0.79, 1.02, 1.19..., Q = 0.023148148148148147 m^3/s, r = 50 m.*
 
-![T (transmissivity (m^2/s)) against Q (pumping rate) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/cooper-jacob-analysis-curve)
+![Storativity as r runs from 30 to 70 m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/cooper-jacob-analysis-live-1)
 
-*T (transmissivity (m^2/s)) against Q (pumping rate) from 0.0115741 m^3/s to 0.0347222 m^3/s. Other inputs as in the worked example: times = [10, 20, 50, 100, 200, 500], drawdowns = [0.62, 0.79, 1.02, 1.19, 1.36, 1.59], r = 50.0 m. 31 points computed by civil-engineering-ai999x; marked: the worked example, Q = 0.0231481 m^3/s, T = 0.00743434 m^2/s.*
+*Storativity as r runs from 30 to 70 m, every other input as you entered it (41 solutions). Marked: your r = 50 m gives S = 0.0003296. Your inputs: times = 10, 20, 50, 100, 200, 500, drawdowns = 0.62, 0.79, 1.02, 1.19..., Q = 0.023148148148148147 m^3/s, r = 50 m.*
+
+![Transmissivity as Q runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/cooper-jacob-analysis-live-2)
+
+*Transmissivity as Q runs from 0.01389 to 0.03241 m^3/s, every other input as you entered it (29 solutions). Marked: your Q = 0.02315 m^3/s gives T = 0.007434. Your inputs: times = 10, 20, 50, 100, 200, 500, drawdowns = 0.62, 0.79, 1.02, 1.19..., Q = 0.023148148148148147 m^3/s, r = 50 m.*
 
 ```python
 civil_engineering_ai999x.solve('cooper_jacob_analysis', times=[10, 20, 50, 100, 200, 500], drawdowns=[0.62, 0.79, 1.02, 1.19, 1.36, 1.59], Q=0.023148148148148147, r=50.0)
@@ -2772,13 +2996,21 @@ $$
 - **Assumes:** confined, homogeneous, infinite aquifer; all wells started together; point at least 5 cm from any well
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Drawdown around 2 pumped wells (at x = [0, 200], y = [0, 0] m, pumping [2000, 1500] m³/day; T = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/well-field-drawdown-map)
+![Drawdown round 2 pumped wells (at x = [0, 200], y = [0, 0] m, pumping [2000, 1500] m³/day) by superposition, over x from -67](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/well-field-drawdown-map)
 
-*Drawdown around 2 pumped wells (at x = [0, 200], y = [0, 0] m, pumping [2000, 1500] m³/day; T = 0.00462963 m²/s, S = 0.0003, after t = 432000 s) by superposition: the drawdown in 330 cells, each computed by the package, shaded from 3.97017 m to 6.54059 m. Marked: the returned drawdown s = 4.93588 m at (100, 50) m, the sum of the wells' parts 2.8205, 2.11538 m.*
+*Drawdown round 2 pumped wells (at x = [0, 200], y = [0, 0] m, pumping [2000, 1500] m³/day) by superposition, over x from -67.4 to 272.6 m and y from -66.6 to 123.4 m. At the given point the model returns s = 4.936 m, the sum of the wells' parts 2.821, 2.115. Each of the 21 × 15 cells is one solve of the model, shaded by its value (light 4.006 m to dark 8.08 m); iso-lines at s = 5, 6, 7, 8. Marked: the given point, s = 4.936 m. Your inputs: wx = 0, 200, wy = 0, 0, Qs = 2000, 1500, T = 0.004629629629629629 m^2/s, S = 0.0003, t = 432000 s, x0 = 100 m, y0 = 50 m.*
 
-![s (total drawdown (m)) against x0 (x coordinate of the point) from 10 m to 1000 m on a logarithmic axis](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/well-field-drawdown-curve)
+![Total drawdown as T runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/well-field-drawdown-live-1)
 
-*s (total drawdown (m)) against x0 (x coordinate of the point) from 10 m to 1000 m on a logarithmic axis. One curve for each value of T (transmissivity): 0.00462963 m^2/s, 0.00231481 m^2/s, 0.00925926 m^2/s. Other inputs as in the worked example: wx = [0, 200], wy = [0, 0], Qs = [2000, 1500], S = 0.0003, t = 432000.0 s, y0 = 50.0 m. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, x0 = 100 m, s = 4.93588 m.*
+*Total drawdown as T runs from 0.001157 to 0.008102 m^2/s, every other input as you entered it (41 solutions). Marked: your T = 0.00463 m^2/s gives s = 4.936. Your inputs: wx = 0, 200, wy = 0, 0, Qs = 2000, 1500, T = 0.004629629629629629 m^2/s, S = 0.0003, t = 432000 s, x0 = 100 m, y0 = 50 m.*
+
+![Every entry of parts as computed for your inputs (2 entries: 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/well-field-drawdown-live-2)
+
+*Every entry of parts as computed for your inputs (2 entries: 2.821, 2.115). Your inputs: wx = 0, 200, wy = 0, 0, Qs = 2000, 1500, T = 0.004629629629629629 m^2/s, S = 0.0003, t = 432000 s, x0 = 100 m, y0 = 50 m.*
+
+![Total drawdown as t runs from 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/well-field-drawdown-live-3)
+
+*Total drawdown as t runs from 2.592e+05 to 6.048e+05 s, every other input as you entered it (29 solutions). Marked: your t = 4.32e+05 s gives s = 4.936. Your inputs: wx = 0, 200, wy = 0, 0, Qs = 2000, 1500, T = 0.004629629629629629 m^2/s, S = 0.0003, t = 432000 s, x0 = 100 m, y0 = 50 m.*
 
 ```python
 civil_engineering_ai999x.solve('well_field_drawdown', wx=[0, 200], wy=[0, 0], Qs=[2000, 1500], T=0.004629629629629629, S=0.0003, t=432000.0, x0=100.0, y0=50.0)
@@ -2828,9 +3060,13 @@ $$
 - **Assumes:** steady, unconfined, homogeneous aquifer on a horizontal base; Dupuit assumptions; $W > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![q0 (flow per unit width at x = 0 (m^2/s, positive toward x = L)) against h1 (head at x = 0 (above the impermeable base)) from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/dupuit-flow-with-recharge-curve)
+![Q0 and qL as h1 runs from 7](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/dupuit-flow-with-recharge-live-1)
 
-*q0 (flow per unit width at x = 0 (m^2/s, positive toward x = L)) against h1 (head at x = 0 (above the impermeable base)) from 1.2 m to 120 m on a logarithmic axis. Outputs with the same unit drawn together: qL (flow per unit width at x = L (m^2/s)). Other inputs as in the worked example: K = 0.00011574074074074073 m/s, h2 = 9.0 m, L = 600.0 m, W = 9.506426344208684e-09 m/s. 41 points computed by civil-engineering-ai999x; marked: the worked example, h1 = 12 m, q0 = 3.2245e-06 m^2/s.*
+*Q0 and qL as h1 runs from 7.2 to 16.8 m, every other input as you entered it (41 solutions). Marked: your h1 = 12 m gives q0 = 3.224e-06. Your inputs: K = 0.00011574074074074073 m/s, h1 = 12 m, h2 = 9 m, L = 600 m, W = 9.506426344208684e-09 m/s.*
+
+![Q0 and qL as h2 runs from 5](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/dupuit-flow-with-recharge-live-2)
+
+*Q0 and qL as h2 runs from 5.4 to 12.6 m, every other input as you entered it (29 solutions). Marked: your h2 = 9 m gives q0 = 3.224e-06. Your inputs: K = 0.00011574074074074073 m/s, h1 = 12 m, h2 = 9 m, L = 600 m, W = 9.506426344208684e-09 m/s.*
 
 ```python
 civil_engineering_ai999x.solve('dupuit_flow_with_recharge', K=0.00011574074074074073, h1=12.0, h2=9.0, L=600.0, W=9.506426344208684e-09)
@@ -2848,7 +3084,7 @@ civil_engineering_ai999x.solve('dupuit_flow_with_recharge', K=2.3148148148148147
 |---|---|---|
 | Dupuit recharge flow with hydraulic conductivity = 10 m/d, first head = 12 m, second head = 9 m, distance = 600 m and recharge = 300 mm/yr. | SOLVED | q0 = 3.22446e-06 m^2/s, qL = 8.92832e-06 m^2/s, x_divide = -339.188 m, h_max = 12 m |
 | Dupuit recharge flow with hydraulic conductivity = 2 m/d, first head = 8 m, second head = 8 m, distance = 400 m and recharge = 500 mm/yr. | SOLVED | q0 = -3.16881e-06 m^2/s, qL = 3.16881e-06 m^2/s, x_divide = 200 m, h_max = 9.55921 m |
-| Dupuit recharge flow with hydraulic conductivity = 10 m/d, first head = 12 m, second head = 9 m and distance = 600 m. | NEEDS_INPUT | dupuit_flow_with_recharge needs W (recharge rate). Example: solve('dupuit_flow_with_recharge', K='0.000115741 m/s', h1=' |
+| Dupuit recharge flow with hydraulic conductivity = 10 m/d, first head = 12 m, second head = 9 m and distance = 600 m. | NEEDS_INPUT | dupuit_flow_with_recharge needs W (recharge rate). Example: solve('dupuit_flow_with_recharge', K='0.00011574074074074073 |
 | Dupuit recharge flow with hydraulic conductivity = 10 m/d, first head = 12 m, second head = 9 m, distance = 600 m and recharge = 300 mm/yr and colour = 3. | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: civil_engineering_ai999x.template |
 
 <a id="soil_phase_relations"></a>
@@ -2882,11 +3118,15 @@ $$
 
 ![Phase diagram of a soil with Gs = 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/soil-phase-relations-diagram)
 
-*Phase diagram of a soil with Gs = 2.7, void ratio e = 0.65 and water content w = 0.18: volumes as fractions of the total, solids 1/(1 + e), water S·e/(1 + e) with the returned degree of saturation S = 0.747692, the rest air; masses relative to ρw·Vs. Marked: the returned porosity n = 0.393939 (= the void fraction), unit weights γ = 18.9422, γd = 16.0527, γsat = 19.9173, submerged 10.1073 kN/m³.*
+*Phase diagram of a soil with Gs = 2.7, void ratio e = 0.65 and water content w = 0.18: volumes as fractions of the total, solids 1/(1 + e), water S·e/(1 + e) with the returned degree of saturation S = 0.7477, the rest air; masses relative to ρw·Vs. Marked: n = 0.3939, S = 0.7477; γ = 18.94 kN/m³, γd = 16.05 kN/m³; γsat = 19.92, γ′ = 10.11 kN/m³. Your inputs: Gs = 2.7, e = 0.65, w = 0.18.*
 
-![n (porosity e/(1 + e)) against e (void ratio) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/soil-phase-relations-curve)
+![Degree of saturation w Gs/e as w runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/soil-phase-relations-live-1)
 
-*n (porosity e/(1 + e)) against e (void ratio) from 0.325 to 0.975. Other inputs as in the worked example: Gs = 2.7, w = 0.18. 23 points computed by civil-engineering-ai999x; marked: the worked example, e = 0.65, n = 0.393939.*
+*Degree of saturation w Gs/e as w runs from 0.045 to 0.234, every other input as you entered it (29 solutions). Marked: your w = 0.18 gives S = 0.7477. Your inputs: Gs = 2.7, e = 0.65, w = 0.18.*
+
+![Porosity e/(1 + e) as e runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/soil-phase-relations-live-2)
+
+*Porosity e/(1 + e) as e runs from 0.5107 to 1.137, every other input as you entered it (19 solutions). Marked: your e = 0.65 gives n = 0.3939. Your inputs: Gs = 2.7, e = 0.65, w = 0.18.*
 
 ```python
 civil_engineering_ai999x.solve('soil_phase_relations', Gs=2.7, e=0.65, w=0.18)
@@ -2942,11 +3182,15 @@ $$
 
 ![Phase diagram of a lab specimen (mass M = 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/soil-phase-from-lab-masses-diagram)
 
-*Phase diagram of a lab specimen (mass M = 1.85 kg, dry mass 1.6 kg, volume 0.001 m³, Gs = 2.7): volumes as fractions of the specimen volume, solids V/(1 + e) and water S·(V − Vs) from the returned void ratio e = 0.6875 and saturation S = 0.613636; masses as stated (water = M − Md). Marked: the returned w = 0.15625, n = 0.407407, ρ = 1850 kg/m³, ρd = 1600 kg/m³, γ = 18.1485 kN/m³, γd = 15.696 kN/m³.*
+*Phase diagram of a lab specimen (mass M = 1.85 kg, dry mass 1.6 kg, volume 0.001 m³, Gs = 2.7): volumes as fractions of the specimen volume, solids 1/(1 + e) and water S·e/(1 + e) from the returned void ratio e = 0.6875 and saturation S = 0.6136; masses as stated (water = M − Md). Marked: w = 0.1562, e = 0.6875, n = 0.4074, S = 0.6136; ρ = 1850 kg/m³, ρd = 1600 kg/m³; γ = 18.15 kN/m³, γd = 15.7 kN/m³. Your inputs: M = 1.85 kg, Md = 1.6 kg, V = 0.001 m^3, Gs = 2.7.*
 
-![w (water content) against Md (oven-dry mass of the sample) from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/soil-phase-from-lab-masses-curve)
+![Water content as M runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/soil-phase-from-lab-masses-live-1)
 
-*w (water content) against Md (oven-dry mass of the sample) from 1.44 kg to 1.76 kg. Other inputs as in the worked example: M = 1.85 kg, V = 0.001 m^3, Gs = 2.7. 31 points computed by civil-engineering-ai999x; marked: the worked example, Md = 1.6 kg, w = 0.15625.*
+*Water content as M runs from 1.609 to 1.999 kg, every other input as you entered it (34 solutions). Marked: your M = 1.85 kg gives w = 0.1562. Your inputs: M = 1.85 kg, Md = 1.6 kg, V = 0.001 m^3, Gs = 2.7.*
+
+![Water content as Md runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/soil-phase-from-lab-masses-live-2)
+
+*Water content as Md runs from 1.367 to 1.833 kg, every other input as you entered it (16 solutions). Marked: your Md = 1.6 kg gives w = 0.1562. Your inputs: M = 1.85 kg, Md = 1.6 kg, V = 0.001 m^3, Gs = 2.7.*
 
 ```python
 civil_engineering_ai999x.solve('soil_phase_from_lab_masses', M=1.85, Md=1.6, V=0.001, Gs=2.7)
@@ -2993,9 +3237,13 @@ $$
 - **Assumes:** gd_min <= gd <= gd_max
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Dr (relative density (fraction)) against gd_min (minimum dry unit weight) from 7250 N/m^3 to 21750 N/m^3](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/relative-density-from-unit-weights-curve)
+![Relative density as gd runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/relative-density-from-unit-weights-live-1)
 
-*Dr (relative density (fraction)) against gd_min (minimum dry unit weight) from 7250 N/m^3 to 21750 N/m^3. Other inputs as in the worked example: gd = 16200.0 N/m^3, gd_max = 17800.0 N/m^3. 19 points computed by civil-engineering-ai999x; marked: the worked example, gd_min = 14500 N/m^3, Dr = 0.566031.*
+*Relative density as gd runs from 1.454e+04 to 1.768e+04 N/m^3, every other input as you entered it (33 solutions). Marked: your gd = 1.62e+04 N/m^3 gives Dr = 0.566. Your inputs: gd = 16200 N/m^3, gd_min = 14500 N/m^3, gd_max = 17800 N/m^3.*
+
+![Relative density as gd_max runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/relative-density-from-unit-weights-live-2)
+
+*Relative density as gd_max runs from 1.67e+04 to 2.492e+04 N/m^3, every other input as you entered it (16 solutions). Marked: your gd_max = 1.78e+04 N/m^3 gives Dr = 0.566. Your inputs: gd = 16200 N/m^3, gd_min = 14500 N/m^3, gd_max = 17800 N/m^3.*
 
 ```python
 civil_engineering_ai999x.solve('relative_density_from_unit_weights', gd=16200.0, gd_min=14500.0, gd_max=17800.0)
@@ -3045,7 +3293,11 @@ $$
 
 ![Casagrande cup tests ([15, 22, 30, 38] blows at water contents [42](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/liquid-limit-flow-curve-fit)
 
-*Casagrande cup tests ([15, 22, 30, 38] blows at water contents [42.1, 40.3, 38.7, 37.6] %) and the flow line with the returned flow index 11.2179 % per log cycle, through the returned liquid limit LL = 39.6292 % at 25 blows; with PL = 21.0 %, the plasticity index PI = 18.6292 %.*
+*Casagrande cup tests ([15, 22, 30, 38] blows at water contents [42.1, 40.3, 38.7, 37.6] %) and the flow line (straight on a logarithmic axis of blows) with the returned flow index 11.22 % per log cycle, through the returned liquid limit LL = 39.63 % at 25 blows; with PL = 21 %, the plasticity index PI = 18.63 %. Your inputs: blows = 15, 22, 30, 38, w = 42.1, 40.3, 38.7, 37.6, PL = 21.*
+
+![Plasticity index LL - PL as PL runs from 5](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/liquid-limit-flow-curve-live-1)
+
+*Plasticity index LL - PL as PL runs from 5.25 to 36.75, every other input as you entered it (41 solutions). Marked: your PL = 21 gives PI = 18.63. Your inputs: blows = 15, 22, 30, 38, w = 42.1, 40.3, 38.7, 37.6, PL = 21.*
 
 ```python
 civil_engineering_ai999x.solve('liquid_limit_flow_curve', blows=[15, 22, 30, 38], w=[42.1, 40.3, 38.7, 37.6], PL=21.0)
@@ -3093,9 +3345,9 @@ $$
 - **Assumes:** percent passing rises strictly with size; the curve spans 10% to 60%
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Grain-size distribution from a sieve analysis (sizes [4](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/grain-size-coefficients-curve)
+![The answer for your inputs: D10 (D10 (mm)) = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/grain-size-coefficients-live-1)
 
-*Grain-size distribution from a sieve analysis (sizes [4.75, 2.0, 0.85, 0.425, 0.25, 0.15, 0.075] mm, percent passing [95, 82, 64, 43, 27, 14, 6]), on a logarithmic size axis. Marked: the returned effective sizes D10 = 0.106066 mm, D30 = 0.276153 mm, D60 = 0.744869 mm, uniformity coefficient Cu = 7.02269 and curvature coefficient Cc = 0.965255.*
+*The answer for your inputs: D10 (D10 (mm)) = 0.1061. Your inputs: sizes = 4.75, 2, 0.85, 0.425..., passing = 95, 82, 64, 43, 27, 14, 6.*
 
 ```python
 civil_engineering_ai999x.solve('grain_size_coefficients', sizes=[4.75, 2.0, 0.85, 0.425, 0.25, 0.15, 0.075], passing=[95, 82, 64, 43, 27, 14, 6])
@@ -3146,11 +3398,15 @@ $$
 
 ![Vertical stresses with depth in layered soil (layers [3, 5] m thick, unit weights [17](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/effective-stress-at-depth-profile)
 
-*Vertical stresses with depth in layered soil (layers [3, 5] m thick, unit weights [17.5, 19.5] kN/m³, water table at 3 m): total stress, pore-water pressure and effective stress at 61 depths, each computed by the package. Marked: at z = 8 m the returned σ = 150 kPa, u = 49.05 kPa, σ′ = 100.95 kPa.*
+*Vertical stresses with depth in layered soil (layers [3, 5] m thick, unit weights [17.5, 19.5] kN/m³, water table at 3 m): total stress, pore-water pressure and effective stress at 60 depths, each a solve of the model. Marked: at z = 8 m the returned σ = 150 kPa, u = 49.05 kPa, σ′ = 101 kPa. In SI units: sigma = 1.5e+05 Pa. Your inputs: H = 3, 5, gam = 17.5, 19.5, zw = 3 m, z = 8 m.*
 
-![sigma (total vertical stress (Pa)) against z (depth of the point) from 4 m to 12 m](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/effective-stress-at-depth-curve)
+![Total vertical stress as z runs from 4](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/effective-stress-at-depth-live-1)
 
-*sigma (total vertical stress (Pa)) against z (depth of the point) from 4 m to 12 m. Outputs with the same unit drawn together: u (pore-water pressure (Pa)), sigma_eff (effective vertical stress (Pa)). Other inputs as in the worked example: H = [3, 5], gam = [17.5, 19.5], zw = 3.0 m. 16 points computed by civil-engineering-ai999x; marked: the worked example, z = 8 m, sigma = 150000 Pa.*
+*Total vertical stress as z runs from 4.8 to 8 m, every other input as you entered it (21 solutions). Marked: your z = 8 m gives σ = 150 kPa. Your inputs: H = 3, 5, gam = 17.5, 19.5, zw = 3 m, z = 8 m.*
+
+![Pore-water pressure as zw runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/effective-stress-at-depth-live-2)
+
+*Pore-water pressure as zw runs from 1.8 to 4.2 m, every other input as you entered it (29 solutions). Marked: your zw = 3 m gives u = 49.05 kPa. Your inputs: H = 3, 5, gam = 17.5, 19.5, zw = 3 m, z = 8 m.*
 
 ```python
 civil_engineering_ai999x.solve('effective_stress_at_depth', H=[3, 5], gam=[17.5, 19.5], zw=3.0, z=8.0)
@@ -3200,9 +3456,13 @@ $$
 - **Assumes:** normally consolidated clay; stresses at mid-depth of the layer
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Sc (consolidation settlement (m)) against s0 (initial effective vertical stress at mid-depth) from 8000 Pa to 800000 Pa on a logarithmic axis](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/consolidation-settlement-nc-curve)
+![Consolidation settlement as e0 runs from 0](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/consolidation-settlement-nc-live-1.svg)
 
-*Sc (consolidation settlement (m)) against s0 (initial effective vertical stress at mid-depth) from 8000 Pa to 800000 Pa on a logarithmic axis. One curve for each value of Cc (compression index): 0.32, 0.16, 0.64. Other inputs as in the worked example: e0 = 0.92, H = 4.0 m, ds = 60000.0 Pa. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, s0 = 80000 Pa, Sc = 0.162025 m.*
+*Consolidation settlement as e0 runs from 0.23 to 1.61, every other input as you entered it (41 solutions). Marked: your e0 = 0.92 gives Sc = 0.162. Your inputs: Cc = 0.32, e0 = 0.92, H = 4 m, s0 = 80000 Pa, ds = 60000 Pa.*
+
+![Consolidation settlement as Cc runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/consolidation-settlement-nc-live-2)
+
+*Consolidation settlement as Cc runs from 0.08 to 0.56, every other input as you entered it (29 solutions). Marked: your Cc = 0.32 gives Sc = 0.162. Your inputs: Cc = 0.32, e0 = 0.92, H = 4 m, s0 = 80000 Pa, ds = 60000 Pa.*
 
 ```python
 civil_engineering_ai999x.solve('consolidation_settlement_nc', Cc=0.32, e0=0.92, H=4.0, s0=80000.0, ds=60000.0)
@@ -3254,9 +3514,17 @@ $$
 - **Assumes:** $Cs < Cc$; $sp  \geq  s_{0}$; stresses at mid-depth
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Sc (consolidation settlement (m)) against ds (added vertical stress at mid-depth) from 15000 Pa to 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/consolidation-settlement-oc-curve)
+![Consolidation settlement as ds runs from 9e+04 to 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/consolidation-settlement-oc-live-1)
 
-*Sc (consolidation settlement (m)) against ds (added vertical stress at mid-depth) from 15000 Pa to 1.5e+06 Pa on a logarithmic axis. One curve for each value of H (clay layer thickness): 5 m, 2.5 m, 10 m. Other inputs as in the worked example: Cc = 0.4, Cs = 0.06, e0 = 1.1, s0 = 90000.0 Pa, sp = 160000.0 Pa. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, ds = 150000 Pa, Sc = 0.203403 m.*
+*Consolidation settlement as ds runs from 9e+04 to 2.1e+05 Pa, every other input as you entered it (41 solutions). Marked: your ds = 1.5e+05 Pa gives Sc = 0.2034. Your inputs: Cc = 0.4, Cs = 0.06, e0 = 1.1, H = 5 m, s0 = 90000 Pa, ds = 150000 Pa, sp = 160000 Pa.*
+
+![Whether the load passes the preconsolidation stress for 25 5 x 5 combinations of ds and sp around your inputs (the other inputs as entered); the ring marks your inputs, which give passes the preconsolidation stress](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/consolidation-settlement-oc-live-2)
+
+*Whether the load passes the preconsolidation stress for 25 5 x 5 combinations of ds and sp around your inputs (the other inputs as entered); the ring marks your inputs, which give passes the preconsolidation stress. Blank cells admit no answer. Your inputs: Cc = 0.4, Cs = 0.06, e0 = 1.1, H = 5 m, s0 = 90000 Pa, ds = 150000 Pa, sp = 160000 Pa.*
+
+![Consolidation settlement as sp runs from 9](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/consolidation-settlement-oc-live-3)
+
+*Consolidation settlement as sp runs from 9.6e+04 to 2.24e+05 Pa, every other input as you entered it (23 solutions). Marked: your sp = 1.6e+05 Pa gives Sc = 0.2034. Your inputs: Cc = 0.4, Cs = 0.06, e0 = 1.1, H = 5 m, s0 = 90000 Pa, ds = 150000 Pa, sp = 160000 Pa.*
 
 ```python
 civil_engineering_ai999x.solve('consolidation_settlement_oc', Cc=0.4, Cs=0.06, e0=1.1, H=5.0, s0=90000.0, ds=150000.0, sp=160000.0)
@@ -3306,9 +3574,13 @@ $$
 - **Assumes:** normally consolidated clay; uniform added stress with depth; s0' = s_top + gsub z
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![S (settlement integrated over depth (m)) against H (clay layer thickness) from 1 m to 100 m on a logarithmic axis](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thick-clay-layer-settlement-curve)
+![Settlement integrated over depth as Cc runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thick-clay-layer-settlement-live-1)
 
-*S (settlement integrated over depth (m)) against H (clay layer thickness) from 1 m to 100 m on a logarithmic axis. One curve for each value of Cc (compression index): 0.45, 0.225, 0.9. Other inputs as in the worked example: s_top = 40000.0 Pa, gsub = 8000.0 N/m^3, ds = 100000.0 Pa, e0 = 1.2. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, H = 10 m, S = 0.753129 m.*
+*Settlement integrated over depth as Cc runs from 0.1125 to 0.7875, every other input as you entered it (41 solutions). Marked: your Cc = 0.45 gives S = 0.7531. Your inputs: H = 10 m, s_top = 40000 Pa, gsub = 8000 N/m^3, ds = 100000 Pa, Cc = 0.45, e0 = 1.2.*
+
+![Settlement integrated over depth as H runs from 6 to 14 m, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/thick-clay-layer-settlement-live-2)
+
+*Settlement integrated over depth as H runs from 6 to 14 m, every other input as you entered it (29 solutions). Marked: your H = 10 m gives S = 0.7531. Your inputs: H = 10 m, s_top = 40000 Pa, gsub = 8000 N/m^3, ds = 100000 Pa, Cc = 0.45, e0 = 1.2.*
 
 ```python
 civil_engineering_ai999x.solve('thick_clay_layer_settlement', H=10.0, s_top=40000.0, gsub=8000.0, ds=100000.0, Cc=0.45, e0=1.2)
@@ -3357,9 +3629,13 @@ $$
 - **Assumes:** $1e-4  \leq  Tv  \leq  5$; uniform initial excess pore pressure; Terzaghi $1-D$ theory
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Tv (time factor cv t/Hdr^2) against Hdr (drainage path length) from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/degree-of-consolidation-curve)
+![Tv as Hdr runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/degree-of-consolidation-live-1)
 
-*Tv (time factor cv t/Hdr^2) against Hdr (drainage path length) from 1.5 m to 4.5 m. One curve for each value of cv (coefficient of consolidation): 7.9220e-08 m^2/s, 3.9610e-08 m^2/s, 1.5844e-07 m^2/s. Other inputs as in the worked example: t = 31557600.0 s. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, Hdr = 3 m, Tv = 0.277778.*
+*Tv as Hdr runs from 1.8 to 4.2 m, every other input as you entered it (41 solutions). Marked: your Hdr = 3 m gives Tv = 0.2778. Your inputs: cv = 7.922021953507237e-08 m^2/s, t = 31557600 s, Hdr = 3 m.*
+
+![Tv as cv runs from 4](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/degree-of-consolidation-live-2)
+
+*Tv as cv runs from 4.753e-08 to 1.109e-07 m^2/s, every other input as you entered it (29 solutions). Marked: your cv = 7.922e-08 m^2/s gives Tv = 0.2778. Your inputs: cv = 7.922021953507237e-08 m^2/s, t = 31557600 s, Hdr = 3 m.*
 
 ```python
 civil_engineering_ai999x.solve('degree_of_consolidation', cv=7.922021953507237e-08, t=31557600.0, Hdr=3.0)
@@ -3377,7 +3653,7 @@ civil_engineering_ai999x.solve('degree_of_consolidation', cv=1.267523512561158e-
 |---|---|---|
 | Degree of consolidation with coefficient of consolidation = 2.5 m^2/yr, time = 1 yr and drainage path = 3 m. | SOLVED | Tv = 0.277778, U = 0.59137, U_percent = 59.137 |
 | Degree of consolidation with coefficient of consolidation = 4 m^2/yr, time = 0.5 yr, drainage path = 2.5 m and final settlement = 180 mm. | SOLVED | Tv = 0.32, U = 0.631895, U_percent = 63.1895, St = 0.113741 m |
-| Degree of consolidation with coefficient of consolidation = 2.5 m^2/yr and time = 1 yr. | NEEDS_INPUT | degree_of_consolidation needs Hdr (drainage path length). Example: solve('degree_of_consolidation', cv='7.92202e-08 m^2/ |
+| Degree of consolidation with coefficient of consolidation = 2.5 m^2/yr and time = 1 yr. | NEEDS_INPUT | degree_of_consolidation needs Hdr (drainage path length). Example: solve('degree_of_consolidation', cv='7.92202195350723 |
 | Degree of consolidation with coefficient of consolidation = 2.5 m^2/yr, time = 1 yr and drainage path = 3 m and colour = 3. | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: civil_engineering_ai999x.template |
 
 <a id="consolidation_time"></a>
@@ -3406,9 +3682,13 @@ $$
 - **Assumes:** 1% <= $U  \leq  99$%; Terzaghi $1-D$ theory
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Tv (time factor) against U (average degree of consolidation (fraction, or % in a question)) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/consolidation-time-curve)
+![Time factor as U runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/consolidation-time-live-1)
 
-*Tv (time factor) against U (average degree of consolidation (fraction, or % in a question)) from 0.02 to 0.98. Other inputs as in the worked example: cv = 9.506426344208684e-08 m^2/s, Hdr = 2.5 m. 41 points computed by civil-engineering-ai999x; marked: the worked example, U = 0.9, Tv = 0.848085.*
+*Time factor as U runs from 0.225 to 0.9675, every other input as you entered it (23 solutions). Marked: your U = 0.9 gives Tv = 0.8481. Your inputs: cv = 9.506426344208684e-08 m^2/s, Hdr = 2.5 m, U = 0.9.*
+
+![Time as Hdr runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/consolidation-time-live-2)
+
+*Time as Hdr runs from 1.5 to 3.5 m, every other input as you entered it (29 solutions). Marked: your Hdr = 2.5 m gives t = 1.767 yr. Your inputs: cv = 9.506426344208684e-08 m^2/s, Hdr = 2.5 m, U = 0.9.*
 
 ```python
 civil_engineering_ai999x.solve('consolidation_time', cv=9.506426344208684e-08, Hdr=2.5, U=0.9)
@@ -3456,9 +3736,13 @@ $$
 - **Assumes:** 1% <= $U  \leq  99$%; Terzaghi $1-D$ theory
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![cv (coefficient of consolidation (m^2/s)) against U (degree of consolidation reached (fraction, or % in a question)) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coefficient-of-consolidation-curve)
+![Coefficient of consolidation as U runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coefficient-of-consolidation-live-1)
 
-*cv (coefficient of consolidation (m^2/s)) against U (degree of consolidation reached (fraction, or % in a question)) from 0.02 to 0.98. One curve for each value of Hdr (drainage path length (half the specimen height for double drainage)): 0.01 m, 0.005 m, 0.02 m. Other inputs as in the worked example: t = 750.0 s. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, U = 0.5, cv = 2.6231e-08 m^2/s.*
+*Coefficient of consolidation as U runs from 0.125 to 0.875, every other input as you entered it (41 solutions). Marked: your U = 0.5 gives cv = 2.623e-08. Your inputs: Hdr = 0.01 m, t = 750 s, U = 0.5.*
+
+![Coefficient of consolidation as Hdr runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coefficient-of-consolidation-live-2)
+
+*Coefficient of consolidation as Hdr runs from 0.006 to 0.014 m, every other input as you entered it (29 solutions). Marked: your Hdr = 0.01 m gives cv = 2.623e-08. Your inputs: Hdr = 0.01 m, t = 750 s, U = 0.5.*
 
 ```python
 civil_engineering_ai999x.solve('coefficient_of_consolidation', Hdr=0.01, t=750.0, U=0.5)
@@ -3509,11 +3793,15 @@ $$
 
 ![Isochrones of excess pore pressure in a doubly drained clay layer of thickness 6 m (cv = 6](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/excess-pore-pressure-isochrone-profile)
 
-*Isochrones of excess pore pressure in a doubly drained clay layer of thickness 6 m (cv = 6.3376e-08 m²/s, u0 = 100 kPa) at a quarter of, at, and at four times the worked example's time t = 3.1558e+07 s; 41 depths each, computed by the package. Marked: at z = 1.5 m the returned u = 52.2473 kPa, local consolidation 0.477527, time factor Tv = 0.222222.*
+*Isochrones of excess pore pressure in a doubly drained clay layer of thickness 6 m (cv = 6.338e-08 m²/s, u0 = 100 kPa) at a quarter of, at, and at four times the given time t = 3.156e+07 s; 41 depths each, every point a solve of the model. Marked: at z = 1.5 m the returned u = 52.25 kPa, local consolidation 0.4775, time factor Tv = 0.2222. In SI units: u = 5.225e+04 Pa. Your inputs: u0 = 100000 Pa, cv = 6.33761756280579e-08 m^2/s, t = 31557600 s, Hdr = 3 m, z = 1.5 m.*
 
-![u (excess pore pressure (Pa)) against z (depth below the top drainage face) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/excess-pore-pressure-isochrone-curve)
+![Excess pore pressure as Hdr runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/excess-pore-pressure-isochrone-live-1)
 
-*u (excess pore pressure (Pa)) against z (depth below the top drainage face) from 0.15 m to 15 m on a logarithmic axis. One curve for each value of u0 (initial excess pore pressure): 100000 Pa, 50000 Pa, 200000 Pa. Other inputs as in the worked example: cv = 6.33761756280579e-08 m^2/s, t = 31557600.0 s, Hdr = 3.0 m. 33 points per curve computed by civil-engineering-ai999x; marked: the worked example, z = 1.5 m, u = 52247.3 Pa.*
+*Excess pore pressure as Hdr runs from 1.8 to 4.2 m, every other input as you entered it (41 solutions). Marked: your Hdr = 3 m gives u = 52.25 kPa. Your inputs: u0 = 100000 Pa, cv = 6.33761756280579e-08 m^2/s, t = 31557600 s, Hdr = 3 m, z = 1.5 m.*
+
+![Excess pore pressure as cv runs from 3](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/excess-pore-pressure-isochrone-live-2)
+
+*Excess pore pressure as cv runs from 3.803e-08 to 8.873e-08 m^2/s, every other input as you entered it (29 solutions). Marked: your cv = 6.338e-08 m^2/s gives u = 52.25 kPa. Your inputs: u0 = 100000 Pa, cv = 6.33761756280579e-08 m^2/s, t = 31557600 s, Hdr = 3 m, z = 1.5 m.*
 
 ```python
 civil_engineering_ai999x.solve('excess_pore_pressure_isochrone', u0=100000.0, cv=6.33761756280579e-08, t=31557600.0, Hdr=3.0, z=1.5)
@@ -3559,9 +3847,13 @@ $$
 - **Assumes:** elastic, homogeneous, isotropic half-space; flexible uniform load; below the centre
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![dsigma (vertical stress increase (Pa)) against a (radius of the loaded area) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/stress-below-circular-load-curve)
+![Vertical stress increase as a runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/stress-below-circular-load-live-1)
 
-*dsigma (vertical stress increase (Pa)) against a (radius of the loaded area) from 0.2 m to 20 m on a logarithmic axis. One curve for each value of q (uniform applied pressure): 150000 Pa, 75000 Pa, 300000 Pa. Other inputs as in the worked example: z = 3.0 m. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, a = 2 m, dsigma = 63594.8 Pa.*
+*Vertical stress increase as a runs from 1.2 to 2.8 m, every other input as you entered it (41 solutions). Marked: your a = 2 m gives dsigma = 63.59 kPa. Your inputs: q = 150000 Pa, a = 2 m, z = 3 m.*
+
+![Vertical stress increase as q runs from 9e+04 to 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/stress-below-circular-load-live-2)
+
+*Vertical stress increase as q runs from 9e+04 to 2.1e+05 Pa, every other input as you entered it (29 solutions). Marked: your q = 1.5e+05 Pa gives dsigma = 63.59 kPa. Your inputs: q = 150000 Pa, a = 2 m, z = 3 m.*
 
 ```python
 civil_engineering_ai999x.solve('stress_below_circular_load', q=150000.0, a=2.0, z=3.0)
@@ -3609,9 +3901,13 @@ $$
 - **Assumes:** elastic, homogeneous, isotropic half-space; flexible uniform load
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![dsigma (vertical stress increase (Pa)) against z (depth below the surface) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/stress-below-rectangular-load-curve)
+![Vertical stress increase as q runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/stress-below-rectangular-load-live-1)
 
-*dsigma (vertical stress increase (Pa)) against z (depth below the surface) from 0.4 m to 40 m on a logarithmic axis. One curve for each value of q (uniform applied pressure): 200000 Pa, 100000 Pa, 400000 Pa. Other inputs as in the worked example: B = 2.0 m, L = 3.0 m. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, z = 4 m, dsigma = 21414.6 Pa.*
+*Vertical stress increase as q runs from 1.2e+05 to 2.8e+05 Pa, every other input as you entered it (41 solutions). Marked: your q = 2e+05 Pa gives dsigma = 21.41 kPa. Your inputs: q = 200000 Pa, B = 2 m, L = 3 m, z = 4 m.*
+
+![Vertical stress increase as z runs from 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/stress-below-rectangular-load-live-2)
+
+*Vertical stress increase as z runs from 2.4 to 5.6 m, every other input as you entered it (29 solutions). Marked: your z = 4 m gives dsigma = 21.41 kPa. Your inputs: q = 200000 Pa, B = 2 m, L = 3 m, z = 4 m.*
 
 ```python
 civil_engineering_ai999x.solve('stress_below_rectangular_load', q=200000.0, B=2.0, L=3.0, z=4.0)
@@ -3658,9 +3954,13 @@ $$
 - **Assumes:** elastic, homogeneous, isotropic half-space; flexible uniform load, plane strain
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![dsigma (vertical stress increase (Pa)) against B (strip width) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/stress-below-strip-load-curve)
+![Vertical stress increase as q runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/stress-below-strip-load-live-1)
 
-*dsigma (vertical stress increase (Pa)) against B (strip width) from 0.2 m to 20 m on a logarithmic axis. One curve for each value of q (uniform applied pressure): 100000 Pa, 50000 Pa, 200000 Pa. Other inputs as in the worked example: z = 3.0 m. 41 points per curve computed by civil-engineering-ai999x; marked: the worked example, B = 2 m, dsigma = 39581.9 Pa.*
+*Vertical stress increase as q runs from 6e+04 to 1.4e+05 Pa, every other input as you entered it (41 solutions). Marked: your q = 1e+05 Pa gives dsigma = 39.58 kPa. Your inputs: q = 100000 Pa, B = 2 m, z = 3 m.*
+
+![Vertical stress increase as B runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/stress-below-strip-load-live-2)
+
+*Vertical stress increase as B runs from 1.2 to 2.8 m, every other input as you entered it (29 solutions). Marked: your B = 2 m gives dsigma = 39.58 kPa. Your inputs: q = 100000 Pa, B = 2 m, z = 3 m.*
 
 ```python
 civil_engineering_ai999x.solve('stress_below_strip_load', q=100000.0, B=2.0, z=3.0)
@@ -3714,11 +4014,15 @@ $$
 
 ![A strip footing B = 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/strip-footing-bearing-capacity-schematic)
 
-*A strip footing B = 1.5 m wide founded at Df = 1.0 m in soil with c = 10 kPa, φ = 30.0°, γ = 18 kN/m³. Marked: the returned ultimate bearing capacity qu = 935.05 kPa, allowable qa = 311.683 kPa and factors Nc = 30.1396, Nq = 18.4011, Nγ = 22.4025. Footing width and depth to scale.*
+*A strip footing B = 1.5 m wide founded at Df = 1 m in soil with c = 10 kPa, φ = 30°, γ = 18 kN/m³. Marked: the returned ultimate bearing capacity qu = 935.1 kPa, allowable qa = 311.7 kPa and factors Nc = 30.14, Nq = 18.4, Nγ = 22.4. Footing width and depth to scale. In SI units: qu = 9.351e+05 Pa. Your inputs: c = 10000 Pa, phi = 30, gam = 18000 N/m^3, B = 1.5 m, Df = 1 m.*
 
-![qu (ultimate bearing capacity (Pa)) against phi (friction angle (degrees)) from 15 to 45](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/strip-footing-bearing-capacity-curve)
+![Ultimate bearing capacity as φ runs from 21 to 44](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/strip-footing-bearing-capacity-live-1)
 
-*qu (ultimate bearing capacity (Pa)) against phi (friction angle (degrees)) from 15 to 45. One curve for each value of gam (unit weight of the soil): 18000 N/m^3, 9000 N/m^3, 36000 N/m^3. Other inputs as in the worked example: c = 10000.0 Pa, B = 1.5 m, Df = 1.0 m. 26 points per curve computed by civil-engineering-ai999x; marked: the worked example, phi = 30, qu = 935050 Pa.*
+*Ultimate bearing capacity as φ runs from 21 to 44.62, every other input as you entered it (22 solutions). Marked: your φ = 30 gives qu = 935.1 kPa. Your inputs: c = 10000 Pa, phi = 30, gam = 18000 N/m^3, B = 1.5 m, Df = 1 m.*
+
+![Ultimate bearing capacity as gam runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/strip-footing-bearing-capacity-live-2)
+
+*Ultimate bearing capacity as gam runs from 1.08e+04 to 2.52e+04 N/m^3, every other input as you entered it (29 solutions). Marked: your gam = 1.8e+04 N/m^3 gives qu = 935.1 kPa. Your inputs: c = 10000 Pa, phi = 30, gam = 18000 N/m^3, B = 1.5 m, Df = 1 m.*
 
 ```python
 civil_engineering_ai999x.solve('strip_footing_bearing_capacity', c=10000.0, phi=30.0, gam=18000.0, B=1.5, Df=1.0)
@@ -3770,13 +4074,17 @@ $$
 - **Assumes:** smooth vertical wall, horizontal backfill; dry backfill; tension zone ignored
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rankine active earth pressure on a 6 m wall retaining soil with φ = 30° and γ = 18 kN/m³ (Ka = 0](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/rankine-active-thrust-diagram.svg)
+![Rankine active earth pressure on a wall of height H = 6 m (φ = 30°, γ = 18 kN/m³): the pressure at each of 21 depths is the base pressure the model returns for a wall of that height, growing to 36 kPa at the base; the thrust Pa = 108 kN/m acts 2 m above the base (arrow)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rankine-active-thrust-diagram)
 
-*Rankine active earth pressure on a 6 m wall retaining soil with φ = 30° and γ = 18 kN/m³ (Ka = 0.333333), drawn as the pressure diagram against the wall: the pressure at each of 40 depths is the base pressure the package returns for a wall of that height. Without surcharge it grows to 36 kPa at the base, resultant Pa = 108 kN/m acting 2 m above the base (arrow); with a 20 kPa surcharge (dashed) the base pressure is 42.6667 kPa and Pa = 148 kN/m.*
+*Rankine active earth pressure on a wall of height H = 6 m (φ = 30°, γ = 18 kN/m³): the pressure at each of 21 depths is the base pressure the model returns for a wall of that height, growing to 36 kPa at the base; the thrust Pa = 108 kN/m acts 2 m above the base (arrow). Marked: Ka = 0.3333. Dashed: the same wall with a 20 kPa surcharge (solved again), base 42.67 kPa. Your inputs: phi = 30, gam = 18000 N/m^3, H = 6 m.*
 
-![Ka (active earth pressure coefficient) against phi (friction angle of the backfill (degrees)) from 15 to 45](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rankine-active-thrust-curve)
+![Active thrust per metre of wall as H runs from 3](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rankine-active-thrust-live-1)
 
-*Ka (active earth pressure coefficient) against phi (friction angle of the backfill (degrees)) from 15 to 45. Other inputs as in the worked example: gam = 18000.0 N/m^3, H = 6.0 m. 31 points computed by civil-engineering-ai999x; marked: the worked example, phi = 30, Ka = 0.333333.*
+*Active thrust per metre of wall as H runs from 3.6 to 8.4 m, every other input as you entered it (41 solutions). Marked: your H = 6 m gives Pa = 1.08e+05. Your inputs: phi = 30, gam = 18000 N/m^3, H = 6 m.*
+
+![Active earth pressure coefficient as φ runs from 10](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rankine-active-thrust-live-2)
+
+*Active earth pressure coefficient as φ runs from 10.71 to 49.29, every other input as you entered it (25 solutions). Marked: your φ = 30 gives Ka = 0.3333. Your inputs: phi = 30, gam = 18000 N/m^3, H = 6 m.*
 
 ```python
 civil_engineering_ai999x.solve('rankine_active_thrust', phi=30.0, gam=18000.0, H=6.0)
@@ -3827,13 +4135,17 @@ $$
 - **Assumes:** smooth vertical wall, horizontal soil surface; dry soil
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A wall of height H = 2 m pushed into a level cohesionless soil (φ = 32](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rankine-passive-thrust-diagram)
+![Rankine passive earth pressure on a wall of height H = 2 m (φ = 32°, γ = 18 kN/m³): the pressure at each of 21 depths is the base pressure the model returns for a wall of that height, growing to 117](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rankine-passive-thrust-diagram)
 
-*A wall of height H = 2 m pushed into a level cohesionless soil (φ = 32.0°, γ = 18 kN/m³): the Rankine passive pressure diagram drawn from the returned base pressure 117.165 kPa, and the thrust Pp = 117.165 kN/m at the returned height 0.666667 m above the base. Marked: Kp = 3.25459.*
+*Rankine passive earth pressure on a wall of height H = 2 m (φ = 32°, γ = 18 kN/m³): the pressure at each of 21 depths is the base pressure the model returns for a wall of that height, growing to 117.2 kPa at the base; the thrust Pp = 117.2 kN/m acts 666.7 mm above the base (arrow). Marked: Kp = 3.255. Your inputs: phi = 32, gam = 18000 N/m^3, H = 2 m.*
 
-![Kp (passive earth pressure coefficient) against phi (friction angle of the soil (degrees)) from 16 to 48](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rankine-passive-thrust-curve)
+![Passive thrust per metre of wall as H runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rankine-passive-thrust-live-1)
 
-*Kp (passive earth pressure coefficient) against phi (friction angle of the soil (degrees)) from 16 to 48. Other inputs as in the worked example: gam = 18000.0 N/m^3, H = 2.0 m. 31 points computed by civil-engineering-ai999x; marked: the worked example, phi = 32, Kp = 3.25459.*
+*Passive thrust per metre of wall as H runs from 1.2 to 2.8 m, every other input as you entered it (41 solutions). Marked: your H = 2 m gives Pp = 1.172e+05. Your inputs: phi = 32, gam = 18000 N/m^3, H = 2 m.*
+
+![Passive earth pressure coefficient as φ runs from 11](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rankine-passive-thrust-live-2)
+
+*Passive earth pressure coefficient as φ runs from 11.43 to 49.14, every other input as you entered it (23 solutions). Marked: your φ = 32 gives Kp = 3.255. Your inputs: phi = 32, gam = 18000 N/m^3, H = 2 m.*
 
 ```python
 civil_engineering_ai999x.solve('rankine_passive_thrust', phi=32.0, gam=18000.0, H=2.0)
@@ -3884,13 +4196,17 @@ $$
 - **Assumes:** vertical wall back; cohesionless dry backfill; $0  \leq  \delta  \leq  \phi$; $0  \leq  \beta < \phi$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Coulomb active thrust on a rough vertical wall of height H = 6 m (φ = 30](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coulomb-active-thrust-diagram)
+![Coulomb active thrust on a rough vertical wall of height H = 6 m (φ = 30°, wall friction δ = 20°, backfill slope β = 10°, γ = 18 kN/m³)](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/coulomb-active-thrust-diagram.svg)
 
-*Coulomb active thrust on a rough vertical wall of height H = 6 m (φ = 30.0°, wall friction δ = 20.0°, backfill slope β = 10.0°, γ = 18 kN/m³). The triangular pressure distribution is drawn with the resultant the package returned (base value 2P/H = 36.7224 kPa, derived), the thrust at H/3 inclined at δ. Marked: K = 0.340022, P = 110.167 kN/m, horizontal 103.523 kN/m, vertical 37.6794 kN/m.*
+*Coulomb active thrust on a rough vertical wall of height H = 6 m (φ = 30°, wall friction δ = 20°, backfill slope β = 10°, γ = 18 kN/m³). The triangular pressure distribution is drawn with the thrust the model returned (base value 2P/H = 36.72 kPa, derived), the thrust at H/3 inclined at δ. Marked: Ka = 0.34, Pa = 110.2 kN/m, horizontal 103.5 kN/m, vertical 37.68 kN/m. Your inputs: phi = 30, delta = 20, beta = 10, gam = 18000 N/m^3, H = 6 m.*
 
-![Ka (Coulomb active coefficient) against delta (wall friction angle (degrees)) from 10 to 30](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coulomb-active-thrust-curve)
+![Vertical component as H runs from 3](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coulomb-active-thrust-live-1)
 
-*Ka (Coulomb active coefficient) against delta (wall friction angle (degrees)) from 10 to 30. One curve for each value of phi (friction angle of the backfill (degrees)): 30, 22.5. Other inputs as in the worked example: beta = 10.0, gam = 18000.0 N/m^3, H = 6.0 m. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, delta = 20, Ka = 0.340022.*
+*Vertical component as H runs from 3.6 to 8.4 m, every other input as you entered it (41 solutions). Marked: your H = 6 m gives Pa_v = 3.768e+04. Your inputs: phi = 30, delta = 20, beta = 10, gam = 18000 N/m^3, H = 6 m.*
+
+![Coulomb active coefficient as φ runs from 20](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coulomb-active-thrust-live-2)
+
+*Coulomb active coefficient as φ runs from 20.36 to 49.29, every other input as you entered it (19 solutions). Marked: your φ = 30 gives Ka = 0.34. Your inputs: phi = 30, delta = 20, beta = 10, gam = 18000 N/m^3, H = 6 m.*
 
 ```python
 civil_engineering_ai999x.solve('coulomb_active_thrust', phi=30.0, delta=20.0, beta=10.0, gam=18000.0, H=6.0)
@@ -3941,13 +4257,17 @@ $$
 - **Assumes:** vertical wall back; cohesionless dry soil; plane wedge $(\phi + \delta + \beta < 90)$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Coulomb passive thrust on a rough vertical wall of height H = 2 m (φ = 30](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coulomb-passive-thrust-diagram)
+![Coulomb passive thrust on a rough vertical wall of height H = 2 m (φ = 30°, wall friction δ = 15°, backfill slope β = 0°, γ = 18 kN/m³)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coulomb-passive-thrust-diagram)
 
-*Coulomb passive thrust on a rough vertical wall of height H = 2 m (φ = 30.0°, wall friction δ = 15.0°, backfill slope β = 0.0°, γ = 18 kN/m³). The triangular pressure distribution is drawn with the resultant the package returned (base value 2P/H = 179.154 kPa, derived), the thrust at H/3 inclined at δ. Marked: K = 4.9765, P = 179.154 kN/m, horizontal 173.049 kN/m, vertical 46.3685 kN/m.*
+*Coulomb passive thrust on a rough vertical wall of height H = 2 m (φ = 30°, wall friction δ = 15°, backfill slope β = 0°, γ = 18 kN/m³). The triangular pressure distribution is drawn with the thrust the model returned (base value 2P/H = 179.2 kPa, derived), the thrust at H/3 inclined at δ. Marked: Kp = 4.977, Pp = 179.2 kN/m, horizontal 173 kN/m, vertical 46.37 kN/m. Your inputs: phi = 30, delta = 15, beta = 0, gam = 18000 N/m^3, H = 2 m.*
 
-![Kp (Coulomb passive coefficient) against phi (friction angle of the backfill (degrees)) from 15 to 45](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coulomb-passive-thrust-curve)
+![Horizontal component as H runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coulomb-passive-thrust-live-1)
 
-*Kp (Coulomb passive coefficient) against phi (friction angle of the backfill (degrees)) from 15 to 45. One curve for each value of beta (backfill slope angle above horizontal (degrees)): 0, 22.5. Other inputs as in the worked example: delta = 15.0, gam = 18000.0 N/m^3, H = 2.0 m. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, phi = 30, Kp = 4.9765.*
+*Horizontal component as H runs from 1.2 to 2.8 m, every other input as you entered it (41 solutions). Marked: your H = 2 m gives Pp_h = 1.73e+05. Your inputs: phi = 30, delta = 15, beta = 0, gam = 18000 N/m^3, H = 2 m.*
+
+![Coulomb passive coefficient as δ runs from 3](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/coulomb-passive-thrust-live-2)
+
+*Coulomb passive coefficient as δ runs from 3.75 to 26.25, every other input as you entered it (29 solutions). Marked: your δ = 15 gives Kp = 4.977. Your inputs: phi = 30, delta = 15, beta = 0, gam = 18000 N/m^3, H = 2 m.*
 
 ```python
 civil_engineering_ai999x.solve('coulomb_passive_thrust', phi=30.0, delta=15.0, beta=0.0, gam=18000.0, H=2.0)
@@ -3996,13 +4316,17 @@ $$
 - **Assumes:** $0 < \phi < 60$ degrees; s3, $c  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Mohr–Coulomb failure for σ3 = 100 kPa, c = 15 kPa, φ = 28](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/mohr-coulomb-failure-stress-mohr)
+![Mohr-Coulomb failure for σ3 = 100 kPa, c = 15 kPa, φ = 28°: the circle through σ3 and the returned major principal stress at failure σ1 = 326](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/mohr-coulomb-failure-stress-mohr)
 
-*Mohr–Coulomb failure for σ3 = 100 kPa, c = 15 kPa, φ = 28.0°: the circle through σ3 and the returned major principal stress at failure σ1 = 326.911 kPa touches the envelope at the returned stresses on the failure plane σf = 160.191 kPa, τf = 100.175 kPa (plane at θ = 59° to the major principal plane).*
+*Mohr-Coulomb failure for σ3 = 100 kPa, c = 15 kPa, φ = 28°: the circle through σ3 and the returned major principal stress at failure σ1 = 326.9 kPa touches the envelope at the returned stresses on the failure plane σf = 160.2 kPa, τf = 100.2 kPa (plane at θ = 59° to the major principal plane). Equal scales on both axes. In SI units: s1 = 3.269e+05 Pa. Your inputs: s3 = 100000 Pa, c = 15000 Pa, phi = 28.*
 
-![s1 (major principal stress at failure (Pa)) against phi (friction angle (degrees)) from 14 to 42](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/mohr-coulomb-failure-stress-curve)
+![Major principal stress at failure as φ runs from 7 to 49, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/mohr-coulomb-failure-stress-live-1)
 
-*s1 (major principal stress at failure (Pa)) against phi (friction angle (degrees)) from 14 to 42. One curve for each value of s3 (minor principal (confining) stress): 100000 Pa, 50000 Pa, 200000 Pa. Other inputs as in the worked example: c = 15000.0 Pa. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, phi = 28, s1 = 326911 Pa.*
+*Major principal stress at failure as φ runs from 7 to 49, every other input as you entered it (41 solutions). Marked: your φ = 28 gives s1 = 326.9 kPa. Your inputs: s3 = 100000 Pa, c = 15000 Pa, phi = 28.*
+
+![Major principal stress at failure as s3 runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/mohr-coulomb-failure-stress-live-2)
+
+*Major principal stress at failure as s3 runs from 6e+04 to 1.4e+05 Pa, every other input as you entered it (29 solutions). Marked: your s3 = 1e+05 Pa gives s1 = 326.9 kPa. Your inputs: s3 = 100000 Pa, c = 15000 Pa, phi = 28.*
 
 ```python
 civil_engineering_ai999x.solve('mohr_coulomb_failure_stress', s3=100000.0, c=15000.0, phi=28.0)
@@ -4051,7 +4375,7 @@ $$
 
 ![Triaxial tests at confining stresses σ3 = [100, 200, 300] kPa failing at σ1 = [330, 590, 860] kPa (circles from these inputs) and the strength envelope from the returned parameters c = 19](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/triaxial-strength-parameters-mohr)
 
-*Triaxial tests at confining stresses σ3 = [100, 200, 300] kPa failing at σ1 = [330, 590, 860] kPa (circles from these inputs) and the strength envelope from the returned parameters c = 19.4378 kPa and φ = 26.8778° (failure plane angle α = 24.3272°).*
+*Triaxial tests at confining stresses σ3 = [100, 200, 300] kPa failing at σ1 = [330, 590, 860] kPa (circles from these inputs) and the strength envelope from the returned parameters c = 19.44 kPa and φ = 26.88° (slope angle of the Kf line 24.33°). Equal scales on both axes. Your inputs: s3 = 100, 200, 300, s1 = 330, 590, 860.*
 
 ```python
 civil_engineering_ai999x.solve('triaxial_strength_parameters', s3=[100, 200, 300], s1=[330, 590, 860])
@@ -4099,7 +4423,7 @@ $$
 
 ![Direct shear tests (σ = [50, 100, 200] kPa, τ at failure = [45, 73, 131] kPa) and the straight strength envelope from the returned c = 16 kPa and tan φ = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/direct-shear-strength-parameters-fit)
 
-*Direct shear tests (σ = [50, 100, 200] kPa, τ at failure = [45, 73, 131] kPa) and the straight strength envelope from the returned c = 16 kPa and tan φ = 0.574286 (φ = 29.8681°).*
+*Direct shear tests (σ = [50, 100, 200] kPa, τ at failure = [45, 73, 131] kPa) and the straight strength envelope from the returned c = 16 kPa and tan φ = 0.5743 (φ = 29.87°). Your inputs: sigma = 50, 100, 200, tau = 45, 73, 131.*
 
 ```python
 civil_engineering_ai999x.solve('direct_shear_strength_parameters', sigma=[50, 100, 200], tau=[45, 73, 131])
@@ -4146,9 +4470,9 @@ $$
 - **Assumes:** at least three points around the peak; a parabola opening downward
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Proctor compaction points (water contents [8, 10, 12, 14, 16] %, dry densities [1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/proctor-compaction-optimum-curve)
+![Zero-air-voids dry density at the optimum](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/proctor-compaction-optimum-live-1)
 
-*Proctor compaction points (water contents [8, 10, 12, 14, 16] %, dry densities [1.72, 1.8, 1.84, 1.82, 1.76] Mg/m³) and the zero-air-voids line for Gs = 2.68 (from Gs ρw/(1 + w Gs)). Marked: the returned optimum water content 12.4118 % and maximum dry density 1.8376 Mg/m³ (from the package's least-squares parabola), and the returned zero-air-voids density 2.01105 Mg/m³ at the optimum.*
+*Zero-air-voids dry density at the optimum... as Gs runs from 2.021 to 2.994, every other input as you entered it (33 solutions). Marked: your Gs = 2.68 gives ρ_zav = 2.011. Your inputs: w = 8, 10, 12, 14, 16, rho_d = 1.72, 1.8, 1.84, 1.82, 1.76, Gs = 2.68.*
 
 ```python
 civil_engineering_ai999x.solve('proctor_compaction_optimum', w=[8, 10, 12, 14, 16], rho_d=[1.72, 1.8, 1.84, 1.82, 1.76], Gs=2.68)
@@ -4200,9 +4524,17 @@ $$
 - **Assumes:** closed loop traverse; azimuths 0 to 360 degrees
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The points (E, N) returned by civil-engineering-ai999x for the worked example (az = [45, 135](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/traverse-bowditch-adjustment-path)
+![The adjusted stations (E, N) returned by the model for the traverse (azimuths [45, 135, 225, 315]°, legs [100, 100, 99](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/traverse-bowditch-adjustment-path)
 
-*The points (E, N) returned by civil-engineering-ai999x for the worked example (az = [45, 135.01, 225, 315], d = [100, 100.02, 99.98, 100]), joined in order: 1: (0, 0); 2: (70.7067, 70.7138); 3: (141.415, -0.0203129); 4: (70.7147, -70.7138).*
+*The adjusted stations (E, N) returned by the model for the traverse (azimuths [45, 135, 225, 315]°, legs [100, 100, 99.98, 100] m), joined in order and closed: 1: (0, 0); 2: (70.71, 70.71); 3: (141.4, -0.02031); 4: (70.71, -70.71). Returned: misclosure 0.02016 m, relative precision 1:1.984e+04, enclosed area 10000 m². In SI units: misclosure_E = 0.01594 m. Your inputs: az = 45, 135.01, 225, 315, d = 100, 100.02, 99.98, 100.*
+
+![Every entry of E, N as computed for your inputs (4 entries, E first: 0, 70](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/traverse-bowditch-adjustment-live-1)
+
+*Every entry of E, N as computed for your inputs (4 entries, E first: 0, 70.71, 141.4, 70.71). Your inputs: az = 45, 135.01, 225, 315, d = 100, 100.02, 99.98, 100.*
+
+![Every answer of one unit for your inputs: misclosure_E (misclosure in departure (m)) = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/traverse-bowditch-adjustment-live-2)
+
+*Every answer of one unit for your inputs: misclosure_E (misclosure in departure (m)) = 0.01594; misclosure_N (misclosure in latitude (m)) = -0.01234; linear_misclosure (linear misclosure (m)) = 0.02016. Your inputs: az = 45, 135.01, 225, 315, d = 100, 100.02, 99.98, 100.*
 
 ```python
 civil_engineering_ai999x.solve('traverse_bowditch_adjustment', az=[45, 135.01, 225, 315], d=[100, 100.02, 99.98, 100])
@@ -4253,7 +4585,19 @@ $$
 
 ![Reduced levels of a levelling run (staff readings [1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/levelling-rise-and-fall-profile)
 
-*Reduced levels of a levelling run (staff readings [1.525, 2.105, 1.64, 0.985, 2.32] m, sights BS, IS, FS, BS, FS, benchmark RL 100.0 m) by rise and fall: the reduced level of every station as returned (100, 99.42, 99.885, 98.55 m). Marked: total rise 0.465 m, total fall 1.915 m, ΣBS − ΣFS = -1.45 m = last RL − first RL.*
+*Reduced levels of a levelling run (staff readings [1.525, 2.105, 1.64, 0.985, 2.32] m, sights BS, IS, FS, BS, FS, benchmark RL 100 m) by rise and fall: the reduced level of every station as returned (100, 99.42, 99.89, 98.55). Marked: total rise 0.465 m, total fall 1.915 m, ΣBS − ΣFS = -1.45 m. Your inputs: readings = 1.525, 2.105, 1.64..., sights = BS, IS, FS, BS, FS, RL0 = 100 m.*
+
+![Sum of rises, sum of falls and sum BS - sum FS as readings[3] runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/levelling-rise-and-fall-live-1)
+
+*Sum of rises, sum of falls and sum BS - sum FS as readings[3] runs from 0.41 to 2.87, every other input as you entered it (41 solutions). Marked: your readings[3] = 1.64 gives rise = 0.465. Your inputs: readings = 1.525, 2.105, 1.64..., sights = BS, IS, FS, BS, FS, RL0 = 100 m.*
+
+![Every entry of RL as computed for your inputs (4 entries: 100, 99](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/levelling-rise-and-fall-live-2)
+
+*Every entry of RL as computed for your inputs (4 entries: 100, 99.42, 99.89, 98.55). Your inputs: readings = 1.525, 2.105, 1.64..., sights = BS, IS, FS, BS, FS, RL0 = 100 m.*
+
+![Sum of rises and sum of falls as readings[2] runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/levelling-rise-and-fall-live-3)
+
+*Sum of rises and sum of falls as readings[2] runs from 0.5262 to 3.684, every other input as you entered it (29 solutions). Marked: your readings[2] = 2.105 gives rise = 0.465. Your inputs: readings = 1.525, 2.105, 1.64..., sights = BS, IS, FS, BS, FS, RL0 = 100 m.*
 
 ```python
 civil_engineering_ai999x.solve('levelling_rise_and_fall', readings=[1.525, 2.105, 1.64, 0.985, 2.32], sights='BS, IS, FS, BS, FS', RL0=100.0)
@@ -4304,13 +4648,17 @@ $$
 - **Assumes:** $0 < Delta < 180$ degrees; chainage measured along the tangents then the curve
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Plan of a simple circular curve, radius R = 300 m, deflection angle Δ = 40°, PI at chainage 1250](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/horizontal-circular-curve-geometry)
+![Plan of a simple circular curve, radius R = 300 m, deflection angle Δ = 40°, PI at chainage 1250 m, drawn to scale with the returned elements: tangent length T = 109](https://huggingface.co/AI999X/civil-engineering-ai999x/resolve/main/figures/horizontal-circular-curve-geometry.svg)
 
-*Plan of a simple circular curve, radius R = 300 m, deflection angle Δ = 40°, PI at chainage 1250.0 m, drawn to scale with the returned elements: tangent length T = 109.191 m, curve length L = 209.44 m, long chord LC = 205.212 m (dashed), external distance E = 19.2533 m and middle ordinate M = 18.0922 m (green), and the chainages PC = 1140.81 m, PT = 1350.25 m.*
+*Plan of a simple circular curve, radius R = 300 m, deflection angle Δ = 40°, PI at chainage 1250 m, drawn to scale with the returned elements: tangent length T = 109.2 m, curve length L = 209.4 m, long chord LC = 205.2 m (dashed), external distance E = 19.25 m and middle ordinate M = 18.09 m (green), and the chainages PC = 1141 m, PT = 1350 m. Your inputs: R = 300 m, Delta = 40, PI = 1250 m.*
 
-![T (tangent length (m)) against Delta (deflection (intersection) angle (degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/horizontal-circular-curve-curve)
+![Tangent length, curve length and long chord as Delta runs from 10 to 70, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/horizontal-circular-curve-live-1)
 
-*T (tangent length (m)) against Delta (deflection (intersection) angle (degrees)) from 0 to 90. One curve for each value of R (curve radius): 300 m, 150 m, 600 m. Other inputs as in the worked example: PI = 1250.0 m. 40 points per curve computed by civil-engineering-ai999x; marked: the worked example, Delta = 40, T = 109.191 m.*
+*Tangent length, curve length and long chord as Delta runs from 10 to 70, every other input as you entered it (41 solutions). Marked: your Delta = 40 gives T = 109.2. Your inputs: R = 300 m, Delta = 40, PI = 1250 m.*
+
+![Chainage of the start of the curve as PI runs from 750 to 1750 m, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/horizontal-circular-curve-live-2)
+
+*Chainage of the start of the curve as PI runs from 750 to 1750 m, every other input as you entered it (29 solutions). Marked: your PI = 1250 m gives PC = 1141. Your inputs: R = 300 m, Delta = 40, PI = 1250 m.*
 
 ```python
 civil_engineering_ai999x.solve('horizontal_circular_curve', R=300.0, Delta=40.0, PI=1250.0)
@@ -4366,11 +4714,15 @@ $$
 
 ![Equal-tangent parabolic vertical curve, L = 200 m, PVI at station 1500 m and elevation 120 m, grades g1 = 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/vertical-parabolic-curve-profile)
 
-*Equal-tangent parabolic vertical curve, L = 200 m, PVI at station 1500 m and elevation 120 m, grades g1 = 0.03, g2 = -0.02: 61 elevations along the curve computed by the package, over the two tangents. Marked: the returned BVC 1400 m (elevation 117 m), the turning point 1520 m at 118.8 m, and the elevation 118.188 m at the worked station 1450.0 m (rate of change of grade -0.025 %/m).*
+*Equal-tangent parabolic vertical curve, L = 200 m, PVI at station 1500 m and elevation 120 m, grades g1 = 0.03, g2 = -0.02: 41 elevations along the curve, each a solve of the model, over the two tangents. Marked: the returned BVC 1400 m (elevation 117 m), the turning point 1520 m at 118.8 m and the elevation 118.2 m at the given station 1450 m. Your inputs: g1 = 0.03, g2 = -0.02, L = 200 m, PVI = 1500 m, elev_PVI = 120 m, x = 1450 m.*
 
-![elev (elevation at the station (m)) against PVI (station of the intersection point) from 1350 m to 1650 m](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/vertical-parabolic-curve-curve)
+![Elevation at the station and elevation of that point as elev_PVI runs from 72 to 168 m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/vertical-parabolic-curve-live-1)
 
-*elev (elevation at the station (m)) against PVI (station of the intersection point) from 1350 m to 1650 m. One curve for each value of elev_PVI (elevation of the intersection point): 120 m, 60 m, 240 m. Other inputs as in the worked example: g1 = 0.03, g2 = -0.02, L = 200.0 m, x = 1450.0 m. 21 points per curve computed by civil-engineering-ai999x; marked: the worked example, PVI = 1500 m, elev = 118.188 m.*
+*Elevation at the station and elevation of that point as elev_PVI runs from 72 to 168 m, every other input as you entered it (41 solutions). Marked: your elev_PVI = 120 m gives elev = 118.2. Your inputs: g1 = 0.03, g2 = -0.02, L = 200 m, PVI = 1500 m, elev_PVI = 120 m, x = 1450 m.*
+
+![Elevation at the station as L runs from 120 to 280 m, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/vertical-parabolic-curve-live-2)
+
+*Elevation at the station as L runs from 120 to 280 m, every other input as you entered it (29 solutions). Marked: your L = 200 m gives elev = 118.2. Your inputs: g1 = 0.03, g2 = -0.02, L = 200 m, PVI = 1500 m, elev_PVI = 120 m, x = 1450 m.*
 
 ```python
 civil_engineering_ai999x.solve('vertical_parabolic_curve', g1=0.03, g2=-0.02, L=200.0, PVI=1500.0, elev_PVI=120.0, x=1450.0)
@@ -4416,9 +4768,13 @@ $$
 - **Assumes:** equally spaced sections; prismoidal rule only for an odd number of sections
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![V_end_area (volume by average end areas (m^3)) against d (spacing between sections) from 10 m to 30 m](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/earthwork-volume-end-areas-curve)
+![Volume by average end areas as d runs from 12 to 28 m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/earthwork-volume-end-areas-live-1)
 
-*V_end_area (volume by average end areas (m^3)) against d (spacing between sections) from 10 m to 30 m. Outputs with the same unit drawn together: V_prismoidal (volume by the prismoidal rule (m^3)). Other inputs as in the worked example: areas = [12.5, 18.2, 25.6, 20.1, 15.8]. 31 points computed by civil-engineering-ai999x; marked: the worked example, d = 20 m, V_end_area = 1561 m^3.*
+*Volume by average end areas as d runs from 12 to 28 m, every other input as you entered it (41 solutions). Marked: your d = 20 m gives V_end_area = 1561. Your inputs: areas = 12.5, 18.2, 25.6, 20.1, 15.8, d = 20 m.*
+
+![Volume by average end areas as areas[4] runs from 5](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/earthwork-volume-end-areas-live-2)
+
+*Volume by average end areas as areas[4] runs from 5.025 to 35.18, every other input as you entered it (29 solutions). Marked: your areas[4] = 20.1 gives V_end_area = 1561. Your inputs: areas = 12.5, 18.2, 25.6, 20.1, 15.8, d = 20 m.*
 
 ```python
 civil_engineering_ai999x.solve('earthwork_volume_end_areas', areas=[12.5, 18.2, 25.6, 20.1, 15.8], d=20.0)
@@ -4465,11 +4821,15 @@ $$
 
 ![Offsets [0, 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/area-from-offsets-diagram)
 
-*Offsets [0, 2.5, 3.5, 5.0, 4.6, 3.2, 0] m taken every 10 m from a base line, joined by straight lines (the trapezoidal reading). Marked: the returned areas by the trapezoidal rule 188 m² and Simpson's rule 196.667 m².*
+*Offsets [0, 2.5, 3.5, 5, 4.6, 3.2, 0] m taken every 10 m from a base line, joined by straight lines (the trapezoidal reading). Marked: the returned areas by the trapezoidal rule 188 m² and Simpson's rule 196.7 m². Your inputs: offsets = 0, 2.5, 3.5, 5, 4.6, 3.2, 0, d = 10 m.*
 
-![A_trapezoidal (area by the trapezoidal rule (m^2)) against d (interval between offsets) from 5 m to 15 m](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/area-from-offsets-curve)
+![Area by the trapezoidal rule and area by Simpson's rule as d runs from 6 to 14 m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/area-from-offsets-live-1)
 
-*A_trapezoidal (area by the trapezoidal rule (m^2)) against d (interval between offsets) from 5 m to 15 m. Outputs with the same unit drawn together: A_simpson (area by Simpson's rule (m^2)). Other inputs as in the worked example: offsets = [0, 2.5, 3.5, 5.0, 4.6, 3.2, 0]. 31 points computed by civil-engineering-ai999x; marked: the worked example, d = 10 m, A_trapezoidal = 188 m^2.*
+*Area by the trapezoidal rule and area by Simpson's rule as d runs from 6 to 14 m, every other input as you entered it (41 solutions). Marked: your d = 10 m gives A_trapezoidal = 188. Your inputs: offsets = 0, 2.5, 3.5, 5, 4.6, 3.2, 0, d = 10 m.*
+
+![Area by the trapezoidal rule and area by Simpson's rule as offsets[4] runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/area-from-offsets-live-2)
+
+*Area by the trapezoidal rule and area by Simpson's rule as offsets[4] runs from 1.25 to 8.75, every other input as you entered it (29 solutions). Marked: your offsets[4] = 5 gives A_trapezoidal = 188. Your inputs: offsets = 0, 2.5, 3.5, 5, 4.6, 3.2, 0, d = 10 m.*
 
 ```python
 civil_engineering_ai999x.solve('area_from_offsets', offsets=[0, 2.5, 3.5, 5.0, 4.6, 3.2, 0], d=10.0)
@@ -4515,9 +4875,13 @@ $$
 - **Assumes:** $0 < C  \leq  1$; $A  \leq  800$ ha (small catchments); intensity for a duration equal to the time of concentration
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q (peak runoff (m^3/s)) against i (rainfall intensity) from 6](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rational-method-peak-runoff-curve)
+![Peak runoff as C runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rational-method-peak-runoff-live-1)
 
-*Q (peak runoff (m^3/s)) against i (rainfall intensity) from 6.9444e-06 m/s to 2.0833e-05 m/s. One curve for each value of A (catchment area): 200000 m^2, 100000 m^2, 400000 m^2. Other inputs as in the worked example: C = 0.6. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, i = 1.3889e-05 m/s, Q = 1.66667 m^3/s.*
+*Peak runoff as C runs from 0.15 to 0.9825, every other input as you entered it (38 solutions). Marked: your C = 0.6 gives Q = 1.667. Your inputs: C = 0.6, i = 1.3888888888888888e-05 m/s, A = 200000 m^2.*
+
+![Peak runoff as i runs from 8](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/rational-method-peak-runoff-live-2)
+
+*Peak runoff as i runs from 8.333e-06 to 1.944e-05 m/s, every other input as you entered it (29 solutions). Marked: your i = 1.389e-05 m/s gives Q = 1.667. Your inputs: C = 0.6, i = 1.3888888888888888e-05 m/s, A = 200000 m^2.*
 
 ```python
 civil_engineering_ai999x.solve('rational_method_peak_runoff', C=0.6, i=1.3888888888888888e-05, A=200000.0)
@@ -4535,7 +4899,7 @@ civil_engineering_ai999x.solve('rational_method_peak_runoff', C=0.85, i=3.333333
 |---|---|---|
 | Rational method peak runoff with runoff coefficient = 0.6, rainfall intensity = 50 mm/h and catchment area = 20 ha. | SOLVED | Q = 1.66667 m^3/s, Q_Ls = 1666.67 |
 | Rational method peak runoff with runoff coefficient = 0.85, rainfall intensity = 120 mm/h and catchment area = 2.5 ha. | SOLVED | Q = 0.708333 m^3/s, Q_Ls = 708.333 |
-| Rational method peak runoff with runoff coefficient = 0.6 and rainfall intensity = 50 mm/h. | NEEDS_INPUT | rational_method_peak_runoff needs A (catchment area). Example: solve('rational_method_peak_runoff', C=0.6, i='1.38889e-0 |
+| Rational method peak runoff with runoff coefficient = 0.6 and rainfall intensity = 50 mm/h. | NEEDS_INPUT | rational_method_peak_runoff needs A (catchment area). Example: solve('rational_method_peak_runoff', C=0.6, i='1.38888888 |
 | Rational method peak runoff with runoff coefficient = 0.6, rainfall intensity = 50 mm/h and catchment area = 20 ha and colour = 3. | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: civil_engineering_ai999x.template |
 | Rational method peak runoff with runoff coefficient = 1.5, rainfall intensity = 50 mm/h and catchment area = 20 ha. | INVALID_INPUT | Peak runoff by the rational method: the runoff coefficient must lie in (0, 1]. |
 
@@ -4564,13 +4928,17 @@ $$
 - **Assumes:** $0 < S  \leq  1$; $L  \leq  100$ km; small rural catchments (Kirpich's data: 0.4 to 45 ha)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![tc (time of concentration (s)) against S (average slope (m/m)) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/kirpich-time-of-concentration-curve)
+![tc_min (time of concentration (min)) over L (length of the longest flow path) from 750 m to 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/kirpich-time-of-concentration-field)
 
-*tc (time of concentration (s)) against S (average slope (m/m)) from 0.01 to 0.03. One curve for each value of L (length of the longest flow path): 1500 m, 750 m, 3000 m. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, S = 0.02, tc = 1469.77 s.*
+*tc_min (time of concentration (min)) over L (length of the longest flow path) from 750 m to 2.25 km and S (average slope (m/m)) from 0.01 to 0.03: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 12.29 to dark 43.71); iso-lines at tc_min = 15, 20, 25, 30, 35, 40. Marked: the given point, L = 1.5 km, S = 0.02, tc_min = 24.5. In SI units: tc = 1470 s. Your inputs: L = 1500 m, S = 0.02.*
 
-![tc (time of concentration (s)) over L (length of the longest flow path) from 750 m to 2250 m and S (average slope (m/m)) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/kirpich-time-of-concentration-field)
+![Time of concentration as L runs from 900 to 2100 m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/kirpich-time-of-concentration-live-1)
 
-*tc (time of concentration (s)) over L (length of the longest flow path) from 750 m to 2250 m and S (average slope (m/m)) from 0.01 to 0.03: each of the 21 × 15 cells is one run of civil-engineering-ai999x, shaded by its value (light 737.326 s to dark 2622.62 s); iso-lines at tc = 1000, 1500, 2000, 2500 s. Marked: the worked example, L = 1500 m, S = 0.02, tc = 1469.77 s.*
+*Time of concentration as L runs from 900 to 2100 m, every other input as you entered it (41 solutions). Marked: your L = 1500 m gives tc = 24.5 min. Your inputs: L = 1500 m, S = 0.02.*
+
+![Time of concentration as S runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/kirpich-time-of-concentration-live-2)
+
+*Time of concentration as S runs from 0.005 to 0.035, every other input as you entered it (29 solutions). Marked: your S = 0.02 gives tc = 24.5 min. Your inputs: L = 1500 m, S = 0.02.*
 
 ```python
 civil_engineering_ai999x.solve('kirpich_time_of_concentration', L=1500.0, S=0.02)
@@ -4621,13 +4989,17 @@ $$
 - **Assumes:** $c  \geq  0$; $0  \leq  \phi < 60$ degrees; $1  \leq  \beta  \leq  80$ degrees; $0  \leq  m  \leq  1$; seepage parallel to the slope
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![An infinite slope at β = 25](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/infinite-slope-factor-of-safety-schematic)
+![An infinite slope at β = 25° with a slip plane at vertical depth z = 3 m (c′ = 5 kPa, φ′ = 30°, γ = 18 kN/m³, water table ratio m = 0); the depth is drawn as a fixed length, the angle to scale](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/infinite-slope-factor-of-safety-schematic)
 
-*An infinite slope at β = 25.0° with a slip plane at vertical depth z = 3 m (c′ = 5 kPa, φ′ = 30.0°, γ = 18 kN/m³, water table ratio m = 0), drawn to scale. Marked: the returned factor of safety FS = 1.47987, driving shear stress 20.6832 kPa and effective normal stress 44.3553 kPa on the slip plane.*
+*An infinite slope at β = 25° with a slip plane at vertical depth z = 3 m (c′ = 5 kPa, φ′ = 30°, γ = 18 kN/m³, water table ratio m = 0); the depth is drawn as a fixed length, the angle to scale. Marked: the returned factor of safety FS = 1.48, driving shear stress 20.68 kPa and effective normal stress 44.36 kPa on the slip plane. Your inputs: c = 5000 Pa, phi = 30, gam = 18000 N/m^3, z = 3 m, beta = 25.*
 
-![FS (factor of safety) against beta (slope angle (degrees)) from 0 to 90](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/infinite-slope-factor-of-safety-curve)
+![Factor of safety as β runs from 6](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/infinite-slope-factor-of-safety-live-1)
 
-*FS (factor of safety) against beta (slope angle (degrees)) from 0 to 90. Other inputs as in the worked example: c = 5000.0 Pa, phi = 30.0, gam = 18000.0 N/m^3, z = 3.0 m. 35 points computed by civil-engineering-ai999x; marked: the worked example, beta = 25, FS = 1.47987.*
+*Factor of safety as β runs from 6.25 to 43.75, every other input as you entered it (41 solutions). Marked: your β = 25 gives FS = 1.48. Your inputs: c = 5000 Pa, phi = 30, gam = 18000 N/m^3, z = 3 m, beta = 25.*
+
+![Factor of safety as gam runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/infinite-slope-factor-of-safety-live-2)
+
+*Factor of safety as gam runs from 1.08e+04 to 2.52e+04 N/m^3, every other input as you entered it (29 solutions). Marked: your gam = 1.8e+04 N/m^3 gives FS = 1.48. Your inputs: c = 5000 Pa, phi = 30, gam = 18000 N/m^3, z = 3 m, beta = 25.*
 
 ```python
 civil_engineering_ai999x.solve('infinite_slope_factor_of_safety', c=5000.0, phi=30.0, gam=18000.0, z=3.0, beta=25.0)
@@ -4681,13 +5053,21 @@ $$
 - **Assumes:** c, $Df  \geq  0$; factors as stated (Terzaghi's table for the friction angle); general shear failure, vertical central load
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A square footing B = 2](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/terzaghi-bearing-capacity-schematic)
+![A square footing B = 2 m founded at Df = 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/terzaghi-bearing-capacity-schematic)
 
-*A square footing B = 2.0 m founded at Df = 1.5 m (c = 20 kPa, γ = 18 kN/m³, Nc = 37.16, Nq = 22.46, Nγ = 19.13). Marked: the returned ultimate bearing capacity qu = 1848.05 kPa, allowable qa = 616.017 kPa and net 1821.05 kPa. Footing width and depth to scale.*
+*A square footing B = 2 m founded at Df = 1.5 m (c = 20 kPa, γ = 18 kN/m³, Nc = 37.16, Nq = 22.46, Nγ = 19.13). Marked: the returned ultimate bearing capacity qu = 1848 kPa, allowable qa = 616 kPa and net 1821 kPa. Footing width and depth to scale. In SI units: qu = 1.848e+06 Pa. Your inputs: c = 20000 Pa, gam = 18000 N/m^3, B = 2 m, Df = 1.5 m, Nc = 37.16, Nq = 22.46, Ngamma = 19.13, shape = square.*
 
-![qu (ultimate bearing capacity (Pa)) against c (cohesion) from 10000 Pa to 30000 Pa](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/terzaghi-bearing-capacity-curve)
+![Ultimate bearing capacity as c runs from 1](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/terzaghi-bearing-capacity-live-1)
 
-*qu (ultimate bearing capacity (Pa)) against c (cohesion) from 10000 Pa to 30000 Pa. One curve for each value of gam (unit weight of the soil): 18000 N/m^3, 9000 N/m^3, 36000 N/m^3. Other inputs as in the worked example: B = 2.0 m, Df = 1.5 m, Nc = 37.16, Nq = 22.46, Ngamma = 19.13, shape = square. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, c = 20000 Pa, qu = 1.84805e+06 Pa.*
+*Ultimate bearing capacity as c runs from 1.2e+04 to 2.8e+04 Pa, every other input as you entered it (41 solutions). Marked: your c = 2e+04 Pa gives qu = 1848 kPa. Your inputs: c = 20000 Pa, gam = 18000 N/m^3, B = 2 m, Df = 1.5 m, Nc = 37.16, Nq = 22.46, Ngamma = 19.13, shape = square.*
+
+![Ultimate bearing capacity for every choice of shape, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/terzaghi-bearing-capacity-live-2)
+
+*Ultimate bearing capacity for every choice of shape, every other input as you entered it (highlighted: your choice). strip: 1.694e+06; square: 1.848e+06; circular: 1.779e+06. Your inputs: c = 20000 Pa, gam = 18000 N/m^3, B = 2 m, Df = 1.5 m, Nc = 37.16, Nq = 22.46, Ngamma = 19.13, shape = square.*
+
+![Ultimate bearing capacity as Nc runs from 9](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/terzaghi-bearing-capacity-live-3)
+
+*Ultimate bearing capacity as Nc runs from 9.29 to 65.03, every other input as you entered it (29 solutions). Marked: your Nc = 37.16 gives qu = 1848 kPa. Your inputs: c = 20000 Pa, gam = 18000 N/m^3, B = 2 m, Df = 1.5 m, Nc = 37.16, Nq = 22.46, Ngamma = 19.13, shape = square.*
 
 ```python
 civil_engineering_ai999x.solve('terzaghi_bearing_capacity', c=20000.0, gam=18000.0, B=2.0, Df=1.5, Nc=37.16, Nq=22.46, Ngamma=19.13, shape='square')
@@ -4736,9 +5116,13 @@ $$
 - **Assumes:** $5  \leq  LL  \leq  1000$ %; $0  \leq  PL < LL$; inputs in percent
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![PI (plasticity index (%)) against LL (liquid limit in %) from 22](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/plasticity-liquidity-index-curve)
+![Plasticity index as LL runs from 23](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/plasticity-liquidity-index-live-1)
 
-*PI (plasticity index (%)) against LL (liquid limit in %) from 22.5 to 67.5. One curve for each value of PL (plastic limit in %): 22, 11, 44. Other inputs as in the worked example: w = 30.0. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, LL = 45, PI = 23.*
+*Plasticity index as LL runs from 23.06 to 78.75, every other input as you entered it (34 solutions). Marked: your LL = 45 gives PI = 23. Your inputs: LL = 45, PL = 22, w = 30.*
+
+![Plasticity index as PL runs from 5](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/plasticity-liquidity-index-live-2)
+
+*Plasticity index as PL runs from 5.5 to 38.5, every other input as you entered it (29 solutions). Marked: your PL = 22 gives PI = 23. Your inputs: LL = 45, PL = 22, w = 30.*
 
 ```python
 civil_engineering_ai999x.solve('plasticity_liquidity_index', LL=45.0, PL=22.0, w=30.0)
@@ -4788,9 +5172,13 @@ $$
 - **Assumes:** $0 < C_alpha  \leq  0.2$; $t_{2} > t_{1}$ (t1 = end of primary consolidation)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Ss (secondary compression settlement (m)) against Ca (secondary compression index C_alpha) from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/secondary-compression-settlement-curve)
+![Secondary compression settlement as Ca runs from 0](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/secondary-compression-settlement-live-1)
 
-*Ss (secondary compression settlement (m)) against Ca (secondary compression index C_alpha) from 0.01 to 0.03. One curve for each value of H (layer thickness (at the end of primary consolidation)): 5 m, 2.5 m, 10 m. Other inputs as in the worked example: ep = 1.1, t1 = 31557600.0 s, t2 = 631152000.0 s. 31 points per curve computed by civil-engineering-ai999x; marked: the worked example, Ca = 0.02, Ss = 0.0619538 m.*
+*Secondary compression settlement as Ca runs from 0.005 to 0.035, every other input as you entered it (41 solutions). Marked: your Ca = 0.02 gives Ss = 61.95 mm. Your inputs: Ca = 0.02, H = 5 m, ep = 1.1, t1 = 31557600 s, t2 = 631152000 s.*
+
+![Secondary compression settlement as H runs from 3 to 7 m, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=civil-engineering-ai999x/secondary-compression-settlement-live-2)
+
+*Secondary compression settlement as H runs from 3 to 7 m, every other input as you entered it (29 solutions). Marked: your H = 5 m gives Ss = 61.95 mm. Your inputs: Ca = 0.02, H = 5 m, ep = 1.1, t1 = 31557600 s, t2 = 631152000 s.*
 
 ```python
 civil_engineering_ai999x.solve('secondary_compression_settlement', Ca=0.02, H=5.0, ep=1.1, t1=31557600.0, t2=631152000.0)
