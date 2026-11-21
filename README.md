@@ -10,8 +10,8 @@ Civil Engineering covers pipe and open-channel hydraulics, hydrology, groundwate
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-civil-engineering-1.6.5-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-civil-engineering-1.6.5-linux-x86_64.tar.gz) |
-| **Command line** `civil-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-civil-engineering-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-civil-engineering-1.6.6-linux-x86_64.tar.gz) |
+| **Command line** `civil-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/civil-engineering-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install civil-engineering-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -244,120 +244,6 @@ z_crack = 0 m
 ybar = 2 m
 ```
 
-## Rust library: 15 examples
-
-The crate `civil-engineering-ai999x` (in `rust/` of the GitHub repository) answers a JSON request with `civil_engineering_ai999x::solve_json`. Each call below was compiled and run on this release; the comment under it is what it printed. The whole program is `rust/civil-engineering/examples/readme.rs`: `cd rust && cargo run --release --example readme -p civil-engineering-ai999x`.
-
-```rust
-use serde_json::{json, Value};
-
-fn show(request: Value) {
-    let answer: Value = serde_json::from_str(&civil_engineering_ai999x::solve_json(&request.to_string())).unwrap();
-    println!("{}", answer["outcome"].as_str().unwrap_or(""));
-    for v in answer["values"].as_array().into_iter().flatten() {
-        let unit = v[2].as_str().unwrap_or("");
-        let unit = if unit.is_empty() || unit == "1" { String::new() } else { format!(" {unit}") };
-        println!("{} = {}{}", v[0].as_str().unwrap_or(""), v[1], unit);
-    }
-}
-
-show(json!({"key": "coulomb_active_thrust", "inputs": {"phi": "30", "delta": "20", "beta": "10", "gam": "18000 N/m^3", "H": "6 m"}}));
-// SOLVED
-// Ka = 0.340022395359
-// Pa = 110167.256096 N/m
-// Pa_h = 103523.357606 N/m
-// Pa_v = 37679.4207198 N/m
-
-show(json!({"key": "darcy_flow_layered_soil", "inputs": {"H": [2], "K": [1e-05], "A": "10 m^2", "dh": "0.5 m"}}));
-// SOLVED
-// Q = 0.000025 m^3/s
-// q = 2.5e-6 m/s
-// Kv = 0.00001 m/s
-// Kh = 0.00001 m/s
-// heads = [0.0] m
-
-show(json!({"key": "thiessen_polygon_rainfall", "inputs": {"gx": [2, 8, 5], "gy": [2, 3, 9], "rain": [45, 60, 38], "bx": [0, 10, 10, 0], "by": [0, 0, 10, 10]}}));
-// SOLVED
-// mean = 47.2399519231
-// areas = [29.6650641026,32.5608974359,37.7740384615]
-// weights = [0.296650641026,0.325608974359,0.377740384615]
-// arithmetic_mean = 47.6666666667
-// catchment_area = 100.0
-
-show(json!({"key": "broad_crested_weir_discharge", "inputs": {"Cd": "0.95", "b": "5 m", "H": "0.6 m"}}));
-// SOLVED
-// Q = 3.76372687638 m^3/s
-// yc = 0.4 m
-
-show(json!({"key": "parallel_pipes_hazen_williams", "inputs": {"Q": "0.3 m^3/s", "L": [800, 1200], "D": [300, 400], "C": [120, 110]}}));
-// SOLVED
-// hf = 7.94406736932 m
-// flows = [0.116758581689,0.183241418311] m^3/s
-
-show(json!({"key": "degree_of_consolidation", "inputs": {"cv": "7.922021954e-08 m^2/s", "t": "31557600 s", "Hdr": "3 m"}}));
-// SOLVED
-// Tv = 0.277777777795
-// U = 0.591370217287
-// U_percent = 59.1370217287
-
-show(json!({"key": "area_from_offsets", "inputs": {"offsets": [0, 2.5, 3.5, 5, 4.6, 3.2, 0], "d": "10 m"}}));
-// SOLVED
-// A_trapezoidal = 188.0 m^2
-// A_simpson = 196.666666667 m^2
-
-show(json!({"key": "coulomb_passive_thrust", "inputs": {"phi": "30", "delta": "15", "beta": "0", "gam": "18000 N/m^3", "H": "2 m"}}));
-// SOLVED
-// Kp = 4.97650022273
-// Pp = 179154.008018 N/m
-// Pp_h = 173049.483228 N/m
-// Pp_v = 46368.4692815 N/m
-
-show(json!({"key": "well_field_drawdown", "inputs": {"wx": [0, 200], "wy": [0, 0], "Qs": [2000, 1500], "T": "0.00462962963 m^2/s", "S": "0.0003", "t": "432000 s", "x0": "100 m", "y0": "50 m"}}));
-// SOLVED
-// s = 4.93587802669 m
-// parts = [2.82050172954,2.11537629715] m
-
-show(json!({"key": "unit_hydrograph_convolution", "inputs": {"excess": [1.5, 2.5, 1], "uh": [0, 10, 30, 22, 12, 5, 0]}}));
-// SOLVED
-// DRO = [0.0,15.0,70.0,118.0,103.0,59.5,24.5,5.0,0.0] m^3/s
-// total = [0.0,15.0,70.0,118.0,103.0,59.5,24.5,5.0,0.0] m^3/s
-// peak = 118.0 m^3/s
-// peak_period = 4
-
-show(json!({"key": "chezy_from_manning", "inputs": {"n": "0.013", "R": "0.75 m"}}));
-// SOLVED
-// C = 73.3218686921 m^0.5/s
-
-show(json!({"key": "hazen_williams_head_loss", "inputs": {"Q": "0.05 m^3/s", "D": "0.3 m", "L": "1000 m", "C": "120"}}));
-// SOLVED
-// hf = 2.06455521352 m
-// V = 0.707355302631 m/s
-// Sf = 0.00206455521352
-
-show(json!({"key": "coefficient_of_consolidation", "inputs": {"Hdr": "0.01 m", "t": "750 s", "U": "0.5"}}));
-// SOLVED
-// cv = 2.62307652698e-8 m^2/s
-// Tv = 0.196730739524
-// cv_m2_yr = 0.827779998079
-
-show(json!({"key": "traverse_bowditch_adjustment", "inputs": {"az": [45, 135.01, 225, 315], "d": [100, 100.02, 99.98, 100]}}));
-// SOLVED
-// misclosure_E = 0.0159393843463 m
-// misclosure_N = -0.0123427324999 m
-// linear_misclosure = 0.0201595391541 m
-// precision = 19841.7234116
-// E = [0.0,70.7066932726,141.415182997,70.7146629647] m
-// N = [0.0,70.7137638018,-0.020312884737,-70.7137638018] m
-
-show(json!({"key": "rankine_active_thrust", "inputs": {"phi": "30", "gam": "18000 N/m^3", "H": "6 m"}}));
-// SOLVED
-// Ka = 0.333333333333
-// sigma_base = 36000.0 Pa
-// Pa = 108000.0 N/m
-// z_crack = 0.0 m
-// ybar = 2.0 m
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/civil-engineering-ai999x/blob/main/docs/civil_engineering_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/civil-engineering-ai999x/blob/main/docs/civil_engineering_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/civil-engineering-ai999x/blob/main/docs/civil_engineering_ai999x_desktop_guide.md)
@@ -366,7 +252,7 @@ show(json!({"key": "rankine_active_thrust", "inputs": {"phi": "30", "gam": "1800
 
 Every calculation, with its formula, a worked example and its figures: **[Civil Engineering on ai999x.com](https://www.ai999x.com/models/civil-engineering-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
